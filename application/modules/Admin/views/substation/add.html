@@ -1,0 +1,106 @@
+<?php include ADMIN_COMMON_PATH.'/header.html';?>
+<div class="layui-container fly-marginTop fly-user-main">
+    <?php include ADMIN_COMMON_PATH.'/substation-nav.html';?>
+    <div class="fly-panel fly-panel-user" pad20>
+        <div class="layui-tab layui-tab-brief" lay-filter="email">
+            <ul class="layui-tab-title" id="LAY_mine">
+                <li class="" lay-id="info"><a
+                        href="/<?php echo ADMIN_DIR;?>/substation/">
+                    分站管理</a></li>
+                <li class="layui-this" lay-id="info">添加</a>
+                </li>
+            </ul>
+            <div class="layui-tab-content" style="padding: 20px 0;">
+                <div class="layui-form-pane layui-tab-item layui-show">
+                    <form class="layui-form layui-show" method="post">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">类型</label>
+                            <div class="layui-input-inline">
+                                <select name="type_id"
+                                        lay-filter="required">
+                                    <option value=""></option>
+                                    <?php if(!empty($type_list)):?>
+                                    <?php foreach($type_list AS $p):?>
+										<option value="<?php echo $p['id'];?>"><?php echo $p['name'];?></option>
+                                    <?php endforeach;?>
+                                    <?php endif;?>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label
+                                   class="layui-form-label">站长用户名</label>
+                            <div class="layui-input-inline">
+                                <input type="text" id="admin_name"
+                                       name="admin_name" lay-verify="required" autocomplete="off" value="" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label
+                                   class="layui-form-label">站长密码
+                            </label>
+                            <div class="layui-input-inline">
+                                <input type="text" id="admin_pwd"
+                                       name="admin_pwd" lay-verify="required" autocomplete="off" value="" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label  class="layui-form-label">绑定域名
+                            </label>
+                            <div class="layui-input-inline">
+                                <input type="text" id="bind_url" name="bind_url" lay-verify="required" autocomplete="off" value="" class="layui-input"  placeholder="填写要用的域名">
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label
+                                    class="layui-form-label">站点余额
+                            </label>
+                            <div class="layui-input-inline">
+                                <input type="text" id="remaining_sum"
+                                       name="remaining_sum" lay-verify="required" autocomplete="off" value="" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label
+                                    class="layui-form-label">站长QQ
+                            </label>
+                            <div class="layui-input-inline">
+                                <input type="text" id="admin_qq"
+                                       name="admin_qq" lay-verify="required" autocomplete="off" value="" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">到期时间
+                            </label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="expire_time" id="expire_time" lay-verify="expire_time" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">状态
+                            </label>
+                            <div class="layui-input-block">
+                                <input type="radio" name="state" value="1" title="开启" checked="">
+                                <input type="radio" name="state"
+                                       value="2" title="关闭">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <input type="hidden" name="method" value="add">
+                            <input type="hidden" name="id" value="0">
+                            <button class="layui-btn"
+                                    key="set-mine" lay-filter="add"
+                                    lay-submit>确认添加</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--引入公共底文件-->
+<?php include ADMIN_COMMON_PATH.'/footer.html';?>
+<script>
+layui.use('adminsubstation');
+</script>
