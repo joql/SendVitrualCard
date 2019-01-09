@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title><?php echo $title.'_'.$config['webname'];?></title>
+    <meta name="version" content="<?php echo VERSION;?>">
+    <meta name="keywords" content="Smalls二次开发">
+    <meta name="author" content="Smalls二次开发">
+    <meta name="description" content="<?php echo $config['webdescription'];?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="<?php echo ASSETS_PATH;?>/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo ASSETS_PATH;?>/css/themify-icons.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo ASSETS_PATH;?>/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo ASSETS_PATH;?>/css/style.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo ASSETS_PATH;?>/gmpanel.css">
+</head>
+
+<body class="fix-menu">
+<section class="login p-fixed d-flex text-center bg-primary common-img-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="login-card card-block auth-body mr-auto ml-auto">
+                    <div class="md-float-material">
+                        <div class="text-center">
+                            <a href="/product">
+                                <img src="<?php if(isset($config['logo']) AND strlen($config['logo'])>0):?><?php echo $config['logo'];?><?php else:?><?php echo ASSETS_PATH;?>/images/logo.png<?php endif;?>" alt="logo.png">
+                            </a>
+                        </div>
+                        <div class="auth-box">
+                            <h3 class="text-left txt-primary">用户登陆</h3>
+                            <hr/>
+                            <?php if(isset($config['loginswitch']) AND $config['loginswitch']>0):?>
+                            <form class="md-float-material" role="form">
+                                <div class="input-group">
+                                    <input type="hidden" name="csrf_token" id="csrf_token" value="<?php echo $csrf_token;?>">
+                                    <input type="email" name='email' id="email" class="form-control" placeholder="请输入您的邮箱">
+                                    <span class="md-line"></span>
+                                </div>
+                                <div class="input-group">
+                                    <input type="password" name='password' id='password' class="form-control" placeholder="请输入您的密码">
+                                    <span class="md-line"></span>
+                                </div>
+                                <?php if(isset($config['yzmswitch']) AND $config['yzmswitch']>0):?>
+                                <div class="input-group">
+                                    <input type="text" name='vercode' id='vercode' class="form-control" placeholder="验证码">
+                                    <span style="border: 1px solid #ccc;"><img id='img' onclick="get_code()" height="36" width="100" src="/Captcha?t=login"></span>
+                                </div>
+                                <?php endif;?>
+                                <?php if(isset($config['registerswitch']) AND $config['registerswitch']>0):?>
+                                <div class="row m-t-25 text-left">
+                                    <div class="col-12">
+                                        <div class="forgot-phone text-right f-right">
+                                            <a class="text-right f-w-600 text-inverse" href="/member/register/"> 注册账户</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php endif;?>
+                                <div class="row m-t-30">
+                                    <div class="col-md-12">
+                                        <button type="button" onclick="login()" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20">登陆 </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <?php else:?>
+                            <p class="text-inverse text-left"><b>本系统已经关闭登录功能；</b></p>
+                            <?php endif;?>
+                            <hr/>
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <p class="text-inverse text-left m-b-0">欢迎使用 <?php echo $title.'_'.$config['webname'];?>.</p>
+                                    <?php if(isset($config['forgetpwdswitch']) AND $config['forgetpwdswitch']>0):?><span style="padding-left:20px;"><a href="/member/forgetpwd"><p class="text-inverse text-left"><b>忘记密码点击我进行修改密码？~~</b></p></a></span><?php endif;?>
+                                    <p class="text-inverse text-left"><b>请验证你的权限</b></p>
+                                </div>
+                                <div class="col-md-2">
+                                    <img src="<?php echo ASSETS_PATH;?>/picture/Logo-small-bottom.png" alt="small-logo.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script  src="<?php echo ASSETS_PATH;?>/js/jquery.min.js"></script>
+<script  src="<?php echo ASSETS_PATH;?>/js/jquery-ui.min.js"></script>
+<script  src="<?php echo ASSETS_PATH;?>/js/popper.min.js"></script>
+<script  src="<?php echo ASSETS_PATH;?>/js/bootstrap.min.js"></script>
+<script  src="<?php echo ASSETS_PATH;?>/js/jquery.slimscroll.js"></script>
+<script>
+    function get_code() {
+        document.getElementById("img").src="/Captcha?t=login";
+    }
+    function login() {
+        $.ajax({
+            url: "/member/login/ajax/",
+            type: "POST",
+            dataType: "json",
+            data:$('form').serialize(),
+            success: function (result) {
+                if (result.code == '1') {
+                    location.pathname = '/product'
+                } else {
+                    alert(result.msg);
+                    get_code();
+                }
+            }
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+[09-Jan-2019 19:30:20 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /www/wwwroot/share/faka.cn/application/library/Core/Model.php:557
+Stack trace:
+#0 /www/wwwroot/share/faka.cn/application/library/Core/Model.php(301): Model->Execute()
+#1 /www/wwwroot/share/faka.cn/application/modules/Product/controllers/Index.php(33): Model->Select()
+#2 [internal function]: IndexController->indexAction()
+#3 /www/wwwroot/share/faka.cn/public/index.php(7): Yaf\Application->run()
+#4 {main}
+  thrown in /www/wwwroot/share/faka.cn/application/library/Core/Model.php on line 557
+[09-Jan-2019 19:30:28 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /www/wwwroot/share/faka.cn/application/library/Core/Model.php:557
+Stack trace:
+#0 /www/wwwroot/share/faka.cn/application/library/Core/Model.php(301): Model->Execute()
+#1 /www/wwwroot/share/faka.cn/application/modules/Product/controllers/Index.php(33): Model->Select()
+#2 [internal function]: IndexController->indexAction()
+#3 /www/wwwroot/share/faka.cn/public/index.php(7): Yaf\Application->run()
+#4 {main}
+  thrown in /www/wwwroot/share/faka.cn/application/library/Core/Model.php on line 557

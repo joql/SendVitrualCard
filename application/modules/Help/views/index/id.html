@@ -1,0 +1,43 @@
+<?php include SMALLS_COMMON_PATH.'/header.html';?>
+<div class="pcoded-main-container">
+    <div class="container">
+        <div class="main-body">
+            <div class="page-wrapper">
+                <div class="page-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- Product detail page start -->
+                            <form id="form">
+                                <div class="card product-detail-page">
+                                    <div class="card-block">
+                                        <div class="row">
+                                            <div class="col-lg-12 col-xs-12">
+                                                <div class="row">
+                                                    <div class="col-lg-10">
+                                                        <div class="p-l-0 m-b-25">
+                                                           <span class="txt-muted d-inline-block"> <h4 class="pro-desc"><?php echo $data['title']; ?></h4></span>
+                                                            <span class="f-right">添加时间 : <?php echo date('Y-m-d H:i:s',$data['addtime']);?></span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- 介绍-->
+                                                    <div class="col-lg-12"><hr>
+                                                        <?php echo $data['content']; ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- Product detail page end -->
+                        </div>
+                    </div>
+                    <!-- Nav tabs card end-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php include SMALLS_COMMON_PATH.'/qcode.html';?>
+</div>
+<!-- slick js -->
+<?php include SMALLS_COMMON_PATH.'/footer.html';?>

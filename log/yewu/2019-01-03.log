@@ -1,0 +1,18 @@
+2019-01-03 01:20:11-{"app_time":"1546449610","chart":"utf-8","id":"163119","money":"0.1","order_id":"163119","pay_id":"sadnt2019010222234854957","pay_no":"2019010222001464740560626539","pay_time":"1546439064","price":"0.1","status":"1","tag":"0","trueID":"163119","type":"1","version":"6.210","sign":"443238d40bb1ff1819a2bfc964d93564"}
+2019-01-03 01:20:11-error|Notify: auth fail
+2019-01-03 01:23:17-{"app_time":"1546449797","chart":"utf-8","id":"163119","money":"8.01","order_id":"163119","pay_id":"sadnt2019010222261847139","pay_no":"2019010222001462450591533313","pay_time":"1546439226","price":"8","status":"1","tag":"0","trueID":"163119","type":"1","version":"6.210","sign":"1fe24dafdfe39e2a538d5eee7ea7dec2"}
+2019-01-03 01:23:17-error|Notify: auth fail
+2019-01-03 04:11:45-{"app_time":"1546459905","chart":"utf-8","id":"163119","money":"0.1","order_id":"163119","pay_id":"sadnt2019010222234854957","pay_no":"2019010222001464740560626539","pay_time":"1546439064","price":"0.1","status":"1","tag":"0","trueID":"163119","type":"1","version":"6.210","sign":"476d2a8f89645557aa4de8c5cde38a49"}
+2019-01-03 04:11:45-error|Notify: auth fail
+2019-01-03 04:14:51-{"app_time":"1546460091","chart":"utf-8","id":"163119","money":"8.01","order_id":"163119","pay_id":"sadnt2019010222261847139","pay_no":"2019010222001462450591533313","pay_time":"1546439226","price":"8","status":"1","tag":"0","trueID":"163119","type":"1","version":"6.210","sign":"67ee0124bf49976984f521bec52ef389"}
+2019-01-03 04:14:51-error|Notify: auth fail
+2019-01-03 06:37:50-Paymethod is null
+2019-01-03 09:53:47-{"app_time":"1546480428","chart":"utf-8","id":"163119","money":"0.1","order_id":"163119","pay_id":"sadnt2019010222234854957","pay_no":"2019010222001464740560626539","pay_time":"1546439064","price":"0.1","status":"1","tag":"0","trueID":"163119","type":"1","version":"6.210","sign":"e295cd7b1226f8e94464056b1dc8efb4"}
+2019-01-03 09:53:47-error|Notify: auth fail
+2019-01-03 09:56:53-{"app_time":"1546480613","chart":"utf-8","id":"163119","money":"8.01","order_id":"163119","pay_id":"sadnt2019010222261847139","pay_no":"2019010222001462450591533313","pay_time":"1546439226","price":"8","status":"1","tag":"0","trueID":"163119","type":"1","version":"6.210","sign":"4af1286f6a06df7392e7bd9b7b9ca7a6"}
+2019-01-03 09:56:53-error|Notify: auth fail
+2019-01-03 10:48:43-Paymethod is null
+2019-01-03 21:16:52-{"app_time":"1546521412","chart":"utf-8","id":"163119","money":"0.1","order_id":"163119","pay_id":"sadnt2019010222234854957","pay_no":"2019010222001464740560626539","pay_time":"1546439064","price":"0.1","status":"1","tag":"0","trueID":"163119","type":"1","version":"6.210","sign":"8b7f0dd20fc791213a245296be27dc5f"}
+2019-01-03 21:16:52-error|Notify: auth fail
+2019-01-03 21:19:57-{"app_time":"1546521598","chart":"utf-8","id":"163119","money":"8.01","order_id":"163119","pay_id":"sadnt2019010222261847139","pay_no":"2019010222001462450591533313","pay_time":"1546439226","price":"8","status":"1","tag":"0","trueID":"163119","type":"1","version":"6.210","sign":"8b7f9e414008ddc656922fba9a8612d5"}
+2019-01-03 21:19:57-error|Notify: auth fail

@@ -1,0 +1,6 @@
+2018-11-04 00:17:17-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-04 00:17:17-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-04 00:17:17-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-04 00:17:17-SELECT * FROM `t_products` WHERE `typeid` = "4" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-04 00:22:00-SELECT COUNT(*) AS `total` FROM `t_article` WHERE `isdelete` = "0" AND `status` = "1" LIMIT 1
+2018-11-04 00:22:00-SELECT * FROM `t_article` WHERE `isdelete` = "0" AND `status` = "1" ORDER BY `id` DESC LIMIT 0,10

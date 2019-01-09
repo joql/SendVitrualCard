@@ -1,0 +1,2300 @@
+[27-Dec-2018 14:36:00 Asia/Chongqing] PHP Warning:  file_get_contents(http://pp.sadnt.com/check.php?url=www.sadnt.com&amp;authcode=加密内容): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 19
+[27-Dec-2018 14:36:00 Asia/Chongqing] PHP Warning:  file_get_contents(http://pp.sadnt.com/check.php?url=www.sadnt.com&amp;authcode=加密内容): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 19
+[27-Dec-2018 14:36:00 Asia/Chongqing] PHP Warning:  file_get_contents(http://pp.sadnt.com/check.php?url=www.sadnt.com&amp;authcode=加密内容): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /www/wwwroot/faka.su/application/library/Core/BasicPc.php on line 19
+[27-Dec-2018 14:36:10 Asia/Chongqing] PHP Warning:  file_get_contents(http://pp.sadnt.com/check.php?url=www.sadnt.com&amp;authcode=加密内容): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 19
+[27-Dec-2018 14:36:10 Asia/Chongqing] PHP Warning:  file_get_contents(http://pp.sadnt.com/check.php?url=www.sadnt.com&amp;authcode=加密内容): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /www/wwwroot/faka.su/application/library/Core/BasicPc.php on line 19
+[27-Dec-2018 14:36:15 Asia/Chongqing] PHP Warning:  file_get_contents(http://pp.sadnt.com/check.php?url=www.sadnt.com&amp;authcode=加密内容): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 19
+[27-Dec-2018 14:36:15 Asia/Chongqing] PHP Warning:  file_get_contents(http://pp.sadnt.com/check.php?url=www.sadnt.com&amp;authcode=加密内容): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /www/wwwroot/faka.su/application/library/Core/BasicPc.php on line 19
+[27-Dec-2018 14:36:15 Asia/Chongqing] PHP Warning:  file_get_contents(http://pp.sadnt.com/check.php?url=www.sadnt.com&amp;authcode=加密内容): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 19
+[27-Dec-2018 14:36:15 Asia/Chongqing] PHP Warning:  file_get_contents(http://pp.sadnt.com/check.php?url=www.sadnt.com&amp;authcode=加密内容): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 19
+[27-Dec-2018 14:36:56 Asia/Chongqing] PHP Warning:  file_get_contents(http://pp.sadnt.com/check.php?url=www.sadnt.com&amp;authcode=加密内容): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 19
+[27-Dec-2018 14:36:56 Asia/Chongqing] PHP Warning:  file_get_contents(http://pp.sadnt.com/check.php?url=www.sadnt.com&amp;authcode=加密内容): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 19
+[27-Dec-2018 14:36:56 Asia/Chongqing] PHP Warning:  file_get_contents(http://pp.sadnt.com/check.php?url=www.sadnt.com&amp;authcode=加密内容): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /www/wwwroot/faka.su/application/library/Core/BasicPc.php on line 19
+[27-Dec-2018 14:40:14 Asia/Chongqing] PHP Warning:  file_get_contents(http://pp.sadnt.com/check.php?url=www.sadnt.com&amp;authcode=加密内容): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 19
+[27-Dec-2018 14:40:15 Asia/Chongqing] PHP Warning:  file_get_contents(http://pp.sadnt.com/check.php?url=www.sadnt.com&amp;authcode=加密内容): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 19
+[27-Dec-2018 14:40:15 Asia/Chongqing] PHP Warning:  file_get_contents(http://pp.sadnt.com/check.php?url=www.sadnt.com&amp;authcode=加密内容): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 19
+[27-Dec-2018 14:40:15 Asia/Chongqing] PHP Warning:  file_get_contents(http://pp.sadnt.com/check.php?url=www.sadnt.com&amp;authcode=加密内容): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ in /www/wwwroot/faka.su/application/library/Core/BasicPc.php on line 19
+[27-Dec-2018 21:37:25 Asia/Chongqing] PHP Warning:  Yaf\Loader::autoload(): Failed opening script /www/wwwroot/faka.su/application/controllers/Basic.php: No such file or directory in /www/wwwroot/faka.su/application/controllers/Index.php on line 7
+[27-Dec-2018 21:37:25 Asia/Chongqing] PHP Fatal error:  Class 'BasicController' not found in /www/wwwroot/faka.su/application/controllers/Index.php on line 7
+[27-Dec-2018 21:37:25 Asia/Chongqing] PHP Warning:  Yaf\Loader::autoload(): Failed opening script /www/wwwroot/faka.su/application/controllers/Basic.php: No such file or directory in /www/wwwroot/faka.su/application/controllers/Index.php on line 7
+[27-Dec-2018 21:37:25 Asia/Chongqing] PHP Fatal error:  Class 'BasicController' not found in /www/wwwroot/faka.su/application/controllers/Index.php on line 7
+[27-Dec-2018 21:47:05 Asia/Chongqing] PHP Warning:  Yaf\Loader::autoload(): Failed opening script /www/wwwroot/faka.su/application/controllers/Basic.php: No such file or directory in /www/wwwroot/faka.su/application/controllers/Index.php on line 7
+[27-Dec-2018 21:47:05 Asia/Chongqing] PHP Fatal error:  Class 'BasicController' not found in /www/wwwroot/faka.su/application/controllers/Index.php on line 7
+[27-Dec-2018 21:49:12 Asia/Chongqing] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting function (T_FUNCTION) or const (T_CONST) in /www/wwwroot/faka.su/application/library/Core/Model.php on line 807
+[27-Dec-2018 21:49:14 Asia/Chongqing] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting function (T_FUNCTION) or const (T_CONST) in /www/wwwroot/faka.su/application/library/Core/Model.php on line 807
+[27-Dec-2018 21:49:14 Asia/Chongqing] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting function (T_FUNCTION) or const (T_CONST) in /www/wwwroot/faka.su/application/library/Core/Model.php on line 807
+[27-Dec-2018 21:49:14 Asia/Chongqing] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting function (T_FUNCTION) or const (T_CONST) in /www/wwwroot/faka.su/application/library/Core/Model.php on line 807
+[27-Dec-2018 21:49:14 Asia/Chongqing] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting function (T_FUNCTION) or const (T_CONST) in /www/wwwroot/faka.su/application/library/Core/Model.php on line 807
+[27-Dec-2018 21:52:38 Asia/Chongqing] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting function (T_FUNCTION) or const (T_CONST) in /www/wwwroot/faka.su/application/library/Core/Model.php on line 806
+[27-Dec-2018 21:52:39 Asia/Chongqing] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting function (T_FUNCTION) or const (T_CONST) in /www/wwwroot/faka.su/application/library/Core/Model.php on line 806
+[27-Dec-2018 21:52:40 Asia/Chongqing] PHP Parse error:  syntax error, unexpected 'if' (T_IF), expecting function (T_FUNCTION) or const (T_CONST) in /www/wwwroot/faka.su/application/library/Core/Model.php on line 806
+[27-Dec-2018 22:10:01 Asia/Chongqing] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /www/wwwroot/faka.su/application/library/Core/Model.php on line 22
+[27-Dec-2018 22:10:02 Asia/Chongqing] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /www/wwwroot/faka.su/application/library/Core/Model.php on line 22
+[27-Dec-2018 22:10:02 Asia/Chongqing] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /www/wwwroot/faka.su/application/library/Core/Model.php on line 22
+[27-Dec-2018 22:10:02 Asia/Chongqing] PHP Parse error:  syntax error, unexpected '}', expecting end of file in /www/wwwroot/faka.su/application/library/Core/Model.php on line 22
+[27-Dec-2018 22:29:42 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:29:44 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:29:45 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:29:45 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:29:45 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:29:45 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:29:46 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:29:46 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:29:46 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:29:46 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:29:46 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:29:47 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:29:47 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:29:47 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:29:48 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:29:48 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:29:48 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:29:49 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:29:49 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:29:49 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:30:01 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/cli.php(10): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:31:05 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:31:05 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:31:07 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:31:17 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:31:17 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:33:52 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:33:53 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:33:53 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:33:53 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:33:53 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:33:54 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:33:54 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:33:54 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:33:54 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:33:54 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:33:55 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:33:55 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:33:55 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:33:55 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:33:56 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:33:56 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:33:56 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:33:56 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:33:56 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:33:57 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:33:57 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:34:59 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:34:59 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:34:59 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:35:00 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:35:00 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:35:00 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:35:00 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:35:00 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:35:01 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:18 Asia/Chongqing] PHP Warning:  Yaf\Loader::autoload(): Failed opening script /www/wwwroot/faka.su/application/controllers/PcBasic.php: No such file or directory in /www/wwwroot/faka.su/application/modules/Product/controllers/Detail.php on line 9
+[27-Dec-2018 22:37:18 Asia/Chongqing] PHP Fatal error:  Class 'PcBasicController' not found in /www/wwwroot/faka.su/application/modules/Product/controllers/Detail.php on line 9
+[27-Dec-2018 22:37:19 Asia/Chongqing] PHP Warning:  Yaf\Loader::autoload(): Failed opening script /www/wwwroot/faka.su/application/controllers/PcBasic.php: No such file or directory in /www/wwwroot/faka.su/application/modules/Product/controllers/Detail.php on line 9
+[27-Dec-2018 22:37:19 Asia/Chongqing] PHP Fatal error:  Class 'PcBasicController' not found in /www/wwwroot/faka.su/application/modules/Product/controllers/Detail.php on line 9
+[27-Dec-2018 22:37:21 Asia/Chongqing] PHP Warning:  Yaf\Loader::autoload(): Failed opening script /www/wwwroot/faka.su/application/controllers/Basic.php: No such file or directory in /www/wwwroot/faka.su/application/controllers/Index.php on line 7
+[27-Dec-2018 22:37:21 Asia/Chongqing] PHP Fatal error:  Class 'BasicController' not found in /www/wwwroot/faka.su/application/controllers/Index.php on line 7
+[27-Dec-2018 22:37:22 Asia/Chongqing] PHP Warning:  Yaf\Loader::autoload(): Failed opening script /www/wwwroot/faka.su/application/controllers/Basic.php: No such file or directory in /www/wwwroot/faka.su/application/controllers/Index.php on line 7
+[27-Dec-2018 22:37:22 Asia/Chongqing] PHP Fatal error:  Class 'BasicController' not found in /www/wwwroot/faka.su/application/controllers/Index.php on line 7
+[27-Dec-2018 22:37:43 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:43 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:43 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:44 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:44 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:44 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:44 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:44 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:45 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:45 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:45 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:45 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:46 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:46 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:46 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:46 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:47 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:47 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:48 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:48 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:48 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:48 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:48 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:49 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:49 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:49 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:49 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:49 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:37:50 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:38:59 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:00 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:00 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:00 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:00 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:01 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:01 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:01 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:01 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:01 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:02 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:02 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:02 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:02 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:02 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:02 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:02 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:02 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:02 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:03 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:03 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:03 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:03 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:03 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:03 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:03 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:03 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:03 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:03 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:03 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:03 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:03 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:03 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:03 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:03 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:03 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:03 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:03 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:03 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:39:03 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:43:50 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 22:43:50 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 22:43:54 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 22:44:03 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 22:45:01 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 22:45:01 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 22:45:12 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 22:45:33 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 22:45:38 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 22:45:38 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 22:47:04 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 22:47:05 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 22:47:05 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 22:47:06 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 22:47:06 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 22:47:06 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 22:47:06 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 22:47:06 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 22:47:07 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 22:47:07 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 22:47:07 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 22:47:07 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 22:47:08 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 22:47:08 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 22:47:08 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 22:47:31 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 22:52:18 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:52:20 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:52:20 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:52:21 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:52:21 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:52:21 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:52:21 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:52:21 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:52:22 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:52:22 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:52:22 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:53:02 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:53:14 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:53:15 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:53:15 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:53:15 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:53:15 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:53:15 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:53:16 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 22:55:37 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Basic.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(8): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 4
+[27-Dec-2018 22:55:38 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Basic.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(8): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 4
+[27-Dec-2018 22:55:38 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Basic.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(8): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 4
+[27-Dec-2018 22:55:39 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Basic.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(8): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 4
+[27-Dec-2018 22:55:39 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Basic.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(8): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 4
+[27-Dec-2018 22:55:39 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Basic.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(8): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 4
+[27-Dec-2018 22:55:39 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Basic.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(8): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 4
+[27-Dec-2018 22:55:39 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Basic.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(8): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 4
+[27-Dec-2018 22:55:40 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Basic.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(8): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 4
+[27-Dec-2018 22:55:40 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Basic.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(8): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 4
+[27-Dec-2018 22:55:40 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Basic.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(8): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 4
+[27-Dec-2018 22:55:40 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Basic.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(8): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 4
+[27-Dec-2018 22:55:40 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Basic.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(8): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 4
+[27-Dec-2018 22:55:41 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Basic.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(8): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 4
+[27-Dec-2018 22:55:41 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Basic.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(8): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 4
+[27-Dec-2018 22:55:41 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Basic.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(8): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 4
+[27-Dec-2018 22:55:41 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Basic.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(8): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 4
+[27-Dec-2018 22:55:41 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Basic.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(8): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 4
+[27-Dec-2018 22:55:42 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Basic.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(8): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 4
+[27-Dec-2018 22:55:42 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Basic.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(8): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 4
+[27-Dec-2018 22:55:42 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Basic.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(8): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 4
+[27-Dec-2018 22:57:32 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Basic.php:3
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(8): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 3
+[27-Dec-2018 23:01:02 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Basic.php:3
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(8): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Basic.php on line 3
+[27-Dec-2018 23:03:43 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:44 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:44 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:44 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:45 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:45 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:47 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:47 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:47 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:47 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:48 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:48 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:48 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:48 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:48 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:49 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:49 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:49 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:49 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:50 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:50 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:50 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:50 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:51 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:51 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:51 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:51 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:52 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:52 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:52 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:52 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:52 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:53 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:53 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:53 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:54 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:03:54 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:05:33 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:05:33 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:05:33 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:05:34 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:05:34 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:05:34 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:05:34 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:05:34 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:05:35 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:05:35 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:05:35 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:05:36 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:05:36 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:05:36 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:05:36 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:05:36 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:05:37 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:06:06 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:06:16 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:07:51 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:07:52 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:07:52 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:07:52 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:07:52 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:07:53 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:07:53 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:07:53 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:07:53 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:07:53 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:07:54 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:07:54 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:07:54 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Model.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(9): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Model.php on line 4
+[27-Dec-2018 23:10:51 Asia/Chongqing] PHP Warning:  Yaf\Loader::autoload(): Failed opening script /www/wwwroot/faka.su/application/library/Model.php: No such file or directory in /www/wwwroot/faka.su/application/model/M_Config.php on line 9
+[27-Dec-2018 23:10:51 Asia/Chongqing] PHP Fatal error:  Class 'Model' not found in /www/wwwroot/faka.su/application/model/M_Config.php on line 9
+[27-Dec-2018 23:32:43 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 23:32:44 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 23:32:44 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 23:32:44 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 23:32:44 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 23:32:44 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 23:32:45 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 23:32:45 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 23:32:45 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 23:32:45 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 23:32:45 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 23:32:46 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 23:32:46 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 23:32:46 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 23:32:46 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 23:32:46 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 23:32:47 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4
+[27-Dec-2018 23:32:47 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to undefined function sg_load() in /www/wwwroot/faka.su/application/library/Core/Helper.php:4
+Stack trace:
+#0 [internal function]: unknown()
+#1 /www/wwwroot/faka.su/application/Bootstrap.php(7): Yaf\Loader::import('/www/wwwroot/fa...')
+#2 [internal function]: Bootstrap->_initCore(Object(Yaf\Dispatcher))
+#3 /www/wwwroot/faka.su/public/index.php(7): Yaf\Application->bootstrap()
+#4 {main}
+  thrown in /www/wwwroot/faka.su/application/library/Core/Helper.php on line 4

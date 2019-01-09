@@ -1,0 +1,40 @@
+
+120.8.254.7 | 2019-01-07 10:50:28
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+120.8.254.7 | 2019-01-07 12:14:13
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+120.8.254.7 | 2019-01-07 12:18:19
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+120.8.254.7 | 2019-01-07 12:19:54
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php

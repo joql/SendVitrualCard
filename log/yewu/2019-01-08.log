@@ -1,0 +1,70 @@
+2019-01-08 03:20:53-[]
+2019-01-08 03:20:53-error|Notify: auth fail
+2019-01-08 12:50:28-[]
+2019-01-08 12:50:28-error|Notify: auth fail
+2019-01-08 12:51:32-[]
+2019-01-08 12:51:32-error|Notify: auth fail
+2019-01-08 12:52:34-[]
+2019-01-08 12:52:34-error|Notify: auth fail
+2019-01-08 12:54:38-[]
+2019-01-08 12:54:38-error|Notify: auth fail
+2019-01-08 12:57:45-[]
+2019-01-08 12:57:45-error|Notify: auth fail
+2019-01-08 13:03:57-[]
+2019-01-08 13:03:57-error|Notify: auth fail
+2019-01-08 13:15:19-[]
+2019-01-08 13:15:19-error|Notify: auth fail
+2019-01-08 13:37:02-[]
+2019-01-08 13:37:02-error|Notify: auth fail
+2019-01-08 14:20:27-[]
+2019-01-08 14:20:27-error|Notify: auth fail
+2019-01-08 14:44:14-[]
+2019-01-08 14:44:14-error|Notify: auth fail
+2019-01-08 15:22:02-[]
+2019-01-08 15:22:02-error|Notify: auth fail
+2019-01-08 15:23:31-[]
+2019-01-08 15:23:31-error|Notify: auth fail
+2019-01-08 15:24:34-[]
+2019-01-08 15:24:34-error|Notify: auth fail
+2019-01-08 15:26:38-[]
+2019-01-08 15:26:38-error|Notify: auth fail
+2019-01-08 15:29:43-[]
+2019-01-08 15:29:43-error|Notify: auth fail
+2019-01-08 15:35:56-[]
+2019-01-08 15:35:56-error|Notify: auth fail
+2019-01-08 15:46:16-[]
+2019-01-08 15:46:16-error|Notify: auth fail
+2019-01-08 15:47:18-[]
+2019-01-08 15:47:18-error|Notify: auth fail
+2019-01-08 16:09:01-[]
+2019-01-08 16:09:01-error|Notify: auth fail
+2019-01-08 16:52:26-[]
+2019-01-08 16:52:26-error|Notify: auth fail
+2019-01-08 17:24:05-{"sign":"9223949d2ee6fcdf78e34c987490c520","codepay_server_time":"1546939445","endTime":"1546924963","id":"1758744468399","mode":"0","money":"1.01","notify_count":"0","ok":"1","pay_id":"sadnt2019010813174358960","pay_no":"2019010822001471080549208490","pay_time":"1546924691","price":"1.00","qr_user":"0","status":"0","tag":"0","target":"get","trade_no":"115469246631152727039556475","trueID":"15272","type":"1","userID":"15272"}
+2019-01-08 17:24:05-{"sign":"2a92d22c8a79d034ca0f57164eb7f375","codepay_server_time":"1546939445","endTime":"1546924618","id":"1758741916292","mode":"0","money":"1.00","notify_count":"0","ok":"1","pay_id":"sadnt2019010813101638491","pay_no":"2019010822001471080549066500","pay_time":"1546924295","price":"1.00","qr_user":"0","status":"0","tag":"0","target":"get","trade_no":"115469242151152722344489977","trueID":"15272","type":"1","userID":"15272"}
+2019-01-08 17:24:05-success
+2019-01-08 17:24:05-success
+2019-01-08 17:25:06-{"sign":"2c7089bda1eeb7075a677aba64dca5d3","codepay_server_time":"1546939505","endTime":"1546908450","id":"1758793816434","mode":"0","money":"5.00","notify_count":"0","ok":"1","pay_id":"sadnt2019010808412691631","pay_no":"101000026901501901081432454310","pay_time":"1546908109","price":"5.00","qr_user":"0","status":"0","tag":"0","target":"get","trade_no":"115469080872152723597070624","trueID":"15272","type":"2","userID":"15272"}
+2019-01-08 17:25:06-success
+2019-01-08 17:25:07-[]
+2019-01-08 17:25:07-error|Notify: auth fail
+2019-01-08 17:27:10-[]
+2019-01-08 17:27:10-error|Notify: auth fail
+2019-01-08 17:29:14-[]
+2019-01-08 17:29:14-error|Notify: auth fail
+2019-01-08 17:31:18-[]
+2019-01-08 17:31:18-error|Notify: auth fail
+2019-01-08 17:35:28-[]
+2019-01-08 17:35:28-error|Notify: auth fail
+2019-01-08 17:41:40-[]
+2019-01-08 17:41:40-error|Notify: auth fail
+2019-01-08 17:54:05-[]
+2019-01-08 17:54:05-error|Notify: auth fail
+2019-01-08 18:16:53-[]
+2019-01-08 18:16:53-error|Notify: auth fail
+2019-01-08 18:18:15-[]
+2019-01-08 18:18:15-error|Notify: auth fail
+2019-01-08 18:37:53-[]
+2019-01-08 18:37:53-error|Notify: auth fail
+2019-01-08 19:00:22-[]
+2019-01-08 19:00:22-error|Notify: auth fail

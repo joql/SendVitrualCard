@@ -1,0 +1,12 @@
+2019-01-04 01:01:08-Paymethod is null
+2019-01-04 05:34:58-Paymethod is null
+2019-01-04 13:01:10-{"sign":"0660836b4aa52ccc6255259f14d34f4e","codepay_server_time":"1546578068","endTime":"1546578343","id":"1759788871307","mode":"0","money":"1.00","notify_count":"0","ok":"1","pay_id":"sadnt2019010413004441299","pay_no":"101000026901301901041402959114","pay_time":"1546578069","price":"1.00","qr_user":"0","status":"0","tag":"0","target":"get","trade_no":"115465780432152721948498487","trueID":"15272","type":"2","userID":"15272"}
+2019-01-04 13:01:10-success
+2019-01-04 17:39:03-{"sign":"8dbd349dddf026d4d0e2e860648d646f","codepay_server_time":"1546594742","endTime":"1546595018","id":"1759659310832","mode":"0","money":"1.00","notify_count":"0","ok":"1","pay_id":"sadnt2019010417383877580","pay_no":"2019010422001418850504924533","pay_time":"1546594735","price":"1.00","qr_user":"0","status":"0","tag":"0","target":"get","trade_no":"115465947181152723497525791","trueID":"15272","type":"1","userID":"15272"}
+2019-01-04 17:39:03-success
+2019-01-04 20:03:04-{"app_time":"1546603385","chart":"utf-8","id":"163119","money":"0.1","order_id":"163119","pay_id":"sadnt2019010222234854957","pay_no":"2019010222001464740560626539","pay_time":"1546439064","price":"0.1","status":"1","tag":"0","trueID":"163119","type":"1","version":"6.210","sign":"dc162a42e52e9a3ae19eab09f2c99416"}
+2019-01-04 20:03:04-error|Notify: auth fail
+2019-01-04 20:03:18-{"sign":"ec72003dd305fc411eda206ad12fdc87","codepay_server_time":"1546603397","endTime":"1546603575","id":"1759693249805","mode":"0","money":"1.00","notify_count":"0","ok":"1","pay_id":"sadnt2019010420011518788","pay_no":"6227558748288819611","pay_time":"1546603397","price":"1.00","qr_user":"87015","status":"0","tag":"0","target":"get","trade_no":"115466032753152721876893462","trueID":"15272","type":"3","userID":"15272"}
+2019-01-04 20:03:18-success
+2019-01-04 20:06:09-{"app_time":"1546603571","chart":"utf-8","id":"163119","money":"8.01","order_id":"163119","pay_id":"sadnt2019010222261847139","pay_no":"2019010222001462450591533313","pay_time":"1546439226","price":"8","status":"1","tag":"0","trueID":"163119","type":"1","version":"6.210","sign":"5c73b7daf403b5d31464322787fe48e2"}
+2019-01-04 20:06:09-error|Notify: auth fail

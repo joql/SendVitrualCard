@@ -1,0 +1,35 @@
+2019-01-09 19:22:26-SELECT * FROM `t_config`
+2019-01-09 19:22:26-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-09 19:22:26-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-09 19:22:26-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-09 19:22:26-SELECT * FROM `t_products` WHERE `typeid` = "4" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-09 19:30:08-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-09 19:30:22-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-09 19:30:57-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-09 19:30:57-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-09 19:30:57-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-09 19:30:57-SELECT * FROM `t_products` WHERE `typeid` = "4" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-09 19:32:00-SELECT `id`, `email`, `secret`, `password` FROM `t_admin_user` WHERE `email` = "52249557@qq.com" LIMIT 1
+2019-01-09 19:32:00-INSERT INTO t_admin_login_log (`adminid`,`ip`,`addtime`) VALUES ('1','192.168.116.1','1547033521')
+2019-01-09 19:32:19-SELECT `id`, `email`, `secret`, `password` FROM `t_admin_user` WHERE `email` = "52249557@qq.com" LIMIT 1
+2019-01-09 19:32:19-UPDATE `t_admin_user` SET `password` = 'e0cb4e2e7ee12b668862f6df10b31f5e',`secret` = '37fb91'  WHERE `id` = "1"
+2019-01-09 19:32:30-SELECT * FROM `t_config`
+2019-01-09 19:32:30-SELECT `id`, `email`, `secret`, `password` FROM `t_admin_user` WHERE `email` = "52249557@qq.com" LIMIT 1
+2019-01-09 19:32:30-INSERT INTO t_admin_login_log (`adminid`,`ip`,`addtime`) VALUES ('1','192.168.116.1','1547033552')
+2019-01-09 19:37:23-SELECT COUNT(*) AS `total` FROM `t_config` LIMIT 1
+2019-01-09 19:37:23-SELECT `id`, `name`, `updatetime`, `tag` FROM `t_config` ORDER BY `id` DESC LIMIT 0,10
+2019-01-09 19:37:43-SELECT COUNT(*) AS `total` FROM `t_user` LIMIT 1
+2019-01-09 19:37:43-SELECT * FROM `t_user` ORDER BY `id` DESC LIMIT 0,10
+2019-01-09 19:38:24-SELECT COUNT(*) AS `total` FROM `t_config` LIMIT 1
+2019-01-09 19:38:24-SELECT `id`, `name`, `updatetime`, `tag` FROM `t_config` ORDER BY `id` DESC LIMIT 0,10
+2019-01-09 19:39:58-SELECT COUNT(*) AS `total` FROM `t_config` LIMIT 1
+2019-01-09 19:39:58-SELECT `id`, `name`, `updatetime`, `tag` FROM `t_config` ORDER BY `id` DESC LIMIT 0,10
+2019-01-09 19:40:10-SELECT COUNT(*) AS `total` FROM `t_config` LIMIT 1
+2019-01-09 19:40:10-SELECT `id`, `name`, `updatetime`, `tag` FROM `t_config` ORDER BY `id` DESC LIMIT 0,10
+2019-01-09 19:40:20-SELECT COUNT(*) AS `total` FROM `t_user` LIMIT 1
+2019-01-09 19:40:20-SELECT * FROM `t_user` ORDER BY `id` DESC LIMIT 0,10
+2019-01-09 19:40:27-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `isdelete` = "0" LIMIT 1
+2019-01-09 19:40:27-SELECT p1.id,p1.name,p1.price,p1.qty,p1.auto,p1.active,p1.stockcontrol,p1.sort_num,p2.name as typename FROM `t_products` as p1 left join `t_products_type` as p2 on p1.typeid = p2.id WHERE p1.isdelete=0 Order by p1.id desc LIMIT 0,10
+2019-01-09 19:40:32-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `isdelete` = "0" LIMIT 1
+2019-01-09 19:40:32-SELECT p1.id,p1.name,p1.price,p1.qty,p1.auto,p1.active,p1.stockcontrol,p1.sort_num,p2.name as typename FROM `t_products` as p1 left join `t_products_type` as p2 on p1.typeid = p2.id WHERE p1.isdelete=0 Order by p1.id desc LIMIT 0,10
+2019-01-09 19:40:33-SELECT * FROM `t_products_type` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC

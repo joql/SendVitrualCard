@@ -1,0 +1,128 @@
+<?php include SMALLS_COMMON_PATH.'/header.html';?>
+<div class="pcoded-main-container">
+	<div class="container">
+		<div class="main-body">
+			<div class="page-wrapper">
+				<div class="page-body">
+					<div class="signin-card card-block auth-body mr-auto ml-auto">
+						<div class="card">
+							<div class="card-block">
+								<form>
+									<div class="input-group input-group-sm input-group-button">
+										<input type="text" name="content" id="content" class="form-control" placeholder="请输入订单号, 交易号, 邮箱.">
+									</div>
+									<div class="input-group input-group-sm input-group-button">
+										<input type="text" name="chapwd" id="chapwd" class="form-control" placeholder="查询密码.">
+									</div>
+									<div class="input-group input-group-button">
+										<button type="button" onclick="order_query_button()" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20"><i class="fa fa-search"></i> 立即查询</button>
+									</div>
+								</form>
+								<span class="text-danger"><strong>　<i class="fa fa-dot-circle-o"></i> 如何获取交易号?  <a target="_blank" class="text-danger" href="https://jingyan.baidu.com/article/20b68a8892515f796cec62cd.html"><u> 点击查看</u></a></strong></span>
+								<br>
+								<span class="text-danger"><strong>　<i class="fa fa-dot-circle-o"></i> 站点不定期清理历史订单, 请及时保存激活码信息．</strong></span>
+								<br>
+								<span class="text-danger"><strong>　<i class="fa fa-dot-circle-o"></i> 由于填写的邮箱不是唯一性, 仅限在同一设备和相同IP下．</strong></span>
+								<hr>
+								<div class="input-group input-group-button">
+									<button class="btn btn-primary btn-mini btn-block" onclick="order_query_new_button()">
+										<span class=""><i class="fa fa-search"></i> 查询最近一次购买记录</span>
+									</button>
+								</div>
+								<hr>
+								<?php if(!empty($order)):?>
+								<?php foreach($order AS $info):?>
+								<div class="col-lg-12">
+									<span><strong>下单时间：</strong></span><span><strong><?php echo date('Y-m-d H:i:s',$info['addtime']);?></strong></span>
+									<br>
+									<span><strong>商品名称：</strong></span><span><strong><?php echo $info['productname'];?></strong></span>
+									<br>
+									<span><strong>下单IP：</strong></span><span>
+                                        <strong>
+                                                <?php echo $info['ip'];?>
+                                        </strong>
+                                    </span>
+									<br>
+									<span><strong>订单金额：</strong></span><span><strong><?php echo $info['money'];?>元</strong></span>
+									<br>
+									<span><strong>购买数量：</strong></span><span><strong><?php echo $info['number'];?></strong></span>
+									<br>
+									<span><strong>订单状态：</strong></span><span>
+                                        <strong>
+										<?php if($info['status']==0):?>
+											等待支付
+											<?php elseif($info['status']==1):?>
+											等待处理
+											<?php elseif($info['status']==2):?>
+											已完成
+											<?php elseif($info['status']==3):?>
+											处理失败
+											<?php endif;?>
+
+                                        </strong>
+                                    </span>
+									<?php if($info['kami']!=''):?>
+									<br>
+									<br>
+									<textarea class="long-press form-control" style="height: 150px;" id="cdk_pay_<?php echo $info['orderid'];?>" readonly="readonly"><?php echo $info['kami'];?></textarea>
+									<button type="button" id="cdk_button" class="col-sm-12 btn btn-mini btn-default waves-effect waves-light" data-clipboard-action="copy"  data-clipboard-target="#cdk_pay_<?php echo $info['orderid'];?>">复制全部激活码</button>
+									<?php endif;?>
+								</div>
+								<hr>
+								<?php endforeach;?>
+								<?php endif;?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php include SMALLS_COMMON_PATH.'/qcode.html';?>
+</div>
+<?php include SMALLS_COMMON_PATH.'/footer.html';?>
+
+<script>
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if ( r != null ){
+            return unescape(r[2]);
+        }else{
+            return null;
+        }
+    }
+    $("#content").val(getQueryString("content"));
+    $("#chapwd").val(getQueryString("chapwd"));
+
+    function getCookie(name)
+    {
+        var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+        if(arr=document.cookie.match(reg))
+            return unescape(arr[2]);
+        else
+            return null;
+    }
+    function order_query_button(){
+        window.location.href="/product/query?zlkbmethod=contact&"+ $('form').serialize();
+    }
+    function order_query_new_button(){
+        window.location.href="/product/query?zlkbmethod=contact&orderid="+ getCookie('oid')+"&chapwd=";
+    }
+</script>
+<script src="<?php echo ASSETS_PATH;?>/js/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+    clipboard.on('success', function(e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        alert('复制成功');
+        e.clearSelection();
+    });
+    clipboard.on('error', function(e) {
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        alert('复制失败请手动复制');
+    });
+</script>

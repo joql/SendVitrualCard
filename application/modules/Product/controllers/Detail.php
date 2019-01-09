@@ -1,0 +1,61 @@
+<?php
+
+/*
+ * 功能：商品模块－商品独立页
+ * Author:资料空白
+ * Date:20180707
+ */
+
+class DetailController extends PcBasicController
+{
+	private $m_products;
+	private $m_products_pifa;
+    private $m_payment;
+
+    public function init()
+    {
+        parent::init();
+		$this->m_products = $this->load('products');
+		$this->m_products_pifa = $this->load('products_pifa');
+        $this->m_payment = $this->load('payment');
+    }
+
+    public function indexAction()
+    {
+		$pid = $this->get('pid');
+		if($pid AND is_numeric($pid) AND $pid>0){
+			$product = $this->m_products->Where(array('id'=>$pid,'active'=>1,'isdelete'=>0))->SelectOne();
+			if(!empty($product)){
+				$data = array();
+				//先拿折扣
+				$data['pifa'] = "";
+				if($this->config['discountswitch']){
+					$pifa = $this->m_products_pifa->getPifa($pid);
+					if(!empty($pifa)){
+						$data['pifa'] = json_encode($pifa);
+					}
+				}
+                //获取支付方式
+                $payments = $this->m_payment->getConfig();
+                $data['payments']=$payments;
+                //否则
+                $data['product'] = $product;
+                if($product['addons']){
+                    $addons = explode(',',$product['addons']);
+                    $data['addons'] = $addons;
+                }else{
+                    $data['addons'] = array();
+                }
+                $data['qcodeurl'] = $product['name']."_购买商品";
+                $data['title'] = $product['name']."_购买商品";
+                $this->getView()->assign($data);
+			}else{
+				$this->redirect("/product/");
+				return FALSE;	
+			}
+		}else{
+			$this->redirect("/product/?error=没有该商品");
+			return FALSE;
+		}
+    }
+}

@@ -1,0 +1,51 @@
+2018-11-03 23:36:23-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:36:23-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:36:23-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:36:23-SELECT * FROM `t_products` WHERE `typeid` = "4" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:36:26-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:36:26-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:36:26-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:36:26-SELECT * FROM `t_products` WHERE `typeid` = "4" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:38:13-SELECT `id`, `email`, `secret`, `password` FROM `t_admin_user` WHERE `email` = "52249557@qq.com" LIMIT 1
+2018-11-03 23:38:13-INSERT INTO t_admin_login_log (`adminid`,`ip`,`addtime`) VALUES ('1','192.168.116.1','1541259493')
+2018-11-03 23:39:48-SELECT * FROM `t_products` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:39:49-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `isdelete` = "0" AND 1 LIMIT 1
+2018-11-03 23:39:49-SELECT `id`, `orderid`, `email`, `productname`, `addtime`, `status`, `paymoney`, `number` FROM `t_order` WHERE `isdelete` = "0" AND 1 ORDER BY `id` DESC LIMIT 0,10
+2018-11-03 23:39:49-SELECT count(*) AS total,sum(money) AS shouru FROM `t_order` Where isdelete=0 AND status>0 AND addtime>=1541174400 AND addtime<=1541260799
+2018-11-03 23:39:49-SELECT count(*) AS total,sum(money) AS shouru FROM `t_order` Where isdelete=0 AND status>0 AND addtime>=1541001600 AND addtime<=1543507200
+2018-11-03 23:39:49-SELECT count(*) AS total,sum(money) AS shouru FROM `t_order` Where isdelete=0 AND status>0
+2018-11-03 23:39:50-SELECT * FROM `t_products` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:39:51-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `isdelete` = "0" AND 1 LIMIT 1
+2018-11-03 23:39:51-SELECT `id`, `orderid`, `email`, `productname`, `addtime`, `status`, `paymoney`, `number` FROM `t_order` WHERE `isdelete` = "0" AND 1 ORDER BY `id` DESC LIMIT 0,10
+2018-11-03 23:39:55-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:39:55-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:39:55-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:39:55-SELECT * FROM `t_products` WHERE `typeid` = "4" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:39:56-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:39:56-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:39:56-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:39:56-SELECT * FROM `t_products` WHERE `typeid` = "4" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:40:13-SELECT COUNT(*) AS `total` FROM `t_article` WHERE `isdelete` = "0" AND `status` = "1" LIMIT 1
+2018-11-03 23:40:13-SELECT * FROM `t_article` WHERE `isdelete` = "0" AND `status` = "1" ORDER BY `id` DESC LIMIT 0,10
+2018-11-03 23:40:29-SELECT COUNT(*) AS `total` FROM `t_article` WHERE `isdelete` = "0" AND `status` = "1" LIMIT 1
+2018-11-03 23:40:29-SELECT * FROM `t_article` WHERE `isdelete` = "0" AND `status` = "1" ORDER BY `id` DESC LIMIT 0,10
+2018-11-03 23:45:16-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:45:16-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:45:16-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:45:16-SELECT * FROM `t_products` WHERE `typeid` = "4" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:46:28-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:46:28-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:46:28-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:46:28-SELECT * FROM `t_products` WHERE `typeid` = "4" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:47:16-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:47:16-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:47:16-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:47:16-SELECT * FROM `t_products` WHERE `typeid` = "4" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:50:52-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:50:52-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:50:52-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:50:52-SELECT * FROM `t_products` WHERE `typeid` = "4" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:54:36-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:54:36-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:54:36-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-11-03 23:54:36-SELECT * FROM `t_products` WHERE `typeid` = "4" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC

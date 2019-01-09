@@ -1,0 +1,258 @@
+<?php include SMALLS_COMMON_PATH.'/header.html';?>
+<div class="pcoded-main-container">
+	<div class="container">
+		<div class="main-body">
+			<div class="page-wrapper">
+				<div class="page-body">
+					<div class="row">
+						<div class="col-md-12">
+							<!-- Product detail page start -->
+							<form id="form">
+								<div class="card product-detail-page">
+									<div class="card-block">
+										<div class="row">
+											<div class="col-lg-3 col-xs-12">
+												<div class="port_details_all_img row">
+													<div class="col-lg-12 m-b-15">
+														<div id="big_banner">
+															<div class="media-middle port_big_img">
+																<div class="card gallery-desc">
+																	<img class="img img-fluid" src="<?php echo $product['images']; ?>" alt="<?php echo $product['name']; ?>">
+																</div>
+															</div>
+														</div>
+														<div id="big_banner_qcode" class="d-none d-sm-block">
+															<div class="media-middle port_big_img">
+																<div class="card gallery-desc">
+																	<div id="qcode"></div>
+																	<button  class="btn btn-mini btn-default btn-outline btn-rounded btn-block">扫一扫手机浏览</button>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="col-lg-9 col-xs-12 product-detail" id="product-detail">
+												<div class="row">
+													<div class="col-lg-12">
+														<span class="txt-muted d-inline-block">商品编号: FaKa_<?php echo $product['id']; ?></span>
+														<?php if($product['stockcontrol']==0):?>
+														<span class="f-right">库存 : 不限量</span>
+														<input type="hidden" name="qty" id="qty" value="不限量">
+														<?php else:?>
+														<span class="f-right">库存 :  <?php echo $product['qty']; ?></span>
+														<input type="hidden" name="qty" id="qty" value="<?php echo $product['qty'];?>">
+														<?php endif;?>
+													</div>
+													<div class="col-lg-12">
+														<div class="p-l-0 m-b-25">
+															<h4 class="pro-desc"><?php echo $product['name']; ?></h4>
+															<input type="hidden" name="name" id="name" value="<?php echo $product['name'];?>">
+															<span class="text-primary product-price"><i class="fa fa-cny"></i>
+																<?php echo $product['price'];?>
+                                                    </span>
+														</div>
+													</div>
+													<div class="col-xl-12 col-sm-12">
+														<?php if(!empty($addons)):?>
+														<?php foreach($addons AS $key=>$addon):?>
+														<?php if($addon):?>
+														<?php if($addon=='代充账号'):?>
+														<div class="input-group">
+                                                        <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-default btn-number shadow-none" disabled="disabled">
+                                                                <span class="fa fa-user"></span>
+                                                            </button>
+                                                        </span>
+															<input id="addons<?php echo $key;?>" type="text" name="addons[]"  class="form-control" placeholder="<?php echo $addon;?> " required>
+														</div>
+														<?php elseif($addon=='代充密码'):?>
+														<div class="input-group">
+                                                        <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-default btn-number shadow-none" disabled="disabled">
+                                                                <span class="fa fa-key"></span>
+                                                            </button>
+                                                        </span>
+															<input id="addons<?php echo $key;?>" type="text" name="addons[]"  class="form-control" placeholder="<?php echo $addon;?> " required>
+														</div>
+														<?php elseif($addon=='代充手机'):?>
+														<div class="input-group">
+                                                        <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-default btn-number shadow-none" disabled="disabled">
+                                                                <span class="fa fa-mobile-phone"></span>
+                                                            </button>
+                                                        </span>
+															<input id="addons<?php echo $key;?>" type="text" name="addons[]"  class="form-control" placeholder="<?php echo $addon;?> " required>
+														</div>
+														<?php else:?>
+														<div class="input-group">
+                                                        <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-default btn-number shadow-none" disabled="disabled">
+                                                                <span class="fa fa-user"></span>
+                                                            </button>
+                                                        </span>
+															<input id="addons<?php echo $key;?>" type="text" name="addons[]"  class="form-control" placeholder="<?php echo $addon;?> " required>
+														</div>
+														<?php endif;?>
+														<?php endif;?>
+														<?php endforeach;?>
+														<?php endif;?>
+														<div class="input-group">
+                                                        <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-default btn-number shadow-none" disabled="disabled" data-type="minus" data-field="number">
+                                                                <span class="fa fa-minus"></span>
+                                                            </button>
+                                                        </span>
+															<input id="number" type="text" name="number" class="form-control input-number text-center" value="1">
+															<span class="input-group-btn">
+                                                            <button type="button" class="btn btn-default btn-number shadow-none" data-type="plus" data-field="number">
+                                                                <span class="fa fa-plus"></span>
+                                                            </button>
+                                                        </span>
+														</div>
+														<?php if($login):?>
+														<div class="input-group">
+                                                        <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-default btn-number shadow-none" disabled="disabled">
+                                                                <span class="fa fa-envelope"></span>
+                                                            </button>
+                                                        </span>
+															<input id='email' type="text" name="email"  class="form-control" placeholder="填写QQ邮箱,用于订单查询! " required>
+														</div>
+														<?php else:?>
+														<?php if(isset($config['orderinputtype']) AND $config['orderinputtype'] == '2'):?>
+														<div class="input-group">
+                                                        <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-default btn-number shadow-none" disabled="disabled">
+                                                                <span class="fa fa-envelope"></span>
+                                                            </button>
+                                                        </span>
+															<input id='qq' type="text" name="qq"  class="form-control" placeholder="填写QQ,用于订单查询! " required>
+														</div>
+														<?php else:?>
+														<div class="input-group">
+                                                        <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-default btn-number shadow-none" disabled="disabled">
+                                                                <span class="fa fa-envelope"></span>
+                                                            </button>
+                                                        </span>
+															<input id='email' type="text" name="email"  class="form-control" placeholder="填写QQ邮箱,用于订单查询! " required>
+														</div>
+														<?php endif;?>
+														<?php endif;?>
+														<div class="input-group">
+                                                        <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-default btn-number shadow-none" disabled="disabled">
+                                                                <span class="fa fa-search"></span>
+                                                            </button>
+                                                        </span>
+															<input id='chapwd' type="text" name="chapwd"  class="form-control" placeholder="将作为自助查询订单重要依据 " required>
+														</div>
+
+														<div class="form-radio m-b-10">
+															<?php if(!empty($payments)):?>
+															<?php foreach($payments AS $payment):?>
+															<?php if($payment['active']>0):?>
+															<div class="radio radio-inline">
+																<label>
+																	<input type="radio" name="paymethod" value="<?php echo $payment['alias'];?>">
+																	<i class="helper" style="top: 0rem;"></i><img src="<?php echo $payment['payimage'];?>" height="30px">
+																</label>
+															</div>
+															<?php endif;?>
+															<?php endforeach;?>
+															<?php else:?>
+															<div class="radio radio-inline">
+																<span>站长正在加紧配置，请耐心等待....</span>
+															</div>
+
+															<?php endif;?>
+														</div>
+														<input type="hidden" name="csrf_token" id="csrf_token" value="<?php echo $csrf_token;?>">
+														<input type="hidden" name="price" id="price" value="<?php echo $product['price'];?>">
+														<input type="hidden" name="money" id="money" value="<?php echo $product['price'];?>">
+														<input type="hidden" name="stockcontrol" id="stockcontrol" value="<?php echo $product['stockcontrol'];?>">
+														<input type="hidden" name="limitorderqty" id="limitorderqty" value="<?php echo $config['limitorderqty'];?>">
+														<input type="hidden" name="pid" id="pid" value="<?php echo $product['id'];?>">
+														<button type="button" class="btn btn-default btn-block waves-effect waves-light m-r-20" id="order_button" onclick="card_ware_order()"<?php if($product['stockcontrol']>0 AND $product['qty']<1):?>disabled="disabled"<?php endif;?>>
+														<i class="fa fa-shopping-cart f-16"></i><span class="m-l-10">购买</span>
+														</button>
+													</div>
+													<!-- 介绍-->
+													<div class="col-lg-12"><hr>
+														<?php echo $product['description']; ?>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+							<!-- Product detail page end -->
+						</div>
+					</div>
+					<!-- Nav tabs card end-->
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php include SMALLS_COMMON_PATH.'/qcode.html';?>
+</div>
+<!-- slick js -->
+<?php include SMALLS_COMMON_PATH.'/footer.html';?>
+<script  src="<?php echo ASSETS_PATH;?>/js/slick.min.js"></script>
+<!-- product detail js -->
+<script  src="<?php echo ASSETS_PATH;?>/js/product-detail.js"></script>
+<script src="<?php echo ASSETS_PATH;?>/js/pcoded.min.js"></script>
+<script src="<?php echo ASSETS_PATH;?>/js/jquery.qrcode.min.js"></script>
+<script src="<?php echo ASSETS_PATH;?>/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+    $(function(){
+        var url = window.location.href;
+        $("#qcode").empty();
+        $("#qcode").qrcode({
+            render: "table",
+            width: 230,
+            height:210,
+            text: url
+        });
+    })
+
+    function card_ware_order() {
+        var chapwd = $('#chapwd').val();
+        var qq = $('#qq').val();
+        var email = $('#email').val();
+        if(chapwd==''){
+            alert('请输入查询密码！');
+            return;
+        }
+        if(qq=='' || email==''){
+            alert('请输入正确的QQ或者QQ邮箱！');
+            return;
+        }
+        $('#order_button').attr('disabled', true);
+        $.ajax({
+            url: "/product/order/buy/",
+            type: "POST",
+            dataType: "json",
+            data:$('form').serialize(),
+            success: function (result) {
+                if (result.code == '1') {
+                    var oid = result.data.oid;
+                    if(oid.length>0){
+                        location.href = '/product/order/pay/?oid='+oid;
+                    }else{
+                        $('#order_button').attr('disabled', false);
+                        alert('订单异常');
+                        return;
+                    }
+                } else {
+                    $('#order_button').attr('disabled', false);
+                    alert(result.msg);
+                    return;
+                }
+            }
+        });
+    }
+</script>

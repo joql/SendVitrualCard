@@ -1,0 +1,322 @@
+2019-01-01 00:18:04-SELECT * FROM `t_config`
+2019-01-01 00:18:04-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 00:18:04-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 00:18:04-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 00:28:03-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 00:28:03-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 00:28:03-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 01:02:53-SELECT * FROM `t_config`
+2019-01-01 01:02:53-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 01:02:53-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 01:02:53-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 01:28:16-SELECT * FROM `t_config`
+2019-01-01 01:28:16-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 01:28:16-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 01:28:16-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 01:28:48-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 01:28:48-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 01:28:48-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 01:28:49-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 01:28:49-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 01:28:49-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 03:31:07-SELECT * FROM `t_config`
+2019-01-01 03:31:07-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 03:31:07-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 03:31:07-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 03:32:17-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 03:32:17-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 03:32:17-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 03:43:34-SELECT * FROM `t_config`
+2019-01-01 03:43:34-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 03:43:34-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 03:43:34-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 04:21:37-SELECT * FROM `t_config`
+2019-01-01 04:21:37-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 04:21:37-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 04:21:37-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 04:36:12-SELECT * FROM `t_config`
+2019-01-01 04:36:12-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 04:36:12-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 04:36:12-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 05:10:08-SELECT * FROM `t_config`
+2019-01-01 05:10:08-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 05:10:08-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 05:10:08-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 05:10:47-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 05:10:47-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 05:10:47-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 05:31:40-SELECT * FROM `t_config`
+2019-01-01 05:31:40-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 05:31:40-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 05:31:40-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 06:11:09-SELECT * FROM `t_config`
+2019-01-01 06:11:09-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 06:11:09-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 06:11:09-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 07:03:05-SELECT * FROM `t_config`
+2019-01-01 07:03:05-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 07:03:05-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 07:03:05-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 07:07:00-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 07:07:00-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 07:07:00-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 07:56:04-SELECT * FROM `t_config`
+2019-01-01 07:56:04-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 07:56:04-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 07:56:04-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 08:01:17-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 08:01:17-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 08:01:17-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 08:15:22-SELECT * FROM `t_config`
+2019-01-01 08:15:22-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 08:15:22-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 08:15:22-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 08:19:38-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 08:19:38-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 08:19:38-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 08:21:13-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 08:21:13-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 08:21:13-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 08:41:36-SELECT * FROM `t_config`
+2019-01-01 08:41:36-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 08:41:36-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 08:41:36-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 09:38:18-SELECT * FROM `t_config`
+2019-01-01 09:38:18-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 09:38:18-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 09:38:18-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:11:48-SELECT * FROM `t_config`
+2019-01-01 10:11:48-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:11:48-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:11:48-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:11:48-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:11:48-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:11:48-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:11:48-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:11:48-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:11:48-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:12:11-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:12:11-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:12:11-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:12:15-SELECT * FROM `t_products` WHERE `id` = "2" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:12:15-SELECT * FROM `t_payment` WHERE `active` = "1"
+2019-01-01 10:12:15-SELECT * FROM `t_products` WHERE `id` = "2" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:13:17-SELECT * FROM `t_products` WHERE `id` = "2" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:25:20-SELECT * FROM `t_config`
+2019-01-01 10:25:20-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:25:20-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:25:20-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:25:57-SELECT * FROM `t_products` WHERE `id` = "1" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:25:57-SELECT * FROM `t_payment` WHERE `active` = "1"
+2019-01-01 10:26:09-SELECT * FROM `t_products` WHERE `id` = "1" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:26:09-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `ip` = "61.185.80.242" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1546272000 and addtime<=1546358399 LIMIT 1
+2019-01-01 10:26:09-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `email` = "4437519@qq.com" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1546272000 and addtime<=1546358399 LIMIT 1
+2019-01-01 10:26:09-SELECT * FROM `t_user` WHERE `email` = "4437519@qq.com" LIMIT 1
+2019-01-01 10:26:09-INSERT INTO t_order (`orderid`,`userid`,`email`,`qq`,`pid`,`productname`,`price`,`number`,`money`,`chapwd`,`ip`,`status`,`paymethod`,`addons`,`addtime`) VALUES ('sadnt2019010110261076812','0','4437519@qq.com','4437519','1','搜狗阅读15万阅读币','1.00','1','1','4437519','61.185.80.242','0','codepayqq','','1546309570')
+2019-01-01 10:26:10-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:26:12-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:26:14-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:26:16-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:26:18-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:26:20-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:26:22-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:26:24-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:26:26-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:26:28-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:26:30-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:26:32-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:26:34-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:26:36-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:26:38-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:26:40-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:26:42-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:26:44-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:26:46-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:26:48-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:26:50-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:26:52-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:26:54-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:26:56-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:26:58-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:27:00-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:27:02-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:27:04-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:27:06-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:27:08-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:27:10-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:27:12-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:27:14-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:27:16-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:27:18-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:27:20-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:27:22-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:27:24-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:27:26-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:27:28-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:27:30-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:27:33-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:27:35-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:27:37-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:27:38-SELECT * FROM `t_order` WHERE `id` = "80" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:32:55-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:32:55-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:32:55-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:37:36-SELECT * FROM `t_config`
+2019-01-01 10:37:36-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:37:36-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:37:36-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:37:38-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:37:38-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:37:38-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:37:38-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:37:38-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:37:38-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:37:55-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:37:55-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:37:55-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:38:10-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:38:10-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:38:10-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:38:21-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:38:21-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:38:21-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:39:44-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:39:44-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:39:44-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:40:45-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:40:45-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:40:45-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:50:31-SELECT * FROM `t_config`
+2019-01-01 10:50:31-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:50:31-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:50:31-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:50:39-SELECT * FROM `t_products` WHERE `id` = "2" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2019-01-01 10:50:39-SELECT * FROM `t_payment` WHERE `active` = "1"
+2019-01-01 10:50:43-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:50:43-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 10:50:43-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 11:28:04-SELECT * FROM `t_config`
+2019-01-01 11:28:04-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 11:28:04-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 11:28:04-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 11:28:43-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 11:28:43-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 11:28:43-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 11:28:52-SELECT * FROM `t_products` WHERE `id` = "2" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2019-01-01 11:28:52-SELECT * FROM `t_payment` WHERE `active` = "1"
+2019-01-01 11:29:08-SELECT * FROM `t_products` WHERE `id` = "2" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2019-01-01 11:29:08-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `ip` = "223.90.115.240" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1546272000 and addtime<=1546358399 LIMIT 1
+2019-01-01 11:29:08-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `email` = "111@qq.com" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1546272000 and addtime<=1546358399 LIMIT 1
+2019-01-01 11:29:08-SELECT * FROM `t_user` WHERE `email` = "111@qq.com" LIMIT 1
+2019-01-01 11:29:08-INSERT INTO t_order (`orderid`,`userid`,`email`,`qq`,`pid`,`productname`,`price`,`number`,`money`,`chapwd`,`ip`,`status`,`paymethod`,`addons`,`addtime`) VALUES ('sadnt2019010111290847253','0','111@qq.com','111','2','豪华黄钻20个月-详情看说明','110.00','1','110','111','223.90.115.240','0','codepaywx','请输入QQ账号:11111;请输入QQ密码:1111;','1546313348')
+2019-01-01 11:29:08-SELECT * FROM `t_order` WHERE `id` = "81" AND `isdelete` = "0" LIMIT 1
+2019-01-01 11:29:11-SELECT * FROM `t_order` WHERE `id` = "81" AND `isdelete` = "0" LIMIT 1
+2019-01-01 11:29:13-SELECT * FROM `t_order` WHERE `id` = "81" AND `isdelete` = "0" LIMIT 1
+2019-01-01 12:02:51-SELECT * FROM `t_config`
+2019-01-01 12:02:51-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 12:02:51-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 12:02:51-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 12:04:26-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 12:04:26-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 12:04:26-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 13:22:31-SELECT * FROM `t_config`
+2019-01-01 13:22:31-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 13:22:31-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 13:22:31-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 13:26:20-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 13:26:20-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 13:26:20-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 13:26:40-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 13:26:40-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 13:26:40-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 13:26:45-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 13:26:45-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 13:26:45-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 13:30:11-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 13:30:11-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 13:30:11-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 13:56:20-SELECT * FROM `t_config`
+2019-01-01 13:56:20-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 13:56:20-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 13:56:20-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 14:52:35-SELECT * FROM `t_config`
+2019-01-01 14:52:35-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 14:52:35-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 14:52:35-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 15:02:17-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 15:02:17-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 15:02:17-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 15:03:26-SELECT * FROM `t_config`
+2019-01-01 15:03:26-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 15:03:26-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 15:03:26-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 15:03:32-SELECT * FROM `t_products` WHERE `id` = "2" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2019-01-01 15:03:32-SELECT * FROM `t_payment` WHERE `active` = "1"
+2019-01-01 15:03:36-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 15:03:36-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 15:03:36-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 15:16:33-SELECT * FROM `t_config`
+2019-01-01 15:16:33-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 15:16:33-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 15:16:33-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 15:44:51-SELECT * FROM `t_config`
+2019-01-01 15:44:51-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 15:44:51-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 15:44:51-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 16:34:53-SELECT * FROM `t_config`
+2019-01-01 16:34:53-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 16:34:53-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 16:34:53-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 17:09:25-SELECT * FROM `t_config`
+2019-01-01 17:09:25-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 17:09:25-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 17:09:25-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 17:39:16-SELECT * FROM `t_config`
+2019-01-01 17:39:16-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 17:39:16-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 17:39:16-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 18:08:13-SELECT * FROM `t_config`
+2019-01-01 18:08:13-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 18:08:13-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 18:08:13-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 19:23:29-SELECT * FROM `t_config`
+2019-01-01 19:23:29-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 19:23:29-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 19:23:29-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 19:45:35-SELECT * FROM `t_config`
+2019-01-01 19:45:35-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 19:45:35-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 19:45:35-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 19:50:27-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 19:50:27-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 19:50:27-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 20:59:33-SELECT * FROM `t_config`
+2019-01-01 20:59:33-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 20:59:33-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 20:59:33-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 22:21:36-SELECT * FROM `t_config`
+2019-01-01 22:21:36-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 22:21:36-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 22:21:36-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 22:34:49-SELECT * FROM `t_config`
+2019-01-01 22:34:49-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 22:34:49-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 22:34:49-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 23:08:40-SELECT * FROM `t_config`
+2019-01-01 23:08:40-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 23:08:40-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 23:08:40-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 23:08:40-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 23:08:40-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 23:08:40-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 23:11:39-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 23:11:39-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 23:11:39-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 23:26:42-SELECT * FROM `t_config`
+2019-01-01 23:26:42-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 23:26:42-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 23:26:42-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 23:59:33-SELECT * FROM `t_config`
+2019-01-01 23:59:33-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 23:59:33-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2019-01-01 23:59:33-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC

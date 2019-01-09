@@ -1,0 +1,112 @@
+[03-Nov-2018 23:00:48 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:00:48 Asia/Chongqing] PHP Fatal error:  Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:00:48 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:00:48 Asia/Chongqing] PHP Fatal error:  Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:00:49 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:00:49 Asia/Chongqing] PHP Fatal error:  Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:01:11 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:01:11 Asia/Chongqing] PHP Fatal error:  Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:01:45 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:01:45 Asia/Chongqing] PHP Fatal error:  Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:01:46 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:01:46 Asia/Chongqing] PHP Fatal error:  Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:02:40 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:02:40 Asia/Chongqing] PHP Fatal error:  Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:04:43 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:04:43 Asia/Chongqing] PHP Fatal error:  Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:04:44 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:04:44 Asia/Chongqing] PHP Fatal error:  Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:04:44 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:04:44 Asia/Chongqing] PHP Fatal error:  Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:04:45 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:04:45 Asia/Chongqing] PHP Fatal error:  Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:04:45 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:04:45 Asia/Chongqing] PHP Fatal error:  Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:06:18 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:06:18 Asia/Chongqing] PHP Fatal error:  Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:06:54 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:06:54 Asia/Chongqing] PHP Fatal error:  Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:06:57 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:06:57 Asia/Chongqing] PHP Fatal error:  Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:09:29 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:09:29 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:09:30 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:09:30 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:09:31 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:09:31 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:09:33 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:09:33 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:21:50 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:21:50 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:21:51 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:21:51 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:21:52 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:21:52 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:23:06 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:23:06 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:24:42 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:24:42 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:26:45 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:26:45 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:27:51 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:27:51 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:27:54 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:27:54 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:28:51 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:28:51 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:30:15 Asia/Chongqing] PHP Warning:  Yaf\Application::bootstrap(): Couldn't find bootstrap file /www/wwwroot/faka.su/application/Bootstrap.php in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:30:15 Asia/Chongqing] PHP Fatal error:  Uncaught Error: Call to a member function run() on boolean in /www/wwwroot/share/faka.cn/public/index.php:7
+Stack trace:
+#0 {main}
+  thrown in /www/wwwroot/share/faka.cn/public/index.php on line 7
+[03-Nov-2018 23:55:15 Asia/Chongqing] PHP Warning:  Yaf\Router::addRoute(): Expects a Yaf\Route_Interface instance in /www/wwwroot/share/faka.cn/application/Bootstrap.php on line 37
+[03-Nov-2018 23:55:15 Asia/Chongqing] PHP Warning:  Yaf\Router::addRoute(): Expects a Yaf\Route_Interface instance in /www/wwwroot/share/faka.cn/application/Bootstrap.php on line 45
+[03-Nov-2018 23:55:16 Asia/Chongqing] PHP Warning:  Yaf\Router::addRoute(): Expects a Yaf\Route_Interface instance in /www/wwwroot/share/faka.cn/application/Bootstrap.php on line 37
+[03-Nov-2018 23:55:16 Asia/Chongqing] PHP Warning:  Yaf\Router::addRoute(): Expects a Yaf\Route_Interface instance in /www/wwwroot/share/faka.cn/application/Bootstrap.php on line 45
+[03-Nov-2018 23:55:16 Asia/Chongqing] PHP Warning:  Yaf\Router::addRoute(): Expects a Yaf\Route_Interface instance in /www/wwwroot/share/faka.cn/application/Bootstrap.php on line 37
+[03-Nov-2018 23:55:16 Asia/Chongqing] PHP Warning:  Yaf\Router::addRoute(): Expects a Yaf\Route_Interface instance in /www/wwwroot/share/faka.cn/application/Bootstrap.php on line 45
+[03-Nov-2018 23:55:16 Asia/Chongqing] PHP Warning:  Yaf\Router::addRoute(): Expects a Yaf\Route_Interface instance in /www/wwwroot/share/faka.cn/application/Bootstrap.php on line 37
+[03-Nov-2018 23:55:16 Asia/Chongqing] PHP Warning:  Yaf\Router::addRoute(): Expects a Yaf\Route_Interface instance in /www/wwwroot/share/faka.cn/application/Bootstrap.php on line 45
+[03-Nov-2018 23:55:16 Asia/Chongqing] PHP Warning:  Yaf\Router::addRoute(): Expects a Yaf\Route_Interface instance in /www/wwwroot/share/faka.cn/application/Bootstrap.php on line 37
+[03-Nov-2018 23:55:16 Asia/Chongqing] PHP Warning:  Yaf\Router::addRoute(): Expects a Yaf\Route_Interface instance in /www/wwwroot/share/faka.cn/application/Bootstrap.php on line 45
+[03-Nov-2018 23:56:46 Asia/Chongqing] PHP Warning:  Yaf\Router::addRoute(): Expects a Yaf\Route_Interface instance in /www/wwwroot/share/faka.cn/application/Bootstrap.php on line 37
+[03-Nov-2018 23:56:46 Asia/Chongqing] PHP Warning:  Yaf\Router::addRoute(): Expects a Yaf\Route_Interface instance in /www/wwwroot/share/faka.cn/application/Bootstrap.php on line 45

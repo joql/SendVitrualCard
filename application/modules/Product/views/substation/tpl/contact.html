@@ -1,0 +1,143 @@
+<?php include SMALLS_COMMON_PATH.'/header.html';?>
+<link href="http://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="http://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="http://ds.sadnt.com/assets/simple/css/plugins.css">
+<link rel="stylesheet" href="http://ds.sadnt.com/assets/simple/css/main.css">
+<link rel="stylesheet" href="http://ds.sadnt.com/assets/css/common.css">
+
+<link rel="stylesheet" href="http://cdn.staticfile.org/layer/2.3/skin/layer.css" id="layui_layer_skinlayercss" style=""><style type="text/css">.jqstooltip { width: auto !important; height: auto !important; position: absolute;left: 0px;top: 0px;visibility: hidden;background: #000000;color: white;font-size: 11px;text-align: left;white-space: nowrap;padding: 5px;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style>
+<div class="pcoded-main-container">
+	<div class="container">
+		<div class="main-body">
+			<div class="page-wrapper">
+				<div class="page-body">
+					<div class="signin-card card-block auth-body mr-auto ml-auto">
+						<div class="card">
+							<div class="block">
+								<!--<div class="block-title">
+									<div class="block-options pull-right">
+										<a href="http://ds.sadnt.com/" class="btn btn-effect-ripple btn-default toggle-bordered enable-tooltip">返回首页</a>
+									</div>
+									<h2><i class="fa fa-user-plus"></i>&nbsp;&nbsp;<b>自助开通分站</b></h2>
+								</div>-->
+								<div class="row text-center">
+									<div class="col-xs-6">
+										<a class="btn btn-block btn-info" href="http://ds.sadnt.com/user/regsite.php#about" data-toggle="modal">分站详细介绍</a>
+									</div>
+									<div class="col-xs-6">
+										<a class="btn btn-block btn-info" href="http://ds.sadnt.com/user/regsite.php#userjs" data-toggle="modal">分站版本介绍</a>
+									</div>
+								</div>
+								<br>
+								<form>
+									<div class="form-group">
+										<div class="input-group">
+											<div class="input-group-addon">
+												分站版本
+											</div>
+											<select name="kind" class="form-control"><option value="1" selected="">普及版(10元)</option><option value="2">专业版(20元)</option></select>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="input-group">
+											<div class="input-group-addon">
+												二级域名
+											</div>
+											<input type="text" name="qz" class="form-control" required="" data-parsley-length="[2,8]" placeholder="输入你想要的二级前缀">
+											<select name="domain" class="form-control"><option value=""></option></select>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="input-group">
+											<div class="input-group-addon">
+												管理账号
+											</div>
+											<input type="text" name="user" class="form-control" required="" placeholder="输入要注册的用户名">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="input-group">
+											<div class="input-group-addon">
+												管理密码
+											</div>
+											<input type="text" name="pwd" class="form-control" required="" placeholder="输入管理员密码">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="input-group">
+											<div class="input-group-addon">
+												绑定ＱＱ
+											</div>
+											<input type="number" name="qq" class="form-control" required="" data-parsley-length="[5,10]" placeholder="输入你的QQ号" value="">
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="input-group">
+											<div class="input-group-addon">
+												网站名称
+											</div>
+											<input type="text" name="name" class="form-control" required="" data-parsley-length="[2,10]" placeholder="输入网站名称">
+										</div>
+									</div>
+									<input type="button" id="submit_buy" value="点此立即拥有分站" class="btn btn-danger btn-block">
+									<hr>
+									<div class="form-group">
+										<a href="http://ds.sadnt.com/user/findpwd.php" class="btn btn-info btn-rounded"><i class="fa fa-unlock"></i>&nbsp;找回密码</a>
+										<a href="http://ds.sadnt.com/user/login.php" class="btn btn-primary btn-rounded" style="float:right;"><i class="fa fa-user"></i>&nbsp;返回登录</a>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php include SMALLS_COMMON_PATH.'/qcode.html';?>
+</div>
+<?php include SMALLS_COMMON_PATH.'/footer.html';?>
+
+<script>
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if ( r != null ){
+            return unescape(r[2]);
+        }else{
+            return null;
+        }
+    }
+    $("#content").val(getQueryString("content"));
+    $("#chapwd").val(getQueryString("chapwd"));
+
+    function getCookie(name)
+    {
+        var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+        if(arr=document.cookie.match(reg))
+            return unescape(arr[2]);
+        else
+            return null;
+    }
+    function order_query_button(){
+        window.location.href="/product/query?zlkbmethod=contact&"+ $('form').serialize();
+    }
+    function order_query_new_button(){
+        window.location.href="/product/query?zlkbmethod=contact&orderid="+ getCookie('oid')+"&chapwd=";
+    }
+</script>
+<script src="<?php echo ASSETS_PATH;?>/js/clipboard.min.js"></script>
+<script>
+    var clipboard = new ClipboardJS('.btn');
+    clipboard.on('success', function(e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        alert('复制成功');
+        e.clearSelection();
+    });
+    clipboard.on('error', function(e) {
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        alert('复制失败请手动复制');
+    });
+</script>

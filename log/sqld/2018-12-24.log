@@ -1,0 +1,637 @@
+2018-12-24 19:51:35-SELECT * FROM `t_config`
+2018-12-24 19:51:52-SELECT `id`, `email`, `secret`, `password` FROM `t_admin_user` WHERE `email` = "52249557@qq.com" LIMIT 1
+2018-12-24 19:51:52-INSERT INTO t_admin_login_log (`adminid`,`ip`,`addtime`) VALUES ('1','111.145.154.153','1545652312')
+2018-12-24 19:51:54-SELECT COUNT(*) AS `total` FROM `t_config` LIMIT 1
+2018-12-24 19:51:54-SELECT `id`, `name`, `updatetime`, `tag` FROM `t_config` ORDER BY `id` DESC LIMIT 0,10
+2018-12-24 19:51:56-SELECT COUNT(*) AS `total` FROM `t_config` LIMIT 1
+2018-12-24 19:51:56-SELECT `id`, `name`, `updatetime`, `tag` FROM `t_config` ORDER BY `id` DESC LIMIT 0,40
+2018-12-24 19:51:56-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 19:51:56-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 19:51:56-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 19:51:58-SELECT * FROM `t_config` WHERE `id` = "4" LIMIT 1
+2018-12-24 19:52:08-SELECT * FROM `t_products` WHERE `id` = "1" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 19:52:08-SELECT * FROM `t_payment` WHERE `active` = "1"
+2018-12-24 19:52:34-UPDATE `t_config` SET `name` = 'weburl',`value` = 'http://www.sadnt.com',`tag` = '当前网站地址,用于支付站点异步返回，务必修改正确'  WHERE `id` = "4" LIMIT 1
+2018-12-24 19:52:34-SELECT * FROM `t_config`
+2018-12-24 19:52:35-SELECT * FROM `t_config` WHERE `id` = "4" LIMIT 1
+2018-12-24 19:52:58-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 19:52:58-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 19:52:58-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 19:53:15-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 19:53:42-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 19:53:42-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `ip` = "111.145.154.153" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1545580800 and addtime<=1545667199 LIMIT 1
+2018-12-24 19:53:42-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `email` = "3123123@qq.com" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1545580800 and addtime<=1545667199 LIMIT 1
+2018-12-24 19:53:42-SELECT * FROM `t_user` WHERE `email` = "3123123@qq.com" LIMIT 1
+2018-12-24 19:53:42-INSERT INTO t_order (`orderid`,`userid`,`email`,`qq`,`pid`,`productname`,`price`,`number`,`money`,`chapwd`,`ip`,`status`,`paymethod`,`addons`,`addtime`) VALUES ('zlkb2018122419534251652','0','3123123@qq.com','3123123','3','超会14个月＋红钻12个月-详情看说明','0.01','1','0.01','123123','111.145.154.153','0','codepayalipay','请输入QQ账号:23123123;请输入QQ密码:312312312;','1545652422')
+2018-12-24 19:53:43-SELECT * FROM `t_order` WHERE `id` = "27" AND `isdelete` = "0" LIMIT 1
+2018-12-24 19:54:05-SELECT * FROM `t_order` WHERE `orderid` = "zlkb2018122419534251652" LIMIT 1
+2018-12-24 19:54:05-UPDATE `t_order` SET `status` = '1',`paytime` = '1545652445',`tradeid` = '2018122422001454720523157887',`paymethod` = 'codepayalipay',`paymoney` = '0.01'  WHERE `orderid` = "zlkb2018122419534251652" AND `status` = "0"
+2018-12-24 19:54:05-SELECT auto,stockcontrol,qty FROM `t_products` WHERE `id` = "3" LIMIT 1
+2018-12-24 19:54:05-INSERT INTO t_email_queue(`email`,`subject`,`content`,`addtime`,`status`) VALUES ('3123123@qq.com','商品购买成功','用户:3123123@qq.com,购买的商品[超会14个月＋红钻12个月-详情看说明],属于手工发货类型，管理员即将联系您....请耐心等待!','1545652445','0'),('52249557@qq.com','用户购买商品','用户:3123123@qq.com,购买的商品[超会14个月＋红钻12个月-详情看说明],属于手工发货类型，请尽快联系他!订单附加信息：请输入QQ账号:23123123;请输入QQ密码:312312312;','1545652445','0')
+2018-12-24 19:54:33-SELECT * FROM `t_order` WHERE `id` = "27" AND `isdelete` = "0" LIMIT 1
+2018-12-24 19:55:33-SELECT * FROM `t_order` WHERE `id` = "27" AND `isdelete` = "0" LIMIT 1
+2018-12-24 19:55:36-SELECT * FROM `t_order` WHERE `id` = "27" AND `isdelete` = "0" LIMIT 1
+2018-12-24 19:58:48-SELECT * FROM `t_order` WHERE `orderid` = "zlkb2018122419534251652" AND `isdelete` = "0" ORDER BY `id` desc
+2018-12-24 19:59:04-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 19:59:04-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 19:59:04-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 19:59:48-SELECT * FROM `t_order` WHERE `orderid` = "zlkb2018122419534251652" AND `isdelete` = "0" ORDER BY `id` desc
+2018-12-24 20:22:30-SELECT * FROM `t_config`
+2018-12-24 20:22:30-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:22:30-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:22:30-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:22:39-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:22:39-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:22:39-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:22:53-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:22:53-SELECT * FROM `t_payment` WHERE `active` = "1"
+2018-12-24 20:22:56-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:22:56-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:22:56-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:23:23-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:23:23-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `ip` = "112.31.163.59" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1545580800 and addtime<=1545667199 LIMIT 1
+2018-12-24 20:23:23-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `email` = "1064244487@qq.com" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1545580800 and addtime<=1545667199 LIMIT 1
+2018-12-24 20:23:23-SELECT * FROM `t_user` WHERE `email` = "1064244487@qq.com" LIMIT 1
+2018-12-24 20:23:23-INSERT INTO t_order (`orderid`,`userid`,`email`,`qq`,`pid`,`productname`,`price`,`number`,`money`,`chapwd`,`ip`,`status`,`paymethod`,`addons`,`addtime`) VALUES ('zlkb2018122420232363726','0','1064244487@qq.com','1064244487','3','超会14个月＋红钻12个月-详情看说明','0.01','1','0.01','1064244487','112.31.163.59','0','codepayalipay','请输入QQ账号:1064244487;请输入QQ密码:1064244487;','1545654203')
+2018-12-24 20:23:23-SELECT * FROM `t_order` WHERE `id` = "28" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:23:26-SELECT * FROM `t_order` WHERE `id` = "28" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:23:28-SELECT * FROM `t_order` WHERE `id` = "28" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:23:30-SELECT * FROM `t_order` WHERE `id` = "28" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:23:32-SELECT * FROM `t_order` WHERE `id` = "28" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:23:34-SELECT * FROM `t_order` WHERE `id` = "28" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:23:36-SELECT * FROM `t_order` WHERE `id` = "28" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:23:36-SELECT * FROM `t_order` WHERE `orderid` = "zlkb2018122420232363726" LIMIT 1
+2018-12-24 20:23:36-UPDATE `t_order` SET `status` = '1',`paytime` = '1545654216',`tradeid` = '2018122422001450610501699618',`paymethod` = 'codepayalipay',`paymoney` = '0.01'  WHERE `orderid` = "zlkb2018122420232363726" AND `status` = "0"
+2018-12-24 20:23:36-SELECT auto,stockcontrol,qty FROM `t_products` WHERE `id` = "3" LIMIT 1
+2018-12-24 20:23:36-INSERT INTO t_email_queue(`email`,`subject`,`content`,`addtime`,`status`) VALUES ('1064244487@qq.com','商品购买成功','用户:1064244487@qq.com,购买的商品[超会14个月＋红钻12个月-详情看说明],属于手工发货类型，管理员即将联系您....请耐心等待!','1545654216','0'),('52249557@qq.com','用户购买商品','用户:1064244487@qq.com,购买的商品[超会14个月＋红钻12个月-详情看说明],属于手工发货类型，请尽快联系他!订单附加信息：请输入QQ账号:1064244487;请输入QQ密码:1064244487;','1545654216','0')
+2018-12-24 20:23:38-SELECT * FROM `t_order` WHERE `id` = "28" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:02-SELECT * FROM `t_order` WHERE `id` = "28" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:03-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:06-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:06-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `ip` = "112.31.163.59" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1545580800 and addtime<=1545667199 LIMIT 1
+2018-12-24 20:24:06-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `email` = "1064244487@qq.com" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1545580800 and addtime<=1545667199 LIMIT 1
+2018-12-24 20:24:06-SELECT * FROM `t_user` WHERE `email` = "1064244487@qq.com" LIMIT 1
+2018-12-24 20:24:06-INSERT INTO t_order (`orderid`,`userid`,`email`,`qq`,`pid`,`productname`,`price`,`number`,`money`,`chapwd`,`ip`,`status`,`paymethod`,`addons`,`addtime`) VALUES ('zlkb2018122420240655265','0','1064244487@qq.com','1064244487','3','超会14个月＋红钻12个月-详情看说明','0.01','1','0.01','1064244487','112.31.163.59','0','codepayqq','请输入QQ账号:1064244487;请输入QQ密码:1064244487;','1545654246')
+2018-12-24 20:24:06-SELECT * FROM `t_order` WHERE `id` = "29" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:08-SELECT * FROM `t_order` WHERE `id` = "29" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:10-SELECT * FROM `t_order` WHERE `id` = "29" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:12-SELECT * FROM `t_order` WHERE `id` = "29" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:14-SELECT * FROM `t_order` WHERE `id` = "29" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:15-SELECT * FROM `t_order` WHERE `id` = "29" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:17-SELECT * FROM `t_order` WHERE `id` = "29" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:19-SELECT * FROM `t_order` WHERE `id` = "29" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:21-SELECT * FROM `t_order` WHERE `id` = "29" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:23-SELECT * FROM `t_order` WHERE `id` = "29" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:25-SELECT * FROM `t_order` WHERE `id` = "29" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:27-SELECT * FROM `t_order` WHERE `id` = "29" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:29-SELECT * FROM `t_order` WHERE `id` = "29" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:31-SELECT * FROM `t_order` WHERE `id` = "29" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:33-SELECT * FROM `t_order` WHERE `id` = "29" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:35-SELECT * FROM `t_order` WHERE `id` = "29" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:35-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:37-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:37-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `ip` = "112.31.163.59" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1545580800 and addtime<=1545667199 LIMIT 1
+2018-12-24 20:24:37-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `email` = "1064244487@qq.com" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1545580800 and addtime<=1545667199 LIMIT 1
+2018-12-24 20:24:37-SELECT * FROM `t_user` WHERE `email` = "1064244487@qq.com" LIMIT 1
+2018-12-24 20:24:37-INSERT INTO t_order (`orderid`,`userid`,`email`,`qq`,`pid`,`productname`,`price`,`number`,`money`,`chapwd`,`ip`,`status`,`paymethod`,`addons`,`addtime`) VALUES ('zlkb2018122420243730183','0','1064244487@qq.com','1064244487','3','超会14个月＋红钻12个月-详情看说明','0.01','1','0.01','1064244487','112.31.163.59','0','codepayqq','请输入QQ账号:1064244487;请输入QQ密码:1064244487;','1545654277')
+2018-12-24 20:24:37-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:40-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:42-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:44-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:46-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:48-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:50-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:52-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:54-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:56-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:24:58-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:00-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:02-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:04-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:06-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:08-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:10-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:12-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:14-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:16-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:18-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:20-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:22-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:24-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:26-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:28-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:30-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:32-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:34-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:36-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:38-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:40-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:42-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:44-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:46-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:48-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:50-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:52-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:54-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:56-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:25:58-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:00-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:02-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:04-SELECT * FROM `t_order` WHERE `id` = "30" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:04-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:05-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:26:05-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:26:05-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:26:06-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:09-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:09-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `ip` = "112.31.163.59" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1545580800 and addtime<=1545667199 LIMIT 1
+2018-12-24 20:26:09-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `email` = "1064244487@qq.com" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1545580800 and addtime<=1545667199 LIMIT 1
+2018-12-24 20:26:09-SELECT * FROM `t_user` WHERE `email` = "1064244487@qq.com" LIMIT 1
+2018-12-24 20:26:09-INSERT INTO t_order (`orderid`,`userid`,`email`,`qq`,`pid`,`productname`,`price`,`number`,`money`,`chapwd`,`ip`,`status`,`paymethod`,`addons`,`addtime`) VALUES ('zlkb2018122420260964546','0','1064244487@qq.com','1064244487','3','超会14个月＋红钻12个月-详情看说明','0.01','1','0.01','1064244487','112.31.163.59','0','codepaywx','请输入QQ账号:1064244487;请输入QQ密码:1064244487;','1545654369')
+2018-12-24 20:26:09-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:11-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:13-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:15-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:17-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:19-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:21-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:23-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:25-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:27-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:29-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:31-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:33-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:35-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:37-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:39-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:41-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:43-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:45-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:47-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:49-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:51-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:53-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:55-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:57-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:59-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:26:59-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:26:59-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:26:59-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:27:01-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:03-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:05-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:27:05-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:27:05-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:27:05-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:07-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:09-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:11-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:13-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:14-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:27:14-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:27:14-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:27:15-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:17-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:18-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:19-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:21-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:23-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:25-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:27-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:29-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:31-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:33-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:34-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:34-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `ip` = "58.243.250.15" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1545580800 and addtime<=1545667199 LIMIT 1
+2018-12-24 20:27:34-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `email` = "1234545@qq.com" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1545580800 and addtime<=1545667199 LIMIT 1
+2018-12-24 20:27:34-SELECT * FROM `t_user` WHERE `email` = "1234545@qq.com" LIMIT 1
+2018-12-24 20:27:34-INSERT INTO t_order (`orderid`,`userid`,`email`,`qq`,`pid`,`productname`,`price`,`number`,`money`,`chapwd`,`ip`,`status`,`paymethod`,`addons`,`addtime`) VALUES ('zlkb2018122420273479415','0','1234545@qq.com','1234545','3','超会14个月＋红钻12个月-详情看说明','0.01','1','0.01','123','58.243.250.15','0','codepaywx','请输入QQ账号:123456;请输入QQ密码:123456;','1545654454')
+2018-12-24 20:27:34-SELECT * FROM `t_order` WHERE `id` = "32" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:35-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:37-SELECT * FROM `t_order` WHERE `id` = "32" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:37-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:39-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:41-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:43-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:45-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:27:45-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:27:45-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:27:45-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:47-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:49-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:50-SELECT * FROM `t_order` WHERE `orderid` = "zlkb2018122420273479415" LIMIT 1
+2018-12-24 20:27:50-UPDATE `t_order` SET `status` = '1',`paytime` = '1545654470',`tradeid` = '6612661005091222002',`paymethod` = 'codepaywx',`paymoney` = '0.02'  WHERE `orderid` = "zlkb2018122420273479415" AND `status` = "0"
+2018-12-24 20:27:50-SELECT auto,stockcontrol,qty FROM `t_products` WHERE `id` = "3" LIMIT 1
+2018-12-24 20:27:50-INSERT INTO t_email_queue(`email`,`subject`,`content`,`addtime`,`status`) VALUES ('1234545@qq.com','商品购买成功','用户:1234545@qq.com,购买的商品[超会14个月＋红钻12个月-详情看说明],属于手工发货类型，管理员即将联系您....请耐心等待!','1545654470','0'),('52249557@qq.com','用户购买商品','用户:1234545@qq.com,购买的商品[超会14个月＋红钻12个月-详情看说明],属于手工发货类型，请尽快联系他!订单附加信息：请输入QQ账号:123456;请输入QQ密码:123456;','1545654470','0')
+2018-12-24 20:27:50-SELECT * FROM `t_order` WHERE `id` = "32" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:51-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:53-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:55-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:57-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:58-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:27:59-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:01-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:03-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:03-SELECT `id`, `email`, `secret`, `password` FROM `t_admin_user` WHERE `email` = "52249557@qq.com" LIMIT 1
+2018-12-24 20:28:05-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:07-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:08-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:08-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `ip` = "58.243.250.15" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1545580800 and addtime<=1545667199 LIMIT 1
+2018-12-24 20:28:08-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `email` = "454646@qq.com" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1545580800 and addtime<=1545667199 LIMIT 1
+2018-12-24 20:28:08-SELECT * FROM `t_user` WHERE `email` = "454646@qq.com" LIMIT 1
+2018-12-24 20:28:08-INSERT INTO t_order (`orderid`,`userid`,`email`,`qq`,`pid`,`productname`,`price`,`number`,`money`,`chapwd`,`ip`,`status`,`paymethod`,`addons`,`addtime`) VALUES ('zlkb2018122420280876294','0','454646@qq.com','454646','3','超会14个月＋红钻12个月-详情看说明','0.01','1','0.01','454545','58.243.250.15','0','codepayqq','请输入QQ账号:12343;请输入QQ密码:454546;','1545654488')
+2018-12-24 20:28:08-SELECT * FROM `t_order` WHERE `id` = "33" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:08-SELECT `id`, `email`, `secret`, `password` FROM `t_admin_user` WHERE `email` = "52249557@qq.com" LIMIT 1
+2018-12-24 20:28:09-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:10-SELECT * FROM `t_order` WHERE `id` = "33" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:11-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:13-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:15-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:17-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:17-SELECT `id`, `email`, `secret`, `password` FROM `t_admin_user` WHERE `email` = "52249557@qq.com" LIMIT 1
+2018-12-24 20:28:17-INSERT INTO t_admin_login_log (`adminid`,`ip`,`addtime`) VALUES ('1','183.197.72.20','1545654497')
+2018-12-24 20:28:19-SELECT COUNT(*) AS `total` FROM `t_config` LIMIT 1
+2018-12-24 20:28:19-SELECT `id`, `name`, `updatetime`, `tag` FROM `t_config` ORDER BY `id` DESC LIMIT 0,10
+2018-12-24 20:28:19-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:21-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:23-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:23-SELECT COUNT(*) AS `total` FROM `t_config` LIMIT 1
+2018-12-24 20:28:23-SELECT `id`, `name`, `updatetime`, `tag` FROM `t_config` ORDER BY `id` DESC LIMIT 0,70
+2018-12-24 20:28:25-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:27-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:29-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:30-SELECT COUNT(*) AS `total` FROM `t_payment` LIMIT 1
+2018-12-24 20:28:30-SELECT `id`, `payment`, `alias`, `app_id`, `active` FROM `t_payment` ORDER BY `id` DESC LIMIT 0,10
+2018-12-24 20:28:31-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:33-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:33-SELECT * FROM `t_payment` WHERE `id` = "3" LIMIT 1
+2018-12-24 20:28:35-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:37-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:38-SELECT COUNT(*) AS `total` FROM `t_payment` LIMIT 1
+2018-12-24 20:28:38-SELECT `id`, `payment`, `alias`, `app_id`, `active` FROM `t_payment` ORDER BY `id` DESC LIMIT 0,10
+2018-12-24 20:28:39-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:41-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:43-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:45-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:47-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:49-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:51-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:52-SELECT * FROM `t_payment` WHERE `id` = "3" LIMIT 1
+2018-12-24 20:28:53-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:55-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:57-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:28:59-SELECT * FROM `t_order` WHERE `id` = "31" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:29:00-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:29:02-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:29:02-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `ip` = "112.31.163.59" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1545580800 and addtime<=1545667199 LIMIT 1
+2018-12-24 20:29:02-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `email` = "1064244487@qq.com" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1545580800 and addtime<=1545667199 LIMIT 1
+2018-12-24 20:29:02-SELECT * FROM `t_user` WHERE `email` = "1064244487@qq.com" LIMIT 1
+2018-12-24 20:29:02-INSERT INTO t_order (`orderid`,`userid`,`email`,`qq`,`pid`,`productname`,`price`,`number`,`money`,`chapwd`,`ip`,`status`,`paymethod`,`addons`,`addtime`) VALUES ('zlkb2018122420290280740','0','1064244487@qq.com','1064244487','3','超会14个月＋红钻12个月-详情看说明','0.01','1','0.01','1064244487','112.31.163.59','0','codepayqq','请输入QQ账号:1064244487;请输入QQ密码:1064244487;','1545654542')
+2018-12-24 20:29:02-SELECT * FROM `t_order` WHERE `id` = "34" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:29:05-SELECT * FROM `t_order` WHERE `id` = "34" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:29:05-SELECT COUNT(*) AS `total` FROM `t_payment` LIMIT 1
+2018-12-24 20:29:05-SELECT `id`, `payment`, `alias`, `app_id`, `active` FROM `t_payment` ORDER BY `id` DESC LIMIT 0,10
+2018-12-24 20:29:07-SELECT * FROM `t_order` WHERE `id` = "34" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:29:07-SELECT * FROM `t_payment` WHERE `id` = "4" LIMIT 1
+2018-12-24 20:29:10-SELECT COUNT(*) AS `total` FROM `t_payment` LIMIT 1
+2018-12-24 20:29:10-SELECT `id`, `payment`, `alias`, `app_id`, `active` FROM `t_payment` ORDER BY `id` DESC LIMIT 0,10
+2018-12-24 20:29:12-SELECT * FROM `t_payment` WHERE `id` = "3" LIMIT 1
+2018-12-24 20:29:14-UPDATE `t_payment` SET `payname` = '手机QQ',`app_id` = '15272',`active` = '1',`app_secret` = '1mnj0B5aZL5Cio8Xnd9f8kjnCpDika',`overtime` = '300'  WHERE `id` = "3" LIMIT 1
+2018-12-24 20:29:15-SELECT COUNT(*) AS `total` FROM `t_payment` LIMIT 1
+2018-12-24 20:29:15-SELECT `id`, `payment`, `alias`, `app_id`, `active` FROM `t_payment` ORDER BY `id` DESC LIMIT 0,10
+2018-12-24 20:29:17-SELECT * FROM `t_payment` WHERE `id` = "3" LIMIT 1
+2018-12-24 20:29:19-SELECT COUNT(*) AS `total` FROM `t_payment` LIMIT 1
+2018-12-24 20:29:19-SELECT `id`, `payment`, `alias`, `app_id`, `active` FROM `t_payment` ORDER BY `id` DESC LIMIT 0,10
+2018-12-24 20:29:21-SELECT * FROM `t_payment` WHERE `id` = "2" LIMIT 1
+2018-12-24 20:29:25-SELECT * FROM `t_payment` WHERE `id` = "3" LIMIT 1
+2018-12-24 20:29:25-SELECT * FROM `t_payment` WHERE `id` = "3" LIMIT 1
+2018-12-24 20:29:25-SELECT COUNT(*) AS `total` FROM `t_payment` LIMIT 1
+2018-12-24 20:29:25-SELECT `id`, `payment`, `alias`, `app_id`, `active` FROM `t_payment` ORDER BY `id` DESC LIMIT 0,10
+2018-12-24 20:29:26-SELECT * FROM `t_payment` WHERE `id` = "2" LIMIT 1
+2018-12-24 20:29:28-SELECT COUNT(*) AS `total` FROM `t_payment` LIMIT 1
+2018-12-24 20:29:28-SELECT `id`, `payment`, `alias`, `app_id`, `active` FROM `t_payment` ORDER BY `id` DESC LIMIT 0,10
+2018-12-24 20:29:30-SELECT * FROM `t_payment` WHERE `id` = "3" LIMIT 1
+2018-12-24 20:29:32-UPDATE `t_payment` SET `payname` = '手机QQ',`app_id` = '15272',`active` = '1',`app_secret` = '1mnj0B5aZL5Cio8Xnd9f8kjnCpDika',`overtime` = '300'  WHERE `id` = "3" LIMIT 1
+2018-12-24 20:30:01-SELECT * FROM `t_email_queue` WHERE `status` = "0" LIMIT 10
+2018-12-24 20:30:01-SELECT * FROM `t_email`
+2018-12-24 20:30:01-UPDATE `t_email_queue` SET `status` = '-1',`sendresult` = '失败220smtp.qq.comEsmtpQQMailServerhello:250-smtp.qq.com250-PIPELINING250-SIZE73400320250-AUTHLOGINPLAIN250-AUTH=LOGIN250-MAILCOMPRESS2508BITMIMElang:email_smtp_auth_pwlang:email_send_failure_smtpUser-Agent:CodeIgniterDate:Mon,24Dec201820:30:01+0800From:=?utf-8?Q?=E5=BE=92=E5=BE=92?=&lt;52249557@qq.com&gt;Return-Path:&lt;52249557@qq.com&gt;To:3123123@qq.comSubject:=?utf-8?Q?=E5=95=86=E5=93=81=E8=B4=AD=E4=B9=B0=E6=88=90=E5=8A=9F?=Reply-To:&lt;52249557@qq.com&gt;X-Sender:52249557@qq.comX-Mailer:CodeIgniterX-Priority:3(Normal)Message-ID:&lt;5c20d14977224@qq.com&gt;Mime-Version:1.0Content-Type:multipart/alternative;boundary=&quot;B_ALT_5c20d14977229&quot;Thisisamulti-partmessageinMIMEformat.Youremailapplicationmaynotsupportthisformat.--B_ALT_5c20d14977229Content-Type:text/plain;charset=utf-8Content-Transfer-Encoding:8bit用户:3123123@qq.com,购买的商品[超会14个月＋红钻12个月-详情看说明],属于手工发货类型，管理员即将联系您....请耐心等待!--B_ALT_5c20d14977229Content-Type:text/html;charset=utf-8Content-Transfer-Encoding:quoted-printable=E7=94=A8=E6=88=B7:3123123@qq.com,=E8=B4=AD=E4=B9=B0=E7=9A=84=E5=95=86==E5=93=81[=E8=B6=85=E4=BC=9A14=E4=B8=AA=E6=9C=88=EF=BC=8B=E7=BA=A2=E9=92==BB12=E4=B8=AA=E6=9C=88-=E8=AF=A6=E6=83=85=E7=9C=8B=E8=AF=B4=E6=98=8E],==E5=B1=9E=E4=BA=8E=E6=89=8B=E5=B7=A5=E5=8F=91=E8=B4=A7=E7=B1=BB=E5=9E=8B==EF=BC=8C=E7=AE=A1=E7=90=86=E5=91=98=E5=8D=B3=E5=B0=86=E8=81=94=E7=B3=BB==E6=82=A8....=E8=AF=B7=E8=80=90=E5=BF=83=E7=AD=89=E5=BE=85!--B_ALT_5c20d14977229--'  WHERE `id` = "8" LIMIT 1
+2018-12-24 20:30:01-UPDATE `t_email_queue` SET `status` = '-1',`sendresult` = '失败220smtp.qq.comEsmtpQQMailServerhello:250-smtp.qq.com250-PIPELINING250-SIZE73400320250-AUTHLOGINPLAIN250-AUTH=LOGIN250-MAILCOMPRESS2508BITMIMElang:email_smtp_auth_pwlang:email_send_failure_smtpUser-Agent:CodeIgniterDate:Mon,24Dec201820:30:02+0800From:=?utf-8?Q?=E5=BE=92=E5=BE=92?=&lt;52249557@qq.com&gt;Return-Path:&lt;52249557@qq.com&gt;To:52249557@qq.comSubject:=?utf-8?Q?=E7=94=A8=E6=88=B7=E8=B4=AD=E4=B9=B0=E5=95=86=E5=93=81?=Reply-To:&lt;52249557@qq.com&gt;X-Sender:52249557@qq.comX-Mailer:CodeIgniterX-Priority:3(Normal)Message-ID:&lt;5c20d14aa93ed@qq.com&gt;Mime-Version:1.0Content-Type:multipart/alternative;boundary=&quot;B_ALT_5c20d14aa93f3&quot;Thisisamulti-partmessageinMIMEformat.Youremailapplicationmaynotsupportthisformat.--B_ALT_5c20d14aa93f3Content-Type:text/plain;charset=utf-8Content-Transfer-Encoding:8bit用户:3123123@qq.com,购买的商品[超会14个月＋红钻12个月-详情看说明],属于手工发货类型，请尽快联系他!订单附加信息：请输入QQ账号:23123123;请输入QQ密码:312312312;--B_ALT_5c20d14aa93f3Content-Type:text/html;charset=utf-8Content-Transfer-Encoding:quoted-printable=E7=94=A8=E6=88=B7:3123123@qq.com,=E8=B4=AD=E4=B9=B0=E7=9A=84=E5=95=86==E5=93=81[=E8=B6=85=E4=BC=9A14=E4=B8=AA=E6=9C=88=EF=BC=8B=E7=BA=A2=E9=92==BB12=E4=B8=AA=E6=9C=88-=E8=AF=A6=E6=83=85=E7=9C=8B=E8=AF=B4=E6=98=8E],==E5=B1=9E=E4=BA=8E=E6=89=8B=E5=B7=A5=E5=8F=91=E8=B4=A7=E7=B1=BB=E5=9E=8B==EF=BC=8C=E8=AF=B7=E5=B0=BD=E5=BF=AB=E8=81=94=E7=B3=BB=E4=BB=96!=E8=AE==A2=E5=8D=95=E9=99=84=E5=8A=A0=E4=BF=A1=E6=81=AF=EF=BC=9A=E8=AF=B7=E8=BE==93=E5=85=A5QQ=E8=B4=A6=E5=8F=B7:23123123;=E8=AF=B7=E8=BE=93=E5=85=A5QQ==E5=AF=86=E7=A0=81:312312312;--B_ALT_5c20d14aa93f3--'  WHERE `id` = "9" LIMIT 1
+2018-12-24 20:30:01-UPDATE `t_email_queue` SET `status` = '-1',`sendresult` = '失败220smtp.qq.comEsmtpQQMailServerhello:250-smtp.qq.com250-PIPELINING250-SIZE73400320250-AUTHLOGINPLAIN250-AUTH=LOGIN250-MAILCOMPRESS2508BITMIMElang:email_smtp_auth_pwlang:email_send_failure_smtpUser-Agent:CodeIgniterDate:Mon,24Dec201820:30:03+0800From:=?utf-8?Q?=E5=BE=92=E5=BE=92?=&lt;52249557@qq.com&gt;Return-Path:&lt;52249557@qq.com&gt;To:1064244487@qq.comSubject:=?utf-8?Q?=E5=95=86=E5=93=81=E8=B4=AD=E4=B9=B0=E6=88=90=E5=8A=9F?=Reply-To:&lt;52249557@qq.com&gt;X-Sender:52249557@qq.comX-Mailer:CodeIgniterX-Priority:3(Normal)Message-ID:&lt;5c20d14bbf01b@qq.com&gt;Mime-Version:1.0Content-Type:multipart/alternative;boundary=&quot;B_ALT_5c20d14bbf020&quot;Thisisamulti-partmessageinMIMEformat.Youremailapplicationmaynotsupportthisformat.--B_ALT_5c20d14bbf020Content-Type:text/plain;charset=utf-8Content-Transfer-Encoding:8bit用户:1064244487@qq.com,购买的商品[超会14个月＋红钻12个月-详情看说明],属于手工发货类型，管理员即将联系您....请耐心等待!--B_ALT_5c20d14bbf020Content-Type:text/html;charset=utf-8Content-Transfer-Encoding:quoted-printable=E7=94=A8=E6=88=B7:1064244487@qq.com,=E8=B4=AD=E4=B9=B0=E7=9A=84=E5=95==86=E5=93=81[=E8=B6=85=E4=BC=9A14=E4=B8=AA=E6=9C=88=EF=BC=8B=E7=BA=A2==E9=92=BB12=E4=B8=AA=E6=9C=88-=E8=AF=A6=E6=83=85=E7=9C=8B=E8=AF=B4=E6=98==8E],=E5=B1=9E=E4=BA=8E=E6=89=8B=E5=B7=A5=E5=8F=91=E8=B4=A7=E7=B1=BB==E5=9E=8B=EF=BC=8C=E7=AE=A1=E7=90=86=E5=91=98=E5=8D=B3=E5=B0=86=E8=81=94==E7=B3=BB=E6=82=A8....=E8=AF=B7=E8=80=90=E5=BF=83=E7=AD=89=E5=BE=85!--B_ALT_5c20d14bbf020--'  WHERE `id` = "10" LIMIT 1
+2018-12-24 20:30:01-UPDATE `t_email_queue` SET `status` = '-1',`sendresult` = '失败220smtp.qq.comEsmtpQQMailServerhello:250-smtp.qq.com250-PIPELINING250-SIZE73400320250-AUTHLOGINPLAIN250-AUTH=LOGIN250-MAILCOMPRESS2508BITMIMElang:email_smtp_auth_pwlang:email_send_failure_smtpUser-Agent:CodeIgniterDate:Mon,24Dec201820:30:04+0800From:=?utf-8?Q?=E5=BE=92=E5=BE=92?=&lt;52249557@qq.com&gt;Return-Path:&lt;52249557@qq.com&gt;To:52249557@qq.comSubject:=?utf-8?Q?=E7=94=A8=E6=88=B7=E8=B4=AD=E4=B9=B0=E5=95=86=E5=93=81?=Reply-To:&lt;52249557@qq.com&gt;X-Sender:52249557@qq.comX-Mailer:CodeIgniterX-Priority:3(Normal)Message-ID:&lt;5c20d14cd77a4@qq.com&gt;Mime-Version:1.0Content-Type:multipart/alternative;boundary=&quot;B_ALT_5c20d14cd77a9&quot;Thisisamulti-partmessageinMIMEformat.Youremailapplicationmaynotsupportthisformat.--B_ALT_5c20d14cd77a9Content-Type:text/plain;charset=utf-8Content-Transfer-Encoding:8bit用户:1064244487@qq.com,购买的商品[超会14个月＋红钻12个月-详情看说明],属于手工发货类型，请尽快联系他!订单附加信息：请输入QQ账号:1064244487;请输入QQ密码:1064244487;--B_ALT_5c20d14cd77a9Content-Type:text/html;charset=utf-8Content-Transfer-Encoding:quoted-printable=E7=94=A8=E6=88=B7:1064244487@qq.com,=E8=B4=AD=E4=B9=B0=E7=9A=84=E5=95==86=E5=93=81[=E8=B6=85=E4=BC=9A14=E4=B8=AA=E6=9C=88=EF=BC=8B=E7=BA=A2==E9=92=BB12=E4=B8=AA=E6=9C=88-=E8=AF=A6=E6=83=85=E7=9C=8B=E8=AF=B4=E6=98==8E],=E5=B1=9E=E4=BA=8E=E6=89=8B=E5=B7=A5=E5=8F=91=E8=B4=A7=E7=B1=BB==E5=9E=8B=EF=BC=8C=E8=AF=B7=E5=B0=BD=E5=BF=AB=E8=81=94=E7=B3=BB=E4=BB=96!==E8=AE=A2=E5=8D=95=E9=99=84=E5=8A=A0=E4=BF=A1=E6=81=AF=EF=BC=9A=E8=AF=B7==E8=BE=93=E5=85=A5QQ=E8=B4=A6=E5=8F=B7:1064244487;=E8=AF=B7=E8=BE=93==E5=85=A5QQ=E5=AF=86=E7=A0=81:1064244487;--B_ALT_5c20d14cd77a9--'  WHERE `id` = "11" LIMIT 1
+2018-12-24 20:30:01-UPDATE `t_email_queue` SET `status` = '-1',`sendresult` = '失败220smtp.qq.comEsmtpQQMailServerhello:250-smtp.qq.com250-PIPELINING250-SIZE73400320250-AUTHLOGINPLAIN250-AUTH=LOGIN250-MAILCOMPRESS2508BITMIMElang:email_smtp_auth_pwlang:email_send_failure_smtpUser-Agent:CodeIgniterDate:Mon,24Dec201820:30:05+0800From:=?utf-8?Q?=E5=BE=92=E5=BE=92?=&lt;52249557@qq.com&gt;Return-Path:&lt;52249557@qq.com&gt;To:1234545@qq.comSubject:=?utf-8?Q?=E5=95=86=E5=93=81=E8=B4=AD=E4=B9=B0=E6=88=90=E5=8A=9F?=Reply-To:&lt;52249557@qq.com&gt;X-Sender:52249557@qq.comX-Mailer:CodeIgniterX-Priority:3(Normal)Message-ID:&lt;5c20d14def258@qq.com&gt;Mime-Version:1.0Content-Type:multipart/alternative;boundary=&quot;B_ALT_5c20d14def25d&quot;Thisisamulti-partmessageinMIMEformat.Youremailapplicationmaynotsupportthisformat.--B_ALT_5c20d14def25dContent-Type:text/plain;charset=utf-8Content-Transfer-Encoding:8bit用户:1234545@qq.com,购买的商品[超会14个月＋红钻12个月-详情看说明],属于手工发货类型，管理员即将联系您....请耐心等待!--B_ALT_5c20d14def25dContent-Type:text/html;charset=utf-8Content-Transfer-Encoding:quoted-printable=E7=94=A8=E6=88=B7:1234545@qq.com,=E8=B4=AD=E4=B9=B0=E7=9A=84=E5=95=86==E5=93=81[=E8=B6=85=E4=BC=9A14=E4=B8=AA=E6=9C=88=EF=BC=8B=E7=BA=A2=E9=92==BB12=E4=B8=AA=E6=9C=88-=E8=AF=A6=E6=83=85=E7=9C=8B=E8=AF=B4=E6=98=8E],==E5=B1=9E=E4=BA=8E=E6=89=8B=E5=B7=A5=E5=8F=91=E8=B4=A7=E7=B1=BB=E5=9E=8B==EF=BC=8C=E7=AE=A1=E7=90=86=E5=91=98=E5=8D=B3=E5=B0=86=E8=81=94=E7=B3=BB==E6=82=A8....=E8=AF=B7=E8=80=90=E5=BF=83=E7=AD=89=E5=BE=85!--B_ALT_5c20d14def25d--'  WHERE `id` = "12" LIMIT 1
+2018-12-24 20:30:01-UPDATE `t_email_queue` SET `status` = '-1',`sendresult` = '失败220smtp.qq.comEsmtpQQMailServerhello:250-smtp.qq.com250-PIPELINING250-SIZE73400320250-AUTHLOGINPLAIN250-AUTH=LOGIN250-MAILCOMPRESS2508BITMIMElang:email_smtp_auth_pwlang:email_send_failure_smtpUser-Agent:CodeIgniterDate:Mon,24Dec201820:30:07+0800From:=?utf-8?Q?=E5=BE=92=E5=BE=92?=&lt;52249557@qq.com&gt;Return-Path:&lt;52249557@qq.com&gt;To:52249557@qq.comSubject:=?utf-8?Q?=E7=94=A8=E6=88=B7=E8=B4=AD=E4=B9=B0=E5=95=86=E5=93=81?=Reply-To:&lt;52249557@qq.com&gt;X-Sender:52249557@qq.comX-Mailer:CodeIgniterX-Priority:3(Normal)Message-ID:&lt;5c20d14f1e644@qq.com&gt;Mime-Version:1.0Content-Type:multipart/alternative;boundary=&quot;B_ALT_5c20d14f1e649&quot;Thisisamulti-partmessageinMIMEformat.Youremailapplicationmaynotsupportthisformat.--B_ALT_5c20d14f1e649Content-Type:text/plain;charset=utf-8Content-Transfer-Encoding:8bit用户:1234545@qq.com,购买的商品[超会14个月＋红钻12个月-详情看说明],属于手工发货类型，请尽快联系他!订单附加信息：请输入QQ账号:123456;请输入QQ密码:123456;--B_ALT_5c20d14f1e649Content-Type:text/html;charset=utf-8Content-Transfer-Encoding:quoted-printable=E7=94=A8=E6=88=B7:1234545@qq.com,=E8=B4=AD=E4=B9=B0=E7=9A=84=E5=95=86==E5=93=81[=E8=B6=85=E4=BC=9A14=E4=B8=AA=E6=9C=88=EF=BC=8B=E7=BA=A2=E9=92==BB12=E4=B8=AA=E6=9C=88-=E8=AF=A6=E6=83=85=E7=9C=8B=E8=AF=B4=E6=98=8E],==E5=B1=9E=E4=BA=8E=E6=89=8B=E5=B7=A5=E5=8F=91=E8=B4=A7=E7=B1=BB=E5=9E=8B==EF=BC=8C=E8=AF=B7=E5=B0=BD=E5=BF=AB=E8=81=94=E7=B3=BB=E4=BB=96!=E8=AE==A2=E5=8D=95=E9=99=84=E5=8A=A0=E4=BF=A1=E6=81=AF=EF=BC=9A=E8=AF=B7=E8=BE==93=E5=85=A5QQ=E8=B4=A6=E5=8F=B7:123456;=E8=AF=B7=E8=BE=93=E5=85=A5QQ==E5=AF=86=E7=A0=81:123456;--B_ALT_5c20d14f1e649--'  WHERE `id` = "13" LIMIT 1
+2018-12-24 20:31:11-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:31:11-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:31:11-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:31:14-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:31:19-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:31:19-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:31:19-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:31:20-SELECT * FROM `t_products` WHERE `id` = "1" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:31:24-SELECT * FROM `t_email` LIMIT 1
+2018-12-24 20:31:25-SELECT COUNT(*) AS `total` FROM `t_products` WHERE `isdelete` = "0" LIMIT 1
+2018-12-24 20:31:25-SELECT p1.id,p1.name,p1.price,p1.qty,p1.auto,p1.active,p1.stockcontrol,p1.sort_num,p2.name as typename FROM `t_products` as p1 left join `t_products_type` as p2 on p1.typeid = p2.id WHERE p1.isdelete=0 Order by p1.id desc LIMIT 0,10
+2018-12-24 20:31:26-SELECT * FROM `t_products` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:31:26-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `isdelete` = "0" AND 1 LIMIT 1
+2018-12-24 20:31:26-SELECT `id`, `orderid`, `email`, `productname`, `addtime`, `status`, `paymoney`, `number` FROM `t_order` WHERE `isdelete` = "0" AND 1 ORDER BY `id` DESC LIMIT 0,10
+2018-12-24 20:31:28-SELECT * FROM `t_order` WHERE `id` = "33" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:31:28-SELECT * FROM `t_order` WHERE `id` = "33" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:31:31-SELECT * FROM `t_order` WHERE `id` = "33" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:31:31-SELECT * FROM `t_order` WHERE `id` = "33" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:31:34-SELECT * FROM `t_order` WHERE `id` = "33" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:31:36-SELECT * FROM `t_order` WHERE `id` = "33" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:31:38-SELECT * FROM `t_order` WHERE `id` = "33" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:31:40-SELECT * FROM `t_order` WHERE `id` = "33" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:31:40-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:31:42-SELECT * FROM `t_order` WHERE `id` = "33" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:31:43-SELECT COUNT(*) AS `total` FROM `t_email_queue` WHERE `isdelete` = "0" LIMIT 1
+2018-12-24 20:31:43-SELECT * FROM `t_email_queue` WHERE `isdelete` = "0" ORDER BY `id` DESC LIMIT 0,10
+2018-12-24 20:31:44-SELECT * FROM `t_order` WHERE `id` = "33" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:31:46-SELECT * FROM `t_order` WHERE `id` = "33" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:31:48-SELECT * FROM `t_order` WHERE `id` = "33" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:31:48-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:31:48-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `ip` = "58.243.250.15" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1545580800 and addtime<=1545667199 LIMIT 1
+2018-12-24 20:31:48-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `email` = "1616@qq.com" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1545580800 and addtime<=1545667199 LIMIT 1
+2018-12-24 20:31:48-SELECT * FROM `t_user` WHERE `email` = "1616@qq.com" LIMIT 1
+2018-12-24 20:31:48-INSERT INTO t_order (`orderid`,`userid`,`email`,`qq`,`pid`,`productname`,`price`,`number`,`money`,`chapwd`,`ip`,`status`,`paymethod`,`addons`,`addtime`) VALUES ('zlkb2018122420314820565','0','1616@qq.com','1616','3','超会14个月＋红钻12个月-详情看说明','0.01','1','0.01','46466','58.243.250.15','0','codepayqq','请输入QQ账号:12346;请输入QQ密码:246464;','1545654708')
+2018-12-24 20:31:48-SELECT * FROM `t_order` WHERE `id` = "35" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:31:51-SELECT * FROM `t_order` WHERE `id` = "35" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:32:46-SELECT * FROM `t_config`
+2018-12-24 20:32:46-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:32:46-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:32:46-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:33:23-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:33:23-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:33:23-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:33:28-SELECT * FROM `t_products` WHERE `id` = "1" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:33:28-SELECT * FROM `t_payment` WHERE `active` = "1"
+2018-12-24 20:33:30-SELECT * FROM `t_products` WHERE `id` = "1" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:33:35-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:33:35-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:33:35-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:33:41-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:33:41-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:33:41-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:33:44-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:33:44-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:33:44-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:34:05-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:34:05-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:34:05-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:34:21-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:34:28-SELECT * FROM `t_products` WHERE `id` = "1" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:34:30-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:34:30-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `ip` = "111.145.154.153" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1545580800 and addtime<=1545667199 LIMIT 1
+2018-12-24 20:34:30-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `email` = "5345@qq.com" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1545580800 and addtime<=1545667199 LIMIT 1
+2018-12-24 20:34:30-SELECT * FROM `t_user` WHERE `email` = "5345@qq.com" LIMIT 1
+2018-12-24 20:34:30-INSERT INTO t_order (`orderid`,`userid`,`email`,`qq`,`pid`,`productname`,`price`,`number`,`money`,`chapwd`,`ip`,`status`,`paymethod`,`addons`,`addtime`) VALUES ('zlkb2018122420343045198','0','5345@qq.com','5345','3','超会14个月＋红钻12个月-详情看说明','0.01','1','0.01','34534','111.145.154.153','0','codepayqq','请输入QQ账号:5345345;请输入QQ密码:534534;','1545654870')
+2018-12-24 20:34:30-SELECT * FROM `t_order` WHERE `id` = "36" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:35:12-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:35:14-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:35:14-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:35:14-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:35:16-SELECT * FROM `t_products` WHERE `id` = "1" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:35:20-SELECT * FROM `t_products` WHERE `id` = "1" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:35:20-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `ip` = "111.145.154.153" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1545580800 and addtime<=1545667199 LIMIT 1
+2018-12-24 20:35:20-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `email` = "31231@qq.com" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1545580800 and addtime<=1545667199 LIMIT 1
+2018-12-24 20:35:20-SELECT * FROM `t_user` WHERE `email` = "31231@qq.com" LIMIT 1
+2018-12-24 20:35:20-INSERT INTO t_order (`orderid`,`userid`,`email`,`qq`,`pid`,`productname`,`price`,`number`,`money`,`chapwd`,`ip`,`status`,`paymethod`,`addons`,`addtime`) VALUES ('zlkb2018122420352041765','0','31231@qq.com','31231','1','搜狗阅读','1.00','1','1','231231','111.145.154.153','0','codepayqq','','1545654920')
+2018-12-24 20:35:20-SELECT * FROM `t_order` WHERE `id` = "37" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:36:29-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:36:29-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:36:29-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:36:43-SELECT * FROM `t_products` WHERE `id` = "2" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:36:47-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:36:47-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:36:47-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:36:54-SELECT * FROM `t_products` WHERE `id` = "2" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:37:43-SELECT * FROM `t_products` WHERE `id` = "2" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:37:43-SELECT * FROM `t_products` WHERE `id` = "2" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:39:30-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:39:30-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:39:30-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:39:51-SELECT * FROM `t_products` WHERE `id` = "2" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:39:51-SELECT * FROM `t_products` WHERE `id` = "2" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:47:25-SELECT * FROM `t_config`
+2018-12-24 20:47:25-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:47:25-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:47:25-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:47:29-SELECT * FROM `t_products` WHERE `id` = "1" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:47:29-SELECT * FROM `t_payment` WHERE `active` = "1"
+2018-12-24 20:48:59-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:48:59-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:48:59-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:49:36-SELECT * FROM `t_products` WHERE `id` = "1" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:52:30-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:52:40-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 20:53:02-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:53:02-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:53:02-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:53:12-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:53:12-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:53:12-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:56:33-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:56:33-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:56:33-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:57:17-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:57:17-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:57:17-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:59:42-SELECT * FROM `t_config`
+2018-12-24 20:59:42-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:59:42-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:59:42-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:59:55-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:59:55-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 20:59:55-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:00:00-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:00:00-SELECT * FROM `t_payment` WHERE `active` = "1"
+2018-12-24 21:00:01-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:00:01-SELECT * FROM `t_products` WHERE `id` = "3" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:00:24-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:00:24-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:00:24-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:05:10-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:05:10-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:05:10-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:05:30-SELECT * FROM `t_products` WHERE `id` = "2" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:05:39-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:05:39-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:05:39-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:05:58-SELECT * FROM `t_products` WHERE `id` = "2" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:06:16-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:06:16-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:06:16-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:06:18-SELECT * FROM `t_products` WHERE `id` = "2" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:07:26-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:07:26-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:07:26-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:09:04-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:09:04-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:09:04-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:10:22-SELECT * FROM `t_config`
+2018-12-24 21:10:22-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:10:22-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:10:22-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:10:38-SELECT * FROM `t_products` WHERE `id` = "1" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:10:38-SELECT * FROM `t_payment` WHERE `active` = "1"
+2018-12-24 21:10:59-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:10:59-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:10:59-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:12:44-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:12:44-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:12:44-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:30:01-SELECT * FROM `t_email_queue` WHERE `status` = "0" LIMIT 10
+2018-12-24 21:39:53-SELECT * FROM `t_config`
+2018-12-24 21:39:53-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:39:53-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:39:53-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:40:04-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:40:04-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:40:04-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:41:00-SELECT `id` FROM `t_user` WHERE `email` = "51887793@qq.com" LIMIT 1
+2018-12-24 21:41:00-INSERT INTO t_user (`email`,`nickname`,`createtime`,`password`,`qq`,`tag`,`groupid`,`integral`,`money`) VALUES ('51887793@qq.com','小王','1545658860','76be591da13c8726248cb4bbafd7917c','','','1','0','0')
+2018-12-24 21:41:00-SELECT * FROM `t_user_group`
+2018-12-24 21:41:00-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:41:00-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:41:00-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:41:59-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:41:59-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:41:59-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:42:09-SELECT * FROM `t_products` WHERE `id` = "2" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:42:09-SELECT * FROM `t_payment` WHERE `active` = "1"
+2018-12-24 21:43:22-SELECT * FROM `t_products` WHERE `id` = "2" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:43:22-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `ip` = "118.114.129.192" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1545580800 and addtime<=1545667199 LIMIT 1
+2018-12-24 21:43:22-SELECT COUNT(*) AS `total` FROM `t_order` WHERE `email` = "51887793@qq.com" AND `status` = "0" AND `isdelete` = "0" AND addtime>=1545580800 and addtime<=1545667199 LIMIT 1
+2018-12-24 21:43:22-INSERT INTO t_order (`orderid`,`userid`,`email`,`qq`,`pid`,`productname`,`price`,`number`,`money`,`chapwd`,`ip`,`status`,`paymethod`,`addons`,`addtime`) VALUES ('zlkb2018122421432298825','5','51887793@qq.com','','2','豪华黄钻20个月-详情看说明','110.00','1','110','wang','118.114.129.192','0','codepayalipay','请输入QQ账号:51887793;请输入QQ密码:55541255;','1545659002')
+2018-12-24 21:43:22-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:43:25-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:43:27-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:43:29-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:43:31-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:43:33-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:43:35-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:43:37-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:43:39-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:43:41-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:43:43-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:43:45-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:43:47-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:43:49-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:43:51-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:43:53-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:43:55-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:43:57-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:43:59-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:44:01-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:44:03-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:44:05-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:44:07-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:44:09-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:44:11-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:44:13-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:44:15-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:44:17-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:44:19-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:44:21-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:44:23-SELECT * FROM `t_order` WHERE `id` = "38" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:44:24-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:44:24-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:44:24-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:44:49-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:44:49-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:44:49-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:45:17-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:45:17-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:45:17-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:45:30-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:45:30-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:45:30-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:45:53-SELECT * FROM `t_products` WHERE `id` = "2" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:45:54-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:45:54-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:45:54-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:46:53-SELECT * FROM `t_products` WHERE `id` = "2" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 21:50:58-SELECT * FROM `t_config`
+2018-12-24 21:50:58-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:50:58-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:50:58-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:51:07-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:51:07-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:51:07-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:51:14-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:51:14-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:51:14-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:51:24-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:51:24-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 21:51:24-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 22:01:29-SELECT * FROM `t_config`
+2018-12-24 22:01:29-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 22:01:29-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 22:01:29-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 22:01:43-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 22:01:43-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 22:01:43-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 22:01:53-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 22:01:53-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 22:01:53-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 22:07:23-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 22:07:23-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 22:07:23-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 22:23:23-SELECT * FROM `t_config`
+2018-12-24 22:23:23-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 22:23:23-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 22:23:23-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 22:26:53-SELECT * FROM `t_order` WHERE `id` = "35" AND `isdelete` = "0" LIMIT 1
+2018-12-24 22:26:53-SELECT * FROM `t_payment` WHERE `active` = "1"
+2018-12-24 22:26:57-SELECT * FROM `t_order` WHERE `id` = "35" AND `isdelete` = "0" LIMIT 1
+2018-12-24 22:27:01-SELECT * FROM `t_order` WHERE `id` = "35" AND `isdelete` = "0" LIMIT 1
+2018-12-24 22:27:03-SELECT * FROM `t_order` WHERE `id` = "35" AND `isdelete` = "0" LIMIT 1
+2018-12-24 22:27:05-SELECT * FROM `t_order` WHERE `id` = "35" AND `isdelete` = "0" LIMIT 1
+2018-12-24 22:27:07-SELECT * FROM `t_order` WHERE `id` = "35" AND `isdelete` = "0" LIMIT 1
+2018-12-24 22:27:09-SELECT * FROM `t_order` WHERE `id` = "35" AND `isdelete` = "0" LIMIT 1
+2018-12-24 22:27:11-SELECT * FROM `t_order` WHERE `id` = "35" AND `isdelete` = "0" LIMIT 1
+2018-12-24 22:27:13-SELECT * FROM `t_order` WHERE `id` = "35" AND `isdelete` = "0" LIMIT 1
+2018-12-24 22:27:15-SELECT * FROM `t_order` WHERE `id` = "35" AND `isdelete` = "0" LIMIT 1
+2018-12-24 22:30:01-SELECT * FROM `t_email_queue` WHERE `status` = "0" LIMIT 10
+2018-12-24 22:45:19-SELECT * FROM `t_config`
+2018-12-24 22:45:19-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 22:45:19-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 22:45:19-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:02:32-SELECT * FROM `t_config`
+2018-12-24 23:02:32-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:02:32-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:02:32-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:07:05-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:07:05-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:07:05-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:07:05-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:07:05-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:07:05-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:13:48-SELECT * FROM `t_config`
+2018-12-24 23:25:39-SELECT * FROM `t_config`
+2018-12-24 23:25:39-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:25:39-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:25:39-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:25:40-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:25:40-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:25:40-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:27:22-SELECT * FROM `t_products` WHERE `id` = "1" AND `active` = "1" AND `isdelete` = "0" LIMIT 1
+2018-12-24 23:27:22-SELECT * FROM `t_payment` WHERE `active` = "1"
+2018-12-24 23:30:01-SELECT * FROM `t_email_queue` WHERE `status` = "0" LIMIT 10
+2018-12-24 23:37:43-SELECT * FROM `t_config`
+2018-12-24 23:37:43-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:37:43-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:37:43-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:37:43-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:37:43-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:37:43-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:37:59-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:37:59-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:37:59-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:51:48-SELECT * FROM `t_config`
+2018-12-24 23:51:48-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:51:48-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:51:48-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:51:49-SELECT * FROM `t_products_type` WHERE `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:51:49-SELECT * FROM `t_products` WHERE `typeid` = "1" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC
+2018-12-24 23:51:49-SELECT * FROM `t_products` WHERE `typeid` = "2" AND `active` = "1" AND `isdelete` = "0" ORDER BY `sort_num` DESC

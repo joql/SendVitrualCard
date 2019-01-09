@@ -1,0 +1,209 @@
+<?php include SMALLS_COMMON_PATH.'/header.html';?>
+<div class="pcoded-main-container">
+	<div class="pcoded-wrapper d-block d-md-none">
+		<div class="pcoded-content">
+			<div class="pcoded-inner-content">
+				<div class="main-body">
+					<div class="page-body">
+						<div class="page-body">
+							<div class="card" style="margin-bottom: 10px;">
+								<div style="margin: 5px 8px 5px 8px;color: #666666;margin-bottom: -10px;">
+									<?php echo $config['gonggao']; ?>
+								</div>
+							</div>
+						</div>
+						<div class="input-group input-group-primary" style="margin-bottom: 10px;">
+							<button class="btn btn-primary btn-mini btn-block" onclick="window.location.href='/product/query'" >
+								<span class=""><i class="fa fa-search"></i>订单查询</span>
+							</button>
+						</div>
+						<div class="page-body">
+							<?php if(!empty($products_type)):?>
+							<?php foreach($products_type AS $type):?>
+							<div class="card" style="margin-bottom: 10px;" >
+								<div class="card-block">
+									<div class="form-horizontal" >
+										<div class="row">
+											<h4 class="sub-title" style="margin-bottom: 0px; margin-top: -6px; width: 100%;"><i class="fa fa-shopping-cart"></i> <?php echo $type['name'];?></h4>
+											<?php if(!empty($type['products'])):?>
+											<?php foreach($type['products'] AS $goods):?>
+											<div class="baoliao_content" onclick="window.location.href='/product/<?php echo $goods['id'];?>.html'">
+												<div class="bl_left">
+													<div class="bl_title" style="margin-top: 1px;color: #666666;" ><strong><?php echo $goods['name'];?></strong></div>
+													<?php if($goods['auto']==1):?>
+													<span class="f-left" style="margin-top: 1px;color: #666666;">自动发货</span>
+													<?php else:?>
+													<span class="f-left" style="margin-top: 1px;color: #666666;">手工发货</span>
+													<?php endif;?>
+													<?php if($goods['stockcontrol']==0):?>
+													<span class="f-left" style="margin-top: 1px;color: #666666;">&nbsp|&nbsp库存&nbsp不限量</span>
+													<?php else:?>
+													<span class="f-left" style="margin-top: 1px;color: #666666;">&nbsp|&nbsp库存&nbsp<?php echo $goods['qty'];?></span>
+													<?php endif;?>
+													<span class="text-primary product-price f-right" style="margin-top: 1px;">
+                                                                <strong>
+                                                                    <i class="fa fa-cny"></i>
+																	<?php echo $goods['price'];?>
+                                                                </strong>
+                                                            </span>
+												</div>
+												<div class="bl_img" style="position:relative">
+													<button class="btn btn-primary" style="font-size: 10px;padding-left: 5px; padding-right: 5px;">立即购买</button>
+												</div>
+
+											</div>
+											<?php endforeach;?>
+											<?php endif;?>
+										</div>
+									</div>
+								</div>
+							</div>
+							<?php endforeach;?>
+							<?php endif;?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="pcoded-wrapper d-none d-sm-block">
+		<div class="pcoded-content">
+			<div class="pcoded-inner-content">
+				<div class="main-body">
+					<div class="page-wrapper">
+						<div class="page-body">
+							<div class="row">
+								<div class="col-md-8">
+									<?php if(!empty($products_type)):?>
+									<?php foreach($products_type AS $type):?>
+									<div class="card" style="margin-bottom: 10px;" >
+										<div class="card-block" style="margin-bottom: -45px;">
+											<div class="form-horizontal" >
+												<div class="row">
+													<h4 class="sub-title" style="margin-bottom: 0px; margin-top: -6px; width: 100%;"><i class="fa fa-shopping-cart"></i> <?php echo $type['name'];?></h4>
+													<div class="card-block p-0 col-md-12">
+														<div class="table-responsive">
+															<table class="table table-hover ">
+																<thead>
+																<tr>
+																	<th class="text-center">商品名称</th>
+																	<th class="d-none d-sm-block  text-center">商品类型</th>
+																	<th class="text-center">商品库存</th>
+																	<th class="text-center">商品价格</th>
+																	<th class="text-center">操作</th>
+																</tr>
+																</thead>
+																<tbody >
+																<?php if(!empty($type['products'])):?>
+																<?php foreach($type['products'] AS $goods):?>
+																<tr onclick="window.location.href='/product/<?php echo $goods['id'];?>.html'">
+																	<td class="text-center" ><span style="margin-top: 1px;color: #666666;"><strong><?php echo $goods['name'];?></strong></span></td>
+																	<?php if($goods['auto']==1):?>
+																	<td class="text-center" width="100px"><span style="margin-top: 1px;color: #666666;">自动发货</span></td>
+																	<?php else:?>
+																	<td class="text-center" width="100px"><span style="margin-top: 1px;color: #666666;">手工发货</span></td>
+																	<?php endif;?>
+																	<?php if($goods['stockcontrol']==0):?>
+																	<td class="text-center" width="100px"><span style="margin-top: 1px;color: #666666;">不限量</span></td>
+																	<?php else:?>
+																	<td class="text-center" width="100px"><span style="margin-top: 1px;color: #666666;"><?php echo $goods['qty'];?></span></td>
+																	<?php endif;?>
+																	<td class="text-center" width="100px">
+                                                                                <span class="text-primary product-price"><i class="fa fa-cny"></i>
+																					<?php echo $goods['price'];?>
+                                                                                </span></td>
+																	<td class="text-center" width="80px">
+																		<button class="btn btn-mini btn-primary">立即购买</button>
+																	</td>
+																</tr>
+																<?php endforeach;?>
+																<?php endif;?>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<?php endforeach;?>
+									<?php endif;?>
+								</div>
+								<div class="col-md-4">
+									<div class="card" style="margin-bottom: 10px;" >
+										<div class="card-block" style="margin-bottom: -45px;">
+											<h4 class="sub-title"  style="margin-bottom: 5px;">网站公告</h4>
+											<div class="row">
+												<div class="col-sm-12">
+													<div class="input-group input-primary">
+														<div style="color: #666666;">
+															<?php echo $config['gonggao']; ?>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<?php if(isset($config['ad_3']) AND $config['ad_3']):?>
+									<div class="default-grid-item">
+										<div class="card gallery-desc" style="margin-bottom: 10px;">
+											<div class="masonry-media">
+												<a class="media-middle" href="#!">
+													<img class="img-fluid" src="<?php echo $config['ad_3'] ?>">
+												</a>
+											</div>
+										</div>
+									</div>
+									<?php endif;?>
+									<?php if(isset($config['ad_2']) AND $config['ad_2']):?>
+									<div class="default-grid-item">
+										<div class="card gallery-desc" style="margin-bottom: 10px;">
+											<div class="masonry-media">
+												<a class="media-middle" href="#!">
+													<img class="img-fluid" src="<?php echo $config['ad_2'] ?>">
+												</a>
+											</div>
+										</div>
+									</div>
+									<?php endif;?>
+									<?php if(isset($config['ad_1']) AND $config['ad_1']):?>
+									<div class="default-grid-item">
+										<div class="card gallery-desc" style="margin-bottom: 10px;">
+											<div class="masonry-media">
+												<a class="media-middle" href="#!">
+													<img class="img-fluid" src="<?php echo $config['ad_1'] ?>">
+												</a>
+											</div>
+										</div>
+									</div>
+									<?php endif;?>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="url-Modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div id="qrcode">
+                </div>
+                <br><span class="" id="basic-addon1"><strong>全自动发卡-长期合作点加入Q群</strong></span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-mini btn-block" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+	<?php include SMALLS_COMMON_PATH.'/content.html';?>
+</div>
+</div>
+<!--引入公共底文件-->
+<?php include SMALLS_COMMON_PATH.'/footer.html';?>
+<script>
+    $('#hi-Modal').modal({backdrop: 'static', keyboard: false})
+</script>

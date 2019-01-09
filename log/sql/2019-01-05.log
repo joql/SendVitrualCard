@@ -1,0 +1,326 @@
+
+111.145.155.207 | 2019-01-05 20:32:23
+SQL: SELECT COUNT(*) AS `total` FROM `t_article` WHERE `isdelete` = "0" AND `status` = "1" LIMIT 1
+Error: Table 'faka.t_article' doesn't exist
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Select_______________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________SelectOne____________/www/wwwroot/faka.su/application/library/Core/Model.php
+30_________Total________________/www/wwwroot/faka.su/application/modules/Help/controllers/Index.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+123.126.52.36 | 2019-01-05 20:32:24
+SQL: SELECT COUNT(*) AS `total` FROM `t_article` WHERE `isdelete` = "0" AND `status` = "1" LIMIT 1
+Error: Table 'faka.t_article' doesn't exist
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Select_______________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________SelectOne____________/www/wwwroot/faka.su/application/library/Core/Model.php
+30_________Total________________/www/wwwroot/faka.su/application/modules/Help/controllers/Index.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+58.247.206.139 | 2019-01-05 20:32:37
+SQL: SELECT COUNT(*) AS `total` FROM `t_article` WHERE `isdelete` = "0" AND `status` = "1" LIMIT 1
+Error: Table 'faka.t_article' doesn't exist
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Select_______________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________SelectOne____________/www/wwwroot/faka.su/application/library/Core/Model.php
+30_________Total________________/www/wwwroot/faka.su/application/modules/Help/controllers/Index.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+183.197.72.59 | 2019-01-05 20:38:48
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+183.197.72.59 | 2019-01-05 20:40:29
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+183.197.72.59 | 2019-01-05 20:40:30
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+183.197.72.59 | 2019-01-05 20:40:34
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+183.197.72.59 | 2019-01-05 20:40:34
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+183.197.72.59 | 2019-01-05 20:40:35
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+183.197.72.59 | 2019-01-05 20:40:35
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+183.197.72.59 | 2019-01-05 20:40:36
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+183.197.72.59 | 2019-01-05 20:40:36
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+183.197.72.59 | 2019-01-05 20:40:37
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+183.197.72.59 | 2019-01-05 20:41:32
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+183.197.72.59 | 2019-01-05 20:41:32
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+183.197.72.59 | 2019-01-05 20:42:06
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+183.197.72.59 | 2019-01-05 20:42:06
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+183.197.72.59 | 2019-01-05 20:42:13
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+183.197.72.59 | 2019-01-05 20:42:20
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+183.197.72.59 | 2019-01-05 20:43:02
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+111.145.155.207 | 2019-01-05 20:43:02
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+111.145.155.207 | 2019-01-05 20:43:05
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+111.145.155.207 | 2019-01-05 20:43:31
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+111.145.155.207 | 2019-01-05 20:43:34
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+183.197.72.59 | 2019-01-05 20:43:54
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+183.197.72.59 | 2019-01-05 20:50:35
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+183.197.72.59 | 2019-01-05 20:50:37
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+183.197.72.59 | 2019-01-05 20:50:40
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+183.197.72.59 | 2019-01-05 20:57:23
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+183.197.72.59 | 2019-01-05 20:57:49
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+183.197.72.59 | 2019-01-05 20:58:04
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
+
+183.197.72.59 | 2019-01-05 20:58:10
+SQL: SELECT * FROM `t_article` WHERE `isdelete` = "0" ORDER BY `sort_num` DESC
+Error: Unknown column 'sort_num' in 'order clause'
+LINE__________FUNCTION__________FILE______________________________________
+3__________checkResult__________/www/wwwroot/faka.su/application/library/Core/Model.php
+3__________Execute______________/www/wwwroot/faka.su/application/library/Core/Model.php
+29_________Select_______________/www/wwwroot/faka.su/application/modules/Admin/controllers/Article.php
+___________indexAction__________
+7__________run__________________/www/wwwroot/faka.su/public/index.php
