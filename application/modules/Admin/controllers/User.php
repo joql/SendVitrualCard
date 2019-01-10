@@ -9,10 +9,12 @@
 class UserController extends AdminBasicController
 {
 	private $m_user;
+	private $m_substation;
     public function init()
     {
         parent::init();
 		$this->m_user = $this->load('user');
+		$this->m_substation = $this->load('substation');
     }
 
     public function indexAction()
@@ -23,6 +25,8 @@ class UserController extends AdminBasicController
         }
 
 		$data = array();
+        $substation_list = $this->m_substation->Select();
+        $data['substation_list'] = $substation_list;
 		$this->getView()->assign($data);
     }
 
@@ -34,15 +38,25 @@ class UserController extends AdminBasicController
 			Helper::response($data);
         }
 		
-		$where = array();
-		
+
+        $substation = $this->get('substation');
+        $name = $this->get('name');
+
+        $where1 = array();
+        //查询条件
+        $get_params = [
+            'substation_id' => $substation,
+            'nickname' => $name,
+        ];
+        $where = $this->conditionSQL($get_params);
+
 		$page = $this->get('page');
 		$page = is_numeric($page) ? $page : 1;
 		
 		$limit = $this->get('limit');
 		$limit = is_numeric($limit) ? $limit : 10;
 		
-		$total=$this->m_user->Where($where)->Total();
+		$total=$this->m_user->Where($where1)->Where($where)->Total();
 		
         if ($total > 0) {
             if ($page > 0 && $page < (ceil($total / $limit) + 1)) {
@@ -50,9 +64,10 @@ class UserController extends AdminBasicController
             } else {
                 $pagenum = 0;
             }
-			
+
+
             $limits = "{$pagenum},{$limit}";
-			$items=$this->m_user->Where($where)->Limit($limits)->Order(array('id'=>'DESC'))->Select();
+			$items=$this->m_user->Where($where1)->Where($where)->Limit($limits)->Order(array('id'=>'DESC'))->Select();
 			
             if (empty($items)) {
                 $data = array('code'=>1002,'count'=>0,'data'=>array(),'msg'=>'无数据');
@@ -86,5 +101,17 @@ class UserController extends AdminBasicController
             $data = array('code' => 1001, 'msg' => '缺少字段', 'data' => '');
         }
        Helper::response($data);
+    }
+
+    private function conditionSQL($param)
+    {
+        $condition = "1";
+        if (isset($param['nickname']) AND empty($param['nickname']) === FALSE) {
+            $condition .= " AND `nickname` LIKE '%{$param['nickname']}%'";
+        }
+        if (isset($param['substation_id']) AND empty($param['substation_id']) === FALSE ) {
+            $condition .= " AND `substation_id` = '{$param['substation_id']}'";
+        }
+        return ltrim($condition, " AND ");
     }
 }

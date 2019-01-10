@@ -14,6 +14,7 @@ layui.define(['layer', 'table', 'form'], function(exports){
 			{type: 'checkbox', fixed: 'left'},
 			{field: 'id', title: 'ID', width:80},
 			{field: 'orderid', title: '订单号', minWidth:100},
+			{field: 'substation_id', title: '分站ID', minWidth:120},
 			{field: 'email', title: '邮箱', minWidth:120},
 			{field: 'productname', title: '商品', minWidth:100},
 			{field: 'addtime', title: '时间', templet: '#addtime',minWidth:120},

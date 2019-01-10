@@ -11,12 +11,14 @@ class OrderController extends AdminBasicController
 	private $m_order;
 	private $m_products;
 	private $m_email_queue;
+	private $m_substation;
     public function init()
     {
         parent::init();
 		$this->m_order = $this->load('order');
 		$this->m_products = $this->load('products');
 		$this->m_email_queue = $this->load('email_queue');
+		$this->m_substation = $this->load('substation');
     }
 
     public function indexAction()
@@ -28,6 +30,8 @@ class OrderController extends AdminBasicController
 		$data = array();
 		$products=$this->m_products->Where(array('isdelete'=>0))->Order(array('sort_num'=>'DESC'))->Select();
 		$data['products'] = $products;
+        $substation_list = $this->m_substation->Select();
+        $data['substation_list'] = $substation_list;
 		$this->getView()->assign($data);
     }
 
@@ -45,14 +49,16 @@ class OrderController extends AdminBasicController
 		$email = $this->get('email',false);
 		$status = $this->get('status');
 		$pid = $this->get('pid');
-		
+		$substation_id = $this->get('substation');
+
         //查询条件
         $get_params = [
             'orderid' => $orderid,
             'email' => $email,
 			'status' => $status,
 			'pid' => $pid,
-        ];   
+			'substation_id' => $substation_id,
+        ];
         $where = $this->conditionSQL($get_params);
 		
 		$page = $this->get('page');
@@ -71,7 +77,7 @@ class OrderController extends AdminBasicController
             }
 			
             $limits = "{$pagenum},{$limit}";
-			$field = array('id','orderid','email','productname','addtime','status','paymoney','number');
+			$field = array('id','orderid','email','productname','addtime','status','paymoney','number','substation_id');
 			$items=$this->m_order->Field($field)->Where($where1)->Where($where)->Limit($limits)->Order(array('id'=>'DESC'))->Select();
 			
             if (empty($items)) {
@@ -306,7 +312,10 @@ class OrderController extends AdminBasicController
         }
         if (isset($param['pid']) AND empty($param['pid']) === FALSE AND $param['pid']>0 ) {
             $condition .= " AND `pid` = {$param['pid']}";
-        }		
+        }
+        if (isset($param['substation_id']) AND empty($param['substation_id']) === FALSE) {
+            $condition .= " AND `substation_id` = '{$param['substation_id']}'";
+        }
         return ltrim($condition, " AND ");
     }
 }

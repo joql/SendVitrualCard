@@ -10,11 +10,13 @@ class RegisterController extends PcBasicController
 {
 
     private $m_user;
+    private $m_substation;
 
     public function init()
     {
         parent::init();
         $this->m_user = $this->load('user');
+        $this->m_substation = $this->load('substation');
     }
 
     public function indexAction()
@@ -67,7 +69,16 @@ class RegisterController extends PcBasicController
 					if(empty($checkEmailUser)){
 						$nickname_string = new \Safe\MyString($nickname);
 						$nickname = $nickname_string->trimall()->getValue();
-						$m = array('email'=>$email,'password'=>$password,'nickname'=>$nickname);
+						$substation_exist = $this->m_substation
+                            ->Field('id')
+                            ->Where(array('bind_url'=>$this->server_name))
+                            ->Select();
+						if(empty($substation_exist[0]['id'])){
+						    $substation = 'master';
+                        }else{
+						    $substation = $substation_exist[0]['id'];
+                        }
+						$m = array('email'=>$email,'password'=>$password,'nickname'=>$nickname,'substation_id'=>$substation);
 						$newUser = $this->m_user->newRegister($m);
 						if($newUser){
 							$data = array('code' => 1, 'msg' =>'success');

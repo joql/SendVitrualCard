@@ -12,6 +12,7 @@ class OrderController extends PcBasicController
 	private $m_user;
 	private $m_payment;
 	private $m_products_pifa;
+	private $m_substation;
 
     public function init()
     {
@@ -21,6 +22,7 @@ class OrderController extends PcBasicController
 		$this->m_user = $this->load('user');
 		$this->m_payment = $this->load('payment');
 		$this->m_products_pifa = $this->load('products_pifa');
+		$this->m_substation = $this->load('substation');
     }
 
     public function buyAction()
@@ -157,6 +159,16 @@ class OrderController extends PcBasicController
 						}
 					}
 
+					//查询域名分站信息
+                    $substation_exist = $this->m_substation
+                        ->Field('id')
+                        ->Where(array('bind_url'=>$this->server_name))
+                        ->Select();
+                    if(empty($substation_exist[0]['id'])){
+                        $substation = 'master';
+                    }else{
+                        $substation = $substation_exist[0]['id'];
+                    }
 					//开始下单，入库
 					$m=array(
 						'orderid'=>$orderid,
@@ -174,6 +186,7 @@ class OrderController extends PcBasicController
                         'paymethod'=>$paymethod,
 						'addons'=>$o_addons,
 						'addtime'=>time(),
+                        'substation_id' => $substation,
 					);
 					$id=$this->m_order->Insert($m);
 					if($id>0){

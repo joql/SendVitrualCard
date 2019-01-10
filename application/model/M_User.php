@@ -47,6 +47,7 @@ class M_User extends Model
 		$m['nickname'] = $params['nickname'];
 		$m['createtime']= time(); 
 		$m['password'] = md5($params['password']);
+        $m['substation_id'] = $params['substation_id'];
 
 		if(isset($params['qq'])){
 			$m['qq'] = $params['qq'];

@@ -16,6 +16,17 @@
 							<div class="layui-inline layui-col-xs12 layui-col-sm4 layui-col-md3 layui-col-lg2">
 								<input type="text" name="email" class="layui-input" value="" placeholder="邮箱" />
 							</div>
+                            <div class="layui-col-xs12 layui-col-sm4 layui-col-md3 layui-col-lg2">
+                                <select name="substation">
+                                    <option value="0" >分站</option>
+                                    <option value="master" >主站</option>
+                                    <?php if(!empty($substation_list)):?>
+                                    <?php foreach($substation_list AS $p):?>
+                                    <option value="<?php echo $p['id'];?>"><?php echo $p['bind_url'];?></option>
+                                    <?php endforeach;?>
+                                    <?php endif;?>
+                                </select>
+                            </div>
 							<div class="layui-col-xs12 layui-col-sm4 layui-col-md3 layui-col-lg2">
 								<select name="pid">
 									<option value="0" >筛选商品</option>
@@ -36,7 +47,7 @@
 								</select>
 							</div>
 
-							<div class="layui-inline layui-col-xs12 layui-col-sm4 layui-col-md3 layui-col-lg2">
+							<div class="layui-inline layui-col-xs12 layui-col-sm3 layui-col-md2 layui-col-lg1">
 								<button lay-submit class="layui-btn" lay-filter="search">查询</button>
 							</div>
 						</div>
