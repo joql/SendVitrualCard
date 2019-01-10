@@ -24,7 +24,7 @@ class ReportController extends AdminBasicController
         }
 		$data = array();
 		$data['title'] = "统计报表";
-		
+
 		//当日统计
 		$today_report = array();
 		$starttime = strtotime(date("Y-m-d"));
@@ -45,7 +45,7 @@ class ReportController extends AdminBasicController
 		$lastday = date('Y-m-d', strtotime("{$firstday} +1 month -1 day"));
 		$firstday = strtotime($firstday);
 		$lastday = strtotime($lastday);
-		
+
 		$sql ="SELECT count(*) AS total,sum(money) AS shouru FROM `t_order` Where isdelete=0 AND status>0 AND addtime>={$firstday} AND addtime<={$lastday}";
 		$total_result = $this->m_order->Query($sql);
 		if(is_array($total_result) AND !empty($total_result)){
@@ -68,7 +68,7 @@ class ReportController extends AdminBasicController
 			$total_report['money'] = 0.00;
 		}
 		$data['total_report'] = $total_report;
-		
+
         $this->getView()->assign($data);
     }
 

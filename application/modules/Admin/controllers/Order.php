@@ -101,8 +101,12 @@ class OrderController extends AdminBasicController
 		if($id AND $id>0){
 			$data = array();
 			$order = $this->m_order->SelectByID('',$id);
+			$substation = $this->m_substation->Field('bind_url')
+                ->Where(array('id'=>$order['substation_id']))
+                ->SelectOne();
 			if(is_array($order) AND !empty($order)){
 				$data['order'] = $order;
+				$data['substation_url'] = empty($substation['bind_url']) ? 'master' : $substation['bind_url'];
 				$this->getView()->assign($data);
 			}else{
 				$this->redirect('/'.ADMIN_DIR."/order");

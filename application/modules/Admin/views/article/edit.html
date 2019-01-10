@@ -4,7 +4,7 @@
     <div class="fly-panel fly-panel-user" pad20>
         <div class="layui-tab layui-tab-brief" lay-filter="email">
             <ul class="layui-tab-title" id="LAY_mine">
-                <li class="" lay-id="info"><a href="/<?php echo ADMIN_DIR;?>/article/">商品管理</a></li>
+                <li class="" lay-id="info"><a href="/<?php echo ADMIN_DIR;?>/article/">文章管理</a></li>
                 <li class="layui-this" lay-id="info">添加</a>
                 </li>
             </ul>
@@ -16,6 +16,21 @@
                         <p> 2.页面支持html代码和直接换行代码等等；</p>
                     </blockquote>
                     <form class="layui-form layui-show" method="post">
+                        <div class="layui-form-item">
+                            <label for="title"
+                                   class="layui-form-label">分站
+                            </label>
+                            <div class="layui-input-block">
+                                <select name="substation">
+                                    <option value="master" >主站</option>
+                                    <?php if(!empty($substation_list)):?>
+                                    <?php foreach($substation_list AS $p):?>
+                                    <option value="<?php echo $p['id'];?>" <?php if($p['id'] == $m_article['substation_id']):?>selected<?php endif;?>><?php echo $p['bind_url'];?></option>
+                                    <?php endforeach;?>
+                                    <?php endif;?>
+                                </select>
+                            </div>
+                        </div>
                         <div class="layui-form-item">
                             <label for="title" class="layui-form-label">文章名称</label>
                             <div class="layui-input-block">

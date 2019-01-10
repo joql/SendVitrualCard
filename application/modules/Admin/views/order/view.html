@@ -13,6 +13,15 @@
                 <div class="layui-form-pane layui-tab-item layui-show">
                     <form class="layui-form layui-show" method="post">
                         <div class="layui-form-item">
+                            <label for="orderid"
+                                   class="layui-form-label">分站
+                            </label>
+                            <div class="layui-input-inline">
+                                <input type="text" id="substation_url" name="substation_url" disabled autocomplete="off" value="<?php echo $substation_url;?>"
+                                       class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
                             <label for="orderid" class="layui-form-label">订单编号</label>
                             <div class="layui-input-inline">
                                 <input type="text" id="orderid" name="orderid" disabled autocomplete="off" value="<?php echo $order['orderid'];?>" class="layui-input">

@@ -16,6 +16,7 @@ layui.define(['layer', 'table', 'form','layedit'], function(exports){
 		cellMinWidth:60,
 		cols: [[
 			{field: 'id', title: 'ID', width:80},
+			{field: 'substation_id', title: '分站ID', width:100},
 			{field: 'title', title: '文章标题'},
             {field: 'status', title: '状态', width:80, templet: '#status',align:'center'},
             {field: 'opt', title: '操作', width:120, templet: '#opt',align:'center'},

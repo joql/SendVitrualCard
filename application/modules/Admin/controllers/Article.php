@@ -8,7 +8,7 @@ class ArticleController extends AdminBasicController
 	private $m_email_queue;
 
     private $m_article;
-
+    private $m_substation;
     public function init()
     {
         parent::init();
@@ -17,6 +17,7 @@ class ArticleController extends AdminBasicController
 		$this->m_email_queue = $this->load('email_queue');
 
         $this->m_article = $this->load('article');
+        $this->m_substation = $this->load('substation');
     }
 
     public function indexAction()
@@ -28,6 +29,8 @@ class ArticleController extends AdminBasicController
 		$data = array();
 		$m_article=$this->m_article->Where(array('isdelete'=>0))->Order(array('sort_num'=>'DESC'))->Select();
 		$data['products'] = $m_article;
+        $substation_list = $this->m_substation->Select();
+        $data['substation_list'] = $substation_list;
 		$this->getView()->assign($data);
     }
     public function editAction()
@@ -41,7 +44,8 @@ class ArticleController extends AdminBasicController
             $data = array();
             $product=$this->m_article->SelectByID('',$id);
             $data['m_article'] = $product;
-
+            $substation_list = $this->m_substation->Select();
+            $data['substation_list'] = $substation_list;
             $this->getView()->assign($data);
         }else{
             $this->redirect('/'.ADMIN_DIR."/article");
@@ -56,6 +60,8 @@ class ArticleController extends AdminBasicController
         }
 
         $data = array();
+        $substation_list = $this->m_substation->Select();
+        $data['substation_list'] = $substation_list;
         $this->getView()->assign($data);
     }
     public function editajaxAction()
@@ -65,6 +71,7 @@ class ArticleController extends AdminBasicController
         $title = $this->getPost('title',false);
         $content = $this->getPost('description',false);
         $status = $this->getPost('status',false);
+        $substation_id = $this->getPost('substation',false);
         $csrf_token = $this->getPost('csrf_token', false);
         $data = array();
 
@@ -79,6 +86,7 @@ class ArticleController extends AdminBasicController
                     'title'=>$title,
                     'content'=>$content,
                     'status'=>$status,
+                    'substation_id'=>$substation_id,
                 );
                 if($method == 'edit' AND $id>0){
                     $u = $this->m_article->UpdateByID($m,$id);
@@ -143,13 +151,20 @@ class ArticleController extends AdminBasicController
 
 		$where1 = array('isdelete'=>0);
 
+        $title = $this->get('title');
+        $substation_id = $this->get('substation');
+        $get_param = array(
+            'title' => $title,
+            'substation_id' => $substation_id,
+        );
+        $where = $this->conditionSQL($get_param);
 		$page = $this->get('page');
 		$page = is_numeric($page) ? $page : 1;
 		
 		$limit = $this->get('limit');
 		$limit = is_numeric($limit) ? $limit : 10;
 
-		$total=$this->m_article->Where($where1)->Total();
+		$total=$this->m_article->Where($where)->Where($where1)->Total();
 
         if ($total > 0) {
             if ($page > 0 && $page < (ceil($total / $limit) + 1)) {
@@ -158,9 +173,10 @@ class ArticleController extends AdminBasicController
                 $pagenum = 0;
             }
             $limits = "{$pagenum},{$limit}";
-			$field = ['id','title','status','isdelete','addtime'];
+			$field = ['id','title','substation_id', 'status',
+            'isdelete','addtime'];
 
-			$items=$this->m_article->Where($where1)->Field($field)->Limit($limits)->Order(array('id'=>'DESC'))->Select();
+			$items=$this->m_article->Where($where)->Where($where1)->Field($field)->Limit($limits)->Order(array('id'=>'DESC'))->Select();
             if (empty($items)) {
                 $data = array('code'=>1002,'count'=>0,'data'=>array(),'msg'=>'无数据');
             } else {
@@ -195,4 +211,16 @@ class ArticleController extends AdminBasicController
 		}
     }
 
+    private function conditionSQL($param)
+    {
+        $condition = "1";
+        if (isset($param['title']) AND empty($param['title']) ===
+            FALSE) {
+            $condition .= " AND `title` LIKE '%{$param['title']}%'";
+        }
+        if (isset($param['substation_id']) AND empty($param['substation_id']) === FALSE) {
+            $condition .= " AND `substation_id` = '{$param['substation_id']}'";
+        }
+        return ltrim($condition, " AND ");
+    }
 }
