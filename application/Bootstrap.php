@@ -13,6 +13,7 @@ class Bootstrap extends \Yaf\Bootstrap_Abstract
 		\Yaf\Loader::import(FUNC_PATH.'/F_Network.php');
 		\Yaf\Loader::import(FUNC_PATH.'/F_String.php');
 		\Yaf\Loader::import(FUNC_PATH.'/F_Validate.php');
+		\Yaf\Loader::import(FUNC_PATH.'/F_Common.php');
     }
 	
 	public function _initLoader()

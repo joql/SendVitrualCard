@@ -149,22 +149,22 @@ class ArticleController extends AdminBasicController
 			Helper::response($data);
         }
 
-		$where1 = array('isdelete'=>0);
-
         $title = $this->get('title');
         $substation_id = $this->get('substation');
         $get_param = array(
-            'title' => $title,
-            'substation_id' => $substation_id,
+            'a.title' => [
+                'like' => $title
+            ],
+            'a.substation_id' => $substation_id,
         );
-        $where = $this->conditionSQL($get_param);
+
 		$page = $this->get('page');
 		$page = is_numeric($page) ? $page : 1;
-		
+
 		$limit = $this->get('limit');
 		$limit = is_numeric($limit) ? $limit : 10;
 
-		$total=$this->m_article->Where($where)->Where($where1)->Total();
+		$total=$this->m_article->Where(convertSQL($get_param))->Where('isdelete=0')->Total();
 
         if ($total > 0) {
             if ($page > 0 && $page < (ceil($total / $limit) + 1)) {
@@ -173,10 +173,15 @@ class ArticleController extends AdminBasicController
                 $pagenum = 0;
             }
             $limits = "{$pagenum},{$limit}";
-			$field = ['id','title','substation_id', 'status',
-            'isdelete','addtime'];
+			$field = "a.id,a.title,a.substation_id,s.bind_url,a.status,a.isdelete,a.addtime";
 
-			$items=$this->m_article->Where($where)->Where($where1)->Field($field)->Limit($limits)->Order(array('id'=>'DESC'))->Select();
+			$sql = "select {$field} from t_article a 
+                      left join t_substation s on s.id=a.substation_id 
+                      where isdelete=0 and ".convertSQL($get_param, true)." 
+                      order by a.id desc
+                      limit {$limit}";
+			//die($sql);
+			$items=$this->m_article->Query($sql);
             if (empty($items)) {
                 $data = array('code'=>1002,'count'=>0,'data'=>array(),'msg'=>'无数据');
             } else {
@@ -187,7 +192,7 @@ class ArticleController extends AdminBasicController
         }
 		Helper::response($data);
 	}
-	
+
 	public function viewAction()
     {
         if ($this->AdminUser==FALSE AND empty($this->AdminUser)) {
