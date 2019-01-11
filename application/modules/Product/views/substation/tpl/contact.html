@@ -1,34 +1,132 @@
 <?php include SMALLS_COMMON_PATH.'/header.html';?>
-<link href="http://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-<link href="http://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
 <link rel="stylesheet" href="http://ds.sadnt.com/assets/simple/css/plugins.css">
 <link rel="stylesheet" href="http://ds.sadnt.com/assets/simple/css/main.css">
 <link rel="stylesheet" href="http://ds.sadnt.com/assets/css/common.css">
 
-<link rel="stylesheet" href="http://cdn.staticfile.org/layer/2.3/skin/layer.css" id="layui_layer_skinlayercss" style=""><style type="text/css">.jqstooltip { width: auto !important; height: auto !important; position: absolute;left: 0px;top: 0px;visibility: hidden;background: #000000;color: white;font-size: 11px;text-align: left;white-space: nowrap;padding: 5px;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style>
+<link rel="stylesheet" href="http://cdn.staticfile.org/layer/2.3/skin/layer.css" id="layui_layer_skinlayercss" style="">
+<script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+<style type="text/css">.jqstooltip { width: auto !important; height: auto !important; position: absolute;left: 0px;top: 0px;visibility: hidden;background: #000000;color: white;font-size: 11px;text-align: left;white-space: nowrap;padding: 5px;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}
+</style>
+<style>
+	.signin-card.auth-body{width:521px;display: inline-block}
+	@media only screen and (max-width: 480px){
+		.signin-card.auth-body{width:100%;display: inline-block}
+	}
+	.input-group-addon{
+		color: #454e59;
+		font-size: 14px;
+		font-weight: 400;
+	}
+</style>
+<style>
+	a:hover,a:focus{
+		text-decoration: none;
+		outline: none;
+	}
+	#accordion .panel{
+		border: none;
+		box-shadow: none;
+		border-radius: 10px;
+		margin-bottom: 10px;
+	}
+	#accordion .panel-heading{
+		padding: 0;
+		border: none;
+		border-radius: 10px;
+	}
+	#accordion .panel-title a{
+		display: block;
+		padding: 20px 35px;
+		font-size: 20px;
+		font-weight: 600;
+		color: #fff;
+		background: #4099ff;
+		border: none;
+		position: relative;
+		transition: all 0.3s ease 0s;
+	}
+	#accordion .panel-title a:after,
+	#accordion .panel-title a.collapsed:after{
+		content: "\f068";
+		font-family: fontawesome;
+		width: 40px;
+		height: 40px;
+		line-height: 32px;
+		border-radius: 50%;
+		background: #4099ff;
+		text-align: center;
+		font-size: 15px;
+		color:#fff;
+		border: 5px solid #fff;
+		position: absolute;
+		top: 10px;
+		left: -20px;
+		transition: all 0.3s ease 0s;
+	}
+	#accordion .panel-title a.collapsed:after{
+		content: "\f067";
+	}
+	#accordion .panel-title a:hover:after,
+	#accordion .panel-title a.collapsed:hover:after{
+		transform: rotate(360deg);
+	}
+	#accordion .panel-body{
+		padding: 15px 25px;
+		background: #fff;
+		font-size: 14px;
+		color: #8c8c8c;
+		line-height: 25px;
+		border-top: none;
+		position: relative;
+	}
+</style>
 <div class="pcoded-main-container">
 	<div class="container">
 		<div class="main-body">
 			<div class="page-wrapper">
 				<div class="page-body">
-					<div class="signin-card card-block auth-body mr-auto ml-auto">
-						<div class="card">
+					<div
+							class="signin-card card-block auth-body mr-auto">
+						<div class="card" style="top: 13px;">
 							<div class="block">
-								<!--<div class="block-title">
-									<div class="block-options pull-right">
-										<a href="http://ds.sadnt.com/" class="btn btn-effect-ripple btn-default toggle-bordered enable-tooltip">返回首页</a>
+								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingOne">
+											<h4 class="panel-title">
+												<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+													分站详情介绍
+												</a>
+											</h4>
+										</div>
+										<div id="collapseOne" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingOne">
+											<div class="panel-body">
+												<p>分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍</p>
+											</div>
+										</div>
 									</div>
-									<h2><i class="fa fa-user-plus"></i>&nbsp;&nbsp;<b>自助开通分站</b></h2>
-								</div>-->
-								<div class="row text-center">
-									<div class="col-xs-6">
-										<a class="btn btn-block btn-info" href="http://ds.sadnt.com/user/regsite.php#about" data-toggle="modal">分站详细介绍</a>
-									</div>
-									<div class="col-xs-6">
-										<a class="btn btn-block btn-info" href="http://ds.sadnt.com/user/regsite.php#userjs" data-toggle="modal">分站版本介绍</a>
+
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingTwo">
+											<h4 class="panel-title">
+												<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+													分站版本介绍
+												</a>
+											</h4>
+										</div>
+										<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+											<div class="panel-body">
+												<p>分站版本介绍分站版本介绍分站版本介绍分站版本介绍分站版本介绍分站版本介绍分站版本介绍分站版本介绍分站版本介绍分站版本介绍分站版本介绍分站版本介绍</p>
+											</div>
+										</div>
 									</div>
 								</div>
-								<br>
+							</div>
+						</div>
+					</div>
+					<div class="signin-card card-block auth-body ml-auto">
+						<div class="card">
+							<div class="block">
 								<form>
 									<div class="form-group">
 										<div class="input-group">
@@ -80,11 +178,10 @@
 										</div>
 									</div>
 									<input type="button" id="submit_buy" value="点此立即拥有分站" class="btn btn-danger btn-block">
-									<hr>
-									<div class="form-group">
+									<!--<div class="form-group">
 										<a href="http://ds.sadnt.com/user/findpwd.php" class="btn btn-info btn-rounded"><i class="fa fa-unlock"></i>&nbsp;找回密码</a>
 										<a href="http://ds.sadnt.com/user/login.php" class="btn btn-primary btn-rounded" style="float:right;"><i class="fa fa-user"></i>&nbsp;返回登录</a>
-									</div>
+									</div>-->
 								</form>
 							</div>
 						</div>
