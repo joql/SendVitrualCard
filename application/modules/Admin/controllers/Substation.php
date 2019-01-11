@@ -88,8 +88,8 @@ class SubstationController extends AdminBasicController
                         `t_substation_type` as 
                         sp1 on sp1.id = s1.type_id  Order by s1.id desc 
                         LIMIT {$limits}";
-            $items=$this->m_products->Query($sql);
-			foreach ((array)$items as &$v){
+            $items=(array)$this->m_products->Query($sql);
+			foreach ($items as $k=>&$v){
                 $v['remaining_sum'] = $v['remaining_sum']/100;
                 $v['create_time'] = date('Y-m-d', $v['create_time']);
                 $v['expire_time'] = date('Y-m-d', $v['expire_time']);
@@ -390,10 +390,12 @@ class SubstationController extends AdminBasicController
     private  function getState($state){
         switch ($state){
             case '1' :
-                return '开启';
+                return '已审核';
             case '2' :
-                return '关闭';
+                return '停用';
+            case '2' :
+                return '未审核';
         }
-        return '关闭';
+        return '停用';
     }
 }
