@@ -9,10 +9,12 @@
 class SettingController extends AdminBasicController
 {
 	private $m_config;
+    private $m_substation;
     public function init()
     {
         parent::init();
 		$this->m_config = $this->load('config');
+        $this->m_substation = $this->load('substation');
     }
 
     public function indexAction()
@@ -23,6 +25,8 @@ class SettingController extends AdminBasicController
         }
 
 		$data = array();
+        $substation_list = $this->m_substation->Select();
+        $data['substation_list'] = $substation_list;
 		$this->getView()->assign($data);
     }
 
@@ -33,8 +37,10 @@ class SettingController extends AdminBasicController
             $data = array('code' => 1000, 'msg' => '请登录');
 			Helper::response($data);
         }
-		
-		$where = array();
+
+        $substation_id = $this->get('substation');
+        $get_param['substation_id'] = $substation_id;
+        $where = convertSQL($get_param);
 		
 		$page = $this->get('page');
 		$page = is_numeric($page) ? $page : 1;
@@ -52,7 +58,7 @@ class SettingController extends AdminBasicController
             }
 			
             $limits = "{$pagenum},{$limit}";
-			$field = array('id','name','updatetime','tag');
+			$field = array('id','name','updatetime','tag','substation_id');
 			$items=$this->m_config->Field($field)->Where($where)->Limit($limits)->Order(array('id'=>'DESC'))->Select();
             if (empty($items)) {
                 $data = array('code'=>1002,'count'=>0,'data'=>array(),'msg'=>'无数据');

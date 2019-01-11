@@ -13,6 +13,22 @@
 							<p> 注意事项： </p>
 							<p> 如果配置中心列表中出现了"数据接口请求异常"，<button lay-submit class="layui-btn" lay-filter="repair">点击修复</button></p>
 						</blockquote>
+                        <div class="layui-form layui-row layui-col-space10">
+                            <div class="layui-col-xs12 layui-col-sm4 layui-col-md3 layui-col-lg2">
+                                <select name="substation">
+                                    <option value="0" >全部分站</option>
+                                    <option value="master" >主站</option>
+                                    <?php if(!empty($substation_list)):?>
+                                    <?php foreach($substation_list AS $p):?>
+                                    <option value="<?php echo $p['id'];?>"><?php echo $p['bind_url'];?></option>
+                                    <?php endforeach;?>
+                                    <?php endif;?>
+                                </select>
+                            </div>
+                            <div class="layui-inline layui-col-xs12 layui-col-sm3 layui-col-md2 layui-col-lg1">
+                                <button lay-submit class="layui-btn" lay-filter="search">查询</button>
+                            </div>
+                        </div>
                         <table class="layui-table" id="setting"></table>
                     </div>
                 </div>

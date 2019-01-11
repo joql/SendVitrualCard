@@ -11,6 +11,7 @@ layui.define(['layer', 'table','form'], function(exports){
 		cellMinWidth:60,
 		cols: [[
 			{field: 'id', title: 'ID', width:80},
+			{field: 'substation_id', title: '分站ID'},
 			{field: 'name', title: '参数'},
 			{field: 'tag', title: '说明'},
 			{field: 'updatetime', title: '更新时间', width:200, templet: '#updatetime',align:'center'},
@@ -96,6 +97,13 @@ layui.define(['layer', 'table','form'], function(exports){
 			});
 
 			return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
+    });
+    form.on('submit(search)', function(data){
+        table.reload('setting', {
+            url: '/'+ADMIN_DIR+'/setting/ajax',
+            where: data.field
+        });
+        return false;
     });
 	exports('adminsetting',null)
 });

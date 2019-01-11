@@ -173,7 +173,7 @@ class ArticleController extends AdminBasicController
                 $pagenum = 0;
             }
             $limits = "{$pagenum},{$limit}";
-			$field = "a.id,a.title,a.substation_id,s.bind_url,a.status,a.isdelete,a.addtime";
+			$field = "a.id,a.title,a.substation_id,ifnull(s.bind_url,'master') as bind_url,a.status,a.isdelete,a.addtime";
 
 			$sql = "select {$field} from t_article a 
                       left join t_substation s on s.id=a.substation_id 

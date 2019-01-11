@@ -14,6 +14,7 @@ class SubstationController extends AdminBasicController
 
     private $m_substation;
     private $m_substation_type;
+    private $m_config;
     public function init()
     {
         parent::init();
@@ -23,6 +24,7 @@ class SubstationController extends AdminBasicController
 
         $this->m_substation = $this->load('substation');
         $this->m_substation_type = $this->load('substation_type');
+        $this->m_config = $this->load('config');
     }
 
     public function indexAction()
@@ -134,12 +136,19 @@ class SubstationController extends AdminBasicController
         $data['create_time'] = time();
 
         $exist = $this->m_substation->Field('id')->Where(array('bind_url'=>$data['bind_url']))->SelectOne();
-        if(!empty($exist[0]['id'])){
+        if(!empty($exist['id'])){
             $data = array('code' => 1003, 'msg' => '新增失败');
             Helper::response($data);
         }
         $r = $this->m_substation->Insert($data);
         if($r){
+            $confs = $this->m_config->Field(array('catid','name','value','tag','lock','updatetime'))
+                ->Where
+            ("substation_id='master'")->Select();
+            foreach ((array)$confs as $k=>$v){
+                $confs[$k]['substation_id'] = $r;
+            }
+            $this->m_config->MultiInsert($confs);
             $data = array('code' => 1, 'msg' => '新增成功');
         }else{
             $data = array('code' => 1003, 'msg' => '新增失败');
