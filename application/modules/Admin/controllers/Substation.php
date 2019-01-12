@@ -14,7 +14,9 @@ class SubstationController extends AdminBasicController
 
     private $m_substation;
     private $m_substation_type;
+    private $m_substation_url;
     private $m_config;
+    private $m_admin_user;
     public function init()
     {
         parent::init();
@@ -24,7 +26,9 @@ class SubstationController extends AdminBasicController
 
         $this->m_substation = $this->load('substation');
         $this->m_substation_type = $this->load('substation_type');
+        $this->m_substation_url = $this->load('substation_url');
         $this->m_config = $this->load('config');
+        $this->m_admin_user = $this->load('admin_user');
     }
 
     public function indexAction()
@@ -115,6 +119,9 @@ class SubstationController extends AdminBasicController
         $data = array();
         $type_list = $this->m_substation_type->Select();
         $data['type_list'] = $type_list;
+        $url_list = $this->m_substation_url->Where(array('state'=>1))
+            ->Select();
+        $data['url_list'] = $url_list;
         $this->getView()->assign($data);
     }
     public function addajaxAction()
@@ -127,13 +134,26 @@ class SubstationController extends AdminBasicController
         $data['type_id'] = $this->getPost('type_id', false);
         $data['admin_name'] = $this->getPost('admin_name', false);
         $data['admin_pwd'] = md5($this->getPost('admin_pwd', false));
-        $data['bind_url'] = $this->getPost('bind_url', false);
+        $postfix =$this->getPost('url_postfix', false);
+        if($postfix !== 'top'){
+            $data['bind_url'] = $this->getPost('bind_url', false)
+                .'.'.$postfix;
+        }else{
+            $data['bind_url'] = $this->getPost('bind_url', false);
+        }
         $data['remaining_sum'] = $this->getPost('remaining_sum',
                 false)*100;
         $data['admin_qq'] = $this->getPost('admin_qq', false);
         $data['expire_time'] = strtotime($this->getPost('expire_time', false));
-        $data['state'] = $this->getPost('state', false);
+        $data['state'] = 3;
         $data['create_time'] = time();
+
+        //admin用户表信息
+        $user['email'] = $data['admin_name'];
+        $user['secret'] = md5(time());
+        $user['password'] = password($this->getPost('admin_pwd',
+            false), $user['secret']);
+
 
         $exist = $this->m_substation->Field('id')->Where(array('bind_url'=>$data['bind_url']))->SelectOne();
         if(!empty($exist['id'])){
@@ -142,13 +162,10 @@ class SubstationController extends AdminBasicController
         }
         $r = $this->m_substation->Insert($data);
         if($r){
-            $confs = $this->m_config->Field(array('catid','name','value','tag','lock','updatetime'))
-                ->Where
-            ("substation_id='master'")->Select();
-            foreach ((array)$confs as $k=>$v){
-                $confs[$k]['substation_id'] = $r;
-            }
-            $this->m_config->MultiInsert($confs);
+
+            $user['substation_id']=$r;
+            $this->m_admin_user->Insert($user);
+
             $data = array('code' => 1, 'msg' => '新增成功');
         }else{
             $data = array('code' => 1003, 'msg' => '新增失败');
@@ -361,6 +378,51 @@ class SubstationController extends AdminBasicController
         }
        Helper::response($data);
     }
+
+    public function agreeAction()
+    {
+        if ($this->AdminUser==FALSE AND empty($this->AdminUser)) {
+            $data = array('code' => 1000, 'msg' => '请登录');
+            Helper::response($data);
+        }
+        $id = $this->get('id');
+        $csrf_token = $this->getPost('csrf_token', false);
+        if (!$csrf_token || !$this->VerifyCsrfToken($csrf_token)) {
+            $data = array('code' => 1002, 'msg' => '页面超时，请刷新页面后重试!');
+            Helper::response($data);
+        }
+        $r = $this->m_substation->UpdateByID(array('state'=>1), $id);
+        if ($r) {
+            $confs = $this->m_config->Field(array('catid','name','value','tag','lock','updatetime'))
+                ->Where
+            ("substation_id='master'")->Select();
+            foreach ((array)$confs as $k=>$v){
+                $confs[$k]['substation_id'] = $id;
+            }
+            $this->m_config->MultiInsert($confs);
+            $data = array('code'=>1,'msg'=>'更新成功');
+        } else {
+            $data = array('code'=>1002,'msg'=>'更新失败');
+        }
+        Helper::response($data);
+    }
+
+    public function blockAction()
+    {
+        if ($this->AdminUser==FALSE AND empty($this->AdminUser)) {
+            $data = array('code' => 1000, 'msg' => '请登录');
+            Helper::response($data);
+        }
+        $id = $this->get('id');
+
+        $r = $this->m_substation->UpdateByID(array('state'=>2), $id);
+        if ($r) {
+            $data = array('code'=>1,'msg'=>'更新成功');
+        } else {
+            $data = array('code'=>1002,'msg'=>'更新失败');
+        }
+        Helper::response($data);
+    }
 	
     private function conditionSQL($param)
     {
@@ -393,7 +455,7 @@ class SubstationController extends AdminBasicController
                 return '已审核';
             case '2' :
                 return '停用';
-            case '2' :
+            case '3' :
                 return '未审核';
         }
         return '停用';

@@ -50,6 +50,17 @@
                             <div class="layui-input-inline">
                                 <input type="text" id="bind_url" name="bind_url" lay-verify="required" autocomplete="off" value="" class="layui-input"  placeholder="填写要用的域名">
                             </div>
+                            <div class="layui-input-inline">
+                                <select name="url_postfix"
+                                        lay-filter="required">
+                                    <option value="top">顶级域名</option>
+                                    <?php if(!empty($url_list)):?>
+                                    <?php foreach($url_list AS $p):?>
+                                    <option value="<?php echo $p['url'];?>"><?php echo $p['url'];?></option>
+                                    <?php endforeach;?>
+                                    <?php endif;?>
+                                </select>
+                            </div>
                         </div>
 
                         <div class="layui-form-item">

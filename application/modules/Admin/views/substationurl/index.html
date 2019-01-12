@@ -4,9 +4,9 @@
     <div class="fly-panel fly-panel-user" pad20>
         <div class="layui-tab layui-tab-brief" lay-filter="user">
             <ul class="layui-tab-title" id="LAY_mine">
-                <li class="layui-this" lay-id="info">分站管理</li>
+                <li class="layui-this" lay-id="info">分站域名管理</li>
                 <li class="" lay-id="info"><a
-                        href="/<?php echo ADMIN_DIR;?>/substation/add/">添加</a></li>
+                        href="/<?php echo ADMIN_DIR;?>/substationurl/add/">添加</a></li>
             </ul>
             <div class="layui-tab-content" style="padding: 20px 0;">
                 <div class="layui-form layui-form-pane layui-tab-item layui-show">
@@ -19,21 +19,14 @@
     </div>
 </div>
 <script type="text/html" id="opt">
-    {{# if(d.state =='未审核'){ }}
-    <a class="layui-btn layui-btn-edit layui-btn-xs"
-       data-href="/<?php echo ADMIN_DIR;?>/substation/agree/?id={{d.id}}" lay-event="check">
-        审核</a>
-    {{# } }}
-    {{# if(d.state =='已审核'){ }}
-    <a class="layui-btn layui-btn-warm layui-btn-xs"
-       data-href="/<?php echo ADMIN_DIR;?>/substation/block/?id={{d.id}}"
-       lay-event="block">停用
-    </a>
-    {{# } }}
-    <a data-href="/<?php echo ADMIN_DIR;?>/substation/delete/?id={{d.id}}" class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">删除</a>
+    <a data-href="/<?php echo ADMIN_DIR;?>/substationurl/delete/?id={{d.id}}" class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">删除</a>
+</script>
+<script type="text/html" id="checkboxTpl">
+    <!-- 这里的 checked 的状态只是演示 -->
+    <input type="checkbox" name="lock" value="{{d.id}}" title="启用" lay-filter="lockDemo" {{ d.state == 1 ? 'checked' : '' }}>
 </script>
 <!--引入公共底文件-->
 <?php include ADMIN_COMMON_PATH.'/footer.html';?>
 <script>
-layui.use('adminsubstation');
+layui.use('adminsubstationurl');
 </script>
