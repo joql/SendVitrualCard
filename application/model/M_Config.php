@@ -21,7 +21,7 @@ class M_Config extends Model
 	 * @param string $password
 	 * @return params on success or 0 or failure
 	 */
-	public function getConfig($new=0)
+	public function getConfig($new=0, $host='master')
 	{
 		$data = $config = array();
 		$file_path=TEMP_PATH ."/config.json";
@@ -34,7 +34,7 @@ class M_Config extends Model
 			$config =$data['config'];
 		}
 		if (empty($config) OR $new){
-    		$data['config'] = $config = $this->_getData();
+    		$data['config'] = $config = $this->_getData($host);
     		$data['expire_time'] = time() + 600;
 			file_put_contents($file_path,json_encode($data));
     	}
@@ -42,9 +42,14 @@ class M_Config extends Model
 		return $config;
 	} 
 
-	private function _getData()
+	private function _getData($host='master')
 	{
-		$result=$this->Select();
+		if($host === 'master'){
+            $result=$this->Select();
+        }else{
+            $result=$this->Where(array('substation_id'=>$host))
+                ->Select();
+        }
 		foreach($result AS $i){
 			$config[$i['name']]=htmlspecialchars_decode($i['value'],ENT_QUOTES);
 		}

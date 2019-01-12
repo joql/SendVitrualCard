@@ -68,7 +68,7 @@ class LoginController extends AdminBasicController
 					    if($resultAdminUser['substation_id'] === 'master'
                             || (
                                 $resultAdminUser['substation']['state'] == 1
-                                && $resultAdminUser['substation']['expire_time'] <= time()
+                                && $resultAdminUser['substation']['expire_time'] > time()
                                 )
                         ){
                             $this->setLogin($resultAdminUser);

@@ -17,7 +17,18 @@ class PcBasicController extends BasicController
 	public function init(){	
 		parent::init();
 		$sysvars = $data = array();
-		$this->config=$this->load('config')->getConfig();
+        //获取网址
+        $this->server_name = $_SERVER['SERVER_NAME'];
+        //$this->server_name = 'dd.test.cn';
+        $substation = $this->load('substation')->Field('id')
+            ->Where(array('bind_url'=>$this->server_name))
+            ->SelectOne();
+        if(empty($substation['id'])){
+            $this->config=$this->load('config')->getConfig();
+        }else{
+            $this->config=$this->load('config')->getConfig(0, $substation['id']);
+        }
+
 		if((isset($this->config['web_name']) AND strlen($this->config['web_name'])>0)==false){
 			$this->config['web_name'] = WEB_NAME;
 		}
@@ -46,8 +57,7 @@ class PcBasicController extends BasicController
 		$data['csrf_token'] = $this->createCsrfToken();
         $this->getView()->assign($data);
 
-        //获取网址
-        $this->server_name = $_SERVER['SERVER_NAME'];
+
         //$this->server_name = '123.cn';
 	}
 
