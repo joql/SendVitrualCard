@@ -19,7 +19,8 @@ class IndexController extends PcBasicController
     public function indexAction()
     {
         $data = array();
-        $where = array('isdelete'=>0,'status'=>1);
+        $where = array('isdelete'=>0,'status'=>1,
+            'substation_id'=>$this->substation_id);
 
         $page = $this->get('page');
         $page = is_numeric($page) ? $page : 1;

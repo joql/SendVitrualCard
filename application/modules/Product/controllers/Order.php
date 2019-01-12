@@ -159,16 +159,16 @@ class OrderController extends PcBasicController
 						}
 					}
 
-					//查询域名分站信息
-                    $substation_exist = $this->m_substation
-                        ->Field('id')
-                        ->Where(array('bind_url'=>$this->server_name))
-                        ->Select();
-                    if(empty($substation_exist[0]['id'])){
-                        $substation = 'master';
-                    }else{
-                        $substation = $substation_exist[0]['id'];
-                    }
+//					//查询域名分站信息
+//                    $substation_exist = $this->m_substation
+//                        ->Field('id')
+//                        ->Where(array('bind_url'=>$this->server_name))
+//                        ->Select();
+//                    if(empty($substation_exist[0]['id'])){
+//                        $substation = 'master';
+//                    }else{
+//                        $substation = $substation_exist[0]['id'];
+//                    }
 					//开始下单，入库
 					$m=array(
 						'orderid'=>$orderid,
@@ -186,7 +186,7 @@ class OrderController extends PcBasicController
                         'paymethod'=>$paymethod,
 						'addons'=>$o_addons,
 						'addtime'=>time(),
-                        'substation_id' => $substation,
+                        'substation_id' => $this->substation_id,
 					);
 					$id=$this->m_order->Insert($m);
 					if($id>0){
