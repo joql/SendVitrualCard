@@ -13,6 +13,7 @@
 							<p> 注意事项： </p>
 							<p> 如果配置中心列表中出现了"数据接口请求异常"，<button lay-submit class="layui-btn" lay-filter="repair">点击修复</button></p>
 						</blockquote>
+                        <?php if($this->AdminUser['substation_id']=='master'):?>
                         <div class="layui-form layui-row layui-col-space10">
                             <div class="layui-col-xs12 layui-col-sm4 layui-col-md3 layui-col-lg2">
                                 <select name="substation">
@@ -29,6 +30,7 @@
                                 <button lay-submit class="layui-btn" lay-filter="search">查询</button>
                             </div>
                         </div>
+                        <?php endif;?>
                         <table class="layui-table" id="setting"></table>
                     </div>
                 </div>

@@ -17,6 +17,7 @@
                         <p> 2.页面支持html代码和直接换行代码等等；</p>
                     </blockquote>
                     <form class="layui-form layui-show" method="post">
+                        <?php if($this->AdminUser['substation_id']=='master'):?>
                         <div class="layui-form-item">
                             <label for="title"
                                    class="layui-form-label">分站
@@ -32,6 +33,7 @@
                                 </select>
                             </div>
                         </div>
+                        <?php endif;?>
                         <div class="layui-form-item">
                             <label for="title" class="layui-form-label">文章名称</label>
                             <div class="layui-input-block">

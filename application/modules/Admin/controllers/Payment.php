@@ -21,7 +21,9 @@ class PaymentController extends AdminBasicController
             $this->redirect('/'.ADMIN_DIR."/login");
             return FALSE;
         }
-
+        if ($this->CommonAdmin !== '') {
+            return FALSE;
+        }
 		$data = array();
 		$this->getView()->assign($data);
     }

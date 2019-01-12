@@ -39,7 +39,8 @@ class SettingController extends AdminBasicController
         }
 
         $substation_id = $this->get('substation');
-        $get_param['substation_id'] = $substation_id;
+        $get_param['substation_id'] = $this->CommonAdmin ?: 
+            $substation_id;
         $where = convertSQL($get_param);
 		
 		$page = $this->get('page');

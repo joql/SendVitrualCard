@@ -25,6 +25,10 @@ class ReportController extends AdminBasicController
 		$data = array();
 		$data['title'] = "统计报表";
 
+		if($this->CommonAdmin !== ""){
+            $this->redirect('/'.ADMIN_DIR."/reportsubstation");
+            return FALSE;
+        }
 		//当日统计
 		$today_report = array();
 		$starttime = strtotime(date("Y-m-d"));

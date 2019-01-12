@@ -16,6 +16,7 @@
 							<div class="layui-inline layui-col-xs12 layui-col-sm4 layui-col-md3 layui-col-lg2">
 								<input type="text" name="email" class="layui-input" value="" placeholder="邮箱" />
 							</div>
+                            <?php if($this->AdminUser['substation_id']=='master'):?>
                             <div class="layui-col-xs12 layui-col-sm4 layui-col-md3 layui-col-lg2">
                                 <select name="substation">
                                     <option value="0" >全部分站</option>
@@ -27,6 +28,7 @@
                                     <?php endif;?>
                                 </select>
                             </div>
+                            <?php endif;?>
 							<div class="layui-col-xs12 layui-col-sm4 layui-col-md3 layui-col-lg2">
 								<select name="pid">
 									<option value="0" >筛选商品</option>

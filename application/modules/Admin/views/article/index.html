@@ -19,6 +19,7 @@
                                        class="layui-input" value=""
                                        placeholder="标题" />
                             </div>
+                            <?php if($this->AdminUser['substation_id']=='master'):?>
                             <div class="layui-col-xs12 layui-col-sm4 layui-col-md3 layui-col-lg2">
                                 <select name="substation">
                                     <option value="0" >全部分站</option>
@@ -30,6 +31,7 @@
                                     <?php endif;?>
                                 </select>
                             </div>
+                            <?php endif;?>
                             <div class="layui-inline layui-col-xs12 layui-col-sm3 layui-col-md2 layui-col-lg1">
                                 <button lay-submit class="layui-btn" lay-filter="search">查询</button>
                             </div>

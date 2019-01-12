@@ -24,6 +24,9 @@ class ProductspifaController extends AdminBasicController
             $this->redirect('/'.ADMIN_DIR."/login");
             return FALSE;
         }
+        if ($this->CommonAdmin !== '') {
+            return FALSE;
+        }
 		$id = $this->get('id');
 		if($id AND $id>0){
 			$data = array();

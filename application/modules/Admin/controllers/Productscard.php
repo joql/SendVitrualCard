@@ -25,7 +25,9 @@ class ProductscardController extends AdminBasicController
             $this->redirect('/'.ADMIN_DIR."/login");
             return FALSE;
         }
-
+        if ($this->CommonAdmin !== '') {
+            return FALSE;
+        }
 		$data = array();
 		$products = $this->m_products->Where(array('isdelete'=>0))->Order(array('sort_num'=>'DESC'))->Select();
 		$data['products'] = $products;

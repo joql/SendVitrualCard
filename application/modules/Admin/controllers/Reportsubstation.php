@@ -32,7 +32,8 @@ class ReportsubstationController extends AdminBasicController
 
     public function ajaxAction(){
         $list = array();
-        $substation_id = $this->get('substation');
+        $substation_id = $this->CommonAdmin ?: $this->get('substation');
+
         $get_params = [
             'substation_id' => $substation_id,
         ];

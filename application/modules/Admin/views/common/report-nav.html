@@ -1,7 +1,9 @@
 <ul class="layui-nav layui-nav-tree layui-inline" lay-filter="user">
+    <?php if($this->AdminUser['substation_id']=='master'):?>
     <li class="layui-nav-item">
         <a href="/<?php echo ADMIN_DIR;?>/report">统计报表</a>
     </li>
+    <?php endif;?>
     <li class="layui-nav-item">
         <a href="/<?php echo ADMIN_DIR;?>/reportsubstation">分站报表</a>
     </li>

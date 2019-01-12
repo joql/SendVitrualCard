@@ -1,40 +1,27 @@
-layui.define(['layer', 'table', 'form','laydate'], function(exports){
+layui.define(['layer', 'table', 'form'], function(exports){
 	var $ = layui.jquery;
 	var layer = layui.layer;
 	var table = layui.table;
 	var form = layui.form;
-	var laydate = layui.laydate;
-
-	laydate.render({
-		elem: '#expire_time'
-	})
+		
 	table.render({
 		elem: '#table',
-		url: '/'+ADMIN_DIR+'/substation/ajax',
+		url: '/'+ADMIN_DIR+'/substationurl/ajax',
 		page: true,
 		cellMinWidth:60,
 		cols: [[
 			{field: 'id', title: 'ID', width:80},
-			{field: 'type_name', title: '类型'},
-			{field: 'admin_name', title: '站长'},
-			{field: 'admin_qq', title: '站长QQ'},
-			{field: 'bind_url', title: '域名'},
-			{field: 'remaining_sum', title: '余额'},
-			{field: 'expire_time', title: '到期时间'},
-			{field: 'state', title: '状态'},
+			{field: 'url', title: '分站顶级域名'},
+			{field: 'state', title: '状态',width:120,templet: '#checkboxTpl'},
 			{field: 'opt', title: '操作', width:120, templet: '#opt',fixed: 'right',align:'center'},
 		]]
 	});
 
 	//添加
 	form.on('submit(add)', function(data){
-        if(data.field.type_id == ""){
-            layer.msg('请选择类型',{icon:2,time:5000});
-            return false;
-        }
 		var i = layer.load(2,{shade: [0.5,'#fff']});
 		$.ajax({
-			url: '/'+ADMIN_DIR+'/substation/addajax',
+			url: '/'+ADMIN_DIR+'/substationurl/addajax',
 			type: 'POST',
 			dataType: 'json',
 			data: data.field,
@@ -65,13 +52,29 @@ layui.define(['layer', 'table', 'form','laydate'], function(exports){
 
 		return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
 	});
-	
-    form.on('submit(search)', function(data){
-        table.reload('table', {
-            url: '/'+ADMIN_DIR+'/products/ajax',
-            where: data.field
-        });
-        return false;
+    form.on('checkbox(lockDemo)', function(obj){
+        $.ajax({
+            url: '/'+ADMIN_DIR+'/substationurl/stateajax',
+            type: 'POST',
+            dataType: 'json',
+            data: {
+            	'id' : this.value,
+            	'state' : obj.elem.checked ? '1' : '2'
+			},
+        })
+            .done(function(res) {
+                if (res.code === '0') {
+                    layer.msg('状态更新成功',{icon:1,time:5000});
+                } else {
+                    layer.msg(res.msg,{icon:2,time:5000});
+                }
+            })
+            .fail(function() {
+                layer.msg('服务器连接失败，请联系管理员',{icon:2,time:5000});
+            })
+            .always(function() {
+                layer.close(i);
+            });
     });
-	exports('adminsubstationtype',null)
+	exports('adminsubstationurl',null)
 });

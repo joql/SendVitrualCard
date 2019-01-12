@@ -71,7 +71,7 @@ class ArticleController extends AdminBasicController
         $title = $this->getPost('title',false);
         $content = $this->getPost('description',false);
         $status = $this->getPost('status',false);
-        $substation_id = $this->getPost('substation',false);
+        $substation_id = $this->getPost('substation',false) ?: $this->CommonAdmin;
         $csrf_token = $this->getPost('csrf_token', false);
         $data = array();
 
@@ -150,7 +150,7 @@ class ArticleController extends AdminBasicController
         }
 
         $title = $this->get('title');
-        $substation_id = $this->get('substation');
+        $substation_id = $this->CommonAdmin ?: $this->get('substation');
         $get_param = array(
             'a.title' => [
                 'like' => $title

@@ -2,9 +2,11 @@
     <li class="layui-nav-item layui-this">
         <a href="/<?php echo ADMIN_DIR;?>/order">订单管理</a>
     </li>
+    <?php if($this->AdminUser['substation_id']=='master'):?>
     <li class="layui-nav-item">
         <a href="/<?php echo ADMIN_DIR;?>/emailqueue">消息队列</a>
     </li>
+    <?php endif;?>
 </ul>
 <div class="site-tree-mobile layui-hide">
     <i class="layui-icon">&#xe602;</i>

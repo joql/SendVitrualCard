@@ -39,7 +39,7 @@ class UserController extends AdminBasicController
         }
 		
 
-        $substation = $this->get('substation');
+        $substation = $this->CommonAdmin ?: $this->get('substation');
         $name = $this->get('name');
 
         $where1 = array();

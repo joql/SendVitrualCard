@@ -2,12 +2,16 @@
     <li class="layui-nav-item layui-this">
         <a href="/<?php echo ADMIN_DIR;?>/setting">配置中心</a>
     </li>
+    <?php if($this->AdminUser['substation_id']=='master'):?>
     <li class="layui-nav-item">
         <a href="/<?php echo ADMIN_DIR;?>/email">邮箱设置</a>
     </li>
+    <?php endif;?>
+    <?php if($this->AdminUser['substation_id']=='master'):?>
     <li class="layui-nav-item">
         <a href="/<?php echo ADMIN_DIR;?>/payment">支付设置</a>
     </li>
+    <?php endif;?>
 </ul>
 <div class="site-tree-mobile layui-hide">
     <i class="layui-icon">&#xe602;</i>

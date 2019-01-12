@@ -18,7 +18,7 @@ class M_Admin_user extends Model
     public function checkLogin($email, $password)
     {
         if (strlen($email) > 0 AND strlen($password) > 0) {
-            $field = array('id', 'email', 'secret', 'password');
+            $field = array('id', 'email', 'secret', 'password','substation_id');
             $where = array('email' => $email);
             $result = $this->Field($field)->Where($where)->SelectOne();
             if (is_array($result) AND !empty($result)) {

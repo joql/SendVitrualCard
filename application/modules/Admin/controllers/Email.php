@@ -22,6 +22,9 @@ class EmailController extends AdminBasicController
             $this->redirect('/'.ADMIN_DIR."/login");
             return FALSE;
         }
+        if ($this->CommonAdmin !== '') {
+            return FALSE;
+        }
 		$data = array();
 		$email = $this->m_email->SelectOne();
 		$data['email'] = $email;

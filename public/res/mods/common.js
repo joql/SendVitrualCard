@@ -117,7 +117,9 @@ layui.define(['layer', 'laytpl', 'form', 'element','table'], function(exports){
 
 		var url = $(this).data('href');
         var deltip = $(this).data('deltip') || '真的要删除该记录吗？';
-		
+        var checktip = $(this).data('checktip') || '真的要审核记录吗？';
+        var blocktip = $(this).data('blocktip') || '真的要停用记录吗？';
+
 		if (layEvent === 'del') { //删除
 			layer.confirm(deltip, function(index) {
 				layer.close(index);
@@ -131,6 +133,56 @@ layui.define(['layer', 'laytpl', 'form', 'element','table'], function(exports){
 				.done(function(res) {
 					if ( res.code == '1' ) {
                         obj.del();
+                        layer.msg(res.msg,{icon:1})
+                    } else {
+                    	layer.msg(res.msg,{icon:2})
+                    }
+				})
+				.fail(function() {
+					layer.alert('error',{time:3000});
+				})
+				.always(function() {
+					layer.close(loading);
+				});
+			});
+		}else if (layEvent === 'check') { //审核
+			layer.confirm(checktip, function(index) {
+				layer.close(index);
+				var loading = layer.load(2);
+				$.ajax({
+					url: url,
+					type: 'POST',
+					dataType: 'json',
+					data: {'csrf_token':TOKEN}
+				})
+				.done(function(res) {
+					if ( res.code == '1' ) {
+                        location.reload();
+                        layer.msg(res.msg,{icon:1})
+                    } else {
+                    	layer.msg(res.msg,{icon:2})
+                    }
+				})
+				.fail(function() {
+					layer.alert('error',{time:3000});
+				})
+				.always(function() {
+					layer.close(loading);
+				});
+			});
+		}else if (layEvent === 'block') { //停用
+			layer.confirm(blocktip, function(index) {
+				layer.close(index);
+				var loading = layer.load(2);
+				$.ajax({
+					url: url,
+					type: 'POST',
+					dataType: 'json',
+					data: {'csrf_token':TOKEN}
+				})
+				.done(function(res) {
+					if ( res.code == '1' ) {
+                        location.reload();
                         layer.msg(res.msg,{icon:1})
                     } else {
                     	layer.msg(res.msg,{icon:2})

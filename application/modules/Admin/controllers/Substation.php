@@ -155,9 +155,15 @@ class SubstationController extends AdminBasicController
             false), $user['secret']);
 
 
-        $exist = $this->m_substation->Field('id')->Where(array('bind_url'=>$data['bind_url']))->SelectOne();
-        if(!empty($exist['id'])){
-            $data = array('code' => 1003, 'msg' => '新增失败');
+        $exist_url = $this->m_substation->Field('id')->Where(array('bind_url'=>$data['bind_url']))->SelectOne();
+        if(!empty($exist_url['id'])){
+            $data = array('code' => 1003, 'msg' => '域名已存在');
+            Helper::response($data);
+        }
+        $exist_name = $this->m_admin_user->Field('id')->Where(array
+        ('email'=>$data['admin_name']))->SelectOne();
+        if(!empty($exist_name['id'])){
+            $data = array('code' => 1003, 'msg' => '邮箱已存在');
             Helper::response($data);
         }
         $r = $this->m_substation->Insert($data);

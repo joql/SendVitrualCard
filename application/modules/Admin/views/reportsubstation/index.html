@@ -9,6 +9,7 @@
             <div class="layui-tab-content" style="padding: 20px 0;">
                 <div class="layui-form layui-form-pane layui-tab-item layui-show">
                     <div class="layui-form-item layui-show">
+                        <?php if($this->AdminUser['substation_id']=='master'):?>
 						<div class="layui-form layui-row layui-col-space10">
                             <div class="layui-col-xs12 layui-col-sm4 layui-col-md3 layui-col-lg2">
                                 <select name="substation">
@@ -24,6 +25,7 @@
 								<button lay-submit class="layui-btn" lay-filter="search">查询</button>
 							</div>
 						</div>
+                        <?php endif;?>
                         <table class="layui-table" id="table" lay-filter="table"></table>
                     </div>
                 </div>

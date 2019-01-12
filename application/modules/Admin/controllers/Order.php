@@ -49,7 +49,7 @@ class OrderController extends AdminBasicController
 		$email = $this->get('email',false);
 		$status = $this->get('status');
 		$pid = $this->get('pid');
-		$substation_id = $this->get('substation');
+		$substation_id = $this->CommonAdmin ?: $this->get('substation');
 
         //查询条件
         $get_params = [

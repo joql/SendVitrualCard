@@ -22,6 +22,10 @@ class EmailqueueController extends AdminBasicController
             return FALSE;
         }
 
+        if ($this->CommonAdmin !== '') {
+            return FALSE;
+        }
+
 		$data = array();
 		$this->getView()->assign($data);
     }

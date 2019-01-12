@@ -9,11 +9,13 @@
 class LoginController extends AdminBasicController
 {
 	private $m_admin_user;
+	private $m_substation;
 
     public function init()
     {
         parent::init();
 		$this->m_admin_user = Helper::load('admin_user');
+		$this->m_substation = Helper::load('substation');
     }
 
     public function indexAction()
@@ -57,9 +59,24 @@ class LoginController extends AdminBasicController
 					}					
 
 					$resultAdminUser = $this->m_admin_user->checkLogin($email,$password);
+					$resultAdminUser['substation_id'] !== 'master'
+                    && $resultAdminUser['substation'] =
+                    $this->m_substation->Where
+                    (array('id'=>$resultAdminUser['substation_id'])
+                    )->SelectOne();
 					if($resultAdminUser){
-						$this->setLogin($resultAdminUser);
-						$data = array('code' => 1, 'msg' =>'success');
+					    if($resultAdminUser['substation_id'] === 'master'
+                            || (
+                                $resultAdminUser['substation']['state'] == 1
+                                && $resultAdminUser['substation']['expire_time'] <= time()
+                                )
+                        ){
+                            $this->setLogin($resultAdminUser);
+                            $data = array('code' => 1, 'msg' =>'success');
+                        }else{
+                            $data = array('code' => 1005, 'msg' =>'没有权限');
+                        }
+
 					}else{
 						$data = array('code' => 1002, 'msg' =>'账户密码错误');
 					}
