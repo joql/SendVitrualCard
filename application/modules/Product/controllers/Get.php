@@ -11,12 +11,14 @@ class GetController extends PcBasicController
 	private $m_products;
 	private $m_products_type;
 	private $m_products_pifa;
+    private $m_products_substation;
     public function init()
     {
         parent::init();
 		$this->m_products = $this->load('products');
 		$this->m_products_type = $this->load('products_type');
 		$this->m_products_pifa = $this->load('products_pifa');
+        $this->m_products_substation = $this->load('products_substation');
     }
 	
     public function indexAction()
@@ -177,6 +179,14 @@ class GetController extends PcBasicController
 				$data = array();
 				$field = array('id', 'name', 'price','auto', 'qty', 'stockcontrol', 'description','addons','password');
 				$product = $this->m_products->Field($field)->Where(array('id'=>$pid))->SelectOne();
+                if(!empty($product) && $this->substation_id != 'master'){
+                    $exist = $this->m_products_substation
+                        ->Where(array(
+                            'substation_id' => $this->substation_id,
+                            'product_id' => $product['id'],
+                        ))->SelectOne();
+                    !empty($exist['price']) && $product['price'] = $exist['price'];
+                }
 				if(!empty($product)){
 					if(strlen($product['password'])>0){
 						$password = $this->getPost('password');

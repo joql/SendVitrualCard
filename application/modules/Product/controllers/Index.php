@@ -34,8 +34,32 @@ class IndexController extends PcBasicController
 				//var_dump($products_type);die();
                 if(isset($products_type)){
                     foreach ($products_type as $id => $value){
-                        $order = array('sort_num' => 'DESC');
-                        $products = $this->m_products->Where(array('typeid'=>$value['id'],'active'=>1,'isdelete'=>0))->Order($order)->Select();
+
+                        if($this->substation_id != 'master'){
+                            $sql = "select p.*,ps.price as price_new from `t_products` as p 
+                                      left join (SELECT * FROM `t_products_substation` WHERE substation_id={$this->substation_id}) as ps on ps.product_id=p.id 
+                                      WHERE ".convertSQL(array(
+                                    'p.typeid'=>$value['id'],
+                                    'p.active'=>1,
+                                    'p.isdelete'=>0
+                                ), true)." order by p.sort_num desc";
+                            $products = (array)$this->m_products->Query($sql);
+                            foreach ($products as &$v){
+                                if(isset($v['price_new']) and $v['price_new'] != ''){
+                                    $v['price'] = $v['price_new'];
+                                }
+                            }
+                        }else{
+                            $order = array('sort_num' => 'DESC');
+                            $products = $this->m_products
+                                ->Where(array(
+                                    'typeid'=>$value['id'],
+                                    'active'=>1,
+                                    'isdelete'=>0
+                                ))
+                                ->Order($order)
+                                ->Select();
+                        }
                         $products_type[$id]['products'] = $products;
 
                     }

@@ -11,6 +11,7 @@ class ProductsController extends AdminBasicController
 	private $m_products;
 	private $m_products_type;
 	private $m_products_card;
+	private $m_products_substation;
 	
     public function init()
     {
@@ -18,15 +19,13 @@ class ProductsController extends AdminBasicController
 		$this->m_products = $this->load('products');
 		$this->m_products_type = $this->load('products_type');
 		$this->m_products_card = $this->load('products_card');
+		$this->m_products_substation = $this->load('products_substation');
     }
 
     public function indexAction()
     {
         if ($this->AdminUser==FALSE AND empty($this->AdminUser)) {
             $this->redirect('/'.ADMIN_DIR."/login");
-            return FALSE;
-        }
-        if ($this->CommonAdmin !== '') {
             return FALSE;
         }
 		$data = array();
@@ -59,8 +58,19 @@ class ProductsController extends AdminBasicController
             }
 			
             $limits = "{$pagenum},{$limit}";
-			$sql = "SELECT p1.id,p1.name,p1.price,p1.qty,p1.auto,p1.active,p1.stockcontrol,p1.sort_num,p2.name as typename FROM `t_products` as p1 left join `t_products_type` as p2 on p1.typeid = p2.id WHERE p1.isdelete=0 Order by p1.id desc LIMIT {$limits}";
-			$items=$this->m_products->Query($sql);
+            if($this->CommonAdmin === ''){//主站
+                $sql = "SELECT p1.id,p1.name,p1.price,p1.qty,p1.auto,p1.active,p1.stockcontrol,p1.sort_num,p2.name as typename FROM `t_products` as p1 left join `t_products_type` as p2 on p1.typeid = p2.id WHERE p1.isdelete=0 Order by p1.id desc LIMIT {$limits}";
+            }else{
+                //分站
+                $sql = "SELECT p1.id,p1.name,p1.price,p1.qty,p1.auto,p1.active,p1
+.stockcontrol,p1.sort_num,p2.name as typename,ps.price as price_new FROM `t_products` as p1 left join `t_products_type` as p2 on p1.typeid = p2.id left join ( SELECT * FROM `t_products_substation` WHERE substation_id={$this->CommonAdmin}) as ps on ps.product_id=p1.id WHERE p1.isdelete=0 Order by p1.id desc LIMIT {$limits}";
+            }
+			$items=(array)$this->m_products->Query($sql);
+            foreach ($items as &$v){
+                if(isset($v['price_new']) and $v['price_new'] !== ''){
+                    $v['price'] = $v['price_new'];
+                }
+            }
             if (empty($items)) {
                 $data = array('code'=>1002,'count'=>0,'data'=>array(),'msg'=>'无数据');
             } else {
@@ -82,9 +92,23 @@ class ProductsController extends AdminBasicController
 		if($id AND $id>0){
 			$data = array();
 			$product=$this->m_products->SelectByID('',$id);
+            if(!empty($this->CommonAdmin)){
+                $s = $this->m_products_substation
+                    ->Field('price')
+                    ->Where(array(
+                    'product_id' => $product['id'],
+                    'substation_id' => $this->CommonAdmin,
+                ))->SelectOne();
+                !empty($s['price']) && $product['price'] = $s['price'];
+            }
 			$data['product'] = $product;
+
 			
-			$productstype=$this->m_products_type->Where(array('isdelete'=>0))->Order(array('sort_num'=>'DESC'))->Select();
+			$productstype=$this->m_products_type
+                ->Where(array('isdelete'=>0))
+                ->Order(array('sort_num'=>'DESC'))
+                ->Select();
+
 			$data['productstype'] = $productstype;
 			
 			$this->getView()->assign($data);
@@ -131,7 +155,8 @@ class ProductsController extends AdminBasicController
 			Helper::response($data);
         }
 		
-		if($method AND $typeid AND $name AND $description AND is_numeric($stockcontrol) AND is_numeric($qty) AND is_numeric($price) AND is_numeric($auto) AND is_numeric($active) AND is_numeric($sort_num) AND $csrf_token){
+		if($this->CommonAdmin != ''
+            || ($method AND $typeid AND $name AND $description AND is_numeric($stockcontrol) AND is_numeric($qty) AND is_numeric($price) AND is_numeric($auto) AND is_numeric($active) AND is_numeric($sort_num) AND $csrf_token)){
 			if ($this->VerifyCsrfToken($csrf_token)) {
 				if($price<0.01){
 					$data = array('code' => 1000, 'msg' => '价格设置错误');
@@ -154,7 +179,24 @@ class ProductsController extends AdminBasicController
                     'images'=>$images,
                     'old_price'=>$old_price,
 				);
-				if($method == 'edit' AND $id>0){
+				if($this->CommonAdmin !=''){
+				    if($price < $old_price){
+                        $data = array('code' => 1013, 'msg' => '售价必须高于成本价');
+                        Helper::response($data);
+                    }
+				    $s = array(
+				        'product_id' => $id,
+                        'price' => $price,
+                        'substation_id' => $this->CommonAdmin,
+                    );
+                    $u=$this->m_products_substation->updateInfo($s);
+                    if($u){
+                        $data = array('code' => 1, 'msg' => '更新成功');
+                    }else{
+                        $data = array('code' => 1003, 'msg' => '更新失败');
+                    }
+                }
+				elseif($method == 'edit' AND $id>0){
 					//修正库存问题,如果不控制库存，库存默认为０
 					if($stockcontrol<1){
 						$m['qty'] = 0;
@@ -170,7 +212,8 @@ class ProductsController extends AdminBasicController
 					}else{
 						$data = array('code' => 1003, 'msg' => '更新失败');
 					}
-				}elseif($method == 'add'){
+				}
+				elseif($method == 'add'){
 					//修正库存问题,在添加新商品时,如果是自动发货商品,库存默认为0
 					if($auto>0 OR $stockcontrol<1){
 						$m['qty'] = 0;
@@ -182,7 +225,8 @@ class ProductsController extends AdminBasicController
 					}else{
 						$data = array('code' => 1003, 'msg' => '新增失败');
 					}
-				}else{
+				}
+				else{
 					$data = array('code' => 1002, 'msg' => '未知方法');
 				}
 			} else {

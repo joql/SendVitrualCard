@@ -2,12 +2,14 @@
     <li class="layui-nav-item">
         <a href="/<?php echo ADMIN_DIR;?>/products">商品管理</a>
     </li>
+    <?php if($this->AdminUser['substation_id']=='master'):?>
     <li class="layui-nav-item">
         <a href="/<?php echo ADMIN_DIR;?>/productscard">卡密管理</a>
     </li>
     <li class="layui-nav-item layui-this">
         <a href="/<?php echo ADMIN_DIR;?>/productstype">产品分类</a>
     </li>
+    <?php endif;?>
 </ul>
 <div class="site-tree-mobile layui-hide">
     <i class="layui-icon">&#xe602;</i>

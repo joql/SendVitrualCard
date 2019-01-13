@@ -21,6 +21,7 @@
                         </p>
                     </blockquote>
                     <form class="layui-form layui-show" method="post" id="products_form">
+                        <?php if($this->AdminUser['substation_id']=='master'):?>
                         <div class="layui-form-item">
                             <label for="name" class="layui-form-label">商品地址</label>
                             <div class="layui-input-block">
@@ -76,18 +77,26 @@
                                     <?php endif;?> id="updateQty">更新库存</button>
                             </div>
                         </div>
+                        <?php endif;?>
                         <div class="layui-form-item">
-                            <label for="price" class="layui-form-label">商品单价</label>
+                            <label for="price"
+                                   class="layui-form-label">商品售价
+                            </label>
                             <div class="layui-input-inline">
-                                <input type="number" id="price" name="price" lay-verify="required" autocomplete="off" value="<?php echo $product['price'];?>" class="layui-input">
+                                <input type="number" id="price" name="price" lay-verify="required" autocomplete="off" value="<?php echo $product['price'];?>"
+                                       class="layui-input"
+                                       placeholder="商品零售价">
                             </div>
                         </div>
                         <div class="layui-form-item">
-                            <label for="name" class="layui-form-label">原始价格</label>
+                            <label for="name"
+                                   class="layui-form-label">成本价格
+                            </label>
                             <div class="layui-input-inline">
-                                <input type="text" id="old_price" name="old_price" lay-verify="required" autocomplete="off" value="<?php echo $product['old_price'];?>" class="layui-input" placeholder="商品在外面的价格,用于跟上面的价格对比">
+                                <input type="text" id="old_price" name="old_price" lay-verify="required" autocomplete="off" value="<?php echo $product['old_price'];?>" class="layui-input" placeholder="商品进货价">
                             </div>
                         </div>
+                        <?php if($this->AdminUser['substation_id']=='master'):?>
                         <div class="layui-form-item">
                             <label class="layui-form-label">发货模式</label>
                             <div class="layui-input-block">
@@ -127,6 +136,7 @@
                             </div>
 							<div class="layui-form-mid layui-word-aux">数字越大，越靠前</div>
                         </div>
+                        <?php endif;?>
                         <div class="layui-form-item">
                             <input type="hidden" name="method" value="edit">
                             <input type="hidden" name="id" id="pid" value="<?php echo $product['id'];?>">

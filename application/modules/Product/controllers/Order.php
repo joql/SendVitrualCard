@@ -13,6 +13,7 @@ class OrderController extends PcBasicController
 	private $m_payment;
 	private $m_products_pifa;
 	private $m_substation;
+    private $m_products_substation;
 
     public function init()
     {
@@ -22,6 +23,7 @@ class OrderController extends PcBasicController
 		$this->m_user = $this->load('user');
 		$this->m_payment = $this->load('payment');
 		$this->m_products_pifa = $this->load('products_pifa');
+        $this->m_products_substation = $this->load('products_substation');
 		$this->m_substation = $this->load('substation');
     }
 
@@ -75,7 +77,17 @@ class OrderController extends PcBasicController
                     Helper::response($data);
                 }
 
-				$product = $this->m_products->Where(array('id'=>$pid,'active'=>1,'isdelete'=>0))->SelectOne();
+				$product = $this->m_products
+                    ->Where(array('id'=>$pid,'active'=>1,'isdelete'=>0))
+                    ->SelectOne();
+                if($this->substation_id != 'master'){
+                    $exist = $this->m_products_substation
+                        ->Where(array(
+                            'substation_id' => $this->substation_id,
+                            'product_id' => $product['id'],
+                        ))->SelectOne();
+                    !empty($exist['price']) && $product['price'] = $exist['price'];
+                }
 				if(!empty($product)){
 					$myip = getClientIP();
 

@@ -11,12 +11,14 @@ class DetailController extends PcBasicController
 	private $m_products;
 	private $m_products_pifa;
     private $m_payment;
+    private $m_products_substation;
 
     public function init()
     {
         parent::init();
 		$this->m_products = $this->load('products');
 		$this->m_products_pifa = $this->load('products_pifa');
+		$this->m_products_substation = $this->load('products_substation');
         $this->m_payment = $this->load('payment');
     }
 
@@ -25,6 +27,14 @@ class DetailController extends PcBasicController
 		$pid = $this->get('pid');
 		if($pid AND is_numeric($pid) AND $pid>0){
 			$product = $this->m_products->Where(array('id'=>$pid,'active'=>1,'isdelete'=>0))->SelectOne();
+            if(!empty($product) && $this->substation_id != 'master'){
+                $exist = $this->m_products_substation
+                    ->Where(array(
+                        'substation_id' => $this->substation_id,
+                        'product_id' => $product['id'],
+                    ))->SelectOne();
+                !empty($exist['price']) && $product['price'] = $exist['price'];
+            }
 			if(!empty($product)){
 				$data = array();
 				//先拿折扣
