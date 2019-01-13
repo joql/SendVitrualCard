@@ -277,8 +277,7 @@ class SubstationurlController extends AdminBasicController
 		$csrf_token = $this->getPost('csrf_token', false);
         if (FALSE != $id AND is_numeric($id) AND $id > 0) {
 			if ($this->VerifyCsrfToken($csrf_token)) {
-				$delete = $this->m_substation_type->Where(array('id' => $id))
-                    ->Delete();
+				$delete = $this->m_substation_url->Where(array('id' => $id))->Delete();
                 if($delete){
                     $data = array('code' => 1, 'msg' => '删除成功', 'data' => '');
                 }else{

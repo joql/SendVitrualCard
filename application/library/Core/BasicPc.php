@@ -19,7 +19,7 @@ class PcBasicController extends BasicController
 		parent::init();
 		$sysvars = $data = array();
         //获取网址
-        $this->server_name = $_SERVER['SERVER_NAME'];
+        $this->server_name = $_SERVER['HTTP_HOST'];
         //$this->server_name = 'dd.test.cn';
         $substation = $this->load('substation')->Field('id')
             ->Where(array('bind_url'=>$this->server_name))
