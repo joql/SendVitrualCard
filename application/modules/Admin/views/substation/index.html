@@ -19,8 +19,9 @@
     </div>
 </div>
 <script type="text/html" id="opt">
+    <a href="/<?php echo ADMIN_DIR;?>/substation/edit/?id={{d.id}}" class="layui-btn layui-btn-xs layui-btn-edit">编辑</a>
     {{# if(d.state =='未审核'){ }}
-    <a class="layui-btn layui-btn-edit layui-btn-xs"
+    <a class="layui-btn layui-btn-normal layui-btn-xs"
        data-href="/<?php echo ADMIN_DIR;?>/substation/agree/?id={{d.id}}" lay-event="check">
         审核</a>
     {{# } }}

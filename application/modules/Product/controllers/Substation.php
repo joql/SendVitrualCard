@@ -1,242 +1,107 @@
 <?php
+/*
+ * 功能：会员中心－个人中心
+ * Author:资料空白
+ * Date:20180509
+ */
 
 class SubstationController extends PcBasicController
 {
-	private $m_order;
-	private $method_array = array();
+    private $m_substation;
+    private $m_substation_url;
+    private $m_substation_type;
+    private $m_admin_user;
+
     public function init()
     {
         parent::init();
-		$this->m_order = $this->load('order');
-		$this->method_array = array('orderid','query_info','contact');
+        $this->m_substation = $this->load('substation');
+        $this->m_substation_type = $this->load('substation_type');
+        $this->m_substation_url = $this->load('substation_url');
+        $this->m_admin_user = $this->load('admin_user');
     }
 
     public function indexAction()
     {
-		$data = array();
-        $order = [];
-		$zlkbmethod = $this->get("zlkbmethod");
-		if(!in_array($zlkbmethod,$this->method_array)){
-			$zlkbmethod = "contact";
-		}
-		if($zlkbmethod=='contact'){
-            $centent = $this->get("content");
-            $chapwd    = $this->get('chapwd');
-            if($centent!=''){
-                if((strlen($centent)>4 && strlen($centent)<12) AND is_numeric($centent)){
-                    $chapwd_string = new \Safe\MyString($chapwd);
-                    $chapwd = $chapwd_string->trimall()->qufuhao2()->getValue();
-                    $where = array('qq'=>$centent,'chapwd'=>$chapwd);
-
-                    $order = $this->m_order->Where($where)->Where(array('isdelete'=>0))->Order(array('id'=>'desc'))->Select();
-                }elseif(strpos($centent,'@') && strpos($centent,'.')){
-                    $chapwd_string = new \Safe\MyString($chapwd);
-                    $chapwd = $chapwd_string->trimall()->qufuhao2()->getValue();
-                    $where = array('email'=>$centent,'chapwd'=>$chapwd);
-                    $order = $this->m_order->Where($where)->Where(array('isdelete'=>0))->Order(array('id'=>'desc'))->Select();
-                }else{
-                    $orderid_string = new \Safe\MyString($centent);
-                    $orderid = $orderid_string->trimall()->qufuhao2()->getValue();
-                    $where = array('orderid'=>$orderid);
-                    $order = $this->m_order->Where($where)->Where(array('isdelete'=>0))->Order(array('id'=>'desc'))->Select();
-                }
-            }
-        }
-        //var_dump($order);die;
-        $data['order'] = $order;
-		$data['title'] = "订单查询";
-		if(file_exists(APP_PATH.'/application/modules/Product/views/query/tpl/'.$zlkbmethod.'.html')){
-			$tpl = 'tpl_'.$zlkbmethod;
-			$this->display($tpl, $data);
-			return FALSE;
-		}else{
-			$this->getView()->assign($data);
-		}
+        $data = array();
+        $data['type_list'] = $this->m_substation_type->Select();
+        $data['url_list'] = $this->m_substation_url->Where(array('state'=>1))->Select();
+        $this->getView()->assign($data);
     }
-	
-	public function ajaxAction()
-	{
-		$zlkbmethod = $this->getPost('zlkbmethod');
-		$csrf_token = $this->getPost('csrf_token', false);
-		if($zlkbmethod AND $csrf_token){
-			if(in_array($zlkbmethod,$this->method_array)){
-				if($zlkbmethod == 'contact'){
-					$chapwd    = $this->getPost('chapwd');
-					if($chapwd){
-						if ($this->VerifyCsrfToken($csrf_token)) {
-							if(isset($this->config['orderinputtype']) AND $this->config['orderinputtype']=='2'){
-								$qq = $this->getPost('qq');
-								if($qq AND is_numeric($qq)){
-									$email = $qq.'@qq.com';
-								}else{
-									$data = array('code' => 1006, 'msg' => '丢失参数');
-									Helper::response($data);
-								}
-							}else{
-								$email = $this->getPost('email',false);
-								if($email AND isEmail($email)){
-									$qq = '';
-								}else{
-									$data = array('code' => 1006, 'msg' => '丢失参数');
-									Helper::response($data);
-								}
-							}
 
-							if(isset($this->config['yzmswitch']) AND $this->config['yzmswitch']>0){
-								$vercode = $this->getPost('vercode');
-								if($vercode){
-									if(strtolower($this->getSession('productqueryCaptcha')) == strtolower($vercode)){
-										$this->unsetSession('productqueryCaptcha');
-									}else{
-										$data=array('code'=>1004,'msg'=>'图形验证码错误');
-										Helper::response($data);
-									}
-								}else{
-									$data = array('code' => 1000, 'msg' => '丢失参数');
-									Helper::response($data);
-								}
-							}
-							
-							$chapwd_string = new \Safe\MyString($chapwd);
-							$chapwd = $chapwd_string->trimall()->qufuhao2()->getValue();
-							
-							$starttime = strtotime("-1 month");
-							$order = $this->m_order->Where(array('email'=>$email,'chapwd'=>$chapwd))->Where(array('isdelete'=>0))->Where("addtime>={$starttime}")->Order(array('id'=>'desc'))->Select();
-							if(empty($order)){
-								$data=array('code'=>1005,'msg'=>'订单不存在');
-							}else{
-								$data=array('code'=>1,'msg'=>'查询成功','data'=>$order,'count'=>count($order));
-							}
-						} else {
-							$data = array('code' => 1001, 'msg' => '页面超时，请刷新页面后重试!');
-						}
-					}else{
-						$data = array('code' => 1000, 'msg' => '丢失参数');
-					}
-				//订单号查询	
-				}elseif($zlkbmethod == 'orderid'){
-					$orderid  = $this->getPost('orderid');
-					if($orderid){
-						if ($this->VerifyCsrfToken($csrf_token)) {
-							if(isset($this->config['yzmswitch']) AND $this->config['yzmswitch']>0){
-								$vercode = $this->getPost('vercode');
-								if($vercode){
-									if(strtolower($this->getSession('productqueryCaptcha')) == strtolower($vercode)){
-										$this->unsetSession('productqueryCaptcha');
-									}else{
-										$data=array('code'=>1004,'msg'=>'图形验证码错误');
-										Helper::response($data);
-									}
-								}else{
-									$data = array('code' => 1000, 'msg' => '丢失参数');
-									Helper::response($data);
-								}
-							}
-							
-							$orderid_string = new \Safe\MyString($orderid);
-							$orderid = $orderid_string->trimall()->qufuhao2()->getValue();
-							
-							$starttime = strtotime("-1 month");
-							$order = $this->m_order->Where(array('orderid'=>$orderid))->Where(array('isdelete'=>0))->Where("addtime>={$starttime}")->Order(array('id'=>'desc'))->Select();
-							if(empty($order)){
-								$data=array('code'=>1005,'msg'=>'订单不存在');
-							}else{
-								$data=array('code'=>1,'msg'=>'查询成功','data'=>$order,'count'=>count($order));
-							}
-						} else {
-							$data = array('code' => 1001, 'msg' => '页面超时，请刷新页面后重试!');
-						}
-					}else{
-						$data = array('code' => 1000, 'msg' => '丢失参数');
-					}
-				}elseif($zlkbmethod == 'cookie'){
-					//从浏览器中cookie中读取
-					$orderid = $this->getCookie('oid');
-					if($orderid){
-						if ($this->VerifyCsrfToken($csrf_token)) {
-							$l_encryption = new Encryption();
-							$cookie_oid = $l_encryption->decrypt($orderid);
-							
-							$orderid_string = new \Safe\MyString($cookie_oid);
-							$cookie_oid = $orderid_string->trimall()->qufuhao2()->getValue();
-							
-							$starttime = strtotime("-1 month");
-							$order = $this->m_order->Where(array('orderid'=>$cookie_oid))->Where(array('isdelete'=>0))->Where("addtime>={$starttime}")->Order(array('id'=>'desc'))->Select();
-							if(empty($order)){
-								$data=array('code'=>1005,'msg'=>'订单不存在');
-							}else{
-								$data=array('code'=>1,'msg'=>'查询成功','data'=>$order,'count'=>count($order));
-							}
-						} else {
-							$data = array('code' => 1001, 'msg' => '页面超时，请刷新页面后重试!');
-						}
-					}else{
-						$data = array('code' => 1000, 'msg' => '没有订单记录');
-					}
-				}else{
-					$data = array('code' => 1001, 'msg' => '未知的查询方式');
-				}
-			}else{
-				$data = array('code' => 1001, 'msg' => '参数错误');
-			}
-		}else{
-			$data = array('code' => 1000, 'msg' => '丢失参数');
-		}
-		Helper::response($data);
-	}
-	
-	public function kamiAction()
-	{
-		$orderid    = $this->getPost('orderid');
-		$csrf_token = $this->getPost('csrf_token', false);
-		if($orderid AND $csrf_token){
-			if ($this->VerifyCsrfToken($csrf_token)) {
-				$orderid_string = new \Safe\MyString($orderid);
-				$orderid = $orderid_string->trimall()->qufuhao2()->getValue();
-				$order = $this->m_order->Where(array('orderid'=>$orderid,'status'=>2))->SelectOne();
-				if(empty($order)){
-					$data=array('code'=>1005,'msg'=>'没有订单');
-				}else{
-					$card_mi_str = $order['kami'];
-					$cards = explode(',',$card_mi_str);
-					$data=array('code'=>1,'msg'=>'查询成功','data'=>$cards);
-				}
-			} else {
-				$data = array('code' => 1001, 'msg' => '页面超时，请刷新页面后重试!');
-            }
-		}else{
-			$data = array('code' => 1000, 'msg' => '丢失参数');
-		}
-		Helper::response($data);
-	}
-	
-	public function payAction()
-	{
-		$oid    = $this->getPost('oid');
-		$csrf_token = $this->getPost('csrf_token', false);
-		if($oid AND is_numeric($oid) AND $oid>0 AND $csrf_token){
-			if ($this->VerifyCsrfToken($csrf_token)) {
-				$order = $this->m_order->Where(array('id'=>$oid,'isdelete'=>0))->SelectOne();
-				if(empty($order)){
-					$data=array('code'=>1002,'msg'=>'没有订单');
-				}else{
-					if($order['status']<1){
-						$data = array('code' => 1003, 'msg' => '未支付');
-					}else{
-						$this->setSession('order_email',$order['email']);
-						$this->clearCookie('oid');
-						$l_encryption = new Encryption();
-						$cookie_oid = $l_encryption->encrypt($order['orderid']);
-						$this->setCookie('oid',$cookie_oid);
-						$data = array('code' => 1, 'msg' => 'success','data'=>$order);
-					}
-				}
-			} else {
-				$data = array('code' => 1001, 'msg' => '页面超时，请刷新页面后重试!');
-            }
-		}else{
-			$data = array('code' => 1000, 'msg' => '丢失参数');
-		}
-		Helper::response($data);
-	}
+    public function ajaxAction()
+    {
+        $data = array();
+        $data['type_id'] = $this->getPost('type',false);
+        $data['url'] = $this->getPost('url',false);
+        $data['url_postfix'] = $this->getPost('url_postfix',false);
+        $data['admin_name'] = $this->getPost('user',false);
+        $data['admin_pwd'] = md5($this->getPost('pwd',false));
+        $data['admin_qq'] = $this->getPost('qq',false);
+        $data['webname'] = $this->getPost('webname',false);
+        $data['remaining_sum'] = 0;
+        $data['expire_time'] = time()+60*60*24*30;
+        $data['state'] = 3;
+        $data['create_time'] = time();
+        //admin用户表信息
+        $user['email'] = $data['admin_name'];
+        $user['secret'] = md5(time());
+        $user['password'] = password($this->getPost('pwd',false), $user['secret']);
+        if(!preg_match('/^[0-9a-zA-Z]+$/',$data['url'])){
+            $data = array('code' => 1001, 'msg' => '前缀仅限字母数字');
+            Helper::response($data);
+        }
+        if(!isNumber($data['admin_qq'])){
+            $data = array('code' => 1002, 'msg' => '绑定qq格式错误');
+            Helper::response($data);
+        }
+        if(!isEmail($data['admin_name'])){
+            $data = array('code' => 1003, 'msg' => '管理账号只能为邮箱');
+            Helper::response($data);
+        }
+        $type = $this->m_substation_type->Where(array('id'=>$data['type_id']))->SelectOne();
+        if(!isset($type['name'])){
+            $data = array('code' => 1004, 'msg' => '版本类型不存在');
+            Helper::response($data);
+        }
+        $url = $this->m_substation_url->Where(array('id'=>$data['url_postfix'],'state'=>1))->SelectOne();
+        if(!isset($url['url'])){
+            $data = array('code' => 1004, 'msg' => '域名不存在');
+            Helper::response($data);
+        }
+        $data['bind_url'] = $data['url'].'.'.$url['url'];
+        unset($data['url']);
+        unset($data['url_postfix']);
+        $exist_url = $this->m_substation
+            ->Field('id')
+            ->Where(array('bind_url'=>$data['bind_url']))
+            ->SelectOne();
+        if(!empty($exist_url['id'])){
+            $data = array('code' => 1005, 'msg' => '域名已存在');
+            Helper::response($data);
+        }
+        $exist_name = $this->m_substation
+            ->Field('id')
+            ->Where(array('admin_name'=>$data['admin_name']))
+            ->SelectOne();
+        if(!empty($exist_name['id'])){
+            $data = array('code' => 1003, 'msg' => '管理账号已存在');
+            Helper::response($data);
+        }
+        unset($data['webname']);
+        
+        $r = $this->m_substation->Insert($data);
+        if($r){
+
+            $user['substation_id']=$r;
+            $this->m_admin_user->Insert($user);
+
+            $data = array('code' => 1, 'msg' => '申请成功，等待审核');
+        }else{
+            $data = array('code' => 1003, 'msg' => '申请失败');
+        }
+        Helper::response($data);
+
+    }
+
 }

@@ -178,6 +178,49 @@ class SubstationController extends AdminBasicController
         }
         Helper::response($data);
     }
+
+    public function editAction()
+    {
+        if ($this->AdminUser==FALSE AND empty($this->AdminUser)) {
+            $this->redirect('/'.ADMIN_DIR."/login");
+            return FALSE;
+        }
+        $id = $this->get('id');
+        if($id AND $id>0){
+            $data = array();
+            $substation=$this->m_substation->SelectByID('',$id);
+            $substation['expire_time'] = date('Y-m-d', $substation['expire_time']);
+            $data['substation'] = $substation;
+            $type_list = $this->m_substation_type->Select();
+            $data['type_list'] = $type_list;
+            $url_list = $this->m_substation_url->Where(array('state'=>1))
+                ->Select();
+            $data['url_list'] = $url_list;
+            $this->getView()->assign($data);
+        }else{
+            $this->redirect('/'.ADMIN_DIR."/article");
+            return FALSE;
+        }
+    }
+    public function editajaxAction()
+    {
+        if ($this->AdminUser==FALSE AND empty($this->AdminUser)) {
+            $this->redirect('/'.ADMIN_DIR."/login");
+            return FALSE;
+        }
+        $id = $this->get('id');
+        $data['type_id'] = $this->getPost('type_id', false);
+        $data['admin_qq'] = $this->getPost('admin_qq', false);
+        $data['expire_time'] = strtotime($this->getPost('expire_time', false));
+
+        $r = $this->m_substation->UpdateById($data,$id);
+        if($r){
+            $data = array('code' => 1, 'msg' => '修改成功');
+        }else{
+            $data = array('code' => 1003, 'msg' => '修改失败');
+        }
+        Helper::response($data);
+    }
 	public function viewAction()
     {
         if ($this->AdminUser==FALSE AND empty($this->AdminUser)) {
@@ -240,147 +283,6 @@ class SubstationController extends AdminBasicController
             }
         } else {
             $data = array('code' => 1001, 'msg' => '缺少字段', 'data' => '');
-        }
-       Helper::response($data);
-    }
-	
-	public function payAction()
-    {
-        if ($this->AdminUser==FALSE AND empty($this->AdminUser)) {
-            $this->redirect('/'.ADMIN_DIR."/login");
-            return FALSE;
-        }
-		$id = $this->get('id');
-		if($id AND $id>0){
-			$data = array();
-			$order = $this->m_order->SelectByID('',$id);
-			if(is_array($order) AND !empty($order)){
-				if($order['status']>0){
-					$this->redirect('/'.ADMIN_DIR."/order/view/?id=".$order['id']);
-					return FALSE;
-				}else{
-					$data['order'] = $order;
-					$this->getView()->assign($data);
-				}
-			}else{
-				$this->redirect('/'.ADMIN_DIR."/order");
-				return FALSE;
-			}
-		}else{
-            $this->redirect('/'.ADMIN_DIR."/order");
-            return FALSE;
-		}
-    }
-	
-    public function payajaxAction()
-    {
-        if ($this->AdminUser==FALSE AND empty($this->AdminUser)) {
-            $data = array('code' => 1000, 'msg' => '请登录');
-			Helper::response($data);
-        }
-		$id = $this->get('id');
-		$csrf_token = $this->getPost('csrf_token', false);
-		
-        if (FALSE != $id AND is_numeric($id) AND $id > 0) {
-			if ($this->VerifyCsrfToken($csrf_token)) {
-				$order = $this->m_order->SelectByID('',$id);
-				if(is_array($order) AND !empty($order)){
-					if($order['status']>0){
-						$data = array('code' => 1, 'msg' => '订单已支付', 'data' => '');
-					}else{
-						//业务处理
-						$config = array('paymethod'=>'admin','tradeid'=>0,'paymoney'=>$order['money'],'orderid'=>$order['orderid'] );
-						$notify = new \Pay\notify();
-						$data = $notify->run($config);
-					}
-				}else{
-					$data = array('code' => 1002, 'msg' => '订单不存在', 'data' => '');
-				}
-			} else {
-                $data = array('code' => 1001, 'msg' => '页面超时，请刷新页面后重试!');
-            }
-        } else {
-            $data = array('code' => 1000, 'msg' => '缺少字段', 'data' => '');
-        }
-       Helper::response($data);
-    }
-	
-	public function sendAction()
-    {
-        if ($this->AdminUser==FALSE AND empty($this->AdminUser)) {
-            $this->redirect('/'.ADMIN_DIR."/login");
-            return FALSE;
-        }
-		$id = $this->get('id');
-		if($id AND $id>0){
-			$data = array();
-			$order = $this->m_order->SelectByID('',$id);
-			if(is_array($order) AND !empty($order)){
-				if($order['status']=='1' OR $order['status']=='3'){
-					$data['order'] = $order;
-					$this->getView()->assign($data);
-				}else{
-					$this->redirect('/'.ADMIN_DIR."/order/view/?id=".$order['id']);
-					return FALSE;
-				}
-			}else{
-				$this->redirect('/'.ADMIN_DIR."/order");
-				return FALSE;
-			}
-		}else{
-            $this->redirect('/'.ADMIN_DIR."/order");
-            return FALSE;
-		}
-    }
-	
-    public function sendajaxAction()
-    {
-        if ($this->AdminUser==FALSE AND empty($this->AdminUser)) {
-            $data = array('code' => 1000, 'msg' => '请登录');
-			Helper::response($data);
-        }
-		$id = $this->getPost('id');
-		$kami = $this->getPost('kami');
-		$csrf_token = $this->getPost('csrf_token', false);
-		
-        if (FALSE != $id AND is_numeric($id) AND $id > 0) {
-			if ($this->VerifyCsrfToken($csrf_token)) {
-				$order = $this->m_order->SelectByID('',$id);
-				if(is_array($order) AND !empty($order)){
-					if($order['status']=='1' OR $order['status']=='3'){
-						//业务处理
-						$kami = str_replace(array("\r","\n","\t"), "", $kami);
-						$update = $this->m_order->Where(array('id'=>$id))->Where('status=1 or status=3')->Update(array('status'=>2,'kami'=>$kami));
-						if($update){
-							$m = array();
-							//3.1.4.1通知用户,定时任务去执行
-							if(isEmail($order['email'])){
-								$content = '用户:' . $order['email'] . ',购买的商品['.$order['productname'].'],卡密是:'.$kami;
-								$m[]=array('email'=>$order['email'],'subject'=>'商品购买成功','content'=>$content,'addtime'=>time(),'status'=>0);
-							}
-							//3.1.4.2通知管理员,定时任务去执行
-							if(isEmail($this->config['admin_email'])){
-								$content = '用户:' . $order['email'] . ',购买的商品['.$order['productname'].'],卡密发送成功';
-								$m[]=array('email'=>$this->config['admin_email'],'subject'=>'用户购买商品','content'=>$content,'addtime'=>time(),'status'=>0);
-							}
-							if(!empty($m)){
-								$this->m_email_queue->MultiInsert($m);
-							}
-							$data = array('code' => 1, 'msg' => '订单已处理', 'data' => '');
-						}else{
-							$data = array('code' => 1004, 'msg' => '处理失败', 'data' => '');
-						}
-					}else{
-						$data = array('code' => 1, 'msg' => '订单状态不需要处理', 'data' => '');
-					}
-				}else{
-					$data = array('code' => 1002, 'msg' => '订单不存在', 'data' => '');
-				}
-			} else {
-                $data = array('code' => 1001, 'msg' => '页面超时，请刷新页面后重试!');
-            }
-        } else {
-            $data = array('code' => 1000, 'msg' => '缺少字段', 'data' => '');
         }
        Helper::response($data);
     }

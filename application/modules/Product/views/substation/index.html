@@ -1,0 +1,293 @@
+<?php include SMALLS_COMMON_PATH.'/header.html';?>
+
+<link rel="stylesheet" type="text/css" href="<?php echo ASSETS_PATH;?>/css/plugins.css">
+<link rel="stylesheet" type="text/css" href="<?php echo ASSETS_PATH;?>/css/main.css">
+<link rel="stylesheet" type="text/css" href="<?php echo ASSETS_PATH;?>/css/common.css">
+
+<link rel="stylesheet" href="http://cdn.staticfile.org/layer/2.3/skin/layer.css" id="layui_layer_skinlayercss" style="">
+<style type="text/css">.jqstooltip { width: auto !important; height: auto !important; position: absolute;left: 0px;top: 0px;visibility: hidden;background: #000000;color: white;font-size: 11px;text-align: left;white-space: nowrap;padding: 5px;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}
+</style>
+<style>
+    .signin-card.auth-body{width:521px;display: inline-block}
+    @media only screen and (max-width: 480px){
+        .signin-card.auth-body{width:100%;display: inline-block}
+    }
+    .input-group-addon{
+        color: #454e59;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    @media only screen and (min-width: 1000px){
+        .page-body .card .card-block{
+            display: inline-grid;
+            height: 392px;
+        }
+    }
+    .btn-danger{
+        background-color: #4099ff;
+        border-color: #4099ff;
+    }
+
+    .btn-danger:hover{
+        background-color: #4099ff;
+        border-color: #4099ff;
+    }
+    .btn-danger:hover,
+    .btn-danger:focus,
+    .btn-danger.focus,
+    .btn-danger:active,
+    .btn-danger:active:hover,
+    .btn-danger:active:focus,
+    .btn-danger.active,
+    .btn-danger.active:hover,
+    .btn-danger.active:focus,
+    .open .btn-danger.dropdown-toggle,
+    .open .btn-danger.dropdown-toggle:hover,
+    .open .btn-danger.dropdown-toggle:focus,
+    .open .btn-danger.dropdown-toggle.focus {
+        background-color: #4099ff;
+        border-color: #4099ff;
+        color: #ffffff !important;
+    }
+</style>
+<style>
+    a:hover,a:focus{
+        text-decoration: none;
+        outline: none;
+    }
+    #accordion .panel{
+        border: none;
+        box-shadow: none;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    #accordion .panel-heading{
+        padding: 0;
+        border: none;
+        border-radius: 10px;
+    }
+    #accordion .panel-title a{
+        display: block;
+        padding: 20px 35px;
+        font-size: 20px;
+        font-weight: 600;
+        color: #fff;
+        background: #4099ff;
+        border: none;
+        position: relative;
+        transition: all 0.3s ease 0s;
+    }
+    #accordion .panel-title a:after,
+    #accordion .panel-title a.collapsed:after{
+        content: "\f068";
+        font-family: fontawesome;
+        width: 40px;
+        height: 40px;
+        line-height: 32px;
+        border-radius: 50%;
+        background: #4099ff;
+        text-align: center;
+        font-size: 15px;
+        color:#fff;
+        border: 5px solid #fff;
+        position: absolute;
+        top: 10px;
+        left: -20px;
+        transition: all 0.3s ease 0s;
+    }
+    #accordion .panel-title a.collapsed:after{
+        content: "\f067";
+    }
+    #accordion .panel-title a:hover:after,
+    #accordion .panel-title a.collapsed:hover:after{
+        transform: rotate(360deg);
+    }
+    #accordion .panel-body{
+        padding: 15px 25px;
+        background: #fff;
+        font-size: 14px;
+        color: #8c8c8c;
+        line-height: 25px;
+        border-top: none;
+        position: relative;
+    }
+</style>
+<div class="pcoded-main-container">
+    <div class="container">
+        <div class="main-body">
+            <div class="page-wrapper">
+                <div class="page-body">
+                    <div
+                            class="signin-card card-block auth-body mr-auto">
+                        <div class="card" style="top: 13px;">
+                            <div class="card-block">
+                                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingOne">
+                                            <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    分站详情介绍
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseOne" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="panel-body">
+                                                <p>分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍分站详情介绍</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingTwo">
+                                            <h4 class="panel-title">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    分站版本介绍
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                            <div class="panel-body">
+                                                <p>分站版本介绍分站版本介绍分站版本介绍分站版本介绍分站版本介绍分站版本介绍分站版本介绍分站版本介绍分站版本介绍分站版本介绍分站版本介绍分站版本介绍</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingThree">
+                                            <h4 class="panel-title">
+                                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                    申请站长注意事项
+                                                </a>
+                                            </h4>
+                                        </div>
+                                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                            <div class="panel-body">
+                                                <p>申请站长注意事项申请站长注意事项申请站长注意事项申请站长注意事项申请站长注意事项 </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="signin-card card-block auth-body ml-auto">
+                        <div class="card">
+                            <div class="card-block">
+                                <form>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                站点版本
+                                            </div>
+                                                <select class="form-control" name="type_id" id="type_id"
+                                                        lay-filter="required">
+                                                    <option value=""></option>
+                                                    <?php if(!empty($type_list)):?>
+                                                    <?php foreach($type_list AS $p):?>
+                                                    <option value="<?php echo $p['id'];?>"><?php echo $p['name'];?></option>
+                                                    <?php endforeach;?>
+                                                    <?php endif;?>
+                                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                二级域名
+                                            </div>
+                                            <input type="text" name="url" id="url" class="form-control" required=""  placeholder="输入你想要的二级前缀">
+                                            <select class="form-control" name="url_postfix" id="url_postfix"
+                                                    lay-filter="required">
+                                                <option value=""></option>
+                                                <?php if(!empty($url_list)):?>
+                                                <?php foreach($url_list AS $p):?>
+                                                <option value="<?php echo $p['id'];?>"><?php echo $p['url'];?></option>
+                                                <?php endforeach;?>
+                                                <?php endif;?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                管理账号
+                                            </div>
+                                            <input type="text" name="user" id="user" class="form-control" required="" placeholder="输入要注册的用户名邮箱">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                管理密码
+                                            </div>
+                                            <input type="text" name="pwd" id="pwd" class="form-control" required="" placeholder="输入管理员密码">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                绑定账号
+                                            </div>
+                                            <input type="number" name="qq" id="qq" class="form-control" required="" data-parsley-length="[5,10]" placeholder="输入你的QQ号" value="">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                网站名称
+                                            </div>
+                                            <input type="text" name="webname" id="webname" class="form-control" required="" data-parsley-length="[2,10]" placeholder="输入网站名称">
+                                        </div>
+                                    </div>
+                                    <input type="button" id="submit_buy" value="开         通" class="btn btn-danger btn-block">
+                                    <!--<div class="form-group">
+                                        <a href="http://ds.sadnt.com/user/findpwd.php" class="btn btn-info btn-rounded"><i class="fa fa-unlock"></i>&nbsp;找回密码</a>
+                                        <a href="http://ds.sadnt.com/user/login.php" class="btn btn-primary btn-rounded" style="float:right;"><i class="fa fa-user"></i>&nbsp;返回登录</a>
+                                    </div>-->
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php include SMALLS_COMMON_PATH.'/footer.html';?>
+<script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+<script>
+    $('#submit_buy').click(function () {
+        var type_id=$('#type_id').val()
+            ,url=$('#url').val()
+            ,url_postfix=$('#url_postfix').val()
+            ,user=$('#user').val()
+            ,pwd=$('#pwd').val()
+            ,qq=$('#qq').val()
+            ,webname=$('#webname').val();
+        if(type_id =='' || url ==''|| url_postfix ==''|| user ==''|| pwd ==''|| qq ==''|| webname ==''){
+            alert('申请信息不完整');
+            return false;
+        }
+
+        $.ajax({
+            url:'/product/substation/ajax',
+            type:"post",
+            data:{
+                type : type_id,
+                url : url,
+                url_postfix : url_postfix,
+                user : user,
+                pwd : pwd,
+                qq : qq,
+                webname : webname,
+            },
+            dataType:"json",
+            success:function(data){
+                alert(data.msg);
+            },
+            error:function(xmlHttpRequest,textStatus,errorThrown){
+                console.log(textStatus+"出错！"+errorThrown);
+            }
+        });
+
+    });
+</script>
