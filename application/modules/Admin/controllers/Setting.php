@@ -120,12 +120,14 @@ class SettingController extends AdminBasicController
 						'name'=>$name,
 						'value'=>htmlspecialchars($value),
 						'tag'=>htmlspecialchars($tag),
+						'updatetime'=>time(),
 					);
 				}else{
 					$m=array(
 						'name'=>$name,
 						'value'=>"",
 						'tag'=>htmlspecialchars($tag),
+						'updatetime'=>time(),
 					);
 				}
 
