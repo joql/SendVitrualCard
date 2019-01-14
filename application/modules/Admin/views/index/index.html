@@ -33,7 +33,26 @@
 							  </table>
 							</div>
 						</div>
+					<?php if($this->AdminUser['substation_id']!=='master'):?>
+					<div class="layui-card">
+						<div class="layui-card-header">域名信息</div>
+						<div class="layui-card-body layui-text">
+							<form class="layui-form layui-show" method="post" id="products_form">
+								<div class="layui-form-item">
+									<label for="url" class="layui-form-label">绑定域名</label>
+									<div class="layui-input-inline">
+										<input type="text" id="url" name="url"  lay-verify="required" autocomplete="off" value="<?php echo $substation['bind_url'];?>" class="layui-input">
+									</div>
+									<div class="layui-form-mid layui-word-aux">
+										<button class="layui-btn layui-btn-warm layui-btn-xs" id="updateUrl">更新</button>
+									</div>
+									<div class="layui-form-mid layui-word-aux">更新后重新配置支付回调地址，否则支付后不会跳转</div>
+								</div>
+							</form>
+						</div>
+					</div>
                 </div>
+				<?php endif;?>
             </div>
         </div>
     </div>

@@ -18,11 +18,12 @@ layui.define(['layer', 'table', 'form','laydate'], function(exports){
 			{field: 'type_name', title: '类型'},
 			{field: 'admin_name', title: '站长'},
 			{field: 'admin_qq', title: '站长QQ'},
+			{field: 'payment_account', title: '打款账户'},
 			{field: 'bind_url', title: '域名'},
 			{field: 'remaining_sum', title: '余额'},
 			{field: 'expire_time', title: '到期时间'},
 			{field: 'state', title: '状态'},
-			{field: 'opt', title: '操作', width:170, templet: '#opt',fixed: 'right',align:'center'},
+			{field: 'opt', title: '操作', width:170, templet: '#opt',fixed: 'right'},
 		]]
 	});
 

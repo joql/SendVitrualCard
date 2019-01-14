@@ -64,10 +64,30 @@ layui.define(['layer', 'form'], function(exports){
             },
         });
     }
+	// 更新域名
+	$('#updateUrl').click(function () {
+        var url = $('#url').val();
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: '/'+ADMIN_DIR+'/index/updateUrlajax',
+            timeout: 10000, //ajax请求超时时间10s
+            data: {"csrf_token": TOKEN,'url':url}, //post数据
+            success: function (res, textStatus) {
+            	if(res.code == 1){
+                    layer.msg(res.msg,{icon:1,time:5000});
+				}else{
+                    layer.msg(res.msg,{icon:2,time:5000});
+				}
+
+            },
+        });
+    });
 
 	form.on('submit(check)', function(data){
 		checkUpdate();
 		return false;
 	});
+
 	exports('adminindex',null)
 });

@@ -10,9 +10,11 @@ class IndexController extends AdminBasicController
 {
 	private $github_url = "https://blog.iiitool.com";
 	private $remote_version = '';
+	private $m_substation;
     public function init()
     {
         parent::init();
+        $this->m_substation = $this->load('substation');
     }
 
     public function indexAction()
@@ -30,6 +32,7 @@ class IndexController extends AdminBasicController
 					return FALSE;
 				}else{
 					$data = array();
+					$this->CommonAdmin != '' && $data['substation'] = $this->m_substation->Where(array('id'=>$this->CommonAdmin))->SelectOne();
 					$this->getView()->assign($data);
 				}
 			}
@@ -66,6 +69,28 @@ class IndexController extends AdminBasicController
 		}else{
 			$data = array('code' => 1000, 'msg' => '丢失参数');
 		}
+		Helper::response($data);
+	}
+	public function updateUrlajaxAction()
+	{
+        if ($this->AdminUser==FALSE AND empty($this->AdminUser)) {
+            $data = array('code' => 1000, 'msg' => '请登录');
+			Helper::response($data);
+        }
+		$url = $this->getPost('url',false);
+		$csrf_token = $this->getPost('csrf_token',false);
+        if ($this->CommonAdmin != '' && $this->VerifyCsrfToken($csrf_token)) {
+            $r = $this->m_substation->UpdateById(array(
+                'bind_url' => $url,
+            ),$this->CommonAdmin);
+            if ($r) {
+                $data = array('code'=>1,'msg'=>'更新成功');
+            } else {
+                $data = array('code'=>0,'msg'=>'更新失败');
+            }
+        } else {
+            $data = array('code' => 1001, 'msg' => '页面超时，请刷新页面后重试!');
+        }
 		Helper::response($data);
 	}
 

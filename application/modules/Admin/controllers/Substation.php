@@ -85,7 +85,7 @@ class SubstationController extends AdminBasicController
                 'bind_url','remaining_sum','create_time','expire_time','state');
 			$items=$this->m_order->Field($field)->Limit($limits)->Order(array('id'=>'DESC'))->Select();
 
-            $sql = "SELECT s1.id,sp1.name as type_name,s1.admin_name,s1.admin_qq,s1.bind_url,
+            $sql = "SELECT s1.id,sp1.name as type_name,s1.admin_name,s1.admin_qq,s1.payment_account,s1.bind_url,
                         s1.remaining_sum,s1.create_time,s1.expire_time,s1.state FROM 
                         `t_substation` as s1 
                         left join 
@@ -132,6 +132,7 @@ class SubstationController extends AdminBasicController
         }
 
         $data['type_id'] = $this->getPost('type_id', false);
+        $data['payment_account'] = $this->getPost('payment_account', false);
         $data['admin_name'] = $this->getPost('admin_name', false);
         $data['admin_pwd'] = md5($this->getPost('admin_pwd', false));
         $postfix =$this->getPost('url_postfix', false);
@@ -257,6 +258,10 @@ class SubstationController extends AdminBasicController
 				if($id AND is_numeric($id) AND $id>0){
 					$delete = $this->m_substation->Where(array('id'=>$id))->Delete();
 					if($delete){
+                        $this->m_admin_user
+                            ->Where("substation_id !='master'")
+                            ->Where(array('substation_id'=>$id))
+                            ->Delete();
 						$data = array('code' => 1, 'msg' => '删除成功', 'data' => '');
 					}else{
 						$data = array('code' => 1003, 'msg' => '删除失败', 'data' => '');

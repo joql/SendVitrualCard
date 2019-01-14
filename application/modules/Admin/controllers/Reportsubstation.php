@@ -48,16 +48,21 @@ class ReportsubstationController extends AdminBasicController
             $today_report = array();
             $starttime = strtotime(date("Y-m-d"));
             $endtime = strtotime(date("Y-m-d 23:59:59"));
-            $sql ="SELECT count(*) AS total,sum(money) AS shouru FROM `t_order` Where 
-isdelete=0 AND status>0 AND addtime>={$starttime} AND 
-addtime<={$endtime} AND substation_id={$v['id']}";
+            $sql ="SELECT 
+                    count(o.id) AS total,sum(o.money) AS shouru,sum(o.money-p.old_price*o.number) as profit 
+                    FROM `t_order` o 
+                    LEFT  JOIN `t_products` p on p.id=o.pid
+                    Where o.isdelete=0 AND o.status>0 AND o.addtime>={$starttime} AND 
+                    o.addtime<={$endtime} AND o.substation_id={$v['id']}";
             $total_result = $this->m_order->Query($sql);
             if(is_array($total_result) AND !empty($total_result)){
                 $today_report['total'] = $total_result[0]['total'];
                 $today_report['money'] = number_format($total_result[0]['shouru'],2,".",".");
+                $today_report['profit'] = number_format($total_result[0]['profit'],2,".",".");
             }else{
                 $today_report['total'] = 0;
                 $today_report['money'] = 0.00;
+                $today_report['profit'] = 0.00;
             }
             $data['today_report'] = $today_report;
             //当月统计
@@ -67,36 +72,51 @@ addtime<={$endtime} AND substation_id={$v['id']}";
             $firstday = strtotime($firstday);
             $lastday = strtotime($lastday);
 
-            $sql ="SELECT count(*) AS total,sum(money) AS shouru FROM `t_order` Where isdelete=0 AND status>0 AND addtime>={$firstday} AND addtime<={$lastday} AND substation_id={$v['id']}";
+            $sql ="SELECT 
+                    count(o.id) AS total,sum(o.money) AS shouru,sum(o.money-p.old_price*o.number) as profit 
+                    FROM `t_order` o 
+                    LEFT  JOIN `t_products` p on p.id=o.pid
+                    Where o.isdelete=0 AND o.status>0 AND o.addtime>={$firstday} AND o.addtime<={$lastday} AND     o.substation_id={$v['id']}";
             $total_result = $this->m_order->Query($sql);
             if(is_array($total_result) AND !empty($total_result)){
                 $month_report['total'] = $total_result[0]['total'];
                 $month_report['money'] = number_format($total_result[0]['shouru'],2,".",".");
+                $month_report['profit'] = number_format($total_result[0]['profit'],2,".",".");
             }else{
                 $month_report['total'] = 0;
                 $month_report['money'] = 0.00;
+                $month_report['profit'] = 0.00;
             }
             $data['month_report'] = $month_report;
             //总计
             $total_report = array();
-            $sql ="SELECT count(*) AS total,sum(money) AS shouru FROM `t_order` Where isdelete=0 AND status>0 AND substation_id={$v['id']}";
+            $sql ="SELECT 
+                    count(o.id) AS total,sum(o.money) AS shouru,sum(o.money-p.old_price*o.number) as profit 
+                    FROM `t_order` o 
+                    LEFT  JOIN `t_products` p on p.id=o.pid
+                    Where o.isdelete=0 AND o.status>0 AND o.substation_id={$v['id']}";
             $total_result = $this->m_order->Query($sql);
             if(is_array($total_result) AND !empty($total_result)){
                 $total_report['total'] = $total_result[0]['total'];
                 $total_report['money'] = number_format($total_result[0]['shouru'],2,".",".");
+                $total_report['profit'] = number_format($total_result[0]['profit'],2,".",".");
             }else{
                 $total_report['total'] = 0;
                 $total_report['money'] = 0.00;
+                $total_report['profit'] = 0.00;
             }
             $data['total_report'] = $total_report;
             $list[] = array(
                 'url' => $v['bind_url'],
                 'order_today' => $today_report['total'],
                 'income_today' => $today_report['money'],
+                'profit_today' => $today_report['profit'],
                 'order_month' => $month_report['total'],
                 'income_month' => $month_report['money'],
+                'profit_month' => $month_report['profit'],
                 'order_all' => $month_report['total'],
                 'income_all' => $month_report['money'],
+                'profit_all' => $month_report['profit'],
             );
         }
         if(count($substation_list)>0){

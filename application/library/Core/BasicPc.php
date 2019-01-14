@@ -20,7 +20,7 @@ class PcBasicController extends BasicController
 		$sysvars = $data = array();
         //获取网址
         $this->server_name = $_SERVER['HTTP_HOST'];
-        //$this->server_name = 'dd.test.cn';
+        //$this->server_name = '2.xiaojiu8.cn';
         $substation = $this->load('substation')->Field('id')
             ->Where(array('bind_url'=>$this->server_name))
             ->SelectOne();

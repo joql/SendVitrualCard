@@ -167,6 +167,10 @@ class OrderController extends AdminBasicController
             $this->redirect('/'.ADMIN_DIR."/login");
             return FALSE;
         }
+        if($this->CommonAdmin !== ""){
+            $this->redirect('/'.ADMIN_DIR."/reportsubstation");
+            return FALSE;
+        }
 		$id = $this->get('id');
 		if($id AND $id>0){
 			$data = array();

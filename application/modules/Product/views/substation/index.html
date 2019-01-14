@@ -233,9 +233,9 @@
                                     <div class="form-group">
                                         <div class="input-group">
                                             <div class="input-group-addon">
-                                                网站名称
+                                                打款账户
                                             </div>
-                                            <input type="text" name="webname" id="webname" class="form-control" required="" data-parsley-length="[2,10]" placeholder="输入网站名称">
+                                            <input type="text" name="account" id="account" class="form-control" required="" placeholder="请输入账户用于打款">
                                         </div>
                                     </div>
                                     <input type="button" id="submit_buy" value="开         通" class="btn btn-danger btn-block">
@@ -262,8 +262,8 @@
             ,user=$('#user').val()
             ,pwd=$('#pwd').val()
             ,qq=$('#qq').val()
-            ,webname=$('#webname').val();
-        if(type_id =='' || url ==''|| url_postfix ==''|| user ==''|| pwd ==''|| qq ==''|| webname ==''){
+            ,account=$('#account').val();
+        if(type_id =='' || url ==''|| url_postfix ==''|| user ==''|| pwd ==''|| qq ==''|| account ==''){
             alert('申请信息不完整');
             return false;
         }
@@ -278,7 +278,7 @@
                 user : user,
                 pwd : pwd,
                 qq : qq,
-                webname : webname,
+                account : account,
             },
             dataType:"json",
             success:function(data){
