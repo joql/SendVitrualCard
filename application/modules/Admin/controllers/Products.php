@@ -59,11 +59,26 @@ class ProductsController extends AdminBasicController
 			
             $limits = "{$pagenum},{$limit}";
             if($this->CommonAdmin === ''){//主站
-                $sql = "SELECT p1.id,p1.name,p1.price,p1.qty,p1.auto,p1.active,p1.stockcontrol,p1.sort_num,p2.name as typename FROM `t_products` as p1 left join `t_products_type` as p2 on p1.typeid = p2.id WHERE p1.isdelete=0 Order by p1.id desc LIMIT {$limits}";
+                $sql = "SELECT 
+                          p1.id,p1.name,p1.price,p1.qty,p1.auto,p1.active,p1.stockcontrol,p1.sort_num,p2.name as typename,(p1.sale_base+ifnull(o.sale_num,0)) as sale_num 
+                          FROM `t_products` as p1 
+                          left join `t_products_type` as p2 on p1.typeid = p2.id
+                          left join (SELECT pid,sum(number) as sale_num FROM `t_order` WHERE isdelete=0 AND status>0 GROUP BY pid) as o on o.pid=p1.id
+                          WHERE p1.isdelete=0 
+                          Order by p1.id desc 
+                          LIMIT {$limits}";
             }else{
                 //分站
-                $sql = "SELECT p1.id,p1.name,p1.price,p1.qty,p1.auto,p1.active,p1
-.stockcontrol,p1.sort_num,p2.name as typename,ps.price as price_new FROM `t_products` as p1 left join `t_products_type` as p2 on p1.typeid = p2.id left join ( SELECT * FROM `t_products_substation` WHERE substation_id={$this->CommonAdmin}) as ps on ps.product_id=p1.id WHERE p1.isdelete=0 Order by p1.id desc LIMIT {$limits}";
+                $sql = "SELECT 
+                          p1.id,p1.name,p1.price,p1.qty,p1.auto,p1.active,p1.stockcontrol,p1.sort_num,p2.name as typename,ps.price as price_new,(p1.sale_base+ifnull(o.sale_num,0)) as sale_num  
+                          FROM `t_products` as p1 
+                          left join `t_products_type` as p2 on p1.typeid = p2.id 
+                          left join 
+                            ( SELECT * FROM `t_products_substation` WHERE substation_id={$this->CommonAdmin}) as ps on ps.product_id=p1.id
+                          left join (SELECT pid,sum(number) as sale_num FROM `t_order` WHERE isdelete=0 AND status>0 GROUP BY pid) as o on o.pid=p1.id
+                          WHERE p1.isdelete=0 
+                          Order by p1.id desc 
+                          LIMIT {$limits}";
             }
 			$items=(array)$this->m_products->Query($sql);
             foreach ($items as &$v){

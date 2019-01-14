@@ -89,6 +89,7 @@
 																	<th class="text-center">商品名称</th>
 																	<th class="d-none d-sm-block  text-center">商品类型</th>
 																	<th class="text-center">商品库存</th>
+																	<th class="text-center">商品销量</th>
 																	<th class="text-center">商品价格</th>
 																	<th class="text-center">操作</th>
 																</tr>
@@ -108,8 +109,10 @@
 																	<?php else:?>
 																	<td class="text-center" width="100px"><span style="margin-top: 1px;color: #666666;"><?php echo $goods['qty'];?></span></td>
 																	<?php endif;?>
+																	<td class="text-center" width="100px"><span style="margin-top: 1px;color: #666666;"><?php echo $goods['sale_num'];?></span></td>
 																	<td class="text-center" width="100px">
-                                                                                <span class="text-primary product-price"><i class="fa fa-cny"></i>
+                                                                                <span class="text-primary product-price">
+																					<i class="fa fa-cny"></i>
 																					<?php echo $goods['price'];?>
                                                                                 </span></td>
 																	<td class="text-center" width="80px">

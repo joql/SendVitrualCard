@@ -20,6 +20,7 @@ layui.define(['layer', 'table', 'form','layedit'], function(exports){
 			{field: 'name', title: '商品名称'},
 			{field: 'price', title: '售价',width:80},
 			{field: 'qty', title: '库存', width:80, templet: '#qty',align:'center'},
+			{field: 'sale_num', title: '销量', width:80, align:'center'},
 			{field: 'auto', title: '发货模式', width:100, templet: '#auto',align:'center'},
 			{field: 'active', title: '是否销售', width:100, templet: '#active',align:'center'},
 			{field: 'pifa', title: '批发', width:80,templet: '#pifa',align:'center'},

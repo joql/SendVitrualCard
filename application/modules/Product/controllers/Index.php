@@ -36,8 +36,10 @@ class IndexController extends PcBasicController
                     foreach ($products_type as $id => $value){
 
                         if($this->substation_id != 'master'){
-                            $sql = "select p.*,ps.price as price_new from `t_products` as p 
+                            $sql = "select 
+                                      p.*,ps.price as price_new,(p.sale_base+ifnull(o.sale_num,0)) as sale_num  from `t_products` as p 
                                       left join (SELECT * FROM `t_products_substation` WHERE substation_id={$this->substation_id}) as ps on ps.product_id=p.id 
+                                      left join (SELECT pid,sum(number) as sale_num FROM `t_order` WHERE isdelete=0 AND status>0 GROUP BY pid) as o on o.pid=p.id
                                       WHERE ".convertSQL(array(
                                     'p.typeid'=>$value['id'],
                                     'p.active'=>1,
@@ -50,15 +52,16 @@ class IndexController extends PcBasicController
                                 }
                             }
                         }else{
-                            $order = array('sort_num' => 'DESC');
+                            $sql = "select 
+                                      p.*,(p.sale_base+ifnull(o.sale_num,0)) as sale_num  from `t_products` as p 
+                                      left join (SELECT pid,sum(number) as sale_num FROM `t_order` WHERE isdelete=0 AND status>0 GROUP BY pid) as o on o.pid=p.id
+                                      WHERE ".convertSQL(array(
+                                    'p.typeid'=>$value['id'],
+                                    'p.active'=>1,
+                                    'p.isdelete'=>0
+                                ), true)." order by p.sort_num desc";
                             $products = $this->m_products
-                                ->Where(array(
-                                    'typeid'=>$value['id'],
-                                    'active'=>1,
-                                    'isdelete'=>0
-                                ))
-                                ->Order($order)
-                                ->Select();
+                                ->Query($sql);
                         }
                         $products_type[$id]['products'] = $products;
 
