@@ -46,7 +46,14 @@ layui.define(['layer', 'table', 'form','layedit'], function(exports){
 			$('#addonsinput').show();
 		}
 	});  
-	
+
+	form.verify({
+		checkPrice: function (value, item) {
+			if(value < $('#old_price').val()){
+				return '当前价格不能低于成本价';
+			}
+        }
+	});
 	//更新库存
 	$("#products_form").on("click","#updateQty",function(event){
 		event.preventDefault();
@@ -116,7 +123,28 @@ layui.define(['layer', 'table', 'form','layedit'], function(exports){
 
 		return false; //阻止表单跳转。如果需要表单跳转，去掉这段即可。
 	});
-	
+
+	$('#wholesale_add').on('click',function () {
+        var _html;
+        _html = '<div class="layui-inline">\n' +
+            '                                    <div class="layui-form-mid">满</div>\n' +
+            '                                    <div class="layui-input-inline">\n' +
+            '                                        <input type="text" name="wholesale_num[]" lay-verify="number" autocomplete="off"  class="layui-input" placeholder="件数">\n' +
+            '                                    </div>\n' +
+            '                                    <div class="layui-form-mid">件单价为：</div>\n' +
+            '                                    <div class="layui-input-inline">\n' +
+            '                                        <input type="text" name="wholesale_price[]" lay-verify="checkPrice" autocomplete="off"  class="layui-input" placeholder="价格">\n' +
+            '                                    </div>\n' +
+            '                                    <div class="layui-form-mid">元/件</div> <div class="layui-input-inline">\n' +
+            '                                        <button type="button" class="layui-btn layui-btn-danger" onclick="wholesale_del(this)">移除</button>\n' +
+            '                                    </div>\n' +
+            '                                </div>';
+        $('.wholesale').append(_html);
+    });
+
+	window.wholesale_del = function (t) {
+        layui.jquery(t).parent().parent().remove();
+    }
     form.on('submit(search)', function(data){
         table.reload('table', {
             url: '/'+ADMIN_DIR+'/products/ajax',

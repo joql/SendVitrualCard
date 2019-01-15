@@ -1,4 +1,6 @@
 <?php include SMALLS_COMMON_PATH.'/header.html';?>
+<link rel="stylesheet" type="text/css" href="<?php echo ASSETS_PATH;?>/css/noticejs.css">
+<link rel="stylesheet" type="text/css" href="<?php echo ASSETS_PATH;?>/css/animate.css">
 <div class="pcoded-main-container">
 	<div class="container">
 		<div class="main-body">
@@ -49,9 +51,11 @@
 														<div class="p-l-0 m-b-25">
 															<h4 class="pro-desc"><?php echo $product['name']; ?></h4>
 															<input type="hidden" name="name" id="name" value="<?php echo $product['name'];?>">
-															<span class="text-primary product-price"><i class="fa fa-cny"></i>
+															<span class="text-primary product-price">
+																<i class="fa fa-cny"></i>
 																<?php echo $product['price'];?>
-                                                    </span>
+															</span>
+															<span class="text-primary" onclick="viewWholeSale(<?php echo $product['id'];?>)">查看批发价</span>
 														</div>
 													</div>
 													<div class="col-xl-12 col-sm-12">
@@ -207,6 +211,7 @@
 <script src="<?php echo ASSETS_PATH;?>/js/pcoded.min.js"></script>
 <script src="<?php echo ASSETS_PATH;?>/js/jquery.qrcode.min.js"></script>
 <script src="<?php echo ASSETS_PATH;?>/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="<?php echo ASSETS_PATH;?>/js/notice.js"></script>
 <script>
     $(function(){
         var url = window.location.href;
@@ -252,6 +257,39 @@
                     alert(result.msg);
                     return;
                 }
+            }
+        });
+    }
+    function viewWholeSale(pid) {
+        $.ajax({
+            url: "/product/detail/wholeSaleajax/",
+            type: "POST",
+            dataType: "json",
+            data:{
+                id: pid
+			},
+            success: function (result) {
+                if (result.code == '1') {
+                    var list = result.data,text='';
+                    if(list.length>0){
+                        $.each(list,function (k,i) {
+							text += '满'+i.num+'件'+i.price+'元/件<br/>';
+                        })
+                    }else{
+                        text = '未查询到批发价';
+                    }
+                } else {
+                    text = result.msg;
+                }
+                new NoticeJs({
+                    text: text,
+                    position: 'middleCenter',
+                    timeout: 60,
+                    animation: {
+                        open: 'animated bounceInRight',
+                        close: 'animated bounceOutLeft'
+                    }
+                }).show();
             }
         });
     }
