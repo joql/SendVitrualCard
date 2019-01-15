@@ -12,6 +12,7 @@ class DetailController extends PcBasicController
 	private $m_products_pifa;
     private $m_payment;
     private $m_products_substation;
+    private $m_products_wholesale_substation;
 
     public function init()
     {
@@ -19,6 +20,7 @@ class DetailController extends PcBasicController
 		$this->m_products = $this->load('products');
 		$this->m_products_pifa = $this->load('products_pifa');
 		$this->m_products_substation = $this->load('products_substation');
+		$this->m_products_wholesale_substation = $this->load('products_wholesale_substation');
         $this->m_payment = $this->load('payment');
     }
 
@@ -67,5 +69,23 @@ class DetailController extends PcBasicController
 			$this->redirect("/product/?error=没有该商品");
 			return FALSE;
 		}
+    }
+
+    public function wholeSaleajaxAction(){
+        $id = $this->getPost('id',false);
+
+        $data = array();
+        if(empty($id) || $this->substation_id === 'master'){
+            $data = array('code' => 1003, 'msg' => '当前商品没有设置批发价');
+            Helper::response($data);
+        }
+        $list = (array)$this->m_products_wholesale_substation
+            ->Field('num,price')
+            ->Where(array(
+            'substation_id' => $this->substation_id,
+            'product_id'=>$id,
+        ))->Select();
+        $data = array('code' => 1, 'msg' => '', 'data' => $list);
+        Helper::response($data);
     }
 }

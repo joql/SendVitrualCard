@@ -12,7 +12,8 @@ class ProductsController extends AdminBasicController
 	private $m_products_type;
 	private $m_products_card;
 	private $m_products_substation;
-	
+	private $m_products_wholesale_substation;
+
     public function init()
     {
         parent::init();
@@ -20,6 +21,7 @@ class ProductsController extends AdminBasicController
 		$this->m_products_type = $this->load('products_type');
 		$this->m_products_card = $this->load('products_card');
 		$this->m_products_substation = $this->load('products_substation');
+		$this->m_products_wholesale_substation = $this->load('products_wholesale_substation');
     }
 
     public function indexAction()
@@ -108,6 +110,7 @@ class ProductsController extends AdminBasicController
 			$data = array();
 			$product=$this->m_products->SelectByID('',$id);
             if(!empty($this->CommonAdmin)){
+                //分站售价
                 $s = $this->m_products_substation
                     ->Field('price')
                     ->Where(array(
@@ -115,6 +118,15 @@ class ProductsController extends AdminBasicController
                     'substation_id' => $this->CommonAdmin,
                 ))->SelectOne();
                 !empty($s['price']) && $product['price'] = $s['price'];
+
+                //分站批发价
+                $wholesale = (array)$this->m_products_wholesale_substation
+                    ->Field('num,price')
+                    ->Where(array(
+                        'product_id' => $product['id'],
+                        'substation_id' => $this->CommonAdmin,
+                    ))->Select();
+                $data['wholesale'] = $wholesale;
             }
 			$data['product'] = $product;
 
@@ -163,6 +175,8 @@ class ProductsController extends AdminBasicController
 		$csrf_token = $this->getPost('csrf_token', false);
         $images = $this->getPost('images', false);
         $old_price = $this->getPost('old_price', false);
+        $wholesale_price = $this->getPost('wholesale_price', false);
+        $wholesale_num = $this->getPost('wholesale_num', false);
 		$data = array();
 		
         if ($this->AdminUser==FALSE AND empty($this->AdminUser)) {
@@ -206,6 +220,21 @@ class ProductsController extends AdminBasicController
                     );
                     $u=$this->m_products_substation->updateInfo($s);
                     if($u){
+                        if($this->CommonAdmin != ''){
+                            //分站情况
+                            foreach ($wholesale_num as $k=>$v){
+                                $data_wholesale[] = array(
+                                    'substation_id' => $this->CommonAdmin,
+                                    'product_id' => $id,
+                                    'num' => $wholesale_num[$k],
+                                    'price' => $wholesale_price[$k],
+                                );
+                            }
+                            $this->m_products_wholesale_substation->updateInfo($data_wholesale,array(
+                                'substation_id' => $this->CommonAdmin,
+                                'product_id' => $id,
+                            ));
+                        }
                         $data = array('code' => 1, 'msg' => '更新成功');
                     }else{
                         $data = array('code' => 1003, 'msg' => '更新失败');
@@ -223,6 +252,23 @@ class ProductsController extends AdminBasicController
 					}
 					$u = $this->m_products->UpdateByID($m,$id);
 					if($u){
+					    //商品编辑成功，开始更新关联数据，含批发价信息表
+
+                        if($this->CommonAdmin != ''){
+                            //分站情况
+                            foreach ($wholesale_num as $k=>$v){
+                                $data_wholesale[] = array(
+                                    'substation_id' => $this->CommonAdmin,
+                                    'product_id' => $id,
+                                    'num' => $wholesale_num[$k],
+                                    'price' => $wholesale_price[$k],
+                                );
+                            }
+                            $this->m_products_wholesale_substation->updateInfo($data_wholesale,array(
+                                'substation_id' => $this->CommonAdmin,
+                                'product_id' => $id,
+                            ));
+                        }
 						$data = array('code' => 1, 'msg' => '更新成功');
 					}else{
 						$data = array('code' => 1003, 'msg' => '更新失败');

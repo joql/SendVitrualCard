@@ -14,6 +14,7 @@ class OrderController extends PcBasicController
 	private $m_products_pifa;
 	private $m_substation;
     private $m_products_substation;
+    private $m_products_wholesale_substation;
 
     public function init()
     {
@@ -24,6 +25,7 @@ class OrderController extends PcBasicController
 		$this->m_payment = $this->load('payment');
 		$this->m_products_pifa = $this->load('products_pifa');
         $this->m_products_substation = $this->load('products_substation');
+        $this->m_products_wholesale_substation = $this->load('products_wholesale_substation');
 		$this->m_substation = $this->load('substation');
     }
 
@@ -81,12 +83,25 @@ class OrderController extends PcBasicController
                     ->Where(array('id'=>$pid,'active'=>1,'isdelete'=>0))
                     ->SelectOne();
                 if($this->substation_id != 'master'){
+                    //获取分站售价如果存在替换默认售价
                     $exist = $this->m_products_substation
                         ->Where(array(
                             'substation_id' => $this->substation_id,
                             'product_id' => $product['id'],
                         ))->SelectOne();
                     !empty($exist['price']) && $product['price'] = $exist['price'];
+
+                    //获取分站批发价如果存在替换当前售价
+                    $wholesale = $this->m_products_wholesale_substation
+                        ->Where(array(
+                            'substation_id' => $this->substation_id,
+                            'product_id' => $product['id'],
+                        ))
+                        ->Where('num <='.$number)
+                        ->Order(array('price'=>'asc'))
+                        ->SelectOne();
+                    !empty($wholesale['price']) && ($wholesale['price'] < $product['price'] )
+                    && $product['price'] = $wholesale['price'];
                 }
 				if(!empty($product)){
 					$myip = getClientIP();
