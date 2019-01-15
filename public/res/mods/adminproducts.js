@@ -50,7 +50,7 @@ layui.define(['layer', 'table', 'form','layedit'], function(exports){
 
 	form.verify({
 		checkPrice: function (value, item) {
-			if(value < $('#old_price').val()){
+			if(value < parseInt($('#old_price').val())){
 				return '当前价格不能低于成本价';
 			}
         }
@@ -102,7 +102,7 @@ layui.define(['layer', 'table', 'form','layedit'], function(exports){
 			if (res.code == '1') {
 				layer.open({
 					title: '提示',
-					content: '修改成功',
+					content: res.msg,
 					btn: ['确定'],
 					yes: function(index, layero){
 					    location.reload();
@@ -127,7 +127,7 @@ layui.define(['layer', 'table', 'form','layedit'], function(exports){
 
 	$('#wholesale_add').on('click',function () {
         var _html;
-        _html = '<div class="layui-inline">\n' +
+        _html = '<div class="layui-inline" style="margin-left: 5px;">\n' +
             '                                    <div class="layui-form-mid">满</div>\n' +
             '                                    <div class="layui-input-inline">\n' +
             '                                        <input type="text" name="wholesale_num[]" lay-verify="number" autocomplete="off"  class="layui-input" placeholder="件数">\n' +

@@ -62,7 +62,7 @@ class ProductsController extends AdminBasicController
             $limits = "{$pagenum},{$limit}";
             if($this->CommonAdmin === ''){//主站
                 $sql = "SELECT 
-                          p1.id,p1.name,p1.price,p1.qty,p1.auto,p1.active,p1.stockcontrol,p1.sort_num,p2.name as typename,(p1.sale_base+ifnull(o.sale_num,0)) as sale_num 
+                          p1.id,p1.name,p1.price,p1.qty,p1.auto,p1.active,p1.stockcontrol,p1.sort_num,p1.sale_base,p2.name as typename,(p1.sale_base+ifnull(o.sale_num,0)) as sale_num 
                           FROM `t_products` as p1 
                           left join `t_products_type` as p2 on p1.typeid = p2.id
                           left join (SELECT pid,sum(number) as sale_num FROM `t_order` WHERE isdelete=0 AND status>0 GROUP BY pid) as o on o.pid=p1.id
@@ -72,7 +72,7 @@ class ProductsController extends AdminBasicController
             }else{
                 //分站
                 $sql = "SELECT 
-                          p1.id,p1.name,p1.price,p1.qty,p1.auto,p1.active,p1.stockcontrol,p1.sort_num,p2.name as typename,ps.price as price_new,(p1.sale_base+ifnull(o.sale_num,0)) as sale_num  
+                          p1.id,p1.name,p1.price,p1.qty,p1.auto,p1.active,p1.stockcontrol,p1.sort_num,p1.sale_base,p2.name as typename,ps.price as price_new,(p1.sale_base+ifnull(o.sale_num,0)) as sale_num  
                           FROM `t_products` as p1 
                           left join `t_products_type` as p2 on p1.typeid = p2.id 
                           left join 
@@ -137,7 +137,6 @@ class ProductsController extends AdminBasicController
                 ->Select();
 
 			$data['productstype'] = $productstype;
-			
 			$this->getView()->assign($data);
 		}else{
             $this->redirect('/'.ADMIN_DIR."/products");
@@ -177,6 +176,7 @@ class ProductsController extends AdminBasicController
         $old_price = $this->getPost('old_price', false);
         $wholesale_price = $this->getPost('wholesale_price', false);
         $wholesale_num = $this->getPost('wholesale_num', false);
+        $sale_base = $this->getPost('sale_base', false);
 		$data = array();
 		
         if ($this->AdminUser==FALSE AND empty($this->AdminUser)) {
@@ -207,6 +207,7 @@ class ProductsController extends AdminBasicController
 					'sort_num'=>$sort_num,
                     'images'=>$images,
                     'old_price'=>$old_price,
+                    'sale_base'=>$sale_base,
 				);
 				if($this->CommonAdmin !=''){
 				    if($price < $old_price){
@@ -276,12 +277,28 @@ class ProductsController extends AdminBasicController
 				}
 				elseif($method == 'add'){
 					//修正库存问题,在添加新商品时,如果是自动发货商品,库存默认为0
-					if($auto>0 OR $stockcontrol<1){
+					if($auto >0 or $stockcontrol<1){
 						$m['qty'] = 0;
 					}
 					$m['addtime'] = time();
 					$u = $this->m_products->Insert($m);
 					if($u){
+                        //商品编辑成功，开始更新关联数据，含批发价信息表
+                        if($this->CommonAdmin != ''){
+                            //分站情况
+                            foreach ($wholesale_num as $k=>$v){
+                                $data_wholesale[] = array(
+                                    'substation_id' => $this->CommonAdmin,
+                                    'product_id' => $u,
+                                    'num' => $wholesale_num[$k],
+                                    'price' => $wholesale_price[$k],
+                                );
+                            }
+                            $this->m_products_wholesale_substation->updateInfo($data_wholesale,array(
+                                'substation_id' => $this->CommonAdmin,
+                                'product_id' => $u,
+                            ));
+                        }
 						$data = array('code' => 1, 'msg' => '新增成功');
 					}else{
 						$data = array('code' => 1003, 'msg' => '新增失败');

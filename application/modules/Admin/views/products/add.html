@@ -65,13 +65,13 @@
                             </div>
                         </div>
                         <div class="layui-form-item">
-                            <label for="price" class="layui-form-label">商品单价</label>
+                            <label for="price" class="layui-form-label">商品售价</label>
                             <div class="layui-input-inline">
                                 <input type="number" id="price" name="price" lay-verify="required" autocomplete="off" value="" class="layui-input">
                             </div>
                         </div>
                         <div class="layui-form-item">
-                            <label for="name" class="layui-form-label">原始价格</label>
+                            <label for="name" class="layui-form-label">成本价格</label>
                             <div class="layui-input-inline">
                                 <input type="text" id="old_price" name="old_price" lay-verify="required" autocomplete="off" value="" class="layui-input"  placeholder="">
                             </div>
@@ -84,14 +84,36 @@
                             </div>
                         </div>
                         <div class="layui-form-item">
-                            <label class="layui-form-label">发货模式</label>
-                            <div class="layui-input-block">
-                                <input type="radio" name="auto" value="1" title="自动发货" checked="">
-                                <input type="radio" name="auto" value="0" title="手工发货">
+                            <label for="name"
+                                   class="layui-form-label">满件优惠
+                            </label>
+                            <div class="layui-input-block wholesale">
+                                <div class="layui-inline" style="margin-left: 5px;">
+                                    <div class="layui-form-mid">满</div>
+                                    <div class="layui-input-inline">
+                                        <input type="text" name="wholesale_num[]" lay-verify="number" autocomplete="off"  class="layui-input" placeholder="件数">
+                                    </div>
+                                    <div class="layui-form-mid">件单价为：</div>
+                                    <div class="layui-input-inline">
+                                        <input type="text" name="wholesale_price[]" lay-verify="checkPrice" autocomplete="off"  class="layui-input" placeholder="价格">
+                                    </div>
+                                    <div class="layui-form-mid">元/件</div>
+                                </div>
                             </div>
                         </div>
-						
-                        <div class="layui-form-item" style="display:none">
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button type="button" class="layui-btn" id="wholesale_add">添加满件优惠</button>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">发货模式</label>
+                            <div class="layui-input-block">
+                                <input type="radio" name="auto" lay-filter="auto" value="1" title="自动发货" checked="">
+                                <input type="radio" name="auto" lay-filter="auto" value="0" title="手工发货">
+                            </div>
+                        </div>
+                        <div class="layui-form-item" id="addonsinput" style="display:none">
                             <label for="addons" class="layui-form-label">附加输入框</label>
                             <div class="layui-input-inline">
                                 <input type="text" id="addons" name="addons" autocomplete="off" value="" class="layui-input">

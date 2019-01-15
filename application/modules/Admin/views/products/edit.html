@@ -97,13 +97,19 @@
                             </div>
                         </div>
                         <div class="layui-form-item">
+                            <label for="name" class="layui-form-label">商品销量</label>
+                            <div class="layui-input-inline">
+                                <input type="text" id="sale_base" name="sale_base" lay-verify="required" autocomplete="off" class="layui-input" value="<?php echo $product['sale_base'];?>"  placeholder="刷的哦">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
                             <label for="name"
                                    class="layui-form-label">满件优惠
                             </label>
                             <div class="layui-input-block wholesale">
                                 <?php if(!empty($wholesale)):?>
                                 <?php foreach((array)$wholesale AS $k=>$whole):?>
-                                <div class="layui-inline">
+                                <div class="layui-inline" style="margin-left: 5px;">
                                     <div class="layui-form-mid">满</div>
                                     <div class="layui-input-inline">
                                         <input type="text" name="wholesale_num[]" lay-verify="number" autocomplete="off"  class="layui-input" placeholder="件数" value="<?php echo $whole['num'];?>">
@@ -121,7 +127,7 @@
                                 </div>
                                 <?php endforeach;?>
                                 <?php else:?>
-                                <div class="layui-inline">
+                                <div class="layui-inline" style="margin-left: 5px;">
                                     <div class="layui-form-mid">满</div>
                                     <div class="layui-input-inline">
                                         <input type="text" name="wholesale_num[]" lay-verify="number" autocomplete="off"  class="layui-input" placeholder="件数">
@@ -137,8 +143,12 @@
                         </div>
                         <div class="layui-form-item">
                             <div class="layui-input-block">
-                                <button type="button" class="layui-btn" id="wholesale_add">添加满件优惠</button>
+                                <div class="layui-input-inline">
+                                    <button type="button" class="layui-btn" id="wholesale_add">添加满件优惠</button>
+                                </div>
+                                <div class="layui-form-mid layui-word-aux">满件优惠仅在分站后台生效</div>
                             </div>
+
                         </div>
                         <?php if($this->AdminUser['substation_id']=='master'):?>
                         <div class="layui-form-item">
@@ -153,8 +163,8 @@
                             <label for="addons" class="layui-form-label">附加输入框</label>
                             <div class="layui-input-inline">
                                 <input type="text" id="addons" name="addons" autocomplete="off" value="<?php echo $product['addons'];?>" class="layui-input">
+                                <div class="layui-form-mid layui-word-aux">自定义输入框，显示在商品订购页; A,B</div>
                             </div>
-							<div class="layui-form-mid layui-word-aux">自定义输入框，显示在商品订购页; A,B</div>
                         </div>
 						
                         <div class="layui-form-item">
