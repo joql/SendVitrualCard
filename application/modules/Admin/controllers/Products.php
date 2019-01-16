@@ -174,6 +174,7 @@ class ProductsController extends AdminBasicController
 		$csrf_token = $this->getPost('csrf_token', false);
         $images = $this->getPost('images', false);
         $old_price = $this->getPost('old_price', false);
+        $price_official = $this->getPost('price_official', false);
         $wholesale_price = $this->getPost('wholesale_price', false);
         $wholesale_num = $this->getPost('wholesale_num', false);
         $sale_base = $this->getPost('sale_base', false);
@@ -207,6 +208,7 @@ class ProductsController extends AdminBasicController
 					'sort_num'=>$sort_num,
                     'images'=>$images,
                     'old_price'=>$old_price,
+                    'price_official'=>$price_official,
                     'sale_base'=>$sale_base,
 				);
 				if($this->CommonAdmin !=''){

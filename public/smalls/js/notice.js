@@ -426,7 +426,7 @@ var Components = exports.Components = function () {
       var element = document.createElement('div');
       element.classList.add('noticejs');
       element.classList.add(element_class);
-      element.style.cssText = "top: "+($('#wholesale').offset().top+20)+"px; left:"+($('#wholesale').offset().left+200)+"px;";
+      //element.style.cssText = "top: "+($('#wholesale').offset().top+20)+"px; left:"+($('#wholesale').offset().left+200)+"px;";
 
       return element;
     }

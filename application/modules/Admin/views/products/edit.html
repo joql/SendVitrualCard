@@ -77,6 +77,13 @@
                                     <?php endif;?> id="updateQty">更新库存</button>
                             </div>
                         </div>
+                        <div class="layui-form-item">
+                            <label for="name" class="layui-form-label">官方售价</label>
+                            <div class="layui-input-inline">
+                                <input type="text" id="price_official" name="price_official" lay-verify="required" autocomplete="off" value="<?php echo $product['price_official'];?>" class="layui-input"  placeholder="">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux">商品在外面的价格,用于跟上面的价格对比</div>
+                        </div>
                         <?php endif;?>
                         <div class="layui-form-item">
                             <label for="price"
@@ -146,7 +153,6 @@
                                 <div class="layui-input-inline">
                                     <button type="button" class="layui-btn" id="wholesale_add">添加满件优惠</button>
                                 </div>
-                                <div class="layui-form-mid layui-word-aux">满件优惠仅在分站后台生效</div>
                             </div>
 
                         </div>
