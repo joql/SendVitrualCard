@@ -55,7 +55,11 @@
 																<i class="fa fa-cny"></i>
 																<?php echo $product['price'];?>
 															</span>
-															<span class="text-primary" onclick="viewWholeSale(<?php echo $product['id'];?>)">查看批发价</span>
+															<span class="text-dark product-old-price">
+																<i class="fa fa-cny"></i>
+																<?php echo $product['old_price'];?>
+															</span>
+															<span class="text-primary" id="wholesale" onclick="viewWholeSale(<?php echo $product['id'];?>)">查看批发价</span>
 														</div>
 													</div>
 													<div class="col-xl-12 col-sm-12">

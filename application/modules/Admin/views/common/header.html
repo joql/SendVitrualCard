@@ -17,6 +17,13 @@
 	<?php else:?>
 	<link rel="shortcut icon" href="/favicon.ico" /> 
 	<?php endif;?>
+    <style>
+        @media screen and (min-width: 1600px){
+            .layui-container{
+                width: 1673px;
+            }
+        }
+    </style>
     <script>
     var TOKEN = "<?php echo $csrf_token;?>";
 	var ADMIN_DIR = "<?php echo ADMIN_DIR;?>";
