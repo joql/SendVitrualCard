@@ -38,7 +38,7 @@ class SubstationController extends PcBasicController
         $data['admin_name'] = $this->getPost('user',false);
         $data['admin_pwd'] = md5($this->getPost('pwd',false));
         $data['admin_qq'] = $this->getPost('qq',false);
-        $data['account'] = $this->getPost('account',false);
+        $data['payment_account'] = $this->getPost('account',false);
         $data['remaining_sum'] = 0;
         $data['expire_time'] = time()+60*60*24*30;
         $data['state'] = 3;
