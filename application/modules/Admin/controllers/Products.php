@@ -118,16 +118,16 @@ class ProductsController extends AdminBasicController
                     'substation_id' => $this->CommonAdmin,
                 ))->SelectOne();
                 !empty($s['price']) && $product['price'] = $s['price'];
-
-                //分站批发价
-                $wholesale = (array)$this->m_products_wholesale_substation
-                    ->Field('num,price')
-                    ->Where(array(
-                        'product_id' => $product['id'],
-                        'substation_id' => $this->CommonAdmin,
-                    ))->Select();
-                $data['wholesale'] = $wholesale;
             }
+            //批发价
+            $wholesale = (array)$this->m_products_wholesale_substation
+                ->Field('num,price')
+                ->Where(array(
+                    'product_id' => $product['id'],
+                    'substation_id' => $this->CommonAdmin === '' ? 'master' : $this->CommonAdmin,
+                ))->Select();
+
+            $data['wholesale'] = $wholesale;
 			$data['product'] = $product;
 
 			
@@ -235,6 +235,20 @@ class ProductsController extends AdminBasicController
                                 'substation_id' => $this->CommonAdmin,
                                 'product_id' => $id,
                             ));
+                        }else{
+                            //主站
+                            foreach ($wholesale_num as $k=>$v){
+                                $data_wholesale[] = array(
+                                    'substation_id' => 'master',
+                                    'product_id' => $id,
+                                    'num' => $wholesale_num[$k],
+                                    'price' => $wholesale_price[$k],
+                                );
+                            }
+                            $this->m_products_wholesale_substation->updateInfo($data_wholesale,array(
+                                'substation_id' => 'master',
+                                'product_id' => $id,
+                            ));
                         }
                         $data = array('code' => 1, 'msg' => '更新成功');
                     }else{
@@ -269,6 +283,20 @@ class ProductsController extends AdminBasicController
                                 'substation_id' => $this->CommonAdmin,
                                 'product_id' => $id,
                             ));
+                        }else{
+                            //主站
+                            foreach ($wholesale_num as $k=>$v){
+                                $data_wholesale[] = array(
+                                    'substation_id' => 'master',
+                                    'product_id' => $id,
+                                    'num' => $wholesale_num[$k],
+                                    'price' => $wholesale_price[$k],
+                                );
+                            }
+                            $this->m_products_wholesale_substation->updateInfo($data_wholesale,array(
+                                'substation_id' => 'master',
+                                'product_id' => $id,
+                            ));
                         }
 						$data = array('code' => 1, 'msg' => '更新成功');
 					}else{
@@ -296,6 +324,20 @@ class ProductsController extends AdminBasicController
                             }
                             $this->m_products_wholesale_substation->updateInfo($data_wholesale,array(
                                 'substation_id' => $this->CommonAdmin,
+                                'product_id' => $u,
+                            ));
+                        }else{
+                            //主站
+                            foreach ($wholesale_num as $k=>$v){
+                                $data_wholesale[] = array(
+                                    'substation_id' => 'master',
+                                    'product_id' => $u,
+                                    'num' => $wholesale_num[$k],
+                                    'price' => $wholesale_price[$k],
+                                );
+                            }
+                            $this->m_products_wholesale_substation->updateInfo($data_wholesale,array(
+                                'substation_id' => 'master',
                                 'product_id' => $u,
                             ));
                         }

@@ -75,7 +75,7 @@ class DetailController extends PcBasicController
         $id = $this->getPost('id',false);
 
         $data = array();
-        if(empty($id) || $this->substation_id === 'master'){
+        if(empty($id)){
             $data = array('code' => 1003, 'msg' => '当前商品没有设置批发价');
             Helper::response($data);
         }
