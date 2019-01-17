@@ -31,3 +31,16 @@ function convertSQL($param, $alias=false)
     }
     return ltrim($condition, " AND ");
 }
+
+function getTopDomainhuo(){
+    $host=$_SERVER['HTTP_HOST'];
+
+    $matchstr="[^\.]+\.(?:(".$str.")|\w{2}|((".$str.")\.\w{2}))$";
+    if(preg_match("/".$matchstr."/ies",$host,$matchs)){
+        $domain=$matchs['0'];
+    }else{
+        $domain=$host;
+    }
+    return $domain;
+
+}
