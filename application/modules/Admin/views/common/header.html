@@ -36,7 +36,7 @@
 <body>
     <div class="fly-header <?php if(isset($config['headermenucolor']) AND strlen($config['headermenucolor'])>0):?><?php echo $config['headermenucolor'];?><?php else:?>layui-bg-black<?php endif;?>">
         <div class="layui-container">
-            <div class="layui-hide-xs"><a class="fly-logo" href="/<?php echo ADMIN_DIR;?>"><img src="<?php if(isset($config['logo']) AND strlen($config['logo'])>0):?><?php echo $config['logo'];?><?php else:?>/res/images/logo.png<?php endif;?>" alt="zfaka"></a></div>
+            <div class="layui-hide-xs"><a class="fly-logo" href="/<?php echo ADMIN_DIR;?>"><img src="<?php if(isset($config['logo']) AND strlen($config['logo'])>0):?><?php echo $config['logo'];?><?php else:?><?php endif;?>" alt="zfaka"></a></div>
             <ul class="layui-nav fly-nav" id="webmenu">
 				<li class="layui-nav-item layui-hide-lg layui-hide-md layui-hide-sm layadmin-flexible">
 					<a href="javascript:;" title="侧边伸缩">
