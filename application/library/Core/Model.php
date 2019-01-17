@@ -36,15 +36,14 @@ abstract class Model {
 	 * @param string => use default DB if parameter is not specified !
 	 * @return NULL
 	 */
-	private function connect($type = 'WRITE') {
+	private function connect($prefix='Local') {
 		$config = Yaf\Application::app()->getConfig();
-		
-		$db     = $config['Default'];
-		$driver = $config['TYPE'];
-		$host   = $config[$type.'_HOST'];
-		$port   = $config[$type.'_PORT'];
-		$user   = $config[$type.'_USER'];
-		$pswd   = $config[$type.'_PSWD'];
+		$db     = $config[$prefix.'_Default'];
+		$driver = $config[$prefix.'_TYPE'];
+		$host   = $config[$prefix.'_HOST'];
+		$port   = $config[$prefix.'_PORT'];
+		$user   = $config[$prefix.'_USER'];
+		$pswd   = $config[$prefix.'_PSWD'];
 		$persistent = $config['pconnect'];
 
 		if($persistent){
@@ -60,32 +59,32 @@ abstract class Model {
 		$dsn = $driver.':host='.$host.';port='.$port.';dbname='.$db;
 
 		try{
-			// 判断 READ, WRITE 是否是相同的配置, 是则用同一个链接, 不再创建连接
-			$read_host = $config['READ_HOST'];
-			$read_port = $config['READ_PORT'];
-
-			$write_host = $config['WRITE_HOST'];
-			$write_port = $config['WRITE_PORT'];
-
-			if($read_host == $write_host && $read_port == $write_port){
-				$sington = TRUE;
-			}
-
-			if($sington){
-				if(isset(self::$obj)) {
-					if(isset(self::$obj['READ'])) {
-						self::$obj['WRITE'] = self::$obj['READ'];
-					}else{
-						self::$obj['READ'] = self::$obj['WRITE'];
-					}
-
-					self::$conn = self::$obj['WRITE'];
-				}
-			}
+//			// 判断 READ, WRITE 是否是相同的配置, 是则用同一个链接, 不再创建连接
+//			$read_host = $config['READ_HOST'];
+//			$read_port = $config['READ_PORT'];
+//
+//			$write_host = $config['WRITE_HOST'];
+//			$write_port = $config['WRITE_PORT'];
+//
+//			if($read_host == $write_host && $read_port == $write_port){
+//				$sington = TRUE;
+//			}
+//
+//			if($sington){
+//				if(isset(self::$obj)) {
+//					if(isset(self::$obj['READ'])) {
+//						self::$obj['WRITE'] = self::$obj['READ'];
+//					}else{
+//						self::$obj['READ'] = self::$obj['WRITE'];
+//					}
+//
+//					self::$conn = self::$obj['WRITE'];
+//				}
+//			}
 
 			// 读写要分离则创建两个连接
-			if(!isset(self::$obj[$type])) {
-				self::$conn = self::$obj[$type] = new PDO($dsn, $user, $pswd, $option);
+			if(!isset(self::$obj[$prefix])) {
+				self::$conn = self::$obj[$prefix] = new PDO($dsn, $user, $pswd, $option);
 				self::$conn->query('SET NAMES utf8');
 				unset($db, $driver, $host, $port, $user, $pswd, $dsn);
 			}
@@ -136,7 +135,7 @@ abstract class Model {
 		}else{
 			$this->options['between'] = $str;
 		}
-		
+
 		return $this;
 	}
 
@@ -223,7 +222,7 @@ abstract class Model {
 		}else{
 			$this->options['where'] = $str;
 		}
-		
+
 		unset($str, $i, $total, $where, $connector);
 
 		return $this;
@@ -284,19 +283,19 @@ abstract class Model {
 	final private function _reset() {
 		unset($this->options);
 	}
-	
+
 
 	/**
 	 * Select records
-	 * @return records on success or FALSE on failure 
+	 * @return records on success or FALSE on failure
 	 */
-	final public function Select(){
+	final public function Select($prefix='Local'){
 		$this->sql = $this->generateSQL();
 
 		//echo $this->sql; br();
 
 		// 连接DB
-		$this->connect('READ');
+		$this->connect($prefix);
 
 		$this->Execute();
 		$result = $this->success ? $this->Fetch() : NULL;
@@ -329,7 +328,7 @@ abstract class Model {
 	 * @param Array => Array('field1'=>'value1', 'field2'=>'value2', 'field3'=>'value1')
 	 * @return FALSE on failure or inserted_id on success
 	 */
-	final public function Insert($map = array()) {
+	final public function Insert($map = array(), $prefix='Local') {
 		if (!$map || !is_array($map)) {
 			return FALSE;
 		} else {
@@ -345,7 +344,7 @@ abstract class Model {
 
 			$this->sql = 'INSERT INTO ' . $this->table . " ($fieldString) VALUES ($valueString)";
 
-			$this->connect();
+			$this->connect($prefix);
 			$this->Execute();
 
 			return $this->success ? $this->getInsertID() : NULL;
@@ -359,7 +358,7 @@ abstract class Model {
 	 * @param type $data
 	 * @return boolean
 	 */
-	public function MultiInsert($data){
+	public function MultiInsert($data, $prefix='Local'){
 		$sql = "INSERT INTO ". $this->table;
 		$sqlFieldArr = array();
 		$sqlValueArr = array();
@@ -386,7 +385,7 @@ abstract class Model {
 		$sql .= "(`$sqlFieldStr`) VALUES $sqlValueStr";
 
 		$this->sql = $sql;
-		$this->connect();
+		$this->connect($prefix);
 		$this->Execute();
 
 		return $this->success ? $this->getInsertID() : NULL;
@@ -427,14 +426,13 @@ abstract class Model {
 	 *
 	 * @param string  => SQL statement for execution
 	 */
-	final public function Query($sql) {
+	final public function Query($sql, $prefix='Local') {
 		if($sql){
 			$this->sql = $sql;
 		}else{
 			return NULL;
 		}
-
-		$this->connect();
+		$this->connect($prefix);
 		$this->Execute();
 		$this->checkResult();
 
@@ -566,7 +564,7 @@ abstract class Model {
 	 * @param boolean $self => self field ?
 	 * @return FALSE on failure or affected rows on success
 	 */
-	final public function Update($map, $self = FALSE) {
+	final public function Update($map, $self = FALSE, $prefix='Local') {
 		if(!$this->options['where'] && !$this->options['between']){
 			return FALSE;
 		}
@@ -620,12 +618,12 @@ abstract class Model {
 			}
 
 			// echo $this->sql; die;
-			$this->connect();
+			$this->connect($prefix);
 
 			return $this->Exec();
 		}
 	}
-	
+
 	/*
      *  Update one record
      */
@@ -640,7 +638,7 @@ abstract class Model {
 	 * @param string => where condition for deletion
 	 * @return FALSE on failure or affected rows on success
 	 */
-	final public function Delete() {
+	final public function Delete($prefix='Local') {
 		if(!$this->options['where'] && !$this->options['between']){
 			return FALSE;
 		}
@@ -667,7 +665,7 @@ abstract class Model {
 		}
 
 		//echo $this->sql; die;
-		$this->connect();
+		$this->connect($prefix);
 		return $this->Exec();
 	}
 
@@ -754,8 +752,8 @@ abstract class Model {
 	 * @param NULL
 	 * @return TRUE on success or FALSE on failure
 	 */
-	public function beginTransaction() {
-		$this->connect();
+	public function beginTransaction($prefix='Local') {
+		$this->connect($prefix);
 		self::$conn->beginTransaction();
 	}
 

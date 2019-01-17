@@ -49,7 +49,8 @@ class notify
 					if(!$u){
 						$data =array('code'=>1004,'msg'=>'更新失败');
 						return $data;
-					}else{ 
+					}else{
+					    //支付成功
 						//3.开始进行订单处理
 						$product = $m_products->SelectByID('auto,stockcontrol,qty',$order['pid']);
 						if(!empty($product)){

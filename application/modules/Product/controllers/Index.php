@@ -19,6 +19,7 @@ class IndexController extends PcBasicController
 
     public function indexAction()
     {
+
 		if(file_exists(INSTALL_LOCK)){
 			$data = array();
 			if(isset($this->config['tplindex']) AND file_exists(APP_PATH.'/application/modules/Product/views/index/tpl/'.$this->config['tplindex'].'.html')){
