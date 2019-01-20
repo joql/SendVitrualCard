@@ -25,11 +25,12 @@ class zhapayalipay
             "notify_url"=>$params['weburl'] . '/product/notify/?paymethod='.$this->paymethod,//通知地址
             "return_url"=>$params['weburl']. "/query/auto/{$params['orderid']}.html",//跳转地址
             "mepay_type"=>  2,//
+            "return_type"=>  2,//
         ); //构造需要传递的参数
 		
 		try{
 			
-			$back = $this->_create_link($config, $payconfig['app_secret'].(int)$payconfig['app_id']); //生成支付URL
+			$back = $this->_create_link($config, $payconfig['app_secret']); //生成支付URL
 			if (function_exists('file_get_contents')) { //如果开启了获取远程HTML函数 file_get_contents
 				$codepay_json = file_get_contents($back['url']); //获取远程HTML
 			} else if (function_exists('curl_init')) {
