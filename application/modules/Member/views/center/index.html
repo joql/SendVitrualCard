@@ -1,0 +1,268 @@
+<?php include SMALLS_COMMON_PATH.'/header.html';?>
+<link rel="stylesheet" type="text/css" href="<?php echo ASSETS_PATH;?>/asset/jeDate/skin/jedate.css">
+<style>
+    /*tab表  */
+    .user-info .tab{
+        width: 100%;
+        background-color: #C9C9C9;
+        cursor: pointer;
+        display: flex;
+    }
+    .user-info span{
+        text-align: center;
+        height: 66px;
+        line-height: 60px;
+        font-size: 20px;
+        color: #868686;
+        flex: 1;
+    }
+    .user-info span.cur{
+        background-color: #009589!important;
+        color: white;
+    }
+
+    /*充值记录*/
+    .recharge-index-page .account-balance .p-balance {
+        width: 100%;
+    }
+    .account-balance,
+    .common-records {
+        background: #fff;
+        padding: 20px;
+        color: #333;
+    }
+    .balance-title {
+        font-size: 18px;
+        border-left: 3px solid red;
+        padding-left: 13px;
+    }
+    .account-balance p {
+        font-size: 24px;
+        text-align: center;
+        line-height: 53px;
+    }
+    .account-balance p em {
+        font-size: 55px;
+        color: #be2632;
+        font-style: normal;
+    }
+    .account-balance p a {
+        display: inline-block;
+        font-size: 12px;
+        color: #fff;
+        line-height: 22px;
+        padding: 0 10px;
+        border-radius: 5px;
+        background: #be2632;
+        margin-left: 20px;
+    }
+    .top-tip {
+        font-size: 14px;
+        color: #666;
+        margin-left: 20px;
+        vertical-align: top;
+        line-height: 13px;
+    }
+    .top-tip i {
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        vertical-align: top;
+        background: url(../images/default/syico.png) no-repeat -122px 0;
+    }
+    .search-container {
+        border-bottom: 1px solid #e2e2e2;
+        padding-bottom: 12px;
+        margin-top: 12px;
+    }
+    .records-list-con {
+        margin-top: 12px;
+    }
+    .records-list-con .records-title li {
+        display: table-cell;
+        width: 1%;
+        text-align: center;
+    }
+    .records-list-con  .records-list {
+        height: 355px;
+        overflow-y: auto;
+        text-align: center;
+        position: relative;
+    }
+    .records-list-con .records-list li span {
+        margin-top: 0;
+    }
+    .records-list-con .records-list li span {
+        display: table-cell;
+        width: 10%;
+        text-align: center;
+    }
+</style>
+<div class="pcoded-main-container">
+    <div class="pcoded-wrapper d-block d-md-none">
+        <div class="pcoded-content">
+            <div class="pcoded-inner-content">
+                <div class="main-body">
+                    <div class="page-wrapper">
+                        <div class="page-body">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="card user-info" style="margin-bottom: 10px;" >
+                                        <div class="card-block" style="margin-bottom: -45px;">
+                                            <div class="form-horizontal" >
+                                                <div class="row">
+                                                    <!--<h4 class="sub-title" style="margin-bottom: 0px; margin-top: -6px; width: 100%;">-->
+                                                        <!--<i class="fa fa-shopping-cart"></i>-->
+                                                    <!--</h4>-->
+                                                    <div class="tab">
+                                                        <span>充值记录</span>
+                                                        <span class="cur">消费记录</span>
+                                                    </div>
+                                                    <div class="card-block p-0 col-md-12">
+                                                        <div class="con-item records-0 cur" style="display: none">
+                                                            <div class="account-balance">
+                                                                <h3 class="balance-title">账户余额</h3>
+                                                                <p>
+                                                                    账户余额：<em id="accountBalance">0</em>
+                                                                    <span class="top-tip">
+                                <i></i>
+                                提现暂未开放
+                            </span>
+                                                                    <a href="/person/recharge/index.html">立即充值</a>
+                                                                </p>
+                                                            </div>
+                                                            <div class="common-records">
+                                                                <h3 class="balance-title">充值记录</h3>
+                                                                <form class="form-inline">
+                                                                    <div class="form-group mb-2">
+                                                                        <label class="col-form-label">时间：</label>
+                                                                    </div>
+                                                                    <div class="form-group mx-sm-3 mb-2">
+                                                                        <input type="text" class="form-control" id="in_start_time">
+                                                                    </div>
+                                                                    <div class="layui-inline">
+                                                                        <div class="">-</div>
+                                                                    </div>
+                                                                    <div class="form-group mx-sm-3 mb-2">
+                                                                        <input type="text" class="form-control" id="in_end_time">
+                                                                    </div>
+                                                                    <button type="submit" class="btn btn-primary mb-2">搜索</button>
+                                                                </form>
+                                                                <div class="records-list-con">
+                                                                    <ul class="records-title">
+                                                                        <li>金额</li>
+                                                                        <li>时间</li>
+                                                                    </ul>
+                                                                    <ul class="records-list" id="rechargeList"></ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="con-item records-0 cur" >
+                                                            <div class="common-records">
+                                                                <h3 class="balance-title">消费记录</h3>
+                                                                <form class="form-inline">
+                                                                    <div class="form-group mb-2">
+                                                                        <label class="col-form-label">时间：</label>
+                                                                    </div>
+                                                                    <div class="form-group mx-sm-3 mb-2">
+                                                                        <input type="text" class="form-control" id="out_start_time">
+                                                                    </div>
+                                                                    <div class="layui-inline">
+                                                                        <div class="">-</div>
+                                                                    </div>
+                                                                    <div class="form-group mx-sm-3 mb-2">
+                                                                        <input type="text" class="form-control" id="out_end_time">
+                                                                    </div>
+                                                                    <button type="submit" class="btn btn-primary mb-2">搜索</button>
+                                                                </form>
+                                                                <div class="records-list-con">
+                                                                    <ul class="records-title">
+                                                                        <li>价格</li>
+                                                                        <li>数量</li>
+                                                                        <li>商品</li>
+                                                                        <li>订单号</li>
+                                                                        <li>时间</li>
+                                                                    </ul>
+                                                                    <ul class="records-list" id="rechargeList1"></ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card" style="margin-bottom: 10px;" >
+                                        <div class="card-block" style="margin-bottom: -45px;">
+                                            <h4 class="sub-title"  style="margin-bottom: 5px;">网站公告</h4>
+                                            <div class="row">
+                                                <div class="col-sm-12">
+                                                    <div class="input-group input-primary">
+                                                        <div style="color: #666666;">
+                                                            <?php echo $config['gonggao']; ?>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php include SMALLS_COMMON_PATH.'/content.html';?>
+</div>
+</div>
+<!--引入公共底文件-->
+<?php include SMALLS_COMMON_PATH.'/footer.html';?>
+<script  src="<?php echo ASSETS_PATH;?>/asset/jeDate/dist/jedate.min.js"></script>
+<script>
+    $('#hi-Modal').modal({backdrop: 'static', keyboard: false});
+    jeDate("#in_start_time",{
+        festival:true,
+        minDate:"1900-01-01",              //最小日期
+        maxDate:"2099-12-31",              //最大日期
+        method:{
+            choose:function (params) {
+            }
+        },
+        format: "YYYY-MM-DD hh:mm:ss"
+    });
+    jeDate("#in_end_time",{
+        festival:true,
+        minDate:"1900-01-01",              //最小日期
+        maxDate:"2099-12-31",              //最大日期
+        method:{
+            choose:function (params) {
+            }
+        },
+        format: "YYYY-MM-DD hh:mm:ss"
+    });
+    jeDate("#out_end_time",{
+        festival:true,
+        minDate:"1900-01-01",              //最小日期
+        maxDate:"2099-12-31",              //最大日期
+        method:{
+            choose:function (params) {
+            }
+        },
+        format: "YYYY-MM-DD hh:mm:ss"
+    });
+    jeDate("#out_end_time",{
+        festival:true,
+        minDate:"1900-01-01",              //最小日期
+        maxDate:"2099-12-31",              //最大日期
+        method:{
+            choose:function (params) {
+            }
+        },
+        format: "YYYY-MM-DD hh:mm:ss"
+    });
+
+</script>
