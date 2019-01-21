@@ -45,9 +45,9 @@ class M_Config extends Model
 	private function _getData($host='master')
 	{
 		if($host === 'master'){
-            $result=$this->Select();
+            $result=(array)$this->Select();
         }else{
-            $result=$this->Where(array('substation_id'=>$host))
+            $result=(array)$this->Where(array('substation_id'=>$host))
                 ->Select();
         }
 		foreach($result AS $i){

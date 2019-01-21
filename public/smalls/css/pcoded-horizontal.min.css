@@ -617,8 +617,8 @@ li.edge > ul {
   background: -webkit-gradient(linear, left top, right top, from(#1d9c83), to(#59e0c5));
   background: linear-gradient(to right, #1d9c83, #59e0c5); }
 .pcoded .pcoded-header[header-theme="theme5"] {
-  background: -webkit-gradient(linear, left top, right top, from(#4099ff), to(#73b4ff));
-  background: linear-gradient(to right, #4099ff, #73b4ff); }
+  background: -webkit-gradient(linear, left top, right top, from(#009589 ), to(#009589));
+  background: linear-gradient(to right, #009589, #009589); }
 .pcoded .pcoded-header[header-theme="theme6"] {
   background: -webkit-gradient(linear, left top, right top, from(#aa8a0a), to(#f4d03f));
   background: linear-gradient(to right, #aa8a0a, #f4d03f); }
