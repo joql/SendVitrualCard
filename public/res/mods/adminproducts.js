@@ -50,7 +50,7 @@ layui.define(['layer', 'table', 'form','layedit'], function(exports){
 
 	form.verify({
 		checkPrice: function (value, item) {
-			if(value < parseInt($('#old_price').val())){
+			if(value < Number($('#old_price').val())){
 				return '当前价格不能低于成本价';
 			}
         }
