@@ -118,6 +118,7 @@ layui.define(['layer', 'laytpl', 'form', 'element','table'], function(exports){
 		var url = $(this).data('href');
         var deltip = $(this).data('deltip') || '真的要删除该记录吗？';
         var checktip = $(this).data('checktip') || '真的要审核记录吗？';
+        var pwdinit = $(this).data('pwdinit') || '真的要重置密码吗？';
         var blocktip = $(this).data('blocktip') || '真的要停用记录吗？';
 
 		if (layEvent === 'del') { //删除
@@ -147,6 +148,31 @@ layui.define(['layer', 'laytpl', 'form', 'element','table'], function(exports){
 			});
 		}else if (layEvent === 'check') { //审核
 			layer.confirm(checktip, function(index) {
+				layer.close(index);
+				var loading = layer.load(2);
+				$.ajax({
+					url: url,
+					type: 'POST',
+					dataType: 'json',
+					data: {'csrf_token':TOKEN}
+				})
+				.done(function(res) {
+					if ( res.code == '1' ) {
+                        location.reload();
+                        layer.msg(res.msg,{icon:1})
+                    } else {
+                    	layer.msg(res.msg,{icon:2})
+                    }
+				})
+				.fail(function() {
+					layer.alert('error',{time:3000});
+				})
+				.always(function() {
+					layer.close(loading);
+				});
+			});
+		}else if (layEvent === 'pwdinit') { //审核
+			layer.confirm(pwdinit, function(index) {
 				layer.close(index);
 				var loading = layer.load(2);
 				$.ajax({

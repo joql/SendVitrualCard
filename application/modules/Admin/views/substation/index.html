@@ -31,6 +31,7 @@
        lay-event="block">停用
     </a>
     {{# } }}
+    <a data-href="/<?php echo ADMIN_DIR;?>/substation/pwdInit/?id={{d.id}}" class="layui-btn layui-btn-xs layui-btn-primary" lay-event="pwdinit">密码重置</a>
     <a data-href="/<?php echo ADMIN_DIR;?>/substation/delete/?id={{d.id}}" class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">删除</a>
 </script>
 <!--引入公共底文件-->

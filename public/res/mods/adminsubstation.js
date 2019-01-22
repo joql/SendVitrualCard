@@ -23,7 +23,7 @@ layui.define(['layer', 'table', 'form','laydate'], function(exports){
 			{field: 'remaining_sum', title: '余额'},
 			{field: 'expire_time', title: '到期时间'},
 			{field: 'state', title: '状态'},
-			{field: 'opt', title: '操作', width:170, templet: '#opt',fixed: 'right'},
+			{field: 'opt', title: '操作', width:230, templet: '#opt',fixed: 'right'},
 		]]
 	});
 
