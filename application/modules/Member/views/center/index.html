@@ -1,6 +1,8 @@
 <?php include SMALLS_COMMON_PATH.'/header.html';?>
 <link rel="stylesheet" type="text/css" href="<?php echo ASSETS_PATH;?>/asset/jeDate/skin/jedate.css">
 <style>
+
+
     /*tab表  */
     .user-info .tab{
         width: 100%;
@@ -8,7 +10,7 @@
         cursor: pointer;
         display: flex;
     }
-    .user-info span{
+    .user-info .tab span{
         text-align: center;
         height: 66px;
         line-height: 60px;
@@ -20,7 +22,6 @@
         background-color: #009589!important;
         color: white;
     }
-
     /*充值记录*/
     .recharge-index-page .account-balance .p-balance {
         width: 100%;
@@ -70,11 +71,6 @@
         vertical-align: top;
         background: url(../images/default/syico.png) no-repeat -122px 0;
     }
-    .search-container {
-        border-bottom: 1px solid #e2e2e2;
-        padding-bottom: 12px;
-        margin-top: 12px;
-    }
     .records-list-con {
         margin-top: 12px;
     }
@@ -97,29 +93,115 @@
         width: 10%;
         text-align: center;
     }
+
+    /*头像*/
+    .user-info {
+        width: 100%;
+        height: 183px;
+        min-height: 183px;
+        height: auto!important;
+        top: 0;
+        left: 0;
+    }
+    .user-info .avatar {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        margin: 20px auto;
+        overflow: hidden;
+        border: solid 2px #fff;
+    }
+    .user-info .avatar img {
+        width: 100%;
+        height: 100%;
+    }
+    .user-info .nick-level {
+        color: #3b4650;
+        text-align: center;
+    }
+
+    /*列表*/
+    .con-item li {
+        line-height: 30px;
+        margin-top: 20px;
+    }
+    .records-list-con .records-title li {
+        display: table-cell;
+        width: 1%;
+        text-align: center;
+    }
+    .records-list-con  .records-list {
+        height: 355px;
+        overflow-y: auto;
+        text-align: center;
+        position: relative;
+    }
+    .records-list-con .records-list li span {
+        margin-top: 0;
+    }
+    .records-list-con .records-list li span {
+        display: table-cell;
+        width: 10%;
+        text-align: center;
+    }
+
+    /*充值模态框*/
+    .recharge-label {
+        loat: left;
+        display: block;
+        padding: 7px 15px;
+        width: 121px;
+        font-weight: 400;
+        text-align: right;
+        font-size: 15px;
+    }
+    .form-radio input {
+        width: auto;
+        opacity: 0.00000001;
+        position: absolute;
+        left: 0;
+    }
+
 </style>
 <div class="pcoded-main-container">
-    <div class="pcoded-wrapper d-block d-md-none">
+    <div class="pcoded-wrapper d-block d-sm-block">
         <div class="pcoded-content">
             <div class="pcoded-inner-content">
                 <div class="main-body">
                     <div class="page-wrapper">
                         <div class="page-body">
                             <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card" style="margin-bottom: 10px;" >
+                                        <div class="card-block" style="margin-bottom: -45px;">
+                                            <div class="user-info pa">
+                                                <div class="avatar">
+                                                    <img src="http://vip.nuoyun.tv/public/uploads/profileimg/1.jpg" class="avatar-src">
+                                                    <form id="uploadForm" enctype="multipart/form-data">
+                                                        <input type="file" id="avatar_img" name="avatar_img" hidden />
+                                                    </form>
+                                                </div>
+                                                <div class="nick-level">
+                                                    系统管理员
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col-md-8">
                                     <div class="card user-info" style="margin-bottom: 10px;" >
-                                        <div class="card-block" style="margin-bottom: -45px;">
+                                        <div class="card-block">
                                             <div class="form-horizontal" >
                                                 <div class="row">
                                                     <!--<h4 class="sub-title" style="margin-bottom: 0px; margin-top: -6px; width: 100%;">-->
                                                         <!--<i class="fa fa-shopping-cart"></i>-->
                                                     <!--</h4>-->
                                                     <div class="tab">
-                                                        <span>充值记录</span>
-                                                        <span class="cur">消费记录</span>
+                                                        <span class="cur">充值记录</span>
+                                                        <span>消费记录</span>
                                                     </div>
                                                     <div class="card-block p-0 col-md-12">
-                                                        <div class="con-item records-0 cur" style="display: none">
+                                                        <div class="con-item records-0 cur">
                                                             <div class="account-balance">
                                                                 <h3 class="balance-title">账户余额</h3>
                                                                 <p>
@@ -128,7 +210,7 @@
                                 <i></i>
                                 提现暂未开放
                             </span>
-                                                                    <a href="/person/recharge/index.html">立即充值</a>
+                                                                    <a href="#" id="openRechareModal">立即充值</a>
                                                                 </p>
                                                             </div>
                                                             <div class="common-records">
@@ -157,7 +239,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="con-item records-0 cur" >
+                                                        <div class="con-item records-1" style="display: none">
                                                             <div class="common-records">
                                                                 <h3 class="balance-title">消费记录</h3>
                                                                 <form class="form-inline">
@@ -173,7 +255,7 @@
                                                                     <div class="form-group mx-sm-3 mb-2">
                                                                         <input type="text" class="form-control" id="out_end_time">
                                                                     </div>
-                                                                    <button type="submit" class="btn btn-primary mb-2">搜索</button>
+                                                                    <button type="button" id="out_search" class="btn btn-primary mb-2">搜索</button>
                                                                 </form>
                                                                 <div class="records-list-con">
                                                                     <ul class="records-title">
@@ -183,25 +265,10 @@
                                                                         <li>订单号</li>
                                                                         <li>时间</li>
                                                                     </ul>
-                                                                    <ul class="records-list" id="rechargeList1"></ul>
+                                                                    <ul class="records-list" id="outList">
+                                                                    </ul>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="card" style="margin-bottom: 10px;" >
-                                        <div class="card-block" style="margin-bottom: -45px;">
-                                            <h4 class="sub-title"  style="margin-bottom: 5px;">网站公告</h4>
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <div class="input-group input-primary">
-                                                        <div style="color: #666666;">
-                                                            <?php echo $config['gonggao']; ?>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -216,8 +283,59 @@
             </div>
         </div>
     </div>
-    <?php include SMALLS_COMMON_PATH.'/content.html';?>
 </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="rechargeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">充值</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="form-group mb-2">
+                        <label class="recharge-label">充值金额：</label>
+                    </div>
+                    <div class="form-group mx-sm-3 mb-2">
+                        <input name="amount" type="text" id="amount" value="" class="form-control" onkeyup="value=value.replace(/[^0-9]/g,'')" maxlength="3">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group mb-2">
+                        <label class="recharge-label">充值方式：</label>
+                    </div>
+                    <div class="form-group mx-sm-3 mb-2 form-radio">
+                        <?php if(!empty($payments)):?>
+                        <?php foreach($payments AS $payment):?>
+                        <?php if($payment['active']>0):?>
+                        <div class="radio radio-inline">
+                            <label>
+                                <input type="radio" name="paymethod" value="<?php echo $payment['alias'];?>">
+                                <i class="helper" style="top: 0rem;"></i><img src="<?php echo $payment['payimage'];?>" height="30px">
+                            </label>
+                        </div>
+                        <?php endif;?>
+                        <?php endforeach;?>
+                        <?php else:?>
+                        <div class="radio radio-inline">
+                            <span>站长正在加紧配置，请耐心等待....</span>
+                        </div>
+
+                        <?php endif;?>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">充值</button>
+            </div>
+        </div>
+    </div>
 </div>
 <!--引入公共底文件-->
 <?php include SMALLS_COMMON_PATH.'/footer.html';?>
@@ -244,7 +362,7 @@
         },
         format: "YYYY-MM-DD hh:mm:ss"
     });
-    jeDate("#out_end_time",{
+    jeDate("#out_start_time",{
         festival:true,
         minDate:"1900-01-01",              //最小日期
         maxDate:"2099-12-31",              //最大日期
@@ -264,5 +382,108 @@
         },
         format: "YYYY-MM-DD hh:mm:ss"
     });
+
+    $('.tab span').click(function() {
+        var idx = $(this).index();
+        $(this).addClass('cur').siblings().removeClass('cur');
+        $('.con-item').hide();
+        $('.records-' + idx).show();
+        if (idx == 1) {
+            if ($('#outList li').length <= 0) {
+                loadOutList(1);
+            }
+        } else{
+            if ($('#goldList li').length <= 0) {
+                loadGoldRecords(1);
+            }
+        }
+    });
+
+    $('.avatar img').on('click',function () {
+        $('#avatar_img').click();
+        $.ajax({
+            url:"center/uploadAvator",
+            type:"post",
+            data: new FormData($('#uploadForm')[0]),
+            dataType:'json',
+            cache:false,         //不设置缓存
+            processData: false,
+            contentType: false,
+            success:function(data){
+                if(data.code == 1){
+                    $('.avatar img').attr('src',data.data);
+                }
+                alert(data.msg);
+            },
+            error:function(xmlHttpRequest,textStatus,errorThrown){
+                console.log(textStatus+"出错！"+errorThrown);
+            }
+        });
+    });
+
+    var outIndex=1;
+    $('#outList').scroll(function () {
+        var top = document.getElementById("loadMoreOut").offsetTop+20;
+        if (top == ($('#outList').scrollTop() + $('#outList').height())) {
+            outIndex ++;
+            var starttime = $('#out_start_time').val(),
+                endtime = $('#out_end_time').val();
+            loadOutList(outIndex, starttime, endtime);
+        }
+    });
+    function loadOutList(page, starttime, endtime) {
+        if (page == 1) {
+            $('#outList').html('');
+        } else if ($('#loadMoreOut').hasClass('all')) {
+            return;
+        }
+        //$('#outList').append('<span class="load-more" id="loadMoreOut">正在加载更多……</span>');
+        $.ajax({
+            type: 'post',
+            dataType: 'json',
+            url: 'center/getOutList',
+            data: {
+                page: page,
+                starttime: starttime,
+                endtime : endtime,
+                csrf_token: TOKEN,
+            },
+            dataType: 'json',
+            success: function (res) {
+                $('#outList span.load-more').remove();
+                if(res.code == 1){
+                    var data = res.data;
+                    if (data.length <= 0) {
+                    } else {
+                        $.each(data, function(idx, item) {
+                            var li = '<li>' +
+                                '<span>- '+ item.total + '</span>' +
+                                '<span>' + item.num + '</span>' +
+                                '<span>' + item.name + '</span>' +
+                                '<span>' + item.oid + '</span>' +
+                                '<span>' + item.time + '</span>' +
+                                '</li>';
+                            $('#outList').append(li);
+                        });
+                        $('#outList').append('<span class="load-more" id="loadMoreOut">正在加载更多……</span>');
+                    }
+                }else{
+                    $('#outList').append('<span class="load-more all" id="loadMoreOut">已加载全部</span>');
+                }
+
+            }
+        });
+
+    }
+
+    $('#out_search').click(function () {
+        outIndex=1;
+        loadOutList(outIndex, $('#out_start_time').val(), $('#out_end_time').val());
+    });
+    
+    /*充值*/
+    $('#openRechareModal').click(function () {
+        $('#rechargeModal').modal('show');
+    })
 
 </script>
