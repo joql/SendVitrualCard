@@ -426,6 +426,10 @@ class ProductsController extends AdminBasicController
 	
     public function getlistbytidAction()
     {
+        if ($this->AdminUser==FALSE AND empty($this->AdminUser)) {
+            $data = array('code' => 1000, 'msg' => '请登录');
+            Helper::response($data);
+        }
 		$tid = $this->getPost('tid');
 		$csrf_token = $this->getPost('csrf_token', false);
 		
@@ -444,6 +448,44 @@ class ProductsController extends AdminBasicController
 			$result = array('code' => 1000, 'msg' => '参数错误');
 		}
         Helper::response($result);
+    }
+
+    /**
+     * use for:商品图片上传
+     * auth: Joql
+     * date:2019-01-22 22:17
+     */
+    public function photoUploadAction()
+    {
+        if ($this->AdminUser==FALSE AND empty($this->AdminUser)) {
+            $data = array('code' => 1000, 'msg' => '请登录');
+            Helper::response($data);
+        }
+        $data = array();
+        \Yaf\Loader::import(LIB_PATH.'/Upload.php');
+        $upload = new \Dj\Upload('file',[
+            'ext'=>'jpg,jpeg,png,gif',
+            'size'=>5242880
+        ]);
+        $filelist = $upload->save(UPLOAD_PATH.'/img');
+        if(is_array($filelist)){
+            # 返回数组，文件就上传成功了
+            //print_r($filelist);
+
+            $data = array('code' => 1, 'msg' => '上传成功','data'=>$filelist['uri']);
+            Helper::response($data);
+        }else{
+            # 如果返回负整数(int)就是发生错误了
+            $error_msg = [
+                -1=>'上传失败',
+                -2=>'文件存储路径不合法',
+                -3=>'上传非法格式文件,请上传以下格式jpg,jpeg,png,gif',
+                -4=>'文件大小不合符规定',
+                -5=>'token验证错误'
+            ];
+            $data = array('code' => 1000, 'msg' => $error_msg[$filelist]);
+            Helper::response($data);
+        }
     }
 	
 }

@@ -1,9 +1,10 @@
-layui.define(['layer', 'table', 'form','layedit'], function(exports){
+layui.define(['layer', 'table', 'form','layedit','upload'], function(exports){
 	var $ = layui.jquery;
 	var layer = layui.layer;
 	var table = layui.table;
 	var form = layui.form;
 	var layedit = layui.layedit;
+	var upload = layui.upload;
 	
 	var edit_description=layedit.build('description',{
 		tool: ['strong','italic','underline','|','del','left','center','right','link','unlink','face']
@@ -152,6 +153,22 @@ layui.define(['layer', 'table', 'form','layedit'], function(exports){
             where: data.field
         });
         return false;
+    });
+
+    var uploadInst = upload.render({
+        elem: '#photo_upload' //绑定元素
+        ,url: '/'+ADMIN_DIR+'/products/photoUpload'//上传接口
+		,accept: 'images'
+        ,done: function(res){
+            //上传完毕回调
+			if(res.code == 1){
+				$('#images').val(res.data);
+			}
+			layer.msg(res.msg);
+        }
+        ,error: function(){
+            //请求异常回调
+        }
     });
 	exports('adminproducts',null)
 });

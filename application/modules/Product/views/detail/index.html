@@ -19,7 +19,7 @@
 														<div id="big_banner">
 															<div class="media-middle port_big_img">
 																<div class="card gallery-desc">
-																	<img class="img img-fluid" src="<?php echo $product['images']; ?>" alt="<?php echo $product['name']; ?>">
+																	<img class="img img-fluid" src="<?php echo strpos($product['images'],'http') !== false ? $product['images'] : $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].'/'.$product['images']; ?>" alt="<?php echo $product['name']; ?>">
 																</div>
 															</div>
 														</div>
