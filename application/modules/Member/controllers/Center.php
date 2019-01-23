@@ -11,13 +11,15 @@ class CenterController extends PcBasicController
     private $m_user;
     private $m_order;
     private $m_payment;
-	
+    private $m_recharge;
+
 	public function init()
     {
         parent::init();
 		$this->m_user = $this->load('user');
 		$this->m_order = $this->load('order');
         $this->m_payment = $this->load('payment');
+        $this->m_recharge = $this->load('recharge');
     }
 
     public function indexAction()
@@ -146,6 +148,149 @@ class CenterController extends PcBasicController
             $data = array('code' => 1000, 'msg' => $error_msg[$filelist]);
             Helper::response($data);
         }
+    }
+
+    /**
+     * use for:保存充值订单
+     * auth: Joql
+     * date:2019-01-23 21:44
+     */
+    public function saveRechargeOrderAction(){
+        //下订单
+        if ($this->login==FALSE AND !$this->userid) {
+            $data = array('code' => 1002, 'msg' => '请登录');
+            Helper::response($data);
+        }
+        $money = $this->getPost('money');
+        $csrf_token = $this->getPost('csrf_token', false);
+        $paymethod = $this->getPost('paymethod');
+
+
+        if(is_numeric($money) AND $money>0 AND $csrf_token AND $paymethod){
+            if ($this->VerifyCsrfToken($csrf_token)) {
+                $payments = $this->m_payment->getConfig();
+                if(isset($payments[$paymethod]) AND !empty($payments[$paymethod])){
+                    $payconfig = $payments[$paymethod];
+                    if($payconfig['active']=0){
+                        $data = array('code' => 1002, 'msg' => '支付渠道已关闭');
+                        Helper::response($data);
+                    }
+                }else{
+                    $data = array('code' => 1001, 'msg' => '支付渠道异常');
+                    Helper::response($data);
+                }
+
+                $myip = getClientIP();
+
+                //生成orderid
+                mt_srand();
+                $postfix = mt_rand(1000, 9999).substr(md5(mt_rand(1000, 9999)),3,6);
+                $prefix = isset($this->config['orderprefix'])?$this->config['orderprefix']:'zlkb';
+                $orderid = $prefix. date('Y') . date('m') . date('d') . date('H') . date('i') . date('s') .$postfix ;
+
+                //开始下单，入库
+                $m=array(
+                    'orderid'=>$orderid,
+                    'userid'=>$this->userid,
+                    'money'=>$money,
+                    'ip'=>$myip,
+                    'status'=>0,
+                    'paymethod'=>$paymethod,
+                    'addtime'=>time(),
+                );
+                $id=$this->m_recharge->Insert($m);
+                if($id>0){
+                    $r = $this->payRechargeOrder($id);
+                    if($r['code'] === 1){
+                        $oid = base64_encode($id);
+                        $data = array('code' => 1, 'msg' => '订单创建成功','data'=>array(
+                            'type'=>$paymethod,'oid'=>$oid,
+                            'uid'=>$this->uinfo['id'],
+                            'pay' => $r['pay'],
+                        )
+                        );
+                    }else{
+                        $data = array('code' => 1004, 'msg' => '订单创建异常');
+                    }
+
+                }else{
+                    $data = array('code' => 1003, 'msg' => '订单异常');
+                }
+            } else {
+                $data = array('code' => 1001, 'msg' => '页面超时，请刷新页面后重试!');
+            }
+        }else{
+            $data = array('code' => 1000, 'msg' => '有内容没有输入完整，在确认一遍？');
+        }
+        Helper::response($data);
+    }
+
+    /**
+     * use for:获取支付二维码
+     * auth: Joql
+     * @param $oid
+     * @return array|bool
+     * date:2019-01-23 22:46
+     */
+    private function payRechargeOrder($oid){
+        if($oid){
+            if(is_numeric($oid) AND $oid>0 ){
+                $recharge = $this->m_recharge->Where(array('id'=>$oid,'isdelete'=>0))->SelectOne();
+                if(!empty($recharge)){
+                    //获取支付方式
+                    $payments = $this->m_payment->getConfig();
+                    $data['order']=$recharge;
+                    $data['payments']=$payments;
+                    $data['code']=1;
+                    try{
+                        $orderid = $recharge['orderid'];
+
+                        $payclass = "\\Pay\\".$recharge['paymethod']."\\".$recharge['paymethod'];
+                        $PAY = new $payclass();
+                        $params =array('pid'=>'999999','orderid'=>$orderid,'money'=>$recharge['money'],'productname'=>'余额充值','weburl'=>$this->config['weburl'],'qrserver'=>$this->config['qrserver']);
+                        $pay_url = $PAY->pay($payments[$recharge['paymethod']],$params);
+                        if($pay_url=='' || $pay_url['code']!=1){
+                            return FALSE;
+                        }
+                        //var_dump($pay_url); die;
+                        $data['pay']=$pay_url['data'];
+                    } catch (\Exception $e) {
+                        $data = array('code' => 1005, 'msg' => $e->getMessage());
+                    }
+                }else{
+                    return FALSE;
+                }
+            }else{
+                return FALSE;
+            }
+        }else{
+            return false;
+        }
+        return $data;
+    }
+
+    public function verifyajaxAction(){
+        $rid    = $this->getPost('rid');
+        $csrf_token = $this->getPost('csrf_token', false);
+        if($rid AND is_numeric($rid) AND $rid>0 AND $csrf_token){
+            if ($this->VerifyCsrfToken($csrf_token)) {
+                $recharge = $this->m_recharge->Where(array('id'=>$rid,'isdelete'=>0))->SelectOne();
+                if(empty($recharge)){
+                    $data=array('code'=>1002,'msg'=>'没有订单');
+                }else{
+                    if($recharge['status']<1){
+                        $data = array('code' => 1003, 'msg' => '未支付,请稍等片刻');
+                    }else{
+                        $data = array('code' => 1, 'msg' => '支付成功','data'=>$recharge);
+                    }
+                }
+            } else {
+                $data = array('code' => 1001, 'msg' => '页面超时，请刷新页面后重试!');
+            }
+        }else{
+            $data = array('code' => 1000, 'msg' => '丢失参数');
+        }
+        Helper::response($data);
     }
 
 }

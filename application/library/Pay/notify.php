@@ -22,6 +22,7 @@ class notify
 		$orderid = $params['orderid'];
 		
 		$m_order =  \Helper::load('order');
+		$m_recharge =  \Helper::load('recharge');
 		$m_products_card = \Helper::load('products_card');
 		$m_email_queue = \Helper::load('email_queue');
 		$m_products = \Helper::load('products');
@@ -154,7 +155,34 @@ class notify
 					}
 				}
 			}else{
-				$data =array('code'=>1003,'msg'=>'订单号不存在');
+			    //查询充值订单
+			    $recharge = $m_recharge->Where(array('orderid'=>$orderid))->SelectOne();
+                if(!empty($recharge)){
+                        if($recharge['status']>0){
+                            $data =array('code'=>1,'msg'=>'订单已处理,请勿重复推送');
+                            return $data;
+                        }else{
+                            if($paymoney < $recharge['money']){
+                                //原本检测支付金额是否与订单金额一致,但由于码支付这样的收款模式导致支付金额有时会与订单不一样,所以这里进行小于判断;
+                                //所以,在这里如果存在类似码支付这样的第三方支付辅助工具时,有变动金额时,一定要做递增不能递减
+                                $data =array('code'=>1005,'msg'=>'支付金额小于订单金额');
+                                return $data;
+                            }
+
+                            //2.先更新支付总金额
+                            $update = array('status'=>1,'paytime'=>time(),'tradeid'=>$tradeid,'paymethod'=>$paymethod,'paymoney'=>$paymoney);
+                            $u = $m_recharge->Where(array('orderid'=>$orderid,'status'=>0))->Update($update);
+                            if(!$u){
+                                $data =array('code'=>1004,'msg'=>'更新失败');
+                                return $data;
+                            }else{
+                                $data =array('code'=>1004,'msg'=>'更新成功');
+                                return $data;
+                            }
+                        }
+                }else{
+                    $data =array('code'=>1003,'msg'=>'订单号不存在');
+                }
 			}
 		} catch(\Exception $e) {
 			file_put_contents(YEWU_FILE, CUR_DATETIME.'-'.$e->getMessage().PHP_EOL, FILE_APPEND);

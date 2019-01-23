@@ -302,7 +302,7 @@
                         <label class="recharge-label">充值金额：</label>
                     </div>
                     <div class="form-group mx-sm-3 mb-2">
-                        <input name="amount" type="text" id="amount" value="" class="form-control" onkeyup="value=value.replace(/[^0-9]/g,'')" maxlength="3">
+                        <input name="amount" type="text" id="amount" value="" class="form-control" onkeyup="value=value.replace(/[^0-9]/g,'')" maxlength="3" placeholder="仅为整数且999元以内">
                     </div>
                 </div>
                 <div class="row">
@@ -312,7 +312,7 @@
                     <div class="form-group mx-sm-3 mb-2 form-radio">
                         <?php if(!empty($payments)):?>
                         <?php foreach($payments AS $payment):?>
-                        <?php if($payment['active']>0):?>
+                        <?php if($payment['active']>0 && $payment['alias'] !== 'balance'):?>
                         <div class="radio radio-inline">
                             <label>
                                 <input type="radio" name="paymethod" value="<?php echo $payment['alias'];?>">
@@ -325,14 +325,39 @@
                         <div class="radio radio-inline">
                             <span>站长正在加紧配置，请耐心等待....</span>
                         </div>
-
                         <?php endif;?>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary">充值</button>
+                <button type="button" class="btn btn-primary" id="saveRechargeOrder">充值</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="rechargeImgModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="">充值二维码</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="form-group mb-2">
+                        <label class="recharge-label">支付二维码：</label>
+                    </div>
+                    <div class="form-group mx-sm-3 mb-2">
+                        <img src="">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">验证</button>
             </div>
         </div>
     </div>
@@ -482,8 +507,61 @@
     });
     
     /*充值*/
+    var verify_id;
     $('#openRechareModal').click(function () {
         $('#rechargeModal').modal('show');
-    })
+    });
+    //提交充值订单
+    $('#saveRechargeOrder').click(function () {
+        var money = parseInt($('#amount').val()),
+            paymethod = $('input[name="paymethod"]').val();
+        if(money <=0){
+            notice('请输入正确金额');
+        }
+        if(paymethod.length <=0){
+            notice('请选择支付方式');
+        }
+
+        $.ajax({
+            url:"center/saveRechargeOrder",
+            type:"post",
+            data:{
+                money: money,
+                paymethod: paymethod,
+            },
+            dataType:"json",
+            success:function(data){
+                if(data.code == 1){
+                    $('#rechargeModal').modal('hide');
+                    $('#rechargeImgModal').modal('show');
+                    $('#rechargeImgModal img').attr('src',data.data.pay.qr);
+                    verify_id=  setInterval(verify(data.data.oid),2000);
+                }
+                notice(data.msg);
+            },
+            error:function(xmlHttpRequest,textStatus,errorThrown){
+                console.log(textStatus+"出错！"+errorThrown);
+            }
+        });
+
+    });
+
+    //验证充值状态
+    function verify(rid){
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "center/verifyajax",
+            timeout: 10000, //ajax请求超时时间10s
+            data: {"csrf_token": TOKEN,'rid':rid}, //post数据
+            success: function (res) {
+                if (res.code == 1) {
+                    clearInterval(verify_id);
+                    $('#rechargeImgModal').modal('hide');
+                }
+                notice(res.msg);
+            }
+        });
+    }
 
 </script>

@@ -300,10 +300,10 @@ class OrderController extends PcBasicController
                             $PAY = new $payclass();
                             $params =array('pid'=>$order['pid'],'orderid'=>$orderid,'money'=>$order['money'],'productname'=>$productname,'weburl'=>$this->config['weburl'],'qrserver'=>$this->config['qrserver']);
                             $pay_url = $PAY->pay($payments[$order['paymethod']],$params);
-//                            if($pay_url=='' || $pay_url['code']!=1){
-//                                $this->redirect("/product/?error=pay问题");
-//                                return FALSE;
-//                            }
+                            if($pay_url=='' || $pay_url['code']!=1){
+                                $this->redirect("/product/?error=pay问题");
+                                return FALSE;
+                            }
                             //var_dump($pay_url); die;
                             $data['pay']=$pay_url['data'];
                         } catch (\Exception $e) {
