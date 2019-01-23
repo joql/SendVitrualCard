@@ -27,7 +27,7 @@ class CenterController extends PcBasicController
             return FALSE;
         }
 		$data = array();
-		$uinfo = $this->m_user->SelectByID('nickname,email,qq,tag,createtime',$this->userid);
+		$uinfo = $this->m_user->SelectByID('nickname,email,qq,tag,createtime,avator',$this->userid);
 		$data['uinfo'] = $this->uinfo = array_merge($this->uinfo, $uinfo);
 		$data['title'] = "我的资料";
 

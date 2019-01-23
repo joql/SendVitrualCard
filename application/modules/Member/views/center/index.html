@@ -34,7 +34,7 @@
     }
     .balance-title {
         font-size: 18px;
-        border-left: 3px solid red;
+        border-left: 3px solid #009589;
         padding-left: 13px;
     }
     .account-balance p {
@@ -44,7 +44,7 @@
     }
     .account-balance p em {
         font-size: 55px;
-        color: #be2632;
+        color: #009589;
         font-style: normal;
     }
     .account-balance p a {
@@ -54,7 +54,7 @@
         line-height: 22px;
         padding: 0 10px;
         border-radius: 5px;
-        background: #be2632;
+        background: #009589;
         margin-left: 20px;
     }
     .top-tip {
@@ -176,13 +176,13 @@
                                         <div class="card-block" style="margin-bottom: -45px;">
                                             <div class="user-info pa">
                                                 <div class="avatar">
-                                                    <img src="http://vip.nuoyun.tv/public/uploads/profileimg/1.jpg" class="avatar-src">
+                                                    <img src="<?php echo $uinfo['avator'];?>" class="avatar-src">
                                                     <form id="uploadForm" enctype="multipart/form-data">
                                                         <input type="file" id="avatar_img" name="avatar_img" hidden />
                                                     </form>
                                                 </div>
                                                 <div class="nick-level">
-                                                    系统管理员
+                                                    <?php echo $uinfo['nickname'];?>
                                                 </div>
                                             </div>
                                         </div>
