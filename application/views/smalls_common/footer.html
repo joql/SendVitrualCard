@@ -17,9 +17,21 @@
 <script src="<?php echo ASSETS_PATH;?>/js/menu-hori-fixed.js"></script>
 <script src="<?php echo ASSETS_PATH;?>/js/jquery.mcustomscrollbar.concat.min.js"></script>
 <script  src="<?php echo ASSETS_PATH;?>/js/script.js"></script>
+<script  src="<?php echo ASSETS_PATH;?>/asset/notice/notice.js"></script>
 <script>
     var  short_url = window.location.href;
-               var qrcode = new QRCode('qrcode', {
+    window.notice = function (txt) {
+        new NoticeJs({
+            text: txt,
+            position: 'middleCenter',
+            timeout: 60,
+            animation: {
+                open: 'animated bounceInRight',
+                close: 'animated bounceOutLeft'
+            }
+        }).show();
+    }
+    var qrcode = new QRCode('qrcode', {
                 text: short_url,
                 width: 268,
                 height: 268,
@@ -27,7 +39,9 @@
                 colorLight : '#ffffff',
                 correctLevel : QRCode.CorrectLevel.H
             });
-            $("#qrcode > img").css({"margin":"auto"});
+    $("#qrcode > img").css({"margin":"auto"});
+
+
 </script>
 <!--统计代码-->
 <?php if(isset($config['tongji']) AND strlen($config['tongji'])>0):?>

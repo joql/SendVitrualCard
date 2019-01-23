@@ -452,9 +452,9 @@ abstract class Model {
 	}
 
 	// 根据ID更新某一条记录
-	public function UpdateByID($map, $id){
+	public function UpdateByID($map, $id, $self = FALSE){
 		$where = array(TB_PK => $id);
-		return $this->Where($where)->UpdateOne($map);
+		return $this->Where($where)->UpdateOne($map, $self);
 	}
 
 	// 根据ID删除某一条记录

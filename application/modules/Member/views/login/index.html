@@ -52,6 +52,22 @@
                                 <?php if(isset($config['registerswitch']) AND $config['registerswitch']>0):?>
                                 <div class="row m-t-25 text-left">
                                     <div class="col-12">
+                                        <div class="form-radio form-inline-block">
+                                            <div class="radio radio-inline">
+                                                <label class="label-inline-block">
+                                                    <input type="radio" name="type" value="1" checked>
+                                                    <i class="helper" style="top: 0rem;"></i>普通用户
+                                                </label>
+                                                <label class="label-inline-block">
+                                                    <input type="radio" name="type" value="2">
+                                                    <i class="helper" style="top: 0rem;"></i>代理用户
+                                                </label>
+                                                <label class="label-inline-block">
+                                                    <input type="radio" name="type" value="">
+                                                    <i class="helper" style="top: 0rem;"></i>待定用户
+                                                </label>
+                                            </div>
+                                        </div>
                                         <div class="forgot-phone text-right f-right">
                                             <a class="text-right f-w-600 text-inverse" href="/member/register/"> 注册账户</a>
                                         </div>

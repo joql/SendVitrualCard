@@ -175,6 +175,7 @@ class ProductsController extends AdminBasicController
         $images = $this->getPost('images', false);
         $old_price = $this->getPost('old_price', false);
         $price_official = $this->getPost('price_official', false);
+        $price_agent = $this->getPost('price_agent', false);
         $wholesale_price = $this->getPost('wholesale_price', false);
         $wholesale_num = $this->getPost('wholesale_num', false);
         $sale_base = $this->getPost('sale_base', false);
@@ -209,6 +210,7 @@ class ProductsController extends AdminBasicController
                     'images'=>$images,
                     'old_price'=>$old_price,
                     'price_official'=>$price_official,
+                    'price_agent'=>$price_agent,
                     'sale_base'=>$sale_base,
 				);
 				if($this->CommonAdmin !=''){

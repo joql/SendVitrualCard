@@ -42,13 +42,14 @@ class LoginController extends PcBasicController
 		}
 		$email    = $this->getPost('email');
 		$password = $this->getPost('password');
+		$type = $this->getPost('type');//用户类型
 		
 		$password_string = new \Safe\MyString($password);
 		$password = $password_string->trimall()->qufuhao()->getValue();
 		
 		$csrf_token = $this->getPost('csrf_token', false);
 		
-		if($email AND $password AND $csrf_token){
+		if($email AND $password AND $type and $csrf_token){
 			if ($this->VerifyCsrfToken($csrf_token)) {
 				if(isEmail($email)){
 					if(isset($this->config['yzmswitch']) AND $this->config['yzmswitch']>0){
@@ -66,7 +67,7 @@ class LoginController extends PcBasicController
 						}
 					}
 
-					$checkUser = $this->m_user->checkLogin($email,$password);
+					$checkUser = $this->m_user->checkLogin($email,$password, $type);
 					if($checkUser){
 						//写入登录日志 
 						$m=array('userid'=>$checkUser['id'],'ip'=>getClientIP(),'addtime'=>time());

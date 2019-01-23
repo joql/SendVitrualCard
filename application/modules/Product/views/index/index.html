@@ -91,6 +91,9 @@
 																	<th class="text-center">商品库存</th>
 																	<th class="text-center">商品销量</th>
 																	<th class="text-center">商品价格</th>
+																	<?php if(!empty($uinfo['super_type'] === '2')):?>
+																	<th class="text-center">代理价格</th>
+																	<?php endif;?>
 																	<th class="text-center">操作</th>
 																</tr>
 																</thead>
@@ -115,6 +118,13 @@
 																					<i class="fa fa-cny"></i>
 																					<?php echo $goods['price'];?>
                                                                                 </span></td>
+																	<?php if(!empty($uinfo['super_type'] === '2')):?>
+																	<td class="text-center" width="100px">
+                                                                                <span class="text-primary product-price">
+																					<i class="fa fa-cny"></i>
+																					<?php echo $goods['price_agent'];?>
+                                                                                </span></td>
+																	<?php endif;?>
 																	<td class="text-center" width="80px">
 																		<button class="btn btn-mini btn-primary">立即购买</button>
 																	</td>

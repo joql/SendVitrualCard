@@ -21,11 +21,11 @@ class M_User extends Model
 	 * @param string $password
 	 * @return params on success or 0 or failure
 	 */
-	public function checkLogin($email, $password)
+	public function checkLogin($email, $password, $type=0)
 	{
-		$field = array('id', 'email','password','nickname','groupid');
+		$field = array('id', 'email','password','nickname','groupid','super_type','money');
 		if(isEmail($email)){
-			$where = array('email' => $email);
+			$where = array('email' => $email, 'super_type'=>$type);
 		}else{
 			return FALSE;
 		}

@@ -1,6 +1,5 @@
 <?php include SMALLS_COMMON_PATH.'/header.html';?>
-<link rel="stylesheet" type="text/css" href="<?php echo ASSETS_PATH;?>/css/noticejs.css">
-<link rel="stylesheet" type="text/css" href="<?php echo ASSETS_PATH;?>/css/animate.css">
+
 <div class="pcoded-main-container">
 	<div class="container">
 		<div class="main-body">
@@ -51,10 +50,17 @@
 														<div class="p-l-0 m-b-25">
 															<h4 class="pro-desc"><?php echo $product['name']; ?></h4>
 															<input type="hidden" name="name" id="name" value="<?php echo $product['name'];?>">
+															<?php if(!empty($uinfo['super_type'] === '2')):?>
+															<span class="text-primary product-price">
+																<i class="fa fa-cny"></i>
+																<?php echo $product['price_agent'];?>
+															</span>
+															<?php else:?>
 															<span class="text-primary product-price">
 																<i class="fa fa-cny"></i>
 																<?php echo $product['price'];?>
 															</span>
+															<?php endif;?>
 															<span class="text-dark product-old-price">
 																<i class="fa fa-cny"></i>
 																<?php echo $product['price_official'];?>
@@ -215,7 +221,6 @@
 <script src="<?php echo ASSETS_PATH;?>/js/pcoded.min.js"></script>
 <script src="<?php echo ASSETS_PATH;?>/js/jquery.qrcode.min.js"></script>
 <script src="<?php echo ASSETS_PATH;?>/js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="<?php echo ASSETS_PATH;?>/js/notice.js"></script>
 <script>
     $(function(){
         var url = window.location.href;
@@ -233,11 +238,11 @@
         var qq = $('#qq').val();
         var email = $('#email').val();
         if(chapwd==''){
-            alert('请输入查询密码！');
+            notice('请输入查询密码！');
             return;
         }
         if(qq=='' || email==''){
-            alert('请输入正确的QQ或者QQ邮箱！');
+            notice('请输入正确的QQ或者QQ邮箱！');
             return;
         }
         $('#order_button').attr('disabled', true);
@@ -250,15 +255,19 @@
                 if (result.code == '1') {
                     var oid = result.data.oid;
                     if(oid.length>0){
-                        location.href = '/product/order/pay/?oid='+oid;
+                        if(result.data.type === 'balance' && result.data.uid === ''){
+                            notice('使用余额支付时请先登陆!');
+						}else{
+                            location.href = '/product/order/pay/?oid='+oid;
+						}
                     }else{
                         $('#order_button').attr('disabled', false);
-                        alert('订单异常');
+                        notice('订单异常');
                         return;
                     }
                 } else {
                     $('#order_button').attr('disabled', false);
-                    alert(result.msg);
+                    notice(result.msg);
                     return;
                 }
             }

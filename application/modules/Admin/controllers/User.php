@@ -79,7 +79,49 @@ class UserController extends AdminBasicController
         }
 		Helper::response($data);
 	}
-	
+
+	public function editAction(){
+        if ($this->AdminUser==FALSE AND empty($this->AdminUser)) {
+            $this->redirect('/'.ADMIN_DIR."/login");
+            return FALSE;
+        }
+        $uid = $this->get('id');
+        $data = array();
+        $user = (array)$this->m_user
+            ->Field('id,super_type')
+            ->Where('id','=',$uid)
+            ->SelectOne();
+        $data['user'] = $user;
+        $this->getView()->assign($data);
+    }
+
+    public function editajaxAction(){
+        if ($this->AdminUser==FALSE AND empty($this->AdminUser)) {
+            $this->redirect('/'.ADMIN_DIR."/login");
+            return FALSE;
+        }
+        $uid = $this->getPost('id');
+        $super_type = $this->getPost('super_type');
+        $csrf_token = $this->getPost('csrf_token', false);
+        if (FALSE != $uid AND is_numeric($uid) AND $uid > 0) {
+            if ($this->VerifyCsrfToken($csrf_token)) {
+                $r = $this->m_user->UpdateById(array(
+                    'super_type' => $super_type,
+                ), $uid);
+                if($r){
+                    $data = array('code' => 1, 'msg' => '修改成功', 'data' => '');
+                }else{
+                    $data = array('code' => -1, 'msg' => '修改失败', 'data' => '');
+                }
+
+            } else {
+                $data = array('code' => 1002, 'msg' => '页面超时，请刷新页面后重试!');
+            }
+        }else{
+            $data = array('code' => 1001, 'msg' => '缺少字段', 'data' => '');
+        }
+        Helper::response($data);
+    }
 	
     public function deleteAction()
     {

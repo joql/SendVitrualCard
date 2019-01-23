@@ -50,6 +50,13 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600
 }
 
+.form-inline-block{
+    display: inline-block!important;
+}
+.label-inline-block{
+    display: inline-block!important;
+}
+
 .media-left {
     padding-right: 20px
 }

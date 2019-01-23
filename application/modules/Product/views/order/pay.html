@@ -7,6 +7,7 @@
 					<div class="signin-card card-block auth-body mr-auto ml-auto col-lg-4">
 						<div class="card col-lg-12">
 							<div class="card-block m-b-5  m-t-10">
+								<?php if($order['paymethod'] !== 'balance'):?>
 								<div style="text-align:center;">
 
 									<img class="img-fluid o-hidden" src="<?php echo $pay['qr'];?>" >
@@ -17,6 +18,9 @@
 									<a class="col-lg-12 text-danger" style="padding:2px 34px;border:1px solid #e5e5e5;display: inline-block;margin-top: 10px"><strong>请按上方金额转账<br>输入错误无法发货</strong></a>
 									<br>
 								</div>
+								<?php else:?>
+								<h5><?php echo $result['msg']; ?></h5>
+								<?php endif;?>
 								<hr>
 								<span><strong>总金额：</strong></span><span><?php echo $order['money'];?>元</span>
 								<br>
@@ -124,7 +128,7 @@
 </script>
 <script>
     var i = 0;
-    var intDiff = <?php echo $pay['overtime'];?>;
+    var intDiff = <?php echo $pay['overtime'] ?: 300;?>;
     myTimer = window.setInterval(function () {
         i++;
         var day = 0,

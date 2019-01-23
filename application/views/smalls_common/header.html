@@ -22,6 +22,8 @@
     <link rel="stylesheet" type="text/css" href="<?php echo ASSETS_PATH;?>/css/jquery.mcustomscrollbar.css">
     <link rel="stylesheet" type="text/css" href="<?php echo ASSETS_PATH;?>/css/pcoded-horizontal.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo ASSETS_PATH;?>/css/gmpanel.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo ASSETS_PATH;?>/asset/notice/noticejs.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo ASSETS_PATH;?>/asset/notice/animate.css">
     <?php if(isset($config['shortcuticon']) AND strlen($config['shortcuticon'])>0):?>
     <link rel="shortcut icon" href="<?php echo $config['shortcuticon'];?>" />
     <?php else:?>
@@ -96,6 +98,11 @@
                                 <i class="ti-angle-down"></i>
                             </a>
                             <ul class="show-notification profile-notification" style="min-width: 150px;width: 150px;">
+                                <li>
+                                    <a href="/member/center/">
+                                        <i class="fa fa-user"></i> 个人中心
+                                    </a>
+                                </li>
                                 <li>
                                     <a href="/member/logout/?referer_url=/product">
                                         <i class="fa fa-sign-out"></i> 注销
