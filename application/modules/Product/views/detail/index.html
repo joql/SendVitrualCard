@@ -50,7 +50,7 @@
 														<div class="p-l-0 m-b-25">
 															<h4 class="pro-desc"><?php echo $product['name']; ?></h4>
 															<input type="hidden" name="name" id="name" value="<?php echo $product['name'];?>">
-															<?php if(!empty($uinfo['super_type'] === '2')):?>
+															<?php if(!empty($uinfo['super_type'] === '2') && $product['price_agent'] > 0):?>
 															<span class="text-primary product-price">
 																<i class="fa fa-cny"></i>
 																<?php echo $product['price_agent'];?>

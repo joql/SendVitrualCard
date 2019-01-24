@@ -71,6 +71,23 @@
         vertical-align: top;
         background: url(../images/default/syico.png) no-repeat -122px 0;
     }
+    @media all and (max-width: 1020px){
+        .records-list span{
+            max-width: 76px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+    @media all and (min-width: 1020px){
+        .records-list span{
+            max-width: 110px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+
     .records-list-con {
         margin-top: 12px;
     }
@@ -205,7 +222,7 @@
                                                             <div class="account-balance">
                                                                 <h3 class="balance-title">账户余额</h3>
                                                                 <p>
-                                                                    账户余额：<em id="accountBalance">0</em>
+                                                                    账户余额：<em id="accountBalance"><?php echo $uinfo['money']; ?></em>
                                                                     <span class="top-tip">
                                 <i></i>
                                 提现暂未开放
@@ -228,11 +245,13 @@
                                                                     <div class="form-group mx-sm-3 mb-2">
                                                                         <input type="text" class="form-control" id="in_end_time">
                                                                     </div>
-                                                                    <button type="submit" class="btn btn-primary mb-2">搜索</button>
+                                                                    <button type="button" id="in_search" class="btn btn-primary mb-2">搜索</button>
                                                                 </form>
                                                                 <div class="records-list-con">
                                                                     <ul class="records-title">
                                                                         <li>金额</li>
+                                                                        <li>订单号</li>
+                                                                        <li>状态</li>
                                                                         <li>时间</li>
                                                                     </ul>
                                                                     <ul class="records-list" id="rechargeList"></ul>
@@ -357,7 +376,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary">验证</button>
+                <button type="button" class="btn btn-primary" id="verify">验证</button>
             </div>
         </div>
     </div>
@@ -365,6 +384,7 @@
 <!--引入公共底文件-->
 <?php include SMALLS_COMMON_PATH.'/footer.html';?>
 <script  src="<?php echo ASSETS_PATH;?>/asset/jeDate/dist/jedate.min.js"></script>
+<script src="<?php echo ASSETS_PATH;?>/js/clipboard.min.js"></script>
 <script>
     $('#hi-Modal').modal({backdrop: 'static', keyboard: false});
     jeDate("#in_start_time",{
@@ -418,16 +438,17 @@
                 loadOutList(1);
             }
         } else{
-            if ($('#goldList li').length <= 0) {
-                loadGoldRecords(1);
+            if ($('#rechargeList li').length <= 0) {
+                loadRechargeList(1);
             }
         }
     });
 
+    //更新头像
     $('.avatar img').on('click',function () {
         $('#avatar_img').click();
         $.ajax({
-            url:"center/uploadAvator",
+            url:"/member/center/uploadAvator",
             type:"post",
             data: new FormData($('#uploadForm')[0]),
             dataType:'json',
@@ -438,7 +459,7 @@
                 if(data.code == 1){
                     $('.avatar img').attr('src',data.data);
                 }
-                alert(data.msg);
+                notice(data.msg);
             },
             error:function(xmlHttpRequest,textStatus,errorThrown){
                 console.log(textStatus+"出错！"+errorThrown);
@@ -446,6 +467,8 @@
         });
     });
 
+    /*记录列表*/
+    //消费
     var outIndex=1;
     $('#outList').scroll(function () {
         var top = document.getElementById("loadMoreOut").offsetTop+20;
@@ -466,7 +489,7 @@
         $.ajax({
             type: 'post',
             dataType: 'json',
-            url: 'center/getOutList',
+            url: '/member/center/getOutList',
             data: {
                 page: page,
                 starttime: starttime,
@@ -485,12 +508,17 @@
                                 '<span>- '+ item.total + '</span>' +
                                 '<span>' + item.num + '</span>' +
                                 '<span>' + item.name + '</span>' +
-                                '<span>' + item.oid + '</span>' +
+                                '<span onclick="copy(this)">' + item.oid + '</span>' +
                                 '<span>' + item.time + '</span>' +
                                 '</li>';
                             $('#outList').append(li);
                         });
-                        $('#outList').append('<span class="load-more" id="loadMoreOut">正在加载更多……</span>');
+                        if(data.length != res.page_num){
+                            $('#outList').append('<span class="load-more all" id="loadMoreOut">已加载全部</span>');
+                        }else{
+                            $('#outList').append('<span class="load-more" id="loadMoreOut">正在加载更多……</span>');
+                        }
+
                     }
                 }else{
                     $('#outList').append('<span class="load-more all" id="loadMoreOut">已加载全部</span>');
@@ -500,12 +528,84 @@
         });
 
     }
-
     $('#out_search').click(function () {
         outIndex=1;
         loadOutList(outIndex, $('#out_start_time').val(), $('#out_end_time').val());
     });
-    
+    //充值
+    var rechargeIndex=1;
+    $('#rechargeList').scroll(function () {
+        var top = document.getElementById("loadMorerecharge").offsetTop+20;
+        if (top == ($('#rechargeList').scrollTop() + $('#rechargeList').height())) {
+            rechargeIndex ++;
+            var starttime = $('#in_start_time').val(),
+                endtime = $('#in_end_time').val();
+            loadRechargeList(rechargeIndex, starttime, endtime);
+        }
+    });
+    function loadRechargeList(page, starttime, endtime) {
+        if (page == 1) {
+            $('#rechargeList').html('');
+        } else if ($('#loadMoreRecharge').hasClass('all')) {
+            return;
+        }
+        $.ajax({
+            type: 'post',
+            dataType: 'json',
+            url: '/member/center/getRechargeList',
+            data: {
+                page: page,
+                starttime: starttime,
+                endtime : endtime,
+                csrf_token: TOKEN,
+            },
+            dataType: 'json',
+            success: function (res) {
+                $('#rechargeList span.load-more').remove();
+                if(res.code == 1){
+                    var data = res.data;
+                    if (data.length <= 0) {
+                    } else {
+                        $.each(data, function(idx, item) {
+                            var li = '<li>' +
+                                '<span>+'+ item.total + '</span>' +
+                                '<span onclick="copy(this)">' + item.orderid + '</span>' +
+                                '<span>' + item.status + '</span>' +
+                                '<span>' + item.addtime + '</span>' +
+                                '</li>';
+                            $('#rechargeList').append(li);
+                        });
+                        if(data.length != res.page_num){
+                            $('#rechargeList').append('<span class="load-more all" id="loadMoreRecharge">已加载全部</span>');
+                        }else{
+                            $('#rechargeList').append('<span class="load-more" id="loadMoreRecharge">正在加载更多……</span>');
+                        }
+                    }
+                }else{
+                    $('#rechargeList').append('<span class="load-more all" id="loadMoreRecharge">已加载全部</span>');
+                }
+
+            }
+        });
+
+    }
+    $('#in_search').click(function () {
+        rechargeIndex=1;
+        loadRechargeList(rechargeIndex, $('#in_start_time').val(), $('#in_end_time').val());
+    });
+    loadRechargeList(1);
+    //复制订单号
+    function copy(t) {
+        const input = document.createElement('input');
+        document.body.appendChild(input);
+        input.setAttribute('value', $(t).text());
+        input.select();
+        if (document.execCommand('copy')) {
+            console.log('复制成功');
+           notice('复制成功');
+        }
+        document.body.removeChild(input);
+    }
     /*充值*/
     var verify_id;
     $('#openRechareModal').click(function () {
@@ -523,11 +623,13 @@
         }
 
         $.ajax({
-            url:"center/saveRechargeOrder",
+            url:"/member/center/saveRechargeOrder",
             type:"post",
             data:{
                 money: money,
                 paymethod: paymethod,
+                csrf_token: TOKEN,
+
             },
             dataType:"json",
             success:function(data){
@@ -535,7 +637,10 @@
                     $('#rechargeModal').modal('hide');
                     $('#rechargeImgModal').modal('show');
                     $('#rechargeImgModal img').attr('src',data.data.pay.qr);
-                    verify_id=  setInterval(verify(data.data.oid),2000);
+                    verify_id=  setInterval(verify(data.data.oid, false),5000);
+                    $('#verify').click(function () {
+                        verify(data.data.oid, true);
+                    });
                 }
                 notice(data.msg);
             },
@@ -547,19 +652,24 @@
     });
 
     //验证充值状态
-    function verify(rid){
+    function verify(rid,btn){
         $.ajax({
             type: "POST",
             dataType: "json",
-            url: "center/verifyajax",
+            url: "/member/center/verifyajax",
             timeout: 10000, //ajax请求超时时间10s
             data: {"csrf_token": TOKEN,'rid':rid}, //post数据
             success: function (res) {
                 if (res.code == 1) {
                     clearInterval(verify_id);
                     $('#rechargeImgModal').modal('hide');
+                    notice(res.msg);
+                }else{
+                    if(btn === true){
+                        notice(res.msg);
+                    }
                 }
-                notice(res.msg);
+
             }
         });
     }

@@ -29,7 +29,7 @@ class CenterController extends PcBasicController
             return FALSE;
         }
 		$data = array();
-		$uinfo = $this->m_user->SelectByID('nickname,email,qq,tag,createtime,avator',$this->userid);
+		$uinfo = $this->m_user->SelectByID('nickname,email,qq,tag,createtime,avator,money',$this->userid);
 		$data['uinfo'] = $this->uinfo = array_merge($this->uinfo, $uinfo);
 		$data['title'] = "我的资料";
 
@@ -72,7 +72,48 @@ class CenterController extends PcBasicController
 		Helper::response($data);
 	}
 
-	public function getOutListAction(){
+
+	public function getRechargeListAction(){
+        $data = array();
+        $csrf_token = $this->getPost('csrf_token', false);
+        if (!$this->VerifyCsrfToken($csrf_token)) {
+            $data = array('code' => 1002, 'msg' => '页面超时，请刷新页面后重试!');
+            Helper::response($data);
+        }
+        if ($this->login==FALSE AND !$this->userid) {
+            $data = array('code' => 1000, 'msg' => '请登录');
+            Helper::response($data);
+        }
+        $page = $this->getPost('page',false);
+        $start_time = strtotime($this->getPost('starttime',false));
+        $end_time = strtotime($this->getPost('endtime',false));
+
+        $list = (array)$this->m_recharge
+            ->Field('id,money as total,orderid,status,addtime')
+            ->Where(array('userid'=> $this->userid))
+            ->Where(empty($start_time) ? '' : 'addtime > '.$start_time)
+            ->Where(empty($end_time) ? '' : 'addtime < '.$end_time)
+            ->Order('id desc')
+            ->Limit(($page-1)*15,15)
+            ->Select();
+        if(empty($list)){
+            $data = array('code' => 1001, 'msg' => '没有查到记录');
+        }else{
+            foreach ($list as &$v){
+                $v['addtime'] = date('Y-m-d H:i:s',$v['addtime']);
+                $v['status'] = $this->getOrderStatus($v['status']);
+            }
+            $data = array('code' => 1, 'msg' => '查询成功','data'=>$list,'page_num'=>15);
+        }
+        Helper::response($data);
+    }
+
+    /**
+     * use for:获取消费记录列表
+     * auth: Joql
+     * date:2019-01-24 10:24
+     */
+    public function getOutListAction(){
         $data = array();
         $csrf_token = $this->getPost('csrf_token', false);
         if (!$this->VerifyCsrfToken($csrf_token)) {
@@ -90,7 +131,7 @@ class CenterController extends PcBasicController
         $list = (array)$this->m_order
             ->Field('id,money as total,number as num,productname as name,orderid as oid,addtime as time')
             //->Where(array('userid'=>$this->userid))
-            ->Where(array('userid'=>'0')) //TODO 测试
+            ->Where(array('userid'=>$this->userid))
             ->Where(empty($start_time) ? '' : 'addtime > '.$start_time)
             ->Where(empty($end_time) ? '' : 'addtime < '.$end_time)
             ->Order('id desc')
@@ -102,7 +143,7 @@ class CenterController extends PcBasicController
             foreach ($list as &$v){
                 $v['time'] = date('Y-m-d H:i:s',$v['time']);
             }
-            $data = array('code' => 1, 'msg' => '查询成功','data'=>$list);
+            $data = array('code' => 1, 'msg' => '查询成功','data'=>$list,'page_num'=>15);
         }
         Helper::response($data);
     }
@@ -249,7 +290,7 @@ class CenterController extends PcBasicController
                         $PAY = new $payclass();
                         $params =array('pid'=>'999999','orderid'=>$orderid,'money'=>$recharge['money'],'productname'=>'余额充值','weburl'=>$this->config['weburl'],'qrserver'=>$this->config['qrserver']);
                         $pay_url = $PAY->pay($payments[$recharge['paymethod']],$params);
-                        if($pay_url=='' || $pay_url['code']!=1){
+                        if($pay_url=='' || !isset($pay_url['code']) || $pay_url['code']!=1){
                             return FALSE;
                         }
                         //var_dump($pay_url); die;
@@ -270,7 +311,7 @@ class CenterController extends PcBasicController
     }
 
     public function verifyajaxAction(){
-        $rid    = $this->getPost('rid');
+        $rid    = (int)base64_decode($this->getPost('rid'));
         $csrf_token = $this->getPost('csrf_token', false);
         if($rid AND is_numeric($rid) AND $rid>0 AND $csrf_token){
             if ($this->VerifyCsrfToken($csrf_token)) {
@@ -291,6 +332,17 @@ class CenterController extends PcBasicController
             $data = array('code' => 1000, 'msg' => '丢失参数');
         }
         Helper::response($data);
+    }
+
+    private function getOrderStatus($status){
+        switch ($status){
+            case '0':
+                return '待支付';
+            case '2':
+                return '支付成功';
+            default:
+                return '支付异常';
+        }
     }
 
 }

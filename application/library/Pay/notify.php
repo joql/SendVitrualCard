@@ -27,6 +27,7 @@ class notify
 		$m_email_queue = \Helper::load('email_queue');
 		$m_products = \Helper::load('products');
 		$m_config = \Helper::load('config');
+		$m_user = \Helper::load('user');
 		$web_config = $m_config->getConfig();
 		
 		try{
@@ -170,12 +171,15 @@ class notify
                             }
 
                             //2.先更新支付总金额
-                            $update = array('status'=>1,'paytime'=>time(),'tradeid'=>$tradeid,'paymethod'=>$paymethod,'paymoney'=>$paymoney);
+                            $update = array('status'=>2,'paytime'=>time(),'tradeid'=>$tradeid,'paymethod'=>$paymethod,'paymoney'=>$paymoney);
                             $u = $m_recharge->Where(array('orderid'=>$orderid,'status'=>0))->Update($update);
                             if(!$u){
                                 $data =array('code'=>1004,'msg'=>'更新失败');
                                 return $data;
                             }else{
+                                $m_user->UpdateById(array(
+                                    'money' => '+'.$paymoney,
+                                ),$recharge['userid'], true);
                                 $data =array('code'=>1004,'msg'=>'更新成功');
                                 return $data;
                             }
