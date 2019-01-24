@@ -71,44 +71,12 @@
         vertical-align: top;
         background: url(../images/default/syico.png) no-repeat -122px 0;
     }
-    @media all and (max-width: 1020px){
-        .records-list span{
-            max-width: 76px;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-        }
-    }
-    @media all and (min-width: 1020px){
-        .records-list span{
-            max-width: 110px;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-        }
-    }
 
-    .records-list-con {
-        margin-top: 12px;
-    }
-    .records-list-con .records-title li {
-        display: table-cell;
-        width: 1%;
-        text-align: center;
-    }
-    .records-list-con  .records-list {
+    .records-list {
         height: 355px;
         overflow-y: auto;
         text-align: center;
         position: relative;
-    }
-    .records-list-con .records-list li span {
-        margin-top: 0;
-    }
-    .records-list-con .records-list li span {
-        display: table-cell;
-        width: 10%;
-        text-align: center;
     }
 
     /*头像*/
@@ -138,6 +106,10 @@
     }
 
     /*列表*/
+    .load-more{
+        position: absolute;
+        left:50%;
+    }
     .con-item li {
         line-height: 30px;
         margin-top: 20px;
@@ -247,14 +219,19 @@
                                                                     </div>
                                                                     <button type="button" id="in_search" class="btn btn-primary mb-2">搜索</button>
                                                                 </form>
-                                                                <div class="records-list-con">
-                                                                    <ul class="records-title">
-                                                                        <li>金额</li>
-                                                                        <li>订单号</li>
-                                                                        <li>状态</li>
-                                                                        <li>时间</li>
-                                                                    </ul>
-                                                                    <ul class="records-list" id="rechargeList"></ul>
+                                                                <div class="table-responsive records-list rechargeList">
+                                                                    <table class="table table-hover">
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <th class="text-center">金额</th>
+                                                                            <th class="d-none d-sm-block  text-center">订单号</th>
+                                                                            <th class="text-center">状态</th>
+                                                                            <th class="text-center">时间</th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody id="rechargeList">
+                                                                        </tbody>
+                                                                    </table>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -276,16 +253,20 @@
                                                                     </div>
                                                                     <button type="button" id="out_search" class="btn btn-primary mb-2">搜索</button>
                                                                 </form>
-                                                                <div class="records-list-con">
-                                                                    <ul class="records-title">
-                                                                        <li>价格</li>
-                                                                        <li>数量</li>
-                                                                        <li>商品</li>
-                                                                        <li>订单号</li>
-                                                                        <li>时间</li>
-                                                                    </ul>
-                                                                    <ul class="records-list" id="outList">
-                                                                    </ul>
+                                                                <div class="table-responsive records-list outList" >
+                                                                    <table class="table table-hover">
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <th class="text-center">金额</th>
+                                                                            <th class="text-center">数量</th>
+                                                                            <th class="text-center">商品</th>
+                                                                            <th class="d-none d-sm-block  text-center">订单号</th>
+                                                                            <th class="text-center">时间</th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody id="outList">
+                                                                        </tbody>
+                                                                    </table>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -470,9 +451,9 @@
     /*记录列表*/
     //消费
     var outIndex=1;
-    $('#outList').scroll(function () {
+    $('.outList').scroll(function () {
         var top = document.getElementById("loadMoreOut").offsetTop+20;
-        if (top == ($('#outList').scrollTop() + $('#outList').height())) {
+        if (top == (parseInt($('.outList').scrollTop()) + $('.outList').height())) {
             outIndex ++;
             var starttime = $('#out_start_time').val(),
                 endtime = $('#out_end_time').val();
@@ -504,13 +485,13 @@
                     if (data.length <= 0) {
                     } else {
                         $.each(data, function(idx, item) {
-                            var li = '<li>' +
-                                '<span>- '+ item.total + '</span>' +
-                                '<span>' + item.num + '</span>' +
-                                '<span>' + item.name + '</span>' +
-                                '<span onclick="copy(this)">' + item.oid + '</span>' +
-                                '<span>' + item.time + '</span>' +
-                                '</li>';
+                            var li = '<tr>' +
+                                '<td class="text-center" width="100px"><span style="margin-top: 1px;color: #666666;">- '+ item.total + '</span></td> '+
+                                '<td class="text-center" width="100px"><span style="margin-top: 1px;color: #666666;">'+ item.num + '</span></td> '+
+                                '<td class="text-center" width="100px"><span style="margin-top: 1px;color: #666666;">'+ item.name + '</span></td> '+
+                                '<td class="text-center" width="100px"><span style="margin-top: 1px;color: #666666;" onclick="copy(this)>"'+ item.oid + '</span></td> '+
+                                '<td class="text-center" width="100px"><span style="margin-top: 1px;color: #666666;">'+ item.time + '</span></td> '+
+                                '</tr>';
                             $('#outList').append(li);
                         });
                         if(data.length != res.page_num){
@@ -534,9 +515,9 @@
     });
     //充值
     var rechargeIndex=1;
-    $('#rechargeList').scroll(function () {
-        var top = document.getElementById("loadMorerecharge").offsetTop+20;
-        if (top == ($('#rechargeList').scrollTop() + $('#rechargeList').height())) {
+    $('.rechargeList').scroll(function () {
+        var top = document.getElementById("loadMorerecharge").offsetTop;
+        if (top == (parseInt($('.rechargeList').scrollTop()) + $('.rechargeList').height())) {
             rechargeIndex ++;
             var starttime = $('#in_start_time').val(),
                 endtime = $('#in_end_time').val();
@@ -567,12 +548,12 @@
                     if (data.length <= 0) {
                     } else {
                         $.each(data, function(idx, item) {
-                            var li = '<li>' +
-                                '<span>+'+ item.total + '</span>' +
-                                '<span onclick="copy(this)">' + item.orderid + '</span>' +
-                                '<span>' + item.status + '</span>' +
-                                '<span>' + item.addtime + '</span>' +
-                                '</li>';
+                            var li = '<tr>' +
+                                '<td class="text-center" width="100px"><span style="margin-top: 1px;color: #666666;">+ '+ item.total + '</span></td> '+
+                                '<td class="text-center" width="100px"><span style="margin-top: 1px;color: #666666;" onclick="copy(this)">'+ item.orderid + '</span></td> '+
+                                '<td class="text-center" width="100px"><span style="margin-top: 1px;color: #666666;">'+ item.status + '</span></td> '+
+                                '<td class="text-center" width="100px"><span style="margin-top: 1px;color: #666666;">'+ item.addtime + '</span></td> '+
+                                '</tr>';
                             $('#rechargeList').append(li);
                         });
                         if(data.length != res.page_num){
