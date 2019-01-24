@@ -35,11 +35,12 @@ class QueryController extends PcBasicController
                     $where = array('email'=>$centent,'chapwd'=>$chapwd);
                     $order = $this->m_order->Where($where)->Where(array('isdelete'=>0))->Order(array('id'=>'desc'))->Select();
                 }else{
-                    $orderid_string = new \Safe\MyString($centent);
-                    $orderid = $orderid_string->trimall()->qufuhao2()->getValue();
-                    $where = array('orderid'=>$orderid);
-                    $order = $this->m_order->Where($where)->Where(array('isdelete'=>0))->Order(array('id'=>'desc'))->Select();
                 }
+            }else{
+                $l_encryption = new Encryption();
+                $orderid = $l_encryption->decrypt((string)$this->get("orderid"));
+                $where = array('orderid'=>$orderid);
+                $order = $this->m_order->Where($where)->Where(array('isdelete'=>0))->Order(array('id'=>'desc'))->Select();
             }
         }
         //var_dump($order);die;
