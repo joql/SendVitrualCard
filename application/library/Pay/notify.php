@@ -103,7 +103,7 @@ class notify
 									$data =array('code'=>1,'msg'=>'自动发卡');
 								}else{
 									//3.2 这里说明库存不足了，干脆就什么都不处理，直接记录异常，同时更新订单状态
-									$m_order->Where(array('orderid'=>$orderid,'status'=>1))->Update(array('status'=>3));
+									$m_order->Where(array('orderid'=>$orderid,'status'=>1))->Update(array('status'=>1));
 									file_put_contents(YEWU_FILE, CUR_DATETIME.'-'.'库存不足，无法处理'.PHP_EOL, FILE_APPEND);
 									//3.2.3邮件通知写到消息队列中，然后用定时任务去执行即可
 									$m = array();
