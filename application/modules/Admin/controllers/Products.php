@@ -177,7 +177,7 @@ class ProductsController extends AdminBasicController
         $price_official = $this->getPost('price_official', false);
         $price_agent = $this->getPost('price_agent', false);
         $wholesale_price = $this->getPost('wholesale_price', false);
-        $wholesale_num = $this->getPost('wholesale_num', false);
+        $wholesale_num = (array)$this->getPost('wholesale_num', false);
         $sale_base = $this->getPost('sale_base', false);
 		$data = array();
 		
@@ -235,7 +235,7 @@ class ProductsController extends AdminBasicController
                                     'price' => $wholesale_price[$k],
                                 );
                             }
-                            $this->m_products_wholesale_substation->updateInfo($data_wholesale,array(
+                            $this->m_products_wholesale_substation->updateInfo((array)$data_wholesale,array(
                                 'substation_id' => $this->CommonAdmin,
                                 'product_id' => $id,
                             ));
@@ -249,7 +249,7 @@ class ProductsController extends AdminBasicController
                                     'price' => $wholesale_price[$k],
                                 );
                             }
-                            $this->m_products_wholesale_substation->updateInfo($data_wholesale,array(
+                            $this->m_products_wholesale_substation->updateInfo((array)$data_wholesale,array(
                                 'substation_id' => 'master',
                                 'product_id' => $id,
                             ));
@@ -283,7 +283,7 @@ class ProductsController extends AdminBasicController
                                     'price' => $wholesale_price[$k],
                                 );
                             }
-                            $this->m_products_wholesale_substation->updateInfo($data_wholesale,array(
+                            $this->m_products_wholesale_substation->updateInfo((array)$data_wholesale,array(
                                 'substation_id' => $this->CommonAdmin,
                                 'product_id' => $id,
                             ));
@@ -297,7 +297,7 @@ class ProductsController extends AdminBasicController
                                     'price' => $wholesale_price[$k],
                                 );
                             }
-                            $this->m_products_wholesale_substation->updateInfo($data_wholesale,array(
+                            $this->m_products_wholesale_substation->updateInfo((array)$data_wholesale,array(
                                 'substation_id' => 'master',
                                 'product_id' => $id,
                             ));
@@ -326,7 +326,7 @@ class ProductsController extends AdminBasicController
                                     'price' => $wholesale_price[$k],
                                 );
                             }
-                            $this->m_products_wholesale_substation->updateInfo($data_wholesale,array(
+                            $this->m_products_wholesale_substation->updateInfo((array)$data_wholesale,array(
                                 'substation_id' => $this->CommonAdmin,
                                 'product_id' => $u,
                             ));
@@ -340,7 +340,7 @@ class ProductsController extends AdminBasicController
                                     'price' => $wholesale_price[$k],
                                 );
                             }
-                            $this->m_products_wholesale_substation->updateInfo($data_wholesale,array(
+                            $this->m_products_wholesale_substation->updateInfo((array)$data_wholesale,array(
                                 'substation_id' => 'master',
                                 'product_id' => $u,
                             ));

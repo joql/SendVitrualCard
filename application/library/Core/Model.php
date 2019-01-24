@@ -359,7 +359,7 @@ abstract class Model {
 	 * @param type $data
 	 * @return boolean
 	 */
-	public function MultiInsert($data){
+	public function MultiInsert(array $data){
 		$sql = "INSERT INTO ". $this->table;
 		$sqlFieldArr = array();
 		$sqlValueArr = array();

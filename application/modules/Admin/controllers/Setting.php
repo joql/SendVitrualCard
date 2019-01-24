@@ -25,7 +25,9 @@ class SettingController extends AdminBasicController
         }
 
 		$data = array();
-        $substation_list = $this->m_substation->Select();
+        $substation_list = $this->m_substation->Where(array('state'=>1))
+            ->Where('expire_time','<',time())
+            ->Select();
         $data['substation_list'] = $substation_list;
 		$this->getView()->assign($data);
     }
