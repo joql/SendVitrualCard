@@ -426,8 +426,10 @@
     });
 
     //更新头像
-    $('.avatar img').on('click',function () {
-        $('#avatar_img').click();
+    $('.avatar-src').on('click',function () {
+       $('#avatar_img').click();
+    });
+    $('#avatar_img').change(function () {
         $.ajax({
             url:"/member/center/uploadAvator",
             type:"post",
