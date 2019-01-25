@@ -120,6 +120,7 @@ layui.define(['layer', 'laytpl', 'form', 'element','table'], function(exports){
         var checktip = $(this).data('checktip') || '真的要审核记录吗？';
         var pwdinit = $(this).data('pwdinit') || '真的要重置密码吗？';
         var blocktip = $(this).data('blocktip') || '真的要停用记录吗？';
+        var restart = $(this).data('restart') || '真的要重新启用吗？';
 
 		if (layEvent === 'del') { //删除
 			layer.confirm(deltip, function(index) {
@@ -198,6 +199,31 @@ layui.define(['layer', 'laytpl', 'form', 'element','table'], function(exports){
 			});
 		}else if (layEvent === 'block') { //停用
 			layer.confirm(blocktip, function(index) {
+				layer.close(index);
+				var loading = layer.load(2);
+				$.ajax({
+					url: url,
+					type: 'POST',
+					dataType: 'json',
+					data: {'csrf_token':TOKEN}
+				})
+				.done(function(res) {
+					if ( res.code == '1' ) {
+                        location.reload();
+                        layer.msg(res.msg,{icon:1})
+                    } else {
+                    	layer.msg(res.msg,{icon:2})
+                    }
+				})
+				.fail(function() {
+					layer.alert('error',{time:3000});
+				})
+				.always(function() {
+					layer.close(loading);
+				});
+			});
+		}else if (layEvent === 'restart') { //启用
+			layer.confirm(restart, function(index) {
 				layer.close(index);
 				var loading = layer.load(2);
 				$.ajax({

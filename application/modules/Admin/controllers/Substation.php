@@ -341,6 +341,11 @@ class SubstationController extends AdminBasicController
         Helper::response($data);
     }
 
+    /**
+     * use for:停用
+     * auth: Joql
+     * date:2019-01-25 14:53
+     */
     public function blockAction()
     {
         if ($this->AdminUser==FALSE AND empty($this->AdminUser)) {
@@ -357,7 +362,30 @@ class SubstationController extends AdminBasicController
         }
         Helper::response($data);
     }
-	
+
+    /**
+     * use for:启用
+     * auth: Joql
+     * date:2019-01-25 14:53
+     */
+    public function restartAction()
+    {
+        if ($this->AdminUser==FALSE AND empty($this->AdminUser)) {
+            $data = array('code' => 1000, 'msg' => '请登录');
+            Helper::response($data);
+        }
+        $id = $this->get('id');
+
+        $r = $this->m_substation->UpdateByID(array('state'=>1), $id);
+        if ($r) {
+            $data = array('code'=>1,'msg'=>'更新成功');
+        } else {
+            $data = array('code'=>1002,'msg'=>'更新失败');
+        }
+        Helper::response($data);
+    }
+
+
     private function conditionSQL($param)
     {
         $condition = "1";

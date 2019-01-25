@@ -110,6 +110,7 @@
                                 <input type="text" id="old_price" name="old_price" lay-verify="required" autocomplete="off" value="<?php echo $product['old_price'];?>" class="layui-input" placeholder="商品进货价">
                             </div>
                         </div>
+                        <?php if($this->AdminUser['substation_id']=='master'):?>
                         <div class="layui-form-item">
                             <label for="name" class="layui-form-label">代理价格</label>
                             <div class="layui-input-inline">
@@ -117,6 +118,7 @@
                             </div>
                             <div class="layui-form-mid layui-word-aux">提供给代理的价格</div>
                         </div>
+                        <?php endif;?>
                         <div class="layui-form-item">
                             <label for="name" class="layui-form-label">商品销量</label>
                             <div class="layui-input-inline">
@@ -137,7 +139,7 @@
                                     </div>
                                     <div class="layui-form-mid">件单价为：</div>
                                     <div class="layui-input-inline">
-                                        <input type="text" name="wholesale_price[]" lay-verify="checkPrice" autocomplete="off"  class="layui-input" placeholder="价格" value="<?php echo $whole['price'];?>">
+                                        <input type="text" name="wholesale_price[]" lay-verify="require" autocomplete="off"  class="layui-input" placeholder="价格" value="<?php echo $whole['price'];?>">
                                     </div>
                                     <div class="layui-form-mid">元/件</div>
                                     <?php if($k>0):?>

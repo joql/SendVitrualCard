@@ -45,7 +45,7 @@
 									<option value="0">待付款</option>
 									<option value="1">待处理</option>
 									<option value="2">已完成</option>
-									<option value="3">处理失败</option>
+									<option value="3">手工处理</option>
 								</select>
 							</div>
 
@@ -89,7 +89,7 @@
 					{{# }else if(d.status =="2"){ }}
                     <span class="layui-badge layui-bg-green">已完成</span>
 					{{# } else { }}
-                    <span class="layui-badge layui-bg-black">处理失败</span> {{# } }}
+                    <span class="layui-badge layui-bg-black">手工处理</span> {{# } }}
                 </script>
                 <script type="text/html" id="opt">
 					<a class="layui-btn layui-btn-warm layui-btn-xs" href="/<?php echo ADMIN_DIR;?>/order/view/?id={{d.id}}">查看</a> 

@@ -214,10 +214,10 @@ class ProductsController extends AdminBasicController
                     'sale_base'=>$sale_base,
 				);
 				if($this->CommonAdmin !=''){
-				    if($price < $old_price){
-                        $data = array('code' => 1013, 'msg' => '售价必须高于成本价');
-                        Helper::response($data);
-                    }
+//				    if($price < $old_price){
+//                        $data = array('code' => 1013, 'msg' => '售价必须高于成本价');
+//                        Helper::response($data);
+//                    }
 				    $s = array(
 				        'product_id' => $id,
                         'price' => $price,
