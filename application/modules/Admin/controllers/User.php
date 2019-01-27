@@ -88,7 +88,7 @@ class UserController extends AdminBasicController
         $uid = $this->get('id');
         $data = array();
         $user = (array)$this->m_user
-            ->Field('id,super_type')
+            ->Field('id,super_type,money')
             ->Where('id','=',$uid)
             ->SelectOne();
         $data['user'] = $user;
@@ -101,13 +101,13 @@ class UserController extends AdminBasicController
             return FALSE;
         }
         $uid = $this->getPost('id');
-        $super_type = $this->getPost('super_type');
+        $update['super_type'] = $this->getPost('super_type');
+        $update['money'] = $this->getPost('money');
+        !empty($this->getPost('pwd')) && $update['password'] = md5($this->getPost('pwd'));
         $csrf_token = $this->getPost('csrf_token', false);
         if (FALSE != $uid AND is_numeric($uid) AND $uid > 0) {
             if ($this->VerifyCsrfToken($csrf_token)) {
-                $r = $this->m_user->UpdateById(array(
-                    'super_type' => $super_type,
-                ), $uid);
+                $r = $this->m_user->UpdateById($update, $uid);
                 if($r){
                     $data = array('code' => 1, 'msg' => '修改成功', 'data' => '');
                 }else{

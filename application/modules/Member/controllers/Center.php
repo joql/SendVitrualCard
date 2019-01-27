@@ -34,7 +34,12 @@ class CenterController extends PcBasicController
 		$data['title'] = "我的资料";
 
         //获取支付方式
-        $payments = $this->m_payment->getConfig();
+        $payments = (array)$this->m_payment->getConfig();
+        foreach ($payments as $k=>$v){
+            if($v['payname'] !== '支付宝'){
+                unset($payments[$k]);
+            }
+        }
         $data['payments']=$payments;
         $this->getView()->assign($data);
     }

@@ -22,6 +22,18 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">用户余额</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="money" id="money" lay-verify="number" placeholder="用户余额" autocomplete="off" class="layui-input" value="<?php echo $user['money'];?>">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">用户密码</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="pwd" id="pwd" lay-verify="" placeholder="用户密码，空则不修改" autocomplete="off" class="layui-input" value="">
+                            </div>
+                        </div>
                         <?php endif;?>
                         <div class="layui-form-item">
                             <input type="hidden" name="method" value="edit">
