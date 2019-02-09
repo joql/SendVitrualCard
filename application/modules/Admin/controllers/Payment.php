@@ -149,7 +149,7 @@ class PaymentController extends AdminBasicController
 					$u = $this->m_payment->UpdateByID($m,$id);
 					if($u){
 						//更新缓存 
-						$this->m_payment->getConfig(1);
+						//$this->m_payment->getConfig(1);
 						$data = array('code' => 1, 'msg' => '更新成功');
 					}else{
 						$data = array('code' => 1003, 'msg' => '更新失败');
