@@ -43,6 +43,9 @@ class UserController extends AdminBasicController
         $name = $this->get('name');
 
         $where1 = array();
+        if($this->CommonAdmin !== ''){
+            $where1['super_type'] = 1;
+        }
         //查询条件
         $get_params = [
             'substation_id' => $substation,
