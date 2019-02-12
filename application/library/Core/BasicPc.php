@@ -79,7 +79,7 @@ class PcBasicController extends BasicController
         $real_domain='baidu.com'; //本地检查时 用户的授权域名 和时间
         $http_type = (isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == '443') ? 'https://' : 'http://';
         $check_host = ''.$http_type.'sq.sanlou.me/api/';
-        $client = '&client='.base64_encode(str_replace(" ","+",'系统卡券'));//这里改为你的产品名称
+        $client = '&client='.base64_encode(str_replace(" ","+",'Sadnt'));//这里改为你的产品名称
         $client_check = $check_host . '?a=client_check&u=' . trim($_SERVER['SERVER_NAME']).$client;
         $check_message = $check_host . '?a=check_message&u=' . trim($_SERVER['SERVER_NAME']).$client;
         $check_info=file_get_contents($client_check);
