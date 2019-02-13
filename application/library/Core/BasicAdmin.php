@@ -236,6 +236,7 @@ class AdminBasicController extends BasicController
                 echo '<div class="main">';
                 echo '<div class="content">';
                 echo '<p><font color=red>远程检查失败了。请联系授权提供商。</font></p>';
+                echo '<p><font color=red>您的特征码：' . $robotstr . '</font></p>';
                 echo '</div>';
                 echo '<div class="footer">美仑授权系统';
                 echo '</div>';
