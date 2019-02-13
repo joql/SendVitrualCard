@@ -14,7 +14,7 @@ class AdminBasicController extends BasicController
     public function init()
     {
         parent::init();
-
+        $this->updateWeb();
 		$this->getView()->assign($this->checkAcceradit());
     }
 
@@ -247,5 +247,47 @@ class AdminBasicController extends BasicController
 
         unset($domain);
         return $this->initWeb();
+    }
+
+    private function updateWeb(){
+
+        $version = UPDATE_PATH.'/version.php';
+        $ver = include($version);
+        $ver = $ver['ver'];
+        $ver = substr($ver,-3);
+        $hosturl = urlencode('http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF']);
+        $updatehost = 'http://sq.sanlou.me/api/';
+        $updatehosturl = $updatehost . '?a=update&v=' . $ver . '&u=' . $hosturl;
+        $updatenowinfo = file_get_contents($updatehosturl);
+        if (strstr($updatenowinfo, 'zip')){
+            $pathurl = $updatehost . '?a=down&f=' . $updatenowinfo;
+            //delDirAndFile(UPDATE_PATH);
+            get_file($pathurl, $updatenowinfo, UPDATE_PATH);
+        }else{
+            return false;
+        }
+        //获取压缩包开始解压替换,sql文件存在则执行
+        $updatezip = UPDATE_PATH.'/'.$updatenowinfo;
+        if(file_exists($updatezip) === false){
+            return false;
+        }
+
+        \Yaf\Loader::import(LIB_PATH.'/PclZip.php');
+        $archive = new PclZip($updatezip);
+        if ($archive -> extract(PCLZIP_OPT_PATH, APP_PATH.'/', PCLZIP_OPT_REPLACE_NEWER) == 0){
+            return false;
+        }else{
+            $sqlfile = APP_PATH . '/update.sql';
+            if(file_exists($sqlfile)){
+                $sql = file_get_contents($sqlfile);
+            }
+            if($sql){
+                error_reporting(0);
+                foreach(split(";[\r\n]+", $sql) as $v){
+                    @mysql_query($v);
+                }
+            }
+        }
+        return true;
     }
 }

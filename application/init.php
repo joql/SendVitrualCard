@@ -25,6 +25,7 @@ define('REQUEST_FILE',APP_PATH.'/log/request/'.CUR_DATE.'.log');
 define('SQL_FILE',APP_PATH.'/log/sqld/'.CUR_DATE.'.log');
 define('CRONTAB_FILE',APP_PATH.'/log/crontab/'.CUR_DATE.'.log');
 define('YEWU_FILE',APP_PATH.'/log/yewu/'.CUR_DATE.'.log');
+define('UPDATE_PATH',APP_PATH.'/update/');
 define('INSTALL_PATH',APP_PATH.'/install/');
 define('INSTALL_LOCK',INSTALL_PATH.'install.lock');
 //error_reporting(0);
