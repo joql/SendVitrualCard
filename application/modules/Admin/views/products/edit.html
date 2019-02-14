@@ -97,7 +97,7 @@
                                    class="layui-form-label">商品售价
                             </label>
                             <div class="layui-input-inline">
-                                <input type="number" id="price" name="price" lay-verify="required" autocomplete="off" value="<?php echo $product['price'];?>"
+                                <input type="number" id="price" name="price" lay-verify="checkPrice" autocomplete="off" value="<?php echo $product['price'];?>"
                                        class="layui-input"
                                        placeholder="商品零售价">
                             </div>
@@ -114,7 +114,7 @@
                         <div class="layui-form-item">
                             <label for="name" class="layui-form-label">代理价格</label>
                             <div class="layui-input-inline">
-                                <input type="text" id="price_agent" name="price_agent" lay-verify="checkPrice" autocomplete="off" value="<?php echo $product['price_agent'];?>" class="layui-input"  placeholder="">
+                                <input type="text" id="price_agent" name="price_agent" lay-verify="required" autocomplete="off" value="<?php echo $product['price_agent'];?>" class="layui-input"  placeholder="">
                             </div>
                             <div class="layui-form-mid layui-word-aux">提供给代理的价格</div>
                         </div>
