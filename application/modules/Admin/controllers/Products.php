@@ -193,7 +193,7 @@ class ProductsController extends AdminBasicController
 					$data = array('code' => 1000, 'msg' => '价格设置错误');
 					Helper::response($data);
 				}
-
+                $product_info = $this->m_products->where(array('id'=>$id))->SelectOne();
                 $description = str_replace(array("\r","\n","\t"), "", $description);
 				$m=array(
 					'typeid'=>$typeid,
@@ -239,28 +239,6 @@ class ProductsController extends AdminBasicController
                                 'substation_id' => $this->CommonAdmin,
                                 'product_id' => $id,
                             ));
-                            $this->m_products_wholesale_substation->Where(array(
-                                'substation_id' => $this->CommonAdmin,
-                                'product_id' => $id,
-                            ))->Delete();
-                        }else{
-                            //主站
-                            foreach ($wholesale_num as $k=>$v){
-                                $data_wholesale[] = array(
-                                    'substation_id' => 'master',
-                                    'product_id' => $id,
-                                    'num' => $wholesale_num[$k],
-                                    'price' => $wholesale_price[$k],
-                                );
-                            }
-                            $this->m_products_wholesale_substation->updateInfo((array)$data_wholesale,array(
-                                'substation_id' => 'master',
-                                'product_id' => $id,
-                            ));
-                            $this->m_products_wholesale_substation->Where(array(
-                                'substation_id' => 'master',
-                                'product_id' => $id,
-                            ))->Delete();
                         }
                         $data = array('code' => 1, 'msg' => '更新成功');
                     }else{
@@ -280,7 +258,9 @@ class ProductsController extends AdminBasicController
 					$u = $this->m_products->UpdateByID($m,$id);
 					if($u){
 					    //商品编辑成功，开始更新关联数据，含批发价信息表
-
+                        if($old_price != $product_info['old_price']){
+                            $this->m_products_substation->Where(array('product_id'=>$id))->Delete();
+                        }
                         if($this->CommonAdmin != ''){
                             //分站情况
                             foreach ($wholesale_num as $k=>$v){
@@ -295,10 +275,6 @@ class ProductsController extends AdminBasicController
                                 'substation_id' => $this->CommonAdmin,
                                 'product_id' => $id,
                             ));
-                            $this->m_products_wholesale_substation->Where(array(
-                                'substation_id' => $this->CommonAdmin,
-                                'product_id' => $id,
-                            ))->Delete();
                         }else{
                             //主站
                             foreach ($wholesale_num as $k=>$v){
@@ -313,10 +289,6 @@ class ProductsController extends AdminBasicController
                                 'substation_id' => 'master',
                                 'product_id' => $id,
                             ));
-                            $this->m_products_wholesale_substation->Where(array(
-                                'substation_id' => 'master',
-                                'product_id' => $id,
-                            ))->Delete();
                         }
 						$data = array('code' => 1, 'msg' => '更新成功');
 					}else{
