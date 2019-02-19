@@ -70,7 +70,10 @@ class IndexController extends PcBasicController
                 //var_dump($products_type);die();
 				$data['products_type'] = $products_type;
 				$data['title'] = "首页";
-				$this->getView()->assign($data);
+				//$this->getView()->assign($data);
+                //关闭自动渲染
+                Yaf\Dispatcher::getInstance()->disableView();
+                $this->display('2-index', $data);
 			}
 		}else{
 			$this->redirect("/install/");

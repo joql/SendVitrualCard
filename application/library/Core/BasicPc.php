@@ -74,7 +74,7 @@ class PcBasicController extends BasicController
 	}
 
 	private function checkAcceradit(){
-        $domain=getTopDomainhuo();
+        /*$domain=getTopDomainhuo();
 
         $real_domain='baidu.com'; //本地检查时 用户的授权域名 和时间
         $http_type = (isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == '443') ? 'https://' : 'http://';
@@ -195,7 +195,7 @@ class PcBasicController extends BasicController
             }
         }
 
-        unset($domain);
+        unset($domain);*/
         return $this->initWeb();
     }
 
