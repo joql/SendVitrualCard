@@ -1,0 +1,223 @@
+<?php include SMALLS_COMMON_PATH.'/header.html';?>
+<style>
+	.index-goodname-xq {
+		font-weight: 400;
+		margin-top: 5px;
+		font-size: 15px;
+		word-wrap: break-word;
+		word-break: break-all;
+		overflow: hidden;
+		height: 40px;
+	}
+	.pr-xl {
+		color: #888;
+		float: right;
+	}
+	.am-badge {
+		display: inline-block;
+		min-width: 10px;
+		padding: 0.25em 0.625em;
+		font-size: 0.75rem;
+		font-weight: bold;
+		color: #fff;;
+		line-height: 1;
+		vertical-align: baseline;
+		white-space: nowrap;
+		text-align: center;
+		background-color: #e1e1e1;
+		border-radius: 0;
+	}
+	.am-badge-danger {
+		background-color: #E54D42;
+	}
+	.am-badge-success {
+		background-color: #29BB9C;
+	}
+	.am-badge-primary {
+		background-color: #5085FF;
+	}
+	.price {
+		font-size: 18px;
+		color: #F40;
+		font-weight: 700;
+		/* text-align: left; */
+	}
+</style>
+<div class="pcoded-main-container">
+	<div class="pcoded-wrapper d-block d-md-none">
+		<div class="pcoded-content">
+			<div class="pcoded-inner-content">
+				<div class="main-body">
+					<div class="page-body">
+						<div class="page-body">
+							<div class="card" style="margin-bottom: 10px;">
+								<div style="margin: 5px 8px 5px 8px;color: #666666;margin-bottom: -10px;">
+									<?php echo $config['gonggao']; ?>
+								</div>
+							</div>
+						</div>
+						<div class="input-group input-group-primary" style="margin-bottom: 10px;">
+							<button class="btn btn-primary btn-mini btn-block" onclick="window.location.href='/product/query'" >
+								<span class=""><i class="fa fa-search"></i>订单查询</span>
+							</button>
+						</div>
+						<div class="page-body">
+							<?php if(!empty($products_type)):?>
+							<?php foreach($products_type AS $type):?>
+							<div class="wapcatname" style="padding: 1px;text-align: center;"><?php echo $type['name'];?></div>
+							<div class="card" style="margin-bottom: 10px;" >
+								<div class="card-block">
+									<div class="form-horizontal" >
+										<div class="row">
+											<?php if(!empty($type['products'])):?>
+											<?php foreach($type['products'] AS $goods):?>
+											<div class="" style="width:100%;border-bottom: #ccc 1px dashed">
+												<div style="background-color: #fff;height: 65px">
+													<div style="padding:0px">
+														<a href="/product/<?php echo $goods['id'];?>html" style="color: #3c3c3c;">
+															<img class="am-radius" alt="<?php echo $goods['name'];?>" src="<?php echo $goods['images'];?>" width="60" height="60" style="float: left">
+															<div class="index-goodname-xq" style="height:38px;color:#333;"><p title="<?php echo $goods['name'];?>" style="margin-left:5px;font-size: 10px"><?php echo $goods['name'];?></p></div>
+															<div class="am-text-truncate" style="margin-left: 15px;">
+																<div style="">
+																	<?php if($goods['stockcontrol']==0):?>
+																	<span class="am-badge am-badge-success" style="margin-left: 5px">库存(不限量)</span>
+																	<?php else:?>
+																	<span class="am-badge am-badge-primary" style="margin-left: 5px">库存(<?php echo $goods['qty'];?>)</span>
+																	<?php endif;?>
+
+																	<span class="am-badge am-badge-danger">销量(<?php echo $goods['sale_num'];?>)</span>
+																	<span style="color: #ff0000">
+                                              <b>¥<?php echo $goods['price'];?></b>
+                                            </span>
+																</div>
+															</div>
+														</a>
+													</div>
+												</div>
+											</div>
+											<?php endforeach;?>
+											<?php endif;?>
+										</div>
+									</div>
+								</div>
+							</div>
+							<?php endforeach;?>
+							<?php endif;?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="pcoded-wrapper d-none d-sm-block">
+		<div class="pcoded-content">
+			<div class="pcoded-inner-content">
+				<div class="main-body">
+					<div class="page-wrapper">
+						<div class="page-body">
+							<div class="row">
+								<div class="col-md-8">
+									<?php if(!empty($products_type)):?>
+									<?php foreach($products_type AS $type):?>
+									<?php if(!empty($type['products'])):?>
+									<?php foreach($type['products'] AS $goods):?>
+									<div class="card col-md-4" style="display:inline-block;list-style: none;padding-top: 21px;;margin-bottom: 10px;" >
+										<li><a href="/product/<?php echo $goods['id'];?>.html">
+											<div style="background-color: #fff;" class="index_good_body">
+												<img class="" src="<?php echo $goods['images'];?>" style="width:100%;height:280px">
+												<div class="pr-info" style="padding:5px">
+													<span class="price">¥<?php echo $goods['price'];?></span>
+													<?php if($goods['stockcontrol']==0):?>
+													<span class="pr-xl am-badge am-badge-success" style="color:#fff">不限量</span>
+													<?php else:?>
+													<span class="pr-xl am-badge am-badge-danger" style="color:#fff">库存<?php echo $goods['sale_num'];?></span>
+													<?php endif;?>
+													<div class="index-goodname-xq" style="height:45px;color:#333"><p title="<?php echo $goods['name'];?>"><?php echo $goods['name'];?></p></div>
+												</div>
+											</div>
+										</a>
+										</li>
+									</div>
+									<?php endforeach;?>
+									<?php endif;?>
+									<?php endforeach;?>
+									<?php endif;?>
+								</div>
+								<div class="col-md-4">
+									<div class="card" style="margin-bottom: 10px;" >
+										<div class="card-block" style="margin-bottom: -45px;">
+											<h4 class="sub-title"  style="margin-bottom: 5px;">网站公告</h4>
+											<div class="row">
+												<div class="col-sm-12">
+													<div class="input-group input-primary">
+														<div style="color: #666666;">
+															<?php echo $config['gonggao']; ?>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<?php if(isset($config['ad_3']) AND $config['ad_3']):?>
+									<div class="default-grid-item">
+										<div class="card gallery-desc" style="margin-bottom: 10px;">
+											<div class="masonry-media">
+												<a class="media-middle" href="#!">
+													<img class="img-fluid" src="<?php echo $config['ad_3'] ?>">
+												</a>
+											</div>
+										</div>
+									</div>
+									<?php endif;?>
+									<?php if(isset($config['ad_2']) AND $config['ad_2']):?>
+									<div class="default-grid-item">
+										<div class="card gallery-desc" style="margin-bottom: 10px;">
+											<div class="masonry-media">
+												<a class="media-middle" href="#!">
+													<img class="img-fluid" src="<?php echo $config['ad_2'] ?>">
+												</a>
+											</div>
+										</div>
+									</div>
+									<?php endif;?>
+									<?php if(isset($config['ad_1']) AND $config['ad_1']):?>
+									<div class="default-grid-item">
+										<div class="card gallery-desc" style="margin-bottom: 10px;">
+											<div class="masonry-media">
+												<a class="media-middle" href="#!">
+													<img class="img-fluid" src="<?php echo $config['ad_1'] ?>">
+												</a>
+											</div>
+										</div>
+									</div>
+									<?php endif;?>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="url-Modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div id="qrcode">
+                </div>
+                <br><span class="" id="basic-addon1"><strong>全自动发卡-长期合作点加入Q群</strong></span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-mini btn-block" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+	<?php include SMALLS_COMMON_PATH.'/content.html';?>
+</div>
+</div>
+<!--引入公共底文件-->
+<?php include SMALLS_COMMON_PATH.'/footer.html';?>
+<script>
+    $('#hi-Modal').modal({backdrop: 'static', keyboard: false})
+</script>
