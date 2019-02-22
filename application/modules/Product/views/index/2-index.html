@@ -116,12 +116,12 @@
 					<div class="page-wrapper">
 						<div class="page-body">
 							<div class="row">
-								<div class="col-md-8">
+								<div class="col-md-10">
 									<?php if(!empty($products_type)):?>
 									<?php foreach($products_type AS $type):?>
 									<?php if(!empty($type['products'])):?>
 									<?php foreach($type['products'] AS $goods):?>
-									<div class="card col-md-4" style="display:inline-block;list-style: none;padding-top: 21px;;margin-bottom: 10px;" >
+									<div class="card col-md-3" style="display:inline-block;list-style: none;padding-top: 21px;;margin-bottom: 10px;max-width: 360px;" >
 										<li><a href="/product/<?php echo $goods['id'];?>.html">
 											<div style="background-color: #fff;" class="index_good_body">
 												<img class="" src="<?php echo $goods['images'];?>" style="width:100%;height:280px">
@@ -143,8 +143,8 @@
 									<?php endforeach;?>
 									<?php endif;?>
 								</div>
-								<div class="col-md-4">
-									<div class="card" style="margin-bottom: 10px;" >
+								<div class="col-md-2">
+									<div class="card" style="position:fixed;top:40%;margin-bottom: 10px;" >
 										<div class="card-block" style="margin-bottom: -45px;">
 											<h4 class="sub-title"  style="margin-bottom: 5px;">网站公告</h4>
 											<div class="row">
@@ -158,39 +158,6 @@
 											</div>
 										</div>
 									</div>
-									<?php if(isset($config['ad_3']) AND $config['ad_3']):?>
-									<div class="default-grid-item">
-										<div class="card gallery-desc" style="margin-bottom: 10px;">
-											<div class="masonry-media">
-												<a class="media-middle" href="#!">
-													<img class="img-fluid" src="<?php echo $config['ad_3'] ?>">
-												</a>
-											</div>
-										</div>
-									</div>
-									<?php endif;?>
-									<?php if(isset($config['ad_2']) AND $config['ad_2']):?>
-									<div class="default-grid-item">
-										<div class="card gallery-desc" style="margin-bottom: 10px;">
-											<div class="masonry-media">
-												<a class="media-middle" href="#!">
-													<img class="img-fluid" src="<?php echo $config['ad_2'] ?>">
-												</a>
-											</div>
-										</div>
-									</div>
-									<?php endif;?>
-									<?php if(isset($config['ad_1']) AND $config['ad_1']):?>
-									<div class="default-grid-item">
-										<div class="card gallery-desc" style="margin-bottom: 10px;">
-											<div class="masonry-media">
-												<a class="media-middle" href="#!">
-													<img class="img-fluid" src="<?php echo $config['ad_1'] ?>">
-												</a>
-											</div>
-										</div>
-									</div>
-									<?php endif;?>
 								</div>
 							</div>
 						</div>

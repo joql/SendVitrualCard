@@ -178,7 +178,6 @@
                                             </div>
                                                 <select class="form-control" name="type_id" id="type_id"
                                                         lay-filter="required">
-                                                    <option value=""></option>
                                                     <?php if(!empty($type_list)):?>
                                                     <?php foreach($type_list AS $p):?>
                                                     <option value="<?php echo $p['id'];?>"><?php echo $p['name'];?></option>
@@ -195,7 +194,6 @@
                                             <input type="text" name="url" id="url" class="form-control" required=""  placeholder="输入你想要的二级前缀">
                                             <select class="form-control" name="url_postfix" id="url_postfix"
                                                     lay-filter="required">
-                                                <option value=""></option>
                                                 <?php if(!empty($url_list)):?>
                                                 <?php foreach($url_list AS $p):?>
                                                 <option value="<?php echo $p['id'];?>"><?php echo $p['url'];?></option>
