@@ -74,7 +74,7 @@
 											<div class="" style="width:100%;border-bottom: #ccc 1px dashed">
 												<div style="background-color: #fff;height: 65px">
 													<div style="padding:0px">
-														<a href="/product/<?php echo $goods['id'];?>html" style="color: #3c3c3c;">
+														<a href="/product/<?php echo $goods['id'];?>.html" style="color: #3c3c3c;">
 															<img class="am-radius" alt="<?php echo $goods['name'];?>" src="<?php echo $goods['images'];?>" width="60" height="60" style="float: left">
 															<div class="index-goodname-xq" style="height:38px;color:#333;"><p title="<?php echo $goods['name'];?>" style="margin-left:5px;font-size: 10px"><?php echo $goods['name'];?></p></div>
 															<div class="am-text-truncate" style="margin-left: 15px;">
@@ -130,7 +130,7 @@
 													<?php if($goods['stockcontrol']==0):?>
 													<span class="pr-xl am-badge am-badge-success" style="color:#fff">不限量</span>
 													<?php else:?>
-													<span class="pr-xl am-badge am-badge-danger" style="color:#fff">库存<?php echo $goods['sale_num'];?></span>
+													<span class="pr-xl am-badge am-badge-danger" style="color:#fff">库存<?php echo $goods['qty'];?></span>
 													<?php endif;?>
 													<div class="index-goodname-xq" style="height:45px;color:#333"><p title="<?php echo $goods['name'];?>"><?php echo $goods['name'];?></p></div>
 												</div>

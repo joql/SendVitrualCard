@@ -1,12 +1,47 @@
 <?php include SMALLS_COMMON_PATH.'/header.html';?>
+<style>
+	.am-panel-default {
+		border-color: #f0f0f0;
+	}
+	.am-list {
+		margin-bottom: 1rem;
+		padding-left: 0;
+	}
+	.am-list > li {
+		position: relative;
+		display: block;
+		margin-bottom: -1px;
+		background-color: #fff;
+		border: 1px solid #dedede;
+		border-width: 1px 0;
+	}
+	.am-list-static > li {
+		padding: 0.5rem 0.125rem;
+	}
+
+</style>
 <div class="pcoded-main-container">
 	<div class="container">
 		<div class="main-body">
 			<div class="page-wrapper">
 				<div class="page-body">
-					<div class="signin-card card-block auth-body mr-auto ml-auto col-lg-4">
+					<div class="signin-card card-block auth-body mr-auto ml-auto">
 						<div class="card col-lg-12">
 							<div class="card-block m-b-5  m-t-10">
+								<div class="am-panel am-panel-default">
+									<div class="am-panel-bd">
+										<ul class="am-list am-list-static">
+											<li><strong>总金额：</strong><?php echo $order['money'];?>元</li>
+											<li><strong>订单号：</strong><?php echo $order['orderid'];?></li>
+											<li><strong>商品：</strong><?php echo $order['productname'];?></li>
+											<li><strong>单价：</strong><?php echo $order['price'];?>元</li>
+											<li><strong>数量：</strong><?php echo $order['number'];?> 件</li>
+											<li><strong>时间：</strong><?php echo date('Y-m-d H:i:s',$order['addtime']);?></li>
+											<li><strong>邮箱：</strong><?php echo $order['email']?$order['email']:$order['qq'];?></li>
+										</ul>
+										<span style="color:red">温馨提示：请将联系方式写复杂一点,以免有人偷卡</span>
+									</div>
+								</div>
 								<?php if($order['paymethod'] !== 'balance'):?>
 								<div style="text-align:center;">
 
@@ -21,20 +56,6 @@
 								<?php else:?>
 								<h5><?php echo $result['msg']; ?></h5>
 								<?php endif;?>
-								<hr>
-								<span><strong>总金额：</strong></span><span><?php echo $order['money'];?>元</span>
-								<br>
-								<span><strong>订单号：</strong></span><span><?php echo $order['orderid'];?></span>
-								<br>
-								<span><strong>商品：</strong></span><span><?php echo $order['productname'];?></span>
-								<br>
-								<span><strong>单价：</strong></span><span><?php echo $order['price'];?>元</span>
-								<br>
-								<span><strong>数量：</strong></span><span><?php echo $order['number'];?> 件</span>
-								<br>
-								<span><strong>时间：</strong></span><span><?php echo date('Y-m-d H:i:s',$order['addtime']);?></span>
-								<br>
-								<span><strong>邮箱：</strong></span><span><?php echo $order['email']?$order['email']:$order['qq'];?></span>
 							</div>
 						</div>
 					</div>

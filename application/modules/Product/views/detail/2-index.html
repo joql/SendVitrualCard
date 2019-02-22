@@ -4,7 +4,7 @@
 		font-size: 15px!important;
 		line-height: 30px!important;
 	}
-	img {
+	.img-desc {
 		width: 100%;
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
@@ -42,25 +42,30 @@
 									<div class="card-block">
 										<div class="row">
 											<div class="col-lg-6 col-xs-12">
-												<img src="<?php echo strpos($product['images'],'http') !== false ? $product['images'] : $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].'/'.$product['images']; ?>" alt="<?php echo $product['name']; ?>">
+												<img class="img-desc" src="<?php echo strpos($product['images'],'http') !== false ? $product['images'] : $_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].'/'.$product['images']; ?>" alt="<?php echo $product['name']; ?>">
 											</div>
 
 											<div class="col-lg-6 col-xs-12 product-detail" id="product-detail">
-												<div class="am-u-sm-12 am-u-md-7 am-u-lg-7  am-u-end" style="">
 													<!-- 网格开始 -->
 
 													<input type="hidden" value="1" name="goodid">
-													<h2 style="margin-top: 0px;color: #333;font-family: 微软雅黑;" class="am-text-truncate">视多发卡系统发卡商品测试</h2>
+													<h2 style="margin-top: 0px;color: #333;font-family: 微软雅黑;" class="am-text-truncate"><?php echo $product['name']; ?></h2>
 													<p class="trade-goodinfo" style="background-color:#f5f3ef;margin-top: 20px">
 														<span style="color:#6c6c6c">促销：</span>
-														<span class="trade-price">¥0.10</span>
+														<span class="trade-price">¥<?php echo $product['price'];?></span>
 
 														<span style="float:right">
                                                                 <span style="color: #6C6C6C;">累积销量：</span>
-                                                                <span style="color:#6c6c6c;font-size:18px;">653</span>
+                                                                <span style="color:#6c6c6c;font-size:18px;"><?php echo $product['sale_num'] ? $product['sale_num']:0; ?></span>
                                                         </span><br>
-														<span style="color:#6C6C6C">库存：189件</span>
-														<a id="lookpf" style="margin-left:5px;font-size:10px" href="javascript:;" onclick="lookpf()">查看批发价</a>
+														<?php if($product['stockcontrol']==0):?>
+														<span style="color:#6C6C6C">库存：不限量</span>
+														<input type="hidden" name="qty" id="qty" value="不限量">
+														<?php else:?>
+														<span style="color:#6C6C6C">库存：<?php echo $product['qty']; ?>件</span>
+														<input type="hidden" name="qty" id="qty" value="<?php echo $product['qty'];?>">
+														<?php endif;?>
+														<a id="lookpf" style="margin-left:5px;font-size:10px" href="javascript:;" onclick="viewWholeSale(<?php echo $product['id'];?>)">查看批发价</a>
 														<br><span style="color:#6c6c6c;">服务：自动发货 无忧售后</span>
 													</p>
 													<?php if(!empty($addons)):?>
@@ -149,6 +154,14 @@
 													</div>
 													<?php endif;?>
 													<?php endif;?>
+												<div class="input-group">
+                                                        <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-default btn-number shadow-none" disabled="disabled">
+                                                                <span class="fa fa-search"></span>
+                                                            </button>
+                                                        </span>
+													<input id='chapwd' type="text" name="chapwd"  class="form-control" placeholder="将作为自助查询订单重要依据 " required>
+												</div>
 													<div class="form-radio m-b-10">
 														<?php if(!empty($payments)):?>
 														<?php foreach($payments AS $payment):?>
@@ -180,7 +193,6 @@
 
 
 													<!-- 网格结束 -->
-												</div>
 											</div>
 										</div>
 										<div class="row">
@@ -189,7 +201,7 @@
 													<div class="am-panel-hd">商品描述</div>
 													<div class="am-panel-bd">
 														<p>
-															<span style="background-color:#FFFFFF;"><b>此商品仅用于测试购买发卡流程，所购买的卡密无其他用途！</b></span>
+															<span style="background-color:#FFFFFF;"><b><?php echo $product['description']; ?></b></span>
 														</p>
 													</div>
 												</div>
