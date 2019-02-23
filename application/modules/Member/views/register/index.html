@@ -15,6 +15,61 @@
     <link rel="stylesheet" type="text/css" href="<?php echo ASSETS_PATH;?>/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo ASSETS_PATH;?>/css/style.css">
     <link rel="stylesheet" type="text/css" href="<?php echo ASSETS_PATH;?>/gmpanel.css">
+    <?php if(isset($config['smallscolor']) AND strlen($config['smallscolor'])>0):?>
+    <style>
+        .btn-primary {
+            background-color: <?php echo $config['smallscolor'];?>;
+            border-color: <?php echo $config['smallscolor'];?>;
+        }
+        .pcoded .pcoded-header[header-theme="theme5"] {
+            background: -webkit-gradient(linear, left top, right top, from(<?php echo $config['smallscolor'];?> ), to(<?php echo $config['smallscolor'];?>));
+            background: linear-gradient(to right, <?php echo $config['smallscolor'];?>, <?php echo $config['smallscolor'];?>);
+        }
+        #accordion .panel-title a {
+            background: <?php echo $config['smallscolor'];?>!important;
+        }
+        #accordion .panel-title a:after, #accordion .panel-title a.collapsed:after {
+            background: <?php echo $config['smallscolor'];?>!important;
+        }
+        .bg-primary {
+            background-color: <?php echo $config['smallscolor'];?> !important;
+        }
+        .radio .helper::after, .radio .helper::before {
+            border: 0.125rem solid <?php echo $config['smallscolor'];?>!important;
+        }
+        .radio .helper::after {
+            background-color: <?php echo $config['smallscolor'];?>!important;
+            border-color: <?php echo $config['smallscolor'];?>!important;
+        }
+    </style>
+    <?php else:?>
+    <style>
+        .btn-primary {
+            background-color: #009589!important;
+            border-color: #009589!important;
+        }
+        .pcoded .pcoded-header[header-theme="theme5"] {
+            background: -webkit-gradient(linear, left top, right top, from(#009589), to(#009589));
+            background: linear-gradient(to right, #009589, #009589);
+        }
+        #accordion .panel-title a {
+            background: #009589!important;
+        }
+        #accordion .panel-title a:after, #accordion .panel-title a.collapsed:after {
+            background: #009589!important;
+        }
+        .bg-primary {
+            background-color: #009589 !important;
+        }
+        .radio .helper::after, .radio .helper::before {
+            border: 0.125rem solid #009589!important;
+        }
+        .radio .helper::after {
+            background-color: #009589!important;
+            border-color: #009589!important;
+        }
+    </style>
+    <?php endif;?>
 </head>
 
 <body class="fix-menu">

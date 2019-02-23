@@ -42,9 +42,12 @@
 										<span style="color:red">温馨提示：请将联系方式写复杂一点,以免有人偷卡</span>
 									</div>
 								</div>
-								<?php if($order['paymethod'] !== 'balance'):?>
+								<?php if($order['paymethod'] === 'balance'):?>
+								<h5><?php echo $result['msg']; ?></h5>
+								<?php elseif($order['paymethod'] === 'mazhifuwx'):?>
+								<h5><?php echo $pay['html']; ?></h5>
+								<?php else:?>
 								<div style="text-align:center;">
-
 									<img class="img-fluid o-hidden" src="<?php echo $pay['qr'];?>" >
 									<a class="col-lg-12" style="padding:2px 34px;border:1px solid #e5e5e5;display: inline-block;margin-top: 24px" id="open-app"><strong>您需要打开 <?php echo $pay['payname'];?></strong></a>
 									<a class="col-lg-12" style="padding:2px 34px;border:1px solid #e5e5e5;display: inline-block;margin-top: 24px" id="open-win"><strong><?php echo $pay['payname'];?> 扫码付款</strong></a>
@@ -53,8 +56,6 @@
 									<a class="col-lg-12 text-danger" style="padding:2px 34px;border:1px solid #e5e5e5;display: inline-block;margin-top: 10px"><strong>请按上方金额转账<br>输入错误无法发货</strong></a>
 									<br>
 								</div>
-								<?php else:?>
-								<h5><?php echo $result['msg']; ?></h5>
 								<?php endif;?>
 							</div>
 						</div>
