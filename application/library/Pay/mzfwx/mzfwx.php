@@ -1,16 +1,17 @@
 <?php
 
-namespace Pay\mazhifuwx;
+namespace Pay\mzfwx;
 use \Pay\notify;
 
-class mazhifuwx
+class mzfwx
 {
     private $apiHost="http://www.mazhifu.net/submit.php?";
-    private $paymethod ="mazhifuwx";
+    private $paymethod ="mzfwx";
 
     //处理请求
     public function pay($payconfig,$params)
     {
+
         $alipay_config = [];
         //商户ID
         $alipay_config['partner']		= $payconfig['app_id'];
@@ -35,7 +36,7 @@ class mazhifuwx
             "money" => (float)$params['money'],//原价
             "out_trade_no" => $params['orderid'], //可以是用户ID,站内商户订单号,用户名
             "return_url" => $params['weburl']. "/query/auto/{$params['orderid']}.html",
-            "notify_url" => $params['weburl'] . '/product/notify/?paymethod='.$this->paymethod,
+            "notify_url" => $params['weburl'] . '/product/notify/?paymethod=mzfwx',
             "name" =>$params['productname'],//付款页面风格
         );
 
@@ -255,6 +256,7 @@ class AlipayNotify {
             return false;
         }
         else {
+            unset($_GET['paymethod']);
             //生成签名结果
             $isSign = $this->getSignVeryfy($_GET, $_GET["sign"]);
             //获取支付宝远程服务器ATN结果（验证是否是支付宝发来的消息）

@@ -186,7 +186,7 @@ class OrderController extends PcBasicController
                     mt_srand();
 					$postfix = mt_rand(1000, 9999).substr(md5(mt_rand(1000, 9999)),3,6);
 					$prefix = isset($this->config['orderprefix'])?$this->config['orderprefix']:'zlkb';
-					$orderid = $prefix. date('Y') . date('m') . date('d') . date('H') . date('i') . date('s') .$postfix ;
+					$orderid = $prefix. date('Y') . date('m') .$postfix ;
 
 					//先拿折扣再算订单价格
 					$money = $product['price']*$number;

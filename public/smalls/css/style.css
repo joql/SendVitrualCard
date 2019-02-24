@@ -147,7 +147,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main-body .page-wrapper {
-    padding: 1.8rem 6.8rem 1.8rem 6.8rem;
+    padding: 1.8rem;
     transition: all ease-in 0.3s
 }
 

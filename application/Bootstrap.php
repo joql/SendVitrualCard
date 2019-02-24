@@ -35,21 +35,13 @@ class Bootstrap extends \Yaf\Bootstrap_Abstract
         );
         $router->addRoute('products_group', $products_group);
         $order_query = new Yaf\Route\Regex(
-            '#query/([A-Za-z]+)/([0-9A-Za-z]+).html#',
+            '#query/([A-Za-z]+)/([0-9A-Za-z]+)#',
             array('module' => 'product', 'controller' => 'query', 'action' => 'index'),
             array(1 => 'zlkbmethod',2 => 'orderid')
         );
         $router->addRoute('order_query', $order_query);
 
-//        $router->addRoute('products_substation', $products_group);
-//        $order_query = new Yaf\Route\Regex(
-//            '#substation/([A-Za-z]+)/([0-9A-Za-z]+).html#',
-//            array('module' => 'product', 'controller' => 'substation', 'action' => 'index'),
-//            array(1 => 'zlkbmethod',2 => 'orderid')
-//        );
-        $router->addRoute('order_query', $order_query);
-
-	}
+    }
 	
     public function _initPlugin(\Yaf\Dispatcher $dispatcher)
 	{

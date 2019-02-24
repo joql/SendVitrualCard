@@ -8,7 +8,7 @@ class QueryController extends PcBasicController
     {
         parent::init();
 		$this->m_order = $this->load('order');
-		$this->method_array = array('orderid','query_info','contact');
+		$this->method_array = array('orderid','query_info','contact','auto');
     }
 
     public function indexAction()
@@ -19,6 +19,29 @@ class QueryController extends PcBasicController
 		if(!in_array($zlkbmethod,$this->method_array)){
 			$zlkbmethod = "contact";
 		}
+        if($zlkbmethod == "auto"){
+            $data['order'] = $data['cnstatus'] = array();
+            //如果有订单号过来，就是直接去自动查询页面
+            $orderid  = $this->get('orderid');
+            if($orderid){
+                if (false != $this->login AND $this->userid) {
+                    $order_email = $this->uinfo['email'];
+                }else{
+                    $order_email = $this->getSession('order_email');
+                }
+
+                //$orderid_string = new \Safe\MyString($orderid);
+                //$orderid = $orderid_string->trimall()->qufuhao2()->getValue();
+
+                if($order_email AND isEmail($order_email)){
+                    $order = $this->m_order->Where(array('orderid'=>$orderid,'email'=>$order_email))->Where(array('isdelete'=>0))->SelectOne();
+                    if(!empty($order)){
+                        $data['order'] = $order;
+                        $data['cnstatus'] = array(0=>'<span class="layui-badge layui-bg-gray">待付款</span>',1=>'<span class="layui-badge layui-bg-blue">待处理</span>',2=>'<span class="layui-badge layui-bg-green">已完成</span>',3=>'<span class="layui-badge layui-bg-black">处理失败</span>');
+                    }
+                }
+            }
+        }
 		if($zlkbmethod=='contact'){
             $centent = $this->get("content");
             $chapwd    = $this->get('chapwd');

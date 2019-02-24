@@ -44,7 +44,7 @@
 								</div>
 								<?php if($order['paymethod'] === 'balance'):?>
 								<h5><?php echo $result['msg']; ?></h5>
-								<?php elseif($order['paymethod'] === 'mazhifuwx'):?>
+								<?php elseif($order['paymethod'] === 'mzfwx' || $order['paymethod'] === 'mzfzfb' || $order['paymethod'] === 'mzfqq'):?>
 								<h5><?php echo $pay['html']; ?></h5>
 								<?php else:?>
 								<div style="text-align:center;">
