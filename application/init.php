@@ -30,10 +30,10 @@ define('INSTALL_PATH',APP_PATH.'/install/');
 define('INSTALL_LOCK',INSTALL_PATH.'install.lock');
 //error_reporting(0);
 error_reporting(E_ALL ^E_NOTICE);
-//ini_set('display_errors', 'off');
-//ini_set('display_startup_errors',0);
-//ini_set('log_errors', 'on');
-//ini_set('error_log', LOG_FILE);
+ini_set('display_errors', 'off');
+ini_set('display_startup_errors',0);
+ini_set('log_errors', 'on');
+ini_set('error_log', LOG_FILE);
 
 //加密代码
 define('AUTHCODE','d2c9f9f10b02a0f6c275e37f6ad42fc51');
