@@ -269,6 +269,8 @@ class AdminBasicController extends BasicController
         }
         //获取压缩包开始解压替换,sql文件存在则执行
         $updatezip = UPDATE_PATH.'/'.$updatenowinfo;
+        //测试数据库
+        //$updatezip = UPDATE_PATH.'/'.'1.4.zip';
         if(file_exists($updatezip) === false){
             return false;
         }
@@ -284,8 +286,10 @@ class AdminBasicController extends BasicController
             }
             if($sql){
                 error_reporting(0);
-                foreach(split(";[\r\n]+", $sql) as $v){
-                    @mysql_query($v);
+                foreach(preg_split("/;[\r\n]+/", $sql) as $v){
+                    //@mysql_query($v);
+                    $m = Helper::load('admin_login_log');
+                    $m->Query($v);
                 }
             }
         }
