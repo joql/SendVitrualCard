@@ -327,7 +327,10 @@ class OrderController extends PcBasicController
 		}
 		//echo json_encode($data);die;
 		$data['title'] = "订单支付";
-		$this->getView()->assign($data);
+        //$this->getView()->assign($data);
+        //关闭自动渲染
+        Yaf\Dispatcher::getInstance()->disableView();
+        $this->display($this->template.'-index', $data);
 	}
 
 	public function payajaxAction()

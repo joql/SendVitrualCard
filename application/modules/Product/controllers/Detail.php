@@ -60,9 +60,10 @@ class DetailController extends PcBasicController
                 }
                 $data['qcodeurl'] = $product['name']."_购买商品";
                 $data['title'] = $product['name']."_购买商品";
-                $this->getView()->assign($data);
-//                Yaf\Dispatcher::getInstance()->disableView();
-//                $this->display('2-index', $data);
+                //$this->getView()->assign($data);
+                //关闭自动渲染
+                Yaf\Dispatcher::getInstance()->disableView();
+                $this->display($this->template.'-index', $data);
 			}else{
 				$this->redirect("/product/");
 				return FALSE;	

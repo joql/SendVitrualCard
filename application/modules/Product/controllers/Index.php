@@ -73,7 +73,7 @@ class IndexController extends PcBasicController
 				//$this->getView()->assign($data);
                 //关闭自动渲染
                 Yaf\Dispatcher::getInstance()->disableView();
-                $this->display('2-index', $data);
+                $this->display($this->template.'-index', $data);
 			}
 		}else{
 			$this->redirect("/install/");

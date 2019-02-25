@@ -1,0 +1,206 @@
+<?php include SMALLS_COMMON_PATH.'/header.html';?>
+<style>
+    .am-panel-default {
+        border-color: #f0f0f0;
+    }
+    .am-list {
+        margin-bottom: 1rem;
+        padding-left: 0;
+    }
+    .am-list > li {
+        position: relative;
+        display: block;
+        margin-bottom: -1px;
+        background-color: #fff;
+        border: 1px solid #dedede;
+        border-width: 1px 0;
+    }
+    .am-list-static > li {
+        padding: 0.5rem 0.125rem;
+    }
+
+</style>
+<div class="pcoded-main-container">
+    <div class="container">
+        <div class="main-body">
+            <div class="page-wrapper">
+                <div class="page-body">
+                    <div class="signin-card card-block auth-body mr-auto ml-auto">
+                        <div class="card col-lg-12">
+                            <div class="card-block m-b-5  m-t-10">
+                                <div class="am-panel am-panel-default">
+                                    <div class="am-panel-bd">
+                                        <ul class="am-list am-list-static">
+                                            <li><strong>总金额：</strong><?php echo $order['money'];?>元</li>
+                                            <li><strong>订单号：</strong><?php echo $order['orderid'];?></li>
+                                            <li><strong>商品：</strong><?php echo $order['productname'];?></li>
+                                            <li><strong>单价：</strong><?php echo $order['price'];?>元</li>
+                                            <li><strong>数量：</strong><?php echo $order['number'];?> 件</li>
+                                            <li><strong>时间：</strong><?php echo date('Y-m-d H:i:s',$order['addtime']);?></li>
+                                            <li><strong>邮箱：</strong><?php echo $order['email']?$order['email']:$order['qq'];?></li>
+                                        </ul>
+                                        <span style="color:red">温馨提示：请将联系方式写复杂一点,以免有人偷卡</span>
+                                    </div>
+                                </div>
+                                <?php if($order['paymethod'] === 'balance'):?>
+                                <h5><?php echo $result['msg']; ?></h5>
+                                <?php elseif($order['paymethod'] === 'mzfwx' || $order['paymethod'] === 'mzfzfb' || $order['paymethod'] === 'mzfqq'):?>
+                                <h5><?php echo $pay['html']; ?></h5>
+                                <?php else:?>
+                                <div style="text-align:center;">
+                                    <img class="img-fluid o-hidden" src="<?php echo $pay['qr'];?>" >
+                                    <a class="col-lg-12" style="padding:2px 34px;border:1px solid #e5e5e5;display: inline-block;margin-top: 24px" id="open-app"><strong>您需要打开 <?php echo $pay['payname'];?></strong></a>
+                                    <a class="col-lg-12" style="padding:2px 34px;border:1px solid #e5e5e5;display: inline-block;margin-top: 24px" id="open-win"><strong><?php echo $pay['payname'];?> 扫码付款</strong></a>
+
+                                    <a class="col-lg-12 text-danger" style="padding:2px 34px;border:1px solid #e5e5e5;display: inline-block;margin-top: 10px"><strong>金额：<?php echo $pay['money'];?></strong></a>
+                                    <a class="col-lg-12 text-danger" style="padding:2px 34px;border:1px solid #e5e5e5;display: inline-block;margin-top: 10px"><strong>请按上方金额转账<br>输入错误无法发货</strong></a>
+                                    <br>
+                                </div>
+                                <?php endif;?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="default-Modal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">付款成功</h4>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <span class="text-danger"><strong>订单编号用于查询订单，请妥善保管!</strong></span>
+                                    <div class="input-group input-group-primary input-group-sm">
+                                        <input type="text" class="form-control" autocomplete="off" value="<?php echo $order['orderid'];?>" readonly id="order_number">
+                                        <span  class="btn input-group-addon" data-clipboard-action="copy"  data-clipboard-target="#order_number">复制订单号</span>
+                                    </div>
+                                    <hr id="cdk-basic">
+                                    <span class="text-danger" id="cdk-info"><strong>激活码，请妥善保管!</strong></span>
+                                    <textarea class="long-press form-control" id="cdk_pay" readonly="readonly"></textarea>
+                                    <button type="button" id="cdk_button" class="col-sm-12 btn btn-mini btn-primary waves-effect waves-light" data-clipboard-action="copy"  data-clipboard-target="#cdk_pay">复制全部激活码</button>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary waves-effect waves-light " onclick="window.location.href='/product/query'">确认</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="timeout-Modal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">订单超时</h4>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <span><strong>订单号：</strong></span><span><strong><?php echo $order['orderid'];?></strong></span>
+                                    <br>
+                                    <span><strong>总金额：</strong></span><span><strong><?php echo $order['money'];?>元</strong></span>
+                                    <br>
+                                    <br>
+                                    <span><strong>订单超时,请重新购买.</strong></span>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary waves-effect waves-light " onclick="window.location.href='/product'">确认</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="weixin-tip">
+        <p>
+            <img src="/static/images/browser_tips.png" style="max-width: 100%; height: auto;" alt="微信打开"/>
+        </p>
+    </div>
+    <?php include SMALLS_COMMON_PATH.'/qcode.html';?>
+</div>
+<?php include SMALLS_COMMON_PATH.'/footer.html';?>
+<script src="<?php echo ASSETS_PATH;?>/js/clipboard.min.js"></script>
+<script>
+    var Days = 30;
+    var exp = new Date();
+    exp.setTime(exp.getTime() + Days*24*60*60*1000);
+    document.cookie="orderid=<?php echo $order['orderid'];?>;expires=" + exp.toGMTString();
+    var clipboard = new ClipboardJS('.btn');
+
+    clipboard.on('success', function(e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        alert('复制成功');
+        e.clearSelection();
+    });
+
+    clipboard.on('error', function(e) {
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        alert('复制失败请手动复制');
+    });
+</script>
+<script src="<?php echo ASSETS_PATH;?>/js/device.min.js"></script>
+<script>
+    if(device.mobile()){
+        $('#open-win').hide();
+
+    } else {
+        $('#open-app').hide();
+    }
+</script>
+<script>
+    var i = 0;
+    var intDiff = <?php echo $pay['overtime'] ?: 300;?>;
+    myTimer = window.setInterval(function () {
+        i++;
+        var day = 0,
+            hour = 0,
+            minute = 0,
+            second = 0;//时间默认值
+        if (intDiff > 0) {
+            day = Math.floor(intDiff / (60 * 60 * 24));
+            hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
+            minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
+            second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+        }
+        if (minute <= 9) minute = '0' + minute;
+        if (second <= 9) second = '0' + second;
+        if (hour <= 0 && minute <= 0 && second <= 0) {
+            clearInterval(verify_id);
+            $('#timeout-Modal').modal({backdrop: 'static', keyboard: false})
+            clearInterval(myTimer);
+            queryRadio = 0;
+        }
+        intDiff--;
+    }, 1000);
+    function verify(){
+        $.ajax({
+            type: "POST",
+            dataType: "json",
+            url: "/product/query/pay",
+            timeout: 10000, //ajax请求超时时间10s
+            data: {"csrf_token": TOKEN,'oid':"<?php echo $order['id'];?>"}, //post数据
+            success: function (res) {
+                if (res.code == 1)
+                {
+                    clearInterval(verify_id);
+                    if (res.data.kami){
+                        $("#cdk_pay").empty();
+                        $("#cdk_pay").append(res.data.kami);
+                    }
+                    else{
+                        $('#cdk_pay').hide();
+                        $('#cdk-basic').hide();
+                        $('#cdk-info').hide();
+                        $('#cdk_button').hide();
+                    }
+                    $('#default-Modal').modal({backdrop: 'static', keyboard: false})
+                }
+                if(queryRadio>0){
+                    t=setTimeout(queryPay, 3000);
+                }
+            }
+        });
+    }
+    var verify_id =  setInterval(verify,2000);
+</script>

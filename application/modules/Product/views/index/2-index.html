@@ -46,7 +46,7 @@
 		width: 24.6%;
 	}
 	.main-body .page-wrapper {
-		padding: 1.8rem 20rem 1.8rem 20rem;
+		padding: 0.1rem 20rem 1.8rem 20rem;
 	}
 </style>
 <div class="pcoded-main-container">
@@ -74,10 +74,10 @@
 							<div class="card" style="margin-bottom: 10px;" >
 								<div class="card-block">
 									<div class="form-horizontal" >
-										<div class="row">
+										<div class="row list">
 											<?php if(!empty($type['products'])):?>
-											<?php foreach($type['products'] AS $goods):?>
-											<div class="" style="width:100%;border-bottom: #ccc 1px dashed">
+											<?php foreach($type['products'] AS $key=>$goods):?>
+											<div class="" style="width:100%;border-bottom: #ccc 1px dashed;<?php if($key===0):?>border-top: #ccc 1px dashed;<?php endif;?>">
 												<div style="background-color: #fff;height: 65px">
 													<div style="padding:0px">
 														<a href="/product/<?php echo $goods['id'];?>.html" style="color: #3c3c3c;">
@@ -123,7 +123,8 @@
 						<div class="page-body">
 							<div class="row">
 								<div class="col-md-12">
-									<div class="card" style="margin-bottom: 10px; margin-right: 1%;" >
+									<div class="card" style="margin-bottom: 10px; margin-right: 1%;<?php if($config['noticecenter'] === 'on'): ?>text-align: center!important;align-items: center;<?php endif;?>
+                                    " >
 										<div class="card-block" style="margin-bottom: -45px;">
 											<h4 class="sub-title"  style="margin-bottom: 5px;">网站公告</h4>
 											<div class="row">
